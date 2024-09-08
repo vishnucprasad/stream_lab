@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_resizable_container/flutter_resizable_container.dart';
 import 'package:stream_lab/presentation/core/widgets/stream_lab_drawer.dart';
+import 'package:stream_lab/presentation/screen/home_screen/widgets/connection_configurations_container/connection_configurations_container.dart';
+import 'package:stream_lab/presentation/screen/home_screen/widgets/emitters_list.dart/emitters_list.dart';
+import 'package:stream_lab/presentation/screen/home_screen/widgets/listeners_list/listeners_list.dart';
+import 'package:stream_lab/presentation/screen/home_screen/widgets/response_list/response_list.dart';
 
 class DesktopLayout extends StatelessWidget {
   const DesktopLayout({super.key});
@@ -37,36 +41,11 @@ class DesktopLayout extends StatelessWidget {
                   ResizableChild(
                     minSize: MediaQuery.of(context).size.height / 4,
                     size: const ResizableSize.ratio(2.5 / 4),
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(8, 8, 8, 4),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8),
-                          color: Colors.grey[400],
-                        ),
-                      ),
-                    ),
+                    child: const ConnectionConfigurationsContainer(),
                   ),
                   ResizableChild(
                     minSize: MediaQuery.of(context).size.height / 4,
-                    child: Padding(
-                      padding: const EdgeInsets.only(bottom: 8),
-                      child: ListView.builder(
-                        itemCount: 7,
-                        itemBuilder: (context, index) {
-                          return Padding(
-                            padding: const EdgeInsets.fromLTRB(8, 4, 8, 8),
-                            child: Container(
-                              height: 78,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(8),
-                                color: Colors.grey[200],
-                              ),
-                            ),
-                          );
-                        },
-                      ),
-                    ),
+                    child: const ResponseList(),
                   ),
                 ],
               ),
@@ -85,29 +64,13 @@ class DesktopLayout extends StatelessWidget {
                   onHoverEnter: () {},
                   onHoverExit: () {},
                 ),
-                children: [
+                children: const [
                   ResizableChild(
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(8, 8, 8, 4),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8),
-                          color: Colors.grey[400],
-                        ),
-                      ),
-                    ),
+                    child: EmittersList(),
                   ),
                   // list of stuff
                   ResizableChild(
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(8, 4, 8, 8),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8),
-                          color: Colors.grey[200],
-                        ),
-                      ),
-                    ),
+                    child: ListenersList(),
                   ),
                 ],
               ),
