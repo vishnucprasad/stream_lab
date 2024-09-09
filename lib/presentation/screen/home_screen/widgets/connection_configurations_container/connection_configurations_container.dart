@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:stream_lab/presentation/core/constants.dart';
 import 'package:stream_lab/presentation/screen/home_screen/widgets/connection_configurations_container/configuration_connection_area.dart';
 import 'package:stream_lab/presentation/screen/home_screen/widgets/connection_configurations_container/configuration_header.dart';
+import 'package:stream_lab/presentation/screen/home_screen/widgets/connection_configurations_container/configuration_tab_bar.dart';
 
 class ConnectionConfigurationsContainer extends StatelessWidget {
   const ConnectionConfigurationsContainer({super.key});
@@ -16,11 +17,13 @@ class ConnectionConfigurationsContainer extends StatelessWidget {
           borderRadius: BorderRadius.circular(8),
           color: Colors.grey[400],
         ),
-        child: ListView(
-          children: const [
+        child: const Column(
+          children: [
             ConfigurationHeader(),
             kHeight,
             ConfigurationConnectionArea(),
+            kHeightSm,
+            ConfigurationTabBar(),
           ],
         ),
       ),

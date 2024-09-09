@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:stream_lab/presentation/core/constants.dart';
 import 'package:stream_lab/presentation/screen/home_screen/widgets/connection_configurations_container/connection_name_input_field.dart';
+import 'package:stream_lab/presentation/screen/home_screen/widgets/connection_configurations_container/save_button.dart';
+import 'package:stream_lab/presentation/screen/home_screen/widgets/connection_configurations_container/unsaved_badge.dart';
 
 class ConfigurationHeader extends StatelessWidget {
   const ConfigurationHeader({
@@ -14,9 +16,9 @@ class ConfigurationHeader extends StatelessWidget {
         color: Colors.grey[200],
         borderRadius: BorderRadius.circular(8),
       ),
-      child: Row(
+      child: const Row(
         children: [
-          const Expanded(
+          Expanded(
             child: Padding(
               padding: EdgeInsets.all(8),
               child: Row(
@@ -31,34 +33,9 @@ class ConfigurationHeader extends StatelessWidget {
               ),
             ),
           ),
-          if (true)
-            Container(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 8,
-              ),
-              decoration: BoxDecoration(
-                color: Colors.transparent, // No fill color
-                border: Border.all(
-                  color: Colors.red,
-                ),
-                borderRadius: BorderRadius.circular(8), // Rounded corners
-              ),
-              child: const Text(
-                'Unsaved',
-                style: TextStyle(
-                  fontSize: 12,
-                  color: Colors.red, // Green text
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
+          if (true) UnsavedBadge(),
           kWidth,
-          ElevatedButton.icon(
-            onPressed: () {},
-            icon: const Icon(Icons.save),
-            label: const Text('Save'),
-            style: kDefaultButtonStyle,
-          )
+          SaveButton()
         ],
       ),
     );

@@ -15,12 +15,14 @@ class ConnectionUrlInputField extends HookWidget {
         height: 40,
         child: TextFormField(
           controller: controller,
-          decoration: const InputDecoration(
-            contentPadding: EdgeInsets.symmetric(
+          decoration: InputDecoration(
+            contentPadding: const EdgeInsets.symmetric(
               vertical: 0,
               horizontal: 8,
             ),
-            border: OutlineInputBorder(),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(8),
+            ),
             hintText: 'Enter URL',
           ),
         ),
