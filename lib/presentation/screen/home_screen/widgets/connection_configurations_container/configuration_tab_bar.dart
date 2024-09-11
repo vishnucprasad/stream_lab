@@ -1,7 +1,10 @@
 import 'package:buttons_tabbar/buttons_tabbar.dart';
 import 'package:flutter/material.dart';
 import 'package:stream_lab/presentation/core/constants.dart';
+import 'package:stream_lab/presentation/screen/home_screen/widgets/connection_configurations_container/auth_table.dart';
 import 'package:stream_lab/presentation/screen/home_screen/widgets/connection_configurations_container/emitter_tab_view.dart';
+import 'package:stream_lab/presentation/screen/home_screen/widgets/connection_configurations_container/headers_table.dart';
+import 'package:stream_lab/presentation/screen/home_screen/widgets/connection_configurations_container/query_params_table.dart';
 
 class ConfigurationTabBar extends StatelessWidget {
   const ConfigurationTabBar({
@@ -50,15 +53,9 @@ class ConfigurationTabBar extends StatelessWidget {
               child: TabBarView(
                 children: <Widget>[
                   EmitterTabView(),
-                  Center(
-                    child: Icon(Icons.directions_transit),
-                  ),
-                  Center(
-                    child: Icon(Icons.directions_bike),
-                  ),
-                  Center(
-                    child: Icon(Icons.directions_bike),
-                  ),
+                  QueryParamsTable(),
+                  HeadersTable(),
+                  AuthTable(),
                 ],
               ),
             ),

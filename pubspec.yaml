@@ -39,6 +39,7 @@ dependencies:
   buttons_tabbar: ^1.3.13
   json_text_field: ^1.2.0
   another_flushbar: ^1.12.30
+  pluto_grid: ^8.0.0
 
 dev_dependencies:
   flutter_test:

@@ -171,21 +171,11 @@ html {
 }
 
 body {
-  min-height: 100vh;
+  min-height: 92vh;
   font-family: Roboto, Arial;
   color: #adafb6;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #f9fbff;
-}
-body .dribbble {
-  position: fixed;
-  display: block;
-  right: 20px;
-  bottom: 20px;
-}
-body .dribbble img {
-  display: block;
-  height: 28px;
 }
