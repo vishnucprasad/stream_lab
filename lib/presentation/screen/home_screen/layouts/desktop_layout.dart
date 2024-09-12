@@ -12,9 +12,6 @@ class DesktopLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('S T R E A M   L A B'),
-      ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Row(
