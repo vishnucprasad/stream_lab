@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_resizable_container/flutter_resizable_container.dart';
 import 'package:stream_lab/presentation/core/widgets/stream_lab_drawer.dart';
 import 'package:stream_lab/presentation/screen/home_screen/widgets/connection_configurations_container/connection_configurations_container.dart';
-import 'package:stream_lab/presentation/screen/home_screen/widgets/emitters_list.dart/emitters_list.dart';
+import 'package:stream_lab/presentation/screen/home_screen/widgets/emitters_list/emitters_list.dart';
 import 'package:stream_lab/presentation/screen/home_screen/widgets/listeners_list/listeners_list.dart';
 import 'package:stream_lab/presentation/screen/home_screen/widgets/response_list/response_list.dart';
 
@@ -63,10 +63,12 @@ class DesktopLayout extends StatelessWidget {
                 ),
                 children: const [
                   ResizableChild(
+                    minSize: 68,
                     child: EmittersList(),
                   ),
                   // list of stuff
                   ResizableChild(
+                    minSize: 68,
                     child: ListenersList(),
                   ),
                 ],
