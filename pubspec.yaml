@@ -41,6 +41,8 @@ dependencies:
   another_flushbar: ^1.12.30
   pluto_grid: ^8.0.0
   toggle_list: ^0.3.1
+  get_it: ^7.7.0
+  injectable: ^2.4.4
 
 dev_dependencies:
   flutter_test:
@@ -52,6 +54,8 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^3.0.0
+  build_runner: ^2.4.11
+  injectable_generator: ^2.6.2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
