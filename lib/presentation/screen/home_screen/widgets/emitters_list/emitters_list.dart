@@ -8,7 +8,7 @@ class EmittersList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(8, 4, 8, 8),
+      padding: const EdgeInsets.fromLTRB(8, 8, 8, 4),
       child: Container(
         padding: const EdgeInsets.all(8),
         decoration: BoxDecoration(
