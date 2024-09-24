@@ -9,7 +9,7 @@ class ConnectionButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 40,
+      height: 50,
       child: ElevatedButton.icon(
         onPressed: () {},
         style: kDefaultButtonStyle.copyWith(

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:stream_lab/application/connection/connection_form/connection_form_bloc.dart';
 import 'package:stream_lab/presentation/core/constants.dart';
 
 class SaveButton extends StatelessWidget {
@@ -9,7 +11,9 @@ class SaveButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton.icon(
-      onPressed: () {},
+      onPressed: () => context
+          .read<ConnectionFormBloc>()
+          .add(const ConnectionFormEvent.saveButtonPressed()),
       icon: const Icon(Icons.save),
       label: const Text('Save'),
       style: kDefaultButtonStyle,
