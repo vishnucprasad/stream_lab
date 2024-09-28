@@ -43,6 +43,7 @@ dependencies:
   hive_flutter: ^1.1.0
   injectable: ^2.4.4
   json_text_field: ^1.2.0
+  path_provider: ^2.1.4
   pluto_grid: ^8.0.0
   toggle_list: ^0.3.1
 

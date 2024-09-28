@@ -10,4 +10,6 @@ class ConnectionFailure with _$ConnectionFailure {
   const factory ConnectionFailure.serverFailure({
     required String messsage,
   }) = _ServerFailure;
+  const factory ConnectionFailure.duplicateConnectionName() =
+      _DuplicateConnectionName;
 }

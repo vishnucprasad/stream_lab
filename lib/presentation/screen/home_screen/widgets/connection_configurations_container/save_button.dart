@@ -10,13 +10,19 @@ class SaveButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton.icon(
-      onPressed: () => context
-          .read<ConnectionFormBloc>()
-          .add(const ConnectionFormEvent.saveButtonPressed()),
-      icon: const Icon(Icons.save),
-      label: const Text('Save'),
-      style: kDefaultButtonStyle,
+    return BlocBuilder<ConnectionFormBloc, ConnectionFormState>(
+      builder: (context, state) {
+        return ElevatedButton.icon(
+          onPressed: () => context
+              .read<ConnectionFormBloc>()
+              .add(const ConnectionFormEvent.saveButtonPressed()),
+          icon: state.isSubmitting
+              ? const CircularProgressIndicator()
+              : const Icon(Icons.save),
+          label: const Text('Save'),
+          style: kDefaultButtonStyle,
+        );
+      },
     );
   }
 }

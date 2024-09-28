@@ -5,6 +5,7 @@ class ConnectionFormState with _$ConnectionFormState {
   const factory ConnectionFormState({
     required bool isSubmitting,
     required bool showValidationError,
+    required bool isSaved,
     required ConnectionFormData connectionFormData,
     required Option<Either<ConnectionFailure, Unit>> failureOrSucessOption,
   }) = _ConnectionFormState;
@@ -13,6 +14,7 @@ class ConnectionFormState with _$ConnectionFormState {
     return ConnectionFormState(
       isSubmitting: false,
       showValidationError: false,
+      isSaved: false,
       connectionFormData: ConnectionFormData.empty(),
       failureOrSucessOption: none(),
     );

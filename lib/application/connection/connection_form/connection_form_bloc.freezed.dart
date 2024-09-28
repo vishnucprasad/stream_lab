@@ -482,6 +482,7 @@ abstract class _SaveButtonPressed implements ConnectionFormEvent {
 mixin _$ConnectionFormState {
   bool get isSubmitting => throw _privateConstructorUsedError;
   bool get showValidationError => throw _privateConstructorUsedError;
+  bool get isSaved => throw _privateConstructorUsedError;
   ConnectionFormData get connectionFormData =>
       throw _privateConstructorUsedError;
   Option<Either<ConnectionFailure, Unit>> get failureOrSucessOption =>
@@ -501,6 +502,7 @@ abstract class $ConnectionFormStateCopyWith<$Res> {
   $Res call(
       {bool isSubmitting,
       bool showValidationError,
+      bool isSaved,
       ConnectionFormData connectionFormData,
       Option<Either<ConnectionFailure, Unit>> failureOrSucessOption});
 
@@ -522,6 +524,7 @@ class _$ConnectionFormStateCopyWithImpl<$Res, $Val extends ConnectionFormState>
   $Res call({
     Object? isSubmitting = null,
     Object? showValidationError = null,
+    Object? isSaved = null,
     Object? connectionFormData = null,
     Object? failureOrSucessOption = null,
   }) {
@@ -533,6 +536,10 @@ class _$ConnectionFormStateCopyWithImpl<$Res, $Val extends ConnectionFormState>
       showValidationError: null == showValidationError
           ? _value.showValidationError
           : showValidationError // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isSaved: null == isSaved
+          ? _value.isSaved
+          : isSaved // ignore: cast_nullable_to_non_nullable
               as bool,
       connectionFormData: null == connectionFormData
           ? _value.connectionFormData
@@ -566,6 +573,7 @@ abstract class _$$ConnectionFormStateImplCopyWith<$Res>
   $Res call(
       {bool isSubmitting,
       bool showValidationError,
+      bool isSaved,
       ConnectionFormData connectionFormData,
       Option<Either<ConnectionFailure, Unit>> failureOrSucessOption});
 
@@ -586,6 +594,7 @@ class __$$ConnectionFormStateImplCopyWithImpl<$Res>
   $Res call({
     Object? isSubmitting = null,
     Object? showValidationError = null,
+    Object? isSaved = null,
     Object? connectionFormData = null,
     Object? failureOrSucessOption = null,
   }) {
@@ -597,6 +606,10 @@ class __$$ConnectionFormStateImplCopyWithImpl<$Res>
       showValidationError: null == showValidationError
           ? _value.showValidationError
           : showValidationError // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isSaved: null == isSaved
+          ? _value.isSaved
+          : isSaved // ignore: cast_nullable_to_non_nullable
               as bool,
       connectionFormData: null == connectionFormData
           ? _value.connectionFormData
@@ -616,6 +629,7 @@ class _$ConnectionFormStateImpl implements _ConnectionFormState {
   const _$ConnectionFormStateImpl(
       {required this.isSubmitting,
       required this.showValidationError,
+      required this.isSaved,
       required this.connectionFormData,
       required this.failureOrSucessOption});
 
@@ -624,13 +638,15 @@ class _$ConnectionFormStateImpl implements _ConnectionFormState {
   @override
   final bool showValidationError;
   @override
+  final bool isSaved;
+  @override
   final ConnectionFormData connectionFormData;
   @override
   final Option<Either<ConnectionFailure, Unit>> failureOrSucessOption;
 
   @override
   String toString() {
-    return 'ConnectionFormState(isSubmitting: $isSubmitting, showValidationError: $showValidationError, connectionFormData: $connectionFormData, failureOrSucessOption: $failureOrSucessOption)';
+    return 'ConnectionFormState(isSubmitting: $isSubmitting, showValidationError: $showValidationError, isSaved: $isSaved, connectionFormData: $connectionFormData, failureOrSucessOption: $failureOrSucessOption)';
   }
 
   @override
@@ -642,6 +658,7 @@ class _$ConnectionFormStateImpl implements _ConnectionFormState {
                 other.isSubmitting == isSubmitting) &&
             (identical(other.showValidationError, showValidationError) ||
                 other.showValidationError == showValidationError) &&
+            (identical(other.isSaved, isSaved) || other.isSaved == isSaved) &&
             (identical(other.connectionFormData, connectionFormData) ||
                 other.connectionFormData == connectionFormData) &&
             (identical(other.failureOrSucessOption, failureOrSucessOption) ||
@@ -650,7 +667,7 @@ class _$ConnectionFormStateImpl implements _ConnectionFormState {
 
   @override
   int get hashCode => Object.hash(runtimeType, isSubmitting,
-      showValidationError, connectionFormData, failureOrSucessOption);
+      showValidationError, isSaved, connectionFormData, failureOrSucessOption);
 
   @JsonKey(ignore: true)
   @override
@@ -664,6 +681,7 @@ abstract class _ConnectionFormState implements ConnectionFormState {
   const factory _ConnectionFormState(
       {required final bool isSubmitting,
       required final bool showValidationError,
+      required final bool isSaved,
       required final ConnectionFormData connectionFormData,
       required final Option<Either<ConnectionFailure, Unit>>
           failureOrSucessOption}) = _$ConnectionFormStateImpl;
@@ -672,6 +690,8 @@ abstract class _ConnectionFormState implements ConnectionFormState {
   bool get isSubmitting;
   @override
   bool get showValidationError;
+  @override
+  bool get isSaved;
   @override
   ConnectionFormData get connectionFormData;
   @override

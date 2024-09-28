@@ -16,23 +16,25 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$ConnectionFailure {
-  String get messsage => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String messsage) clientFailure,
     required TResult Function(String messsage) serverFailure,
+    required TResult Function() duplicateConnectionName,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String messsage)? clientFailure,
     TResult? Function(String messsage)? serverFailure,
+    TResult? Function()? duplicateConnectionName,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String messsage)? clientFailure,
     TResult Function(String messsage)? serverFailure,
+    TResult Function()? duplicateConnectionName,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -40,24 +42,24 @@ mixin _$ConnectionFailure {
   TResult map<TResult extends Object?>({
     required TResult Function(_ClientFailure value) clientFailure,
     required TResult Function(_ServerFailure value) serverFailure,
+    required TResult Function(_DuplicateConnectionName value)
+        duplicateConnectionName,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ClientFailure value)? clientFailure,
     TResult? Function(_ServerFailure value)? serverFailure,
+    TResult? Function(_DuplicateConnectionName value)? duplicateConnectionName,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ClientFailure value)? clientFailure,
     TResult Function(_ServerFailure value)? serverFailure,
+    TResult Function(_DuplicateConnectionName value)? duplicateConnectionName,
     required TResult orElse(),
   }) =>
-      throw _privateConstructorUsedError;
-
-  @JsonKey(ignore: true)
-  $ConnectionFailureCopyWith<ConnectionFailure> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -66,8 +68,6 @@ abstract class $ConnectionFailureCopyWith<$Res> {
   factory $ConnectionFailureCopyWith(
           ConnectionFailure value, $Res Function(ConnectionFailure) then) =
       _$ConnectionFailureCopyWithImpl<$Res, ConnectionFailure>;
-  @useResult
-  $Res call({String messsage});
 }
 
 /// @nodoc
@@ -79,28 +79,13 @@ class _$ConnectionFailureCopyWithImpl<$Res, $Val extends ConnectionFailure>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? messsage = null,
-  }) {
-    return _then(_value.copyWith(
-      messsage: null == messsage
-          ? _value.messsage
-          : messsage // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
-  }
 }
 
 /// @nodoc
-abstract class _$$ClientFailureImplCopyWith<$Res>
-    implements $ConnectionFailureCopyWith<$Res> {
+abstract class _$$ClientFailureImplCopyWith<$Res> {
   factory _$$ClientFailureImplCopyWith(
           _$ClientFailureImpl value, $Res Function(_$ClientFailureImpl) then) =
       __$$ClientFailureImplCopyWithImpl<$Res>;
-  @override
   @useResult
   $Res call({String messsage});
 }
@@ -163,6 +148,7 @@ class _$ClientFailureImpl implements _ClientFailure {
   TResult when<TResult extends Object?>({
     required TResult Function(String messsage) clientFailure,
     required TResult Function(String messsage) serverFailure,
+    required TResult Function() duplicateConnectionName,
   }) {
     return clientFailure(messsage);
   }
@@ -172,6 +158,7 @@ class _$ClientFailureImpl implements _ClientFailure {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String messsage)? clientFailure,
     TResult? Function(String messsage)? serverFailure,
+    TResult? Function()? duplicateConnectionName,
   }) {
     return clientFailure?.call(messsage);
   }
@@ -181,6 +168,7 @@ class _$ClientFailureImpl implements _ClientFailure {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String messsage)? clientFailure,
     TResult Function(String messsage)? serverFailure,
+    TResult Function()? duplicateConnectionName,
     required TResult orElse(),
   }) {
     if (clientFailure != null) {
@@ -194,6 +182,8 @@ class _$ClientFailureImpl implements _ClientFailure {
   TResult map<TResult extends Object?>({
     required TResult Function(_ClientFailure value) clientFailure,
     required TResult Function(_ServerFailure value) serverFailure,
+    required TResult Function(_DuplicateConnectionName value)
+        duplicateConnectionName,
   }) {
     return clientFailure(this);
   }
@@ -203,6 +193,7 @@ class _$ClientFailureImpl implements _ClientFailure {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ClientFailure value)? clientFailure,
     TResult? Function(_ServerFailure value)? serverFailure,
+    TResult? Function(_DuplicateConnectionName value)? duplicateConnectionName,
   }) {
     return clientFailure?.call(this);
   }
@@ -212,6 +203,7 @@ class _$ClientFailureImpl implements _ClientFailure {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ClientFailure value)? clientFailure,
     TResult Function(_ServerFailure value)? serverFailure,
+    TResult Function(_DuplicateConnectionName value)? duplicateConnectionName,
     required TResult orElse(),
   }) {
     if (clientFailure != null) {
@@ -225,21 +217,17 @@ abstract class _ClientFailure implements ConnectionFailure {
   const factory _ClientFailure({required final String messsage}) =
       _$ClientFailureImpl;
 
-  @override
   String get messsage;
-  @override
   @JsonKey(ignore: true)
   _$$ClientFailureImplCopyWith<_$ClientFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$ServerFailureImplCopyWith<$Res>
-    implements $ConnectionFailureCopyWith<$Res> {
+abstract class _$$ServerFailureImplCopyWith<$Res> {
   factory _$$ServerFailureImplCopyWith(
           _$ServerFailureImpl value, $Res Function(_$ServerFailureImpl) then) =
       __$$ServerFailureImplCopyWithImpl<$Res>;
-  @override
   @useResult
   $Res call({String messsage});
 }
@@ -302,6 +290,7 @@ class _$ServerFailureImpl implements _ServerFailure {
   TResult when<TResult extends Object?>({
     required TResult Function(String messsage) clientFailure,
     required TResult Function(String messsage) serverFailure,
+    required TResult Function() duplicateConnectionName,
   }) {
     return serverFailure(messsage);
   }
@@ -311,6 +300,7 @@ class _$ServerFailureImpl implements _ServerFailure {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String messsage)? clientFailure,
     TResult? Function(String messsage)? serverFailure,
+    TResult? Function()? duplicateConnectionName,
   }) {
     return serverFailure?.call(messsage);
   }
@@ -320,6 +310,7 @@ class _$ServerFailureImpl implements _ServerFailure {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String messsage)? clientFailure,
     TResult Function(String messsage)? serverFailure,
+    TResult Function()? duplicateConnectionName,
     required TResult orElse(),
   }) {
     if (serverFailure != null) {
@@ -333,6 +324,8 @@ class _$ServerFailureImpl implements _ServerFailure {
   TResult map<TResult extends Object?>({
     required TResult Function(_ClientFailure value) clientFailure,
     required TResult Function(_ServerFailure value) serverFailure,
+    required TResult Function(_DuplicateConnectionName value)
+        duplicateConnectionName,
   }) {
     return serverFailure(this);
   }
@@ -342,6 +335,7 @@ class _$ServerFailureImpl implements _ServerFailure {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ClientFailure value)? clientFailure,
     TResult? Function(_ServerFailure value)? serverFailure,
+    TResult? Function(_DuplicateConnectionName value)? duplicateConnectionName,
   }) {
     return serverFailure?.call(this);
   }
@@ -351,6 +345,7 @@ class _$ServerFailureImpl implements _ServerFailure {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ClientFailure value)? clientFailure,
     TResult Function(_ServerFailure value)? serverFailure,
+    TResult Function(_DuplicateConnectionName value)? duplicateConnectionName,
     required TResult orElse(),
   }) {
     if (serverFailure != null) {
@@ -364,10 +359,120 @@ abstract class _ServerFailure implements ConnectionFailure {
   const factory _ServerFailure({required final String messsage}) =
       _$ServerFailureImpl;
 
-  @override
   String get messsage;
-  @override
   @JsonKey(ignore: true)
   _$$ServerFailureImplCopyWith<_$ServerFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$DuplicateConnectionNameImplCopyWith<$Res> {
+  factory _$$DuplicateConnectionNameImplCopyWith(
+          _$DuplicateConnectionNameImpl value,
+          $Res Function(_$DuplicateConnectionNameImpl) then) =
+      __$$DuplicateConnectionNameImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$DuplicateConnectionNameImplCopyWithImpl<$Res>
+    extends _$ConnectionFailureCopyWithImpl<$Res, _$DuplicateConnectionNameImpl>
+    implements _$$DuplicateConnectionNameImplCopyWith<$Res> {
+  __$$DuplicateConnectionNameImplCopyWithImpl(
+      _$DuplicateConnectionNameImpl _value,
+      $Res Function(_$DuplicateConnectionNameImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$DuplicateConnectionNameImpl implements _DuplicateConnectionName {
+  const _$DuplicateConnectionNameImpl();
+
+  @override
+  String toString() {
+    return 'ConnectionFailure.duplicateConnectionName()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DuplicateConnectionNameImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String messsage) clientFailure,
+    required TResult Function(String messsage) serverFailure,
+    required TResult Function() duplicateConnectionName,
+  }) {
+    return duplicateConnectionName();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String messsage)? clientFailure,
+    TResult? Function(String messsage)? serverFailure,
+    TResult? Function()? duplicateConnectionName,
+  }) {
+    return duplicateConnectionName?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String messsage)? clientFailure,
+    TResult Function(String messsage)? serverFailure,
+    TResult Function()? duplicateConnectionName,
+    required TResult orElse(),
+  }) {
+    if (duplicateConnectionName != null) {
+      return duplicateConnectionName();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ClientFailure value) clientFailure,
+    required TResult Function(_ServerFailure value) serverFailure,
+    required TResult Function(_DuplicateConnectionName value)
+        duplicateConnectionName,
+  }) {
+    return duplicateConnectionName(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ClientFailure value)? clientFailure,
+    TResult? Function(_ServerFailure value)? serverFailure,
+    TResult? Function(_DuplicateConnectionName value)? duplicateConnectionName,
+  }) {
+    return duplicateConnectionName?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ClientFailure value)? clientFailure,
+    TResult Function(_ServerFailure value)? serverFailure,
+    TResult Function(_DuplicateConnectionName value)? duplicateConnectionName,
+    required TResult orElse(),
+  }) {
+    if (duplicateConnectionName != null) {
+      return duplicateConnectionName(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _DuplicateConnectionName implements ConnectionFailure {
+  const factory _DuplicateConnectionName() = _$DuplicateConnectionNameImpl;
 }

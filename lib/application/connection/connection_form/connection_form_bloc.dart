@@ -3,6 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:stream_lab/domain/connection/failures/connection_failure.dart';
+import 'package:stream_lab/domain/connection/i_connection_repository.dart';
+import 'package:stream_lab/domain/connection/models/connection.dart';
 import 'package:stream_lab/domain/connection/models/connection_form_data.dart';
 import 'package:stream_lab/domain/connection/models/connection_value_objects.dart';
 
@@ -13,7 +15,9 @@ part 'connection_form_bloc.freezed.dart';
 @injectable
 class ConnectionFormBloc
     extends Bloc<ConnectionFormEvent, ConnectionFormState> {
-  ConnectionFormBloc() : super(ConnectionFormState.initial()) {
+  final IConnectionRepository _connectionRepository;
+  ConnectionFormBloc(this._connectionRepository)
+      : super(ConnectionFormState.initial()) {
     on<ConnectionFormEvent>((event, emit) async {
       await event.map(
         connectionNameChanged: (e) async => emit(state.copyWith(
@@ -32,12 +36,17 @@ class ConnectionFormBloc
           Either<ConnectionFailure, Unit>? failureOrSuccess;
 
           if (state.connectionFormData.failureOption.isNone()) {
-            // Logic for saving connection data goes here
+            failureOrSuccess = await _connectionRepository.createConnection(
+              connection: Connection.fromDomain(
+                state.connectionFormData,
+              ),
+            );
           }
 
           emit(state.copyWith(
             isSubmitting: false,
             showValidationError: true,
+            isSaved: failureOrSuccess?.isRight() ?? false,
             failureOrSucessOption: optionOf(failureOrSuccess),
           ));
         },
