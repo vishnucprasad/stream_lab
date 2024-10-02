@@ -32,6 +32,18 @@ class ConnectionRespository implements IConnectionRepository {
     }
   }
 
+  @override
+  Future<Either<ConnectionFailure, List<Connection>>>
+      getAllConnections() async {
+    try {
+      return right(connectionBox.values.toList());
+    } catch (_) {
+      return left(const ConnectionFailure.clientFailure(
+        messsage: 'Something went wrong, please try again.',
+      ));
+    }
+  }
+
   bool isDuplicateConnectionName(Connection connection) {
     return connectionBox.values.any(
       (value) =>

@@ -6,4 +6,5 @@ abstract class IConnectionRepository {
   Future<Either<ConnectionFailure, Unit>> createConnection({
     required Connection connection,
   });
+  Future<Either<ConnectionFailure, List<Connection>>> getAllConnections();
 }

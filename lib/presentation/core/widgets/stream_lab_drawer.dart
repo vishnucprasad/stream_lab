@@ -1,4 +1,6 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide ConnectionState;
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:stream_lab/application/connection/connection_bloc.dart';
 import 'package:stream_lab/presentation/core/constants.dart';
 
 class StreamLabDrawer extends StatelessWidget {
@@ -30,65 +32,32 @@ class StreamLabDrawer extends StatelessWidget {
                 ],
               ),
             ),
-            Expanded(
-              child: ListView(
-                children: [
-                  Padding(
-                    padding: kTilePadding,
-                    child: ListTile(
-                      onTap: () {},
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8),
+            BlocBuilder<ConnectionBloc, ConnectionState>(
+              builder: (context, state) {
+                return Expanded(
+                  child: ListView.builder(
+                    itemCount: state.connections.length,
+                    itemBuilder: (context, index) => Padding(
+                      padding: kTilePadding,
+                      child: ListTile(
+                        onTap: () {},
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        leading: const Icon(
+                          Icons.wifi_off,
+                          color: Colors.red,
+                        ),
+                        title: Text(
+                          state.connections[index].connectionName,
+                          style: kDrawerTextStyle,
+                        ),
+                        trailing: const Icon(Icons.more_vert),
                       ),
-                      leading: const Icon(
-                        Icons.wifi,
-                        color: Colors.green,
-                      ),
-                      title: Text(
-                        'Connection 1',
-                        style: kDrawerTextStyle,
-                      ),
-                      trailing: const Icon(Icons.more_vert),
                     ),
                   ),
-                  Padding(
-                    padding: kTilePadding,
-                    child: ListTile(
-                      onTap: () {},
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      leading: const Icon(
-                        Icons.wifi_off,
-                        color: Colors.red,
-                      ),
-                      title: Text(
-                        'Connection 2',
-                        style: kDrawerTextStyle,
-                      ),
-                      trailing: const Icon(Icons.more_vert),
-                    ),
-                  ),
-                  Padding(
-                    padding: kTilePadding,
-                    child: ListTile(
-                      onTap: () {},
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      leading: const Icon(
-                        Icons.wifi_off,
-                        color: Colors.red,
-                      ),
-                      title: Text(
-                        'Connection 3',
-                        style: kDrawerTextStyle,
-                      ),
-                      trailing: const Icon(Icons.more_vert),
-                    ),
-                  ),
-                ],
-              ),
+                );
+              },
             ),
             Padding(
               padding: kTilePadding.copyWith(bottom: 8),
