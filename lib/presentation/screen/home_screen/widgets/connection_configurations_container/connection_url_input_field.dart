@@ -17,7 +17,15 @@ class ConnectionUrlInputField extends HookWidget {
         listenWhen: (p, c) => p.showValidationError != c.showValidationError,
         listener: (context, state) => controller.text =
             state.connectionFormData.connectionUrl.value.getOrElse(() => ""),
+        buildWhen: (p, c) =>
+            p.showValidationError != c.showValidationError ||
+            p.connectionKey != c.connectionKey,
         builder: (context, state) {
+          if (!state.showValidationError || state.connectionKey != null) {
+            controller.text = state.connectionFormData.connectionUrl.value
+                .getOrElse(() => "");
+          }
+
           return TextFormField(
             controller: controller,
             decoration: InputDecoration(

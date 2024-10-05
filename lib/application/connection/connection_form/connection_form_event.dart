@@ -8,5 +8,8 @@ class ConnectionFormEvent with _$ConnectionFormEvent {
   const factory ConnectionFormEvent.connectionUrlChanged({
     required String connectionUrl,
   }) = _ConnectionUrlChanged;
+  const factory ConnectionFormEvent.connectionSelected({
+    required Connection connection,
+  }) = _ConnectionSelected;
   const factory ConnectionFormEvent.saveButtonPressed() = _SaveButtonPressed;
 }

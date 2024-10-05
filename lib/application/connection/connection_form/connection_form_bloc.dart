@@ -32,8 +32,25 @@ class ConnectionFormBloc
           ),
           failureOrSucessOption: none(),
         )),
+        connectionSelected: (e) async {
+          emit(state.copyWith(
+            isLoading: true,
+            isSubmitting: false,
+            isSaved: true,
+            connectionKey: e.connection.key,
+            connectionFormData: e.connection.toDomain(),
+            showValidationError: false,
+            failureOrSucessOption: none(),
+          ));
+        },
         saveButtonPressed: (_) async {
           Either<ConnectionFailure, Unit>? failureOrSuccess;
+
+          emit(state.copyWith(
+            isSubmitting: true,
+            showValidationError: false,
+            failureOrSucessOption: none(),
+          ));
 
           if (state.connectionFormData.failureOption.isNone()) {
             failureOrSuccess = await _connectionRepository.createConnection(

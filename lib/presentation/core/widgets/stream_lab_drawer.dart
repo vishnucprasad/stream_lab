@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart' hide ConnectionState;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:stream_lab/application/connection/connection_bloc.dart';
+import 'package:stream_lab/application/connection/connection_form/connection_form_bloc.dart';
 import 'package:stream_lab/presentation/core/constants.dart';
 
 class StreamLabDrawer extends StatelessWidget {
@@ -37,24 +38,40 @@ class StreamLabDrawer extends StatelessWidget {
                 return Expanded(
                   child: ListView.builder(
                     itemCount: state.connections.length,
-                    itemBuilder: (context, index) => Padding(
-                      padding: kTilePadding,
-                      child: ListTile(
-                        onTap: () {},
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8),
+                    itemBuilder: (context, index) {
+                      final connection = state.connections[index];
+                      final selectedConnectionKey = context
+                          .read<ConnectionFormBloc>()
+                          .state
+                          .connectionKey;
+
+                      return Padding(
+                        padding: kTilePadding,
+                        child: ListTile(
+                          onTap: () {
+                            if (selectedConnectionKey != connection.key) {
+                              context
+                                  .read<ConnectionFormBloc>()
+                                  .add(ConnectionFormEvent.connectionSelected(
+                                    connection: state.connections[index],
+                                  ));
+                            }
+                          },
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          leading: const Icon(
+                            Icons.wifi_off,
+                            color: Colors.red,
+                          ),
+                          title: Text(
+                            connection.connectionName,
+                            style: kDrawerTextStyle,
+                          ),
+                          trailing: const Icon(Icons.more_vert),
                         ),
-                        leading: const Icon(
-                          Icons.wifi_off,
-                          color: Colors.red,
-                        ),
-                        title: Text(
-                          state.connections[index].connectionName,
-                          style: kDrawerTextStyle,
-                        ),
-                        trailing: const Icon(Icons.more_vert),
-                      ),
-                    ),
+                      );
+                    },
                   ),
                 );
               },

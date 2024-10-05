@@ -1,7 +1,8 @@
+import 'package:another_flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:stream_lab/application/connection/connection_bloc.dart';
 import 'package:stream_lab/application/connection/connection_form/connection_form_bloc.dart';
-import 'package:stream_lab/core/injection/injection.dart';
 import 'package:stream_lab/presentation/core/constants.dart';
 import 'package:stream_lab/presentation/screen/home_screen/widgets/connection_configurations_container/configuration_connection_area.dart';
 import 'package:stream_lab/presentation/screen/home_screen/widgets/connection_configurations_container/configuration_header.dart';
@@ -20,8 +21,26 @@ class ConnectionConfigurationsContainer extends StatelessWidget {
           borderRadius: BorderRadius.circular(8),
           color: Colors.grey[400],
         ),
-        child: BlocProvider(
-          create: (_) => getIt<ConnectionFormBloc>(),
+        child: BlocListener<ConnectionFormBloc, ConnectionFormState>(
+          listener: (context, state) {
+            state.failureOrSucessOption.fold(
+              () => null,
+              (either) => either.fold(
+                (f) => FlushbarHelper.createError(
+                  message: f.map(
+                    clientFailure: (_) => 'Something went wrong.',
+                    duplicateConnectionName: (_) =>
+                        'Connection name ${state.connectionFormData.connectionName.getOrCrash()} is already exists.',
+                    serverFailure: (_) =>
+                        'Something went wrong on the server side.',
+                  ),
+                ).show(context),
+                (_) => context
+                    .read<ConnectionBloc>()
+                    .add(const ConnectionEvent.loadConnections()),
+              ),
+            );
+          },
           child: const Column(
             children: [
               ConfigurationHeader(),

@@ -17,9 +17,11 @@ class ConnectionNameInputField extends HookWidget {
           listenWhen: (p, c) => p.showValidationError != c.showValidationError,
           listener: (context, state) => controller.text =
               state.connectionFormData.connectionName.value.getOrElse(() => ""),
-          buildWhen: (p, c) => p.showValidationError != c.showValidationError,
+          buildWhen: (p, c) =>
+              p.showValidationError != c.showValidationError ||
+              p.connectionKey != c.connectionKey,
           builder: (context, state) {
-            if (!state.showValidationError) {
+            if (!state.showValidationError || state.connectionKey != null) {
               controller.value = TextEditingValue(
                 text: state.connectionFormData.connectionName.value
                     .getOrElse(() => ""),

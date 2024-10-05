@@ -20,6 +20,7 @@ mixin _$ConnectionFormEvent {
   TResult when<TResult extends Object?>({
     required TResult Function(String connectionName) connectionNameChanged,
     required TResult Function(String connectionUrl) connectionUrlChanged,
+    required TResult Function(Connection connection) connectionSelected,
     required TResult Function() saveButtonPressed,
   }) =>
       throw _privateConstructorUsedError;
@@ -27,6 +28,7 @@ mixin _$ConnectionFormEvent {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String connectionName)? connectionNameChanged,
     TResult? Function(String connectionUrl)? connectionUrlChanged,
+    TResult? Function(Connection connection)? connectionSelected,
     TResult? Function()? saveButtonPressed,
   }) =>
       throw _privateConstructorUsedError;
@@ -34,6 +36,7 @@ mixin _$ConnectionFormEvent {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String connectionName)? connectionNameChanged,
     TResult Function(String connectionUrl)? connectionUrlChanged,
+    TResult Function(Connection connection)? connectionSelected,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) =>
@@ -43,6 +46,7 @@ mixin _$ConnectionFormEvent {
     required TResult Function(_ConnectionNameChanged value)
         connectionNameChanged,
     required TResult Function(_ConnectionUrlChanged value) connectionUrlChanged,
+    required TResult Function(_ConnectionSelected value) connectionSelected,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) =>
       throw _privateConstructorUsedError;
@@ -50,6 +54,7 @@ mixin _$ConnectionFormEvent {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ConnectionNameChanged value)? connectionNameChanged,
     TResult? Function(_ConnectionUrlChanged value)? connectionUrlChanged,
+    TResult? Function(_ConnectionSelected value)? connectionSelected,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) =>
       throw _privateConstructorUsedError;
@@ -57,6 +62,7 @@ mixin _$ConnectionFormEvent {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ConnectionNameChanged value)? connectionNameChanged,
     TResult Function(_ConnectionUrlChanged value)? connectionUrlChanged,
+    TResult Function(_ConnectionSelected value)? connectionSelected,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) =>
@@ -150,6 +156,7 @@ class _$ConnectionNameChangedImpl implements _ConnectionNameChanged {
   TResult when<TResult extends Object?>({
     required TResult Function(String connectionName) connectionNameChanged,
     required TResult Function(String connectionUrl) connectionUrlChanged,
+    required TResult Function(Connection connection) connectionSelected,
     required TResult Function() saveButtonPressed,
   }) {
     return connectionNameChanged(connectionName);
@@ -160,6 +167,7 @@ class _$ConnectionNameChangedImpl implements _ConnectionNameChanged {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String connectionName)? connectionNameChanged,
     TResult? Function(String connectionUrl)? connectionUrlChanged,
+    TResult? Function(Connection connection)? connectionSelected,
     TResult? Function()? saveButtonPressed,
   }) {
     return connectionNameChanged?.call(connectionName);
@@ -170,6 +178,7 @@ class _$ConnectionNameChangedImpl implements _ConnectionNameChanged {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String connectionName)? connectionNameChanged,
     TResult Function(String connectionUrl)? connectionUrlChanged,
+    TResult Function(Connection connection)? connectionSelected,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -185,6 +194,7 @@ class _$ConnectionNameChangedImpl implements _ConnectionNameChanged {
     required TResult Function(_ConnectionNameChanged value)
         connectionNameChanged,
     required TResult Function(_ConnectionUrlChanged value) connectionUrlChanged,
+    required TResult Function(_ConnectionSelected value) connectionSelected,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return connectionNameChanged(this);
@@ -195,6 +205,7 @@ class _$ConnectionNameChangedImpl implements _ConnectionNameChanged {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ConnectionNameChanged value)? connectionNameChanged,
     TResult? Function(_ConnectionUrlChanged value)? connectionUrlChanged,
+    TResult? Function(_ConnectionSelected value)? connectionSelected,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return connectionNameChanged?.call(this);
@@ -205,6 +216,7 @@ class _$ConnectionNameChangedImpl implements _ConnectionNameChanged {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ConnectionNameChanged value)? connectionNameChanged,
     TResult Function(_ConnectionUrlChanged value)? connectionUrlChanged,
+    TResult Function(_ConnectionSelected value)? connectionSelected,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -294,6 +306,7 @@ class _$ConnectionUrlChangedImpl implements _ConnectionUrlChanged {
   TResult when<TResult extends Object?>({
     required TResult Function(String connectionName) connectionNameChanged,
     required TResult Function(String connectionUrl) connectionUrlChanged,
+    required TResult Function(Connection connection) connectionSelected,
     required TResult Function() saveButtonPressed,
   }) {
     return connectionUrlChanged(connectionUrl);
@@ -304,6 +317,7 @@ class _$ConnectionUrlChangedImpl implements _ConnectionUrlChanged {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String connectionName)? connectionNameChanged,
     TResult? Function(String connectionUrl)? connectionUrlChanged,
+    TResult? Function(Connection connection)? connectionSelected,
     TResult? Function()? saveButtonPressed,
   }) {
     return connectionUrlChanged?.call(connectionUrl);
@@ -314,6 +328,7 @@ class _$ConnectionUrlChangedImpl implements _ConnectionUrlChanged {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String connectionName)? connectionNameChanged,
     TResult Function(String connectionUrl)? connectionUrlChanged,
+    TResult Function(Connection connection)? connectionSelected,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -329,6 +344,7 @@ class _$ConnectionUrlChangedImpl implements _ConnectionUrlChanged {
     required TResult Function(_ConnectionNameChanged value)
         connectionNameChanged,
     required TResult Function(_ConnectionUrlChanged value) connectionUrlChanged,
+    required TResult Function(_ConnectionSelected value) connectionSelected,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return connectionUrlChanged(this);
@@ -339,6 +355,7 @@ class _$ConnectionUrlChangedImpl implements _ConnectionUrlChanged {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ConnectionNameChanged value)? connectionNameChanged,
     TResult? Function(_ConnectionUrlChanged value)? connectionUrlChanged,
+    TResult? Function(_ConnectionSelected value)? connectionSelected,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return connectionUrlChanged?.call(this);
@@ -349,6 +366,7 @@ class _$ConnectionUrlChangedImpl implements _ConnectionUrlChanged {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ConnectionNameChanged value)? connectionNameChanged,
     TResult Function(_ConnectionUrlChanged value)? connectionUrlChanged,
+    TResult Function(_ConnectionSelected value)? connectionSelected,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -367,6 +385,155 @@ abstract class _ConnectionUrlChanged implements ConnectionFormEvent {
   @JsonKey(ignore: true)
   _$$ConnectionUrlChangedImplCopyWith<_$ConnectionUrlChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ConnectionSelectedImplCopyWith<$Res> {
+  factory _$$ConnectionSelectedImplCopyWith(_$ConnectionSelectedImpl value,
+          $Res Function(_$ConnectionSelectedImpl) then) =
+      __$$ConnectionSelectedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({Connection connection});
+}
+
+/// @nodoc
+class __$$ConnectionSelectedImplCopyWithImpl<$Res>
+    extends _$ConnectionFormEventCopyWithImpl<$Res, _$ConnectionSelectedImpl>
+    implements _$$ConnectionSelectedImplCopyWith<$Res> {
+  __$$ConnectionSelectedImplCopyWithImpl(_$ConnectionSelectedImpl _value,
+      $Res Function(_$ConnectionSelectedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? connection = null,
+  }) {
+    return _then(_$ConnectionSelectedImpl(
+      connection: null == connection
+          ? _value.connection
+          : connection // ignore: cast_nullable_to_non_nullable
+              as Connection,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ConnectionSelectedImpl implements _ConnectionSelected {
+  const _$ConnectionSelectedImpl({required this.connection});
+
+  @override
+  final Connection connection;
+
+  @override
+  String toString() {
+    return 'ConnectionFormEvent.connectionSelected(connection: $connection)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ConnectionSelectedImpl &&
+            (identical(other.connection, connection) ||
+                other.connection == connection));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, connection);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ConnectionSelectedImplCopyWith<_$ConnectionSelectedImpl> get copyWith =>
+      __$$ConnectionSelectedImplCopyWithImpl<_$ConnectionSelectedImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String connectionName) connectionNameChanged,
+    required TResult Function(String connectionUrl) connectionUrlChanged,
+    required TResult Function(Connection connection) connectionSelected,
+    required TResult Function() saveButtonPressed,
+  }) {
+    return connectionSelected(connection);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String connectionName)? connectionNameChanged,
+    TResult? Function(String connectionUrl)? connectionUrlChanged,
+    TResult? Function(Connection connection)? connectionSelected,
+    TResult? Function()? saveButtonPressed,
+  }) {
+    return connectionSelected?.call(connection);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String connectionName)? connectionNameChanged,
+    TResult Function(String connectionUrl)? connectionUrlChanged,
+    TResult Function(Connection connection)? connectionSelected,
+    TResult Function()? saveButtonPressed,
+    required TResult orElse(),
+  }) {
+    if (connectionSelected != null) {
+      return connectionSelected(connection);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ConnectionNameChanged value)
+        connectionNameChanged,
+    required TResult Function(_ConnectionUrlChanged value) connectionUrlChanged,
+    required TResult Function(_ConnectionSelected value) connectionSelected,
+    required TResult Function(_SaveButtonPressed value) saveButtonPressed,
+  }) {
+    return connectionSelected(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ConnectionNameChanged value)? connectionNameChanged,
+    TResult? Function(_ConnectionUrlChanged value)? connectionUrlChanged,
+    TResult? Function(_ConnectionSelected value)? connectionSelected,
+    TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
+  }) {
+    return connectionSelected?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ConnectionNameChanged value)? connectionNameChanged,
+    TResult Function(_ConnectionUrlChanged value)? connectionUrlChanged,
+    TResult Function(_ConnectionSelected value)? connectionSelected,
+    TResult Function(_SaveButtonPressed value)? saveButtonPressed,
+    required TResult orElse(),
+  }) {
+    if (connectionSelected != null) {
+      return connectionSelected(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ConnectionSelected implements ConnectionFormEvent {
+  const factory _ConnectionSelected({required final Connection connection}) =
+      _$ConnectionSelectedImpl;
+
+  Connection get connection;
+  @JsonKey(ignore: true)
+  _$$ConnectionSelectedImplCopyWith<_$ConnectionSelectedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -409,6 +576,7 @@ class _$SaveButtonPressedImpl implements _SaveButtonPressed {
   TResult when<TResult extends Object?>({
     required TResult Function(String connectionName) connectionNameChanged,
     required TResult Function(String connectionUrl) connectionUrlChanged,
+    required TResult Function(Connection connection) connectionSelected,
     required TResult Function() saveButtonPressed,
   }) {
     return saveButtonPressed();
@@ -419,6 +587,7 @@ class _$SaveButtonPressedImpl implements _SaveButtonPressed {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String connectionName)? connectionNameChanged,
     TResult? Function(String connectionUrl)? connectionUrlChanged,
+    TResult? Function(Connection connection)? connectionSelected,
     TResult? Function()? saveButtonPressed,
   }) {
     return saveButtonPressed?.call();
@@ -429,6 +598,7 @@ class _$SaveButtonPressedImpl implements _SaveButtonPressed {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String connectionName)? connectionNameChanged,
     TResult Function(String connectionUrl)? connectionUrlChanged,
+    TResult Function(Connection connection)? connectionSelected,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -444,6 +614,7 @@ class _$SaveButtonPressedImpl implements _SaveButtonPressed {
     required TResult Function(_ConnectionNameChanged value)
         connectionNameChanged,
     required TResult Function(_ConnectionUrlChanged value) connectionUrlChanged,
+    required TResult Function(_ConnectionSelected value) connectionSelected,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return saveButtonPressed(this);
@@ -454,6 +625,7 @@ class _$SaveButtonPressedImpl implements _SaveButtonPressed {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ConnectionNameChanged value)? connectionNameChanged,
     TResult? Function(_ConnectionUrlChanged value)? connectionUrlChanged,
+    TResult? Function(_ConnectionSelected value)? connectionSelected,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return saveButtonPressed?.call(this);
@@ -464,6 +636,7 @@ class _$SaveButtonPressedImpl implements _SaveButtonPressed {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ConnectionNameChanged value)? connectionNameChanged,
     TResult Function(_ConnectionUrlChanged value)? connectionUrlChanged,
+    TResult Function(_ConnectionSelected value)? connectionSelected,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -481,8 +654,10 @@ abstract class _SaveButtonPressed implements ConnectionFormEvent {
 /// @nodoc
 mixin _$ConnectionFormState {
   bool get isSubmitting => throw _privateConstructorUsedError;
+  bool get isLoading => throw _privateConstructorUsedError;
   bool get showValidationError => throw _privateConstructorUsedError;
   bool get isSaved => throw _privateConstructorUsedError;
+  dynamic get connectionKey => throw _privateConstructorUsedError;
   ConnectionFormData get connectionFormData =>
       throw _privateConstructorUsedError;
   Option<Either<ConnectionFailure, Unit>> get failureOrSucessOption =>
@@ -501,8 +676,10 @@ abstract class $ConnectionFormStateCopyWith<$Res> {
   @useResult
   $Res call(
       {bool isSubmitting,
+      bool isLoading,
       bool showValidationError,
       bool isSaved,
+      dynamic connectionKey,
       ConnectionFormData connectionFormData,
       Option<Either<ConnectionFailure, Unit>> failureOrSucessOption});
 
@@ -523,8 +700,10 @@ class _$ConnectionFormStateCopyWithImpl<$Res, $Val extends ConnectionFormState>
   @override
   $Res call({
     Object? isSubmitting = null,
+    Object? isLoading = null,
     Object? showValidationError = null,
     Object? isSaved = null,
+    Object? connectionKey = freezed,
     Object? connectionFormData = null,
     Object? failureOrSucessOption = null,
   }) {
@@ -532,6 +711,10 @@ class _$ConnectionFormStateCopyWithImpl<$Res, $Val extends ConnectionFormState>
       isSubmitting: null == isSubmitting
           ? _value.isSubmitting
           : isSubmitting // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isLoading: null == isLoading
+          ? _value.isLoading
+          : isLoading // ignore: cast_nullable_to_non_nullable
               as bool,
       showValidationError: null == showValidationError
           ? _value.showValidationError
@@ -541,6 +724,10 @@ class _$ConnectionFormStateCopyWithImpl<$Res, $Val extends ConnectionFormState>
           ? _value.isSaved
           : isSaved // ignore: cast_nullable_to_non_nullable
               as bool,
+      connectionKey: freezed == connectionKey
+          ? _value.connectionKey
+          : connectionKey // ignore: cast_nullable_to_non_nullable
+              as dynamic,
       connectionFormData: null == connectionFormData
           ? _value.connectionFormData
           : connectionFormData // ignore: cast_nullable_to_non_nullable
@@ -572,8 +759,10 @@ abstract class _$$ConnectionFormStateImplCopyWith<$Res>
   @useResult
   $Res call(
       {bool isSubmitting,
+      bool isLoading,
       bool showValidationError,
       bool isSaved,
+      dynamic connectionKey,
       ConnectionFormData connectionFormData,
       Option<Either<ConnectionFailure, Unit>> failureOrSucessOption});
 
@@ -593,8 +782,10 @@ class __$$ConnectionFormStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? isSubmitting = null,
+    Object? isLoading = null,
     Object? showValidationError = null,
     Object? isSaved = null,
+    Object? connectionKey = freezed,
     Object? connectionFormData = null,
     Object? failureOrSucessOption = null,
   }) {
@@ -602,6 +793,10 @@ class __$$ConnectionFormStateImplCopyWithImpl<$Res>
       isSubmitting: null == isSubmitting
           ? _value.isSubmitting
           : isSubmitting // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isLoading: null == isLoading
+          ? _value.isLoading
+          : isLoading // ignore: cast_nullable_to_non_nullable
               as bool,
       showValidationError: null == showValidationError
           ? _value.showValidationError
@@ -611,6 +806,10 @@ class __$$ConnectionFormStateImplCopyWithImpl<$Res>
           ? _value.isSaved
           : isSaved // ignore: cast_nullable_to_non_nullable
               as bool,
+      connectionKey: freezed == connectionKey
+          ? _value.connectionKey
+          : connectionKey // ignore: cast_nullable_to_non_nullable
+              as dynamic,
       connectionFormData: null == connectionFormData
           ? _value.connectionFormData
           : connectionFormData // ignore: cast_nullable_to_non_nullable
@@ -628,17 +827,23 @@ class __$$ConnectionFormStateImplCopyWithImpl<$Res>
 class _$ConnectionFormStateImpl implements _ConnectionFormState {
   const _$ConnectionFormStateImpl(
       {required this.isSubmitting,
+      required this.isLoading,
       required this.showValidationError,
       required this.isSaved,
+      required this.connectionKey,
       required this.connectionFormData,
       required this.failureOrSucessOption});
 
   @override
   final bool isSubmitting;
   @override
+  final bool isLoading;
+  @override
   final bool showValidationError;
   @override
   final bool isSaved;
+  @override
+  final dynamic connectionKey;
   @override
   final ConnectionFormData connectionFormData;
   @override
@@ -646,7 +851,7 @@ class _$ConnectionFormStateImpl implements _ConnectionFormState {
 
   @override
   String toString() {
-    return 'ConnectionFormState(isSubmitting: $isSubmitting, showValidationError: $showValidationError, isSaved: $isSaved, connectionFormData: $connectionFormData, failureOrSucessOption: $failureOrSucessOption)';
+    return 'ConnectionFormState(isSubmitting: $isSubmitting, isLoading: $isLoading, showValidationError: $showValidationError, isSaved: $isSaved, connectionKey: $connectionKey, connectionFormData: $connectionFormData, failureOrSucessOption: $failureOrSucessOption)';
   }
 
   @override
@@ -656,9 +861,13 @@ class _$ConnectionFormStateImpl implements _ConnectionFormState {
             other is _$ConnectionFormStateImpl &&
             (identical(other.isSubmitting, isSubmitting) ||
                 other.isSubmitting == isSubmitting) &&
+            (identical(other.isLoading, isLoading) ||
+                other.isLoading == isLoading) &&
             (identical(other.showValidationError, showValidationError) ||
                 other.showValidationError == showValidationError) &&
             (identical(other.isSaved, isSaved) || other.isSaved == isSaved) &&
+            const DeepCollectionEquality()
+                .equals(other.connectionKey, connectionKey) &&
             (identical(other.connectionFormData, connectionFormData) ||
                 other.connectionFormData == connectionFormData) &&
             (identical(other.failureOrSucessOption, failureOrSucessOption) ||
@@ -666,8 +875,15 @@ class _$ConnectionFormStateImpl implements _ConnectionFormState {
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, isSubmitting,
-      showValidationError, isSaved, connectionFormData, failureOrSucessOption);
+  int get hashCode => Object.hash(
+      runtimeType,
+      isSubmitting,
+      isLoading,
+      showValidationError,
+      isSaved,
+      const DeepCollectionEquality().hash(connectionKey),
+      connectionFormData,
+      failureOrSucessOption);
 
   @JsonKey(ignore: true)
   @override
@@ -680,8 +896,10 @@ class _$ConnectionFormStateImpl implements _ConnectionFormState {
 abstract class _ConnectionFormState implements ConnectionFormState {
   const factory _ConnectionFormState(
       {required final bool isSubmitting,
+      required final bool isLoading,
       required final bool showValidationError,
       required final bool isSaved,
+      required final dynamic connectionKey,
       required final ConnectionFormData connectionFormData,
       required final Option<Either<ConnectionFailure, Unit>>
           failureOrSucessOption}) = _$ConnectionFormStateImpl;
@@ -689,9 +907,13 @@ abstract class _ConnectionFormState implements ConnectionFormState {
   @override
   bool get isSubmitting;
   @override
+  bool get isLoading;
+  @override
   bool get showValidationError;
   @override
   bool get isSaved;
+  @override
+  dynamic get connectionKey;
   @override
   ConnectionFormData get connectionFormData;
   @override
