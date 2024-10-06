@@ -11,5 +11,7 @@ class ConnectionFormEvent with _$ConnectionFormEvent {
   const factory ConnectionFormEvent.connectionSelected({
     required Connection connection,
   }) = _ConnectionSelected;
+  const factory ConnectionFormEvent.newConnectionButtonPressed() =
+      _NewConnectionButtonPressed;
   const factory ConnectionFormEvent.saveButtonPressed() = _SaveButtonPressed;
 }

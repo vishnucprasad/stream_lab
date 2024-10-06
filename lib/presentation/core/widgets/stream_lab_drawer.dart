@@ -79,7 +79,9 @@ class StreamLabDrawer extends StatelessWidget {
             Padding(
               padding: kTilePadding.copyWith(bottom: 8),
               child: ListTile(
-                onTap: () {},
+                onTap: () => context.read<ConnectionFormBloc>().add(
+                      const ConnectionFormEvent.newConnectionButtonPressed(),
+                    ),
                 tileColor: kPrimaryColor,
                 textColor: Colors.white,
                 iconColor: Colors.white,

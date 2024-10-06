@@ -32,17 +32,22 @@ class ConnectionFormBloc
           ),
           failureOrSucessOption: none(),
         )),
-        connectionSelected: (e) async {
-          emit(state.copyWith(
-            isLoading: true,
-            isSubmitting: false,
-            isSaved: true,
-            connectionKey: e.connection.key,
-            connectionFormData: e.connection.toDomain(),
-            showValidationError: false,
-            failureOrSucessOption: none(),
-          ));
-        },
+        connectionSelected: (e) async => emit(state.copyWith(
+          isSubmitting: false,
+          isSaved: true,
+          connectionKey: e.connection.key,
+          connectionFormData: e.connection.toDomain(),
+          showValidationError: false,
+          failureOrSucessOption: none(),
+        )),
+        newConnectionButtonPressed: (_) async => emit(state.copyWith(
+          isSubmitting: false,
+          isSaved: true,
+          connectionKey: null,
+          connectionFormData: ConnectionFormData.empty(),
+          showValidationError: false,
+          failureOrSucessOption: none(),
+        )),
         saveButtonPressed: (_) async {
           Either<ConnectionFailure, Unit>? failureOrSuccess;
 
