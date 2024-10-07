@@ -10,6 +10,10 @@ abstract class IConnectionRepository {
   Future<Either<ConnectionFailure, Unit>> duplicateConnection({
     required Connection connection,
   });
+  Future<Either<ConnectionFailure, Unit>> updateConnection({
+    required dynamic key,
+    required Connection connection,
+  });
   Future<Either<ConnectionFailure, Unit>> deleteConnection({
     required dynamic key,
   });

@@ -58,11 +58,20 @@ class ConnectionFormBloc
           ));
 
           if (state.connectionFormData.failureOption.isNone()) {
-            failureOrSuccess = await _connectionRepository.createConnection(
-              connection: Connection.fromDomain(
-                state.connectionFormData,
-              ),
-            );
+            if (state.connectionKey == null) {
+              failureOrSuccess = await _connectionRepository.createConnection(
+                connection: Connection.fromDomain(
+                  state.connectionFormData,
+                ),
+              );
+            } else {
+              failureOrSuccess = await _connectionRepository.updateConnection(
+                key: state.connectionKey,
+                connection: Connection.fromDomain(
+                  state.connectionFormData,
+                ),
+              );
+            }
           }
 
           emit(state.copyWith(
