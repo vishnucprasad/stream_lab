@@ -1,3 +1,4 @@
+import 'package:another_flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart' hide ConnectionState;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:stream_lab/application/connection/connection_bloc.dart';
@@ -68,7 +69,65 @@ class StreamLabDrawer extends StatelessWidget {
                             connection.connectionName,
                             style: kDrawerTextStyle,
                           ),
-                          trailing: const Icon(Icons.more_vert),
+                          trailing: PopupMenuButton(
+                            itemBuilder: (BuildContext context) => [
+                              const PopupMenuItem(
+                                child: ListTile(
+                                  leading: Icon(
+                                    Icons.link,
+                                    color: Colors.green,
+                                  ),
+                                  title: Text('Connect to Server'),
+                                ),
+                              ),
+                              const PopupMenuItem(
+                                child: ListTile(
+                                  leading: Icon(
+                                    Icons.control_point_duplicate,
+                                    color: Colors.blue,
+                                  ),
+                                  title: Text('Duplicate Connection'),
+                                ),
+                              ),
+                              PopupMenuItem(
+                                onTap: () {
+                                  FlushbarHelper.createAction(
+                                    message:
+                                        'Are you sure you want to delete ${connection.connectionName} ?',
+                                    button: TextButton(
+                                      style: const ButtonStyle(
+                                        foregroundColor:
+                                            WidgetStatePropertyAll<Color>(
+                                          Colors.red,
+                                        ),
+                                      ),
+                                      onPressed: () {
+                                        context.read<ConnectionBloc>().add(
+                                            ConnectionEvent.deleteConnection(
+                                                key: connection.key));
+                                        Navigator.pop(context);
+                                      },
+                                      child: const Text('DELETE'),
+                                    ),
+                                    duration: const Duration(seconds: 5),
+                                  ).show(context);
+                                },
+                                child: const ListTile(
+                                  leading: Icon(
+                                    Icons.delete,
+                                    color: Colors.red,
+                                  ),
+                                  title: Text('Delete Connection'),
+                                ),
+                              ),
+                            ],
+                            tooltip: 'More',
+                            child: const Icon(Icons.more_vert),
+                          ),
+                          contentPadding: const EdgeInsets.only(
+                            left: 16,
+                            right: 8,
+                          ),
                         ),
                       );
                     },

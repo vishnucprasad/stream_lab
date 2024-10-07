@@ -19,32 +19,38 @@ mixin _$ConnectionEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loadConnections,
+    required TResult Function(dynamic key) deleteConnection,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loadConnections,
+    TResult? Function(dynamic key)? deleteConnection,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loadConnections,
+    TResult Function(dynamic key)? deleteConnection,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_LoadConnections value) loadConnections,
+    required TResult Function(_deleteConnection value) deleteConnection,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_LoadConnections value)? loadConnections,
+    TResult? Function(_deleteConnection value)? deleteConnection,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_LoadConnections value)? loadConnections,
+    TResult Function(_deleteConnection value)? deleteConnection,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -107,6 +113,7 @@ class _$LoadConnectionsImpl implements _LoadConnections {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loadConnections,
+    required TResult Function(dynamic key) deleteConnection,
   }) {
     return loadConnections();
   }
@@ -115,6 +122,7 @@ class _$LoadConnectionsImpl implements _LoadConnections {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loadConnections,
+    TResult? Function(dynamic key)? deleteConnection,
   }) {
     return loadConnections?.call();
   }
@@ -123,6 +131,7 @@ class _$LoadConnectionsImpl implements _LoadConnections {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loadConnections,
+    TResult Function(dynamic key)? deleteConnection,
     required TResult orElse(),
   }) {
     if (loadConnections != null) {
@@ -135,6 +144,7 @@ class _$LoadConnectionsImpl implements _LoadConnections {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_LoadConnections value) loadConnections,
+    required TResult Function(_deleteConnection value) deleteConnection,
   }) {
     return loadConnections(this);
   }
@@ -143,6 +153,7 @@ class _$LoadConnectionsImpl implements _LoadConnections {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_LoadConnections value)? loadConnections,
+    TResult? Function(_deleteConnection value)? deleteConnection,
   }) {
     return loadConnections?.call(this);
   }
@@ -151,6 +162,7 @@ class _$LoadConnectionsImpl implements _LoadConnections {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_LoadConnections value)? loadConnections,
+    TResult Function(_deleteConnection value)? deleteConnection,
     required TResult orElse(),
   }) {
     if (loadConnections != null) {
@@ -162,6 +174,142 @@ class _$LoadConnectionsImpl implements _LoadConnections {
 
 abstract class _LoadConnections implements ConnectionEvent {
   const factory _LoadConnections() = _$LoadConnectionsImpl;
+}
+
+/// @nodoc
+abstract class _$$deleteConnectionImplCopyWith<$Res> {
+  factory _$$deleteConnectionImplCopyWith(_$deleteConnectionImpl value,
+          $Res Function(_$deleteConnectionImpl) then) =
+      __$$deleteConnectionImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({dynamic key});
+}
+
+/// @nodoc
+class __$$deleteConnectionImplCopyWithImpl<$Res>
+    extends _$ConnectionEventCopyWithImpl<$Res, _$deleteConnectionImpl>
+    implements _$$deleteConnectionImplCopyWith<$Res> {
+  __$$deleteConnectionImplCopyWithImpl(_$deleteConnectionImpl _value,
+      $Res Function(_$deleteConnectionImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? key = freezed,
+  }) {
+    return _then(_$deleteConnectionImpl(
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$deleteConnectionImpl implements _deleteConnection {
+  const _$deleteConnectionImpl({required this.key});
+
+  @override
+  final dynamic key;
+
+  @override
+  String toString() {
+    return 'ConnectionEvent.deleteConnection(key: $key)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$deleteConnectionImpl &&
+            const DeepCollectionEquality().equals(other.key, key));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(key));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$deleteConnectionImplCopyWith<_$deleteConnectionImpl> get copyWith =>
+      __$$deleteConnectionImplCopyWithImpl<_$deleteConnectionImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() loadConnections,
+    required TResult Function(dynamic key) deleteConnection,
+  }) {
+    return deleteConnection(key);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? loadConnections,
+    TResult? Function(dynamic key)? deleteConnection,
+  }) {
+    return deleteConnection?.call(key);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? loadConnections,
+    TResult Function(dynamic key)? deleteConnection,
+    required TResult orElse(),
+  }) {
+    if (deleteConnection != null) {
+      return deleteConnection(key);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_LoadConnections value) loadConnections,
+    required TResult Function(_deleteConnection value) deleteConnection,
+  }) {
+    return deleteConnection(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_LoadConnections value)? loadConnections,
+    TResult? Function(_deleteConnection value)? deleteConnection,
+  }) {
+    return deleteConnection?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_LoadConnections value)? loadConnections,
+    TResult Function(_deleteConnection value)? deleteConnection,
+    required TResult orElse(),
+  }) {
+    if (deleteConnection != null) {
+      return deleteConnection(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _deleteConnection implements ConnectionEvent {
+  const factory _deleteConnection({required final dynamic key}) =
+      _$deleteConnectionImpl;
+
+  dynamic get key;
+  @JsonKey(ignore: true)
+  _$$deleteConnectionImplCopyWith<_$deleteConnectionImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc

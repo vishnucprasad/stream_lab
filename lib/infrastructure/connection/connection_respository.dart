@@ -44,6 +44,20 @@ class ConnectionRespository implements IConnectionRepository {
     }
   }
 
+  @override
+  Future<Either<ConnectionFailure, Unit>> deleteConnection({
+    required dynamic key,
+  }) async {
+    try {
+      await connectionBox.delete(key);
+      return right(unit);
+    } catch (_) {
+      return left(const ConnectionFailure.clientFailure(
+        messsage: 'Something went wrong, please try again.',
+      ));
+    }
+  }
+
   bool isDuplicateConnectionName(Connection connection) {
     return connectionBox.values.any(
       (value) =>

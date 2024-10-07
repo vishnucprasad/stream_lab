@@ -7,4 +7,7 @@ abstract class IConnectionRepository {
     required Connection connection,
   });
   Future<Either<ConnectionFailure, List<Connection>>> getAllConnections();
+  Future<Either<ConnectionFailure, Unit>> deleteConnection({
+    required dynamic key,
+  });
 }

@@ -16,30 +16,51 @@ class ConnectionBloc extends Bloc<ConnectionEvent, ConnectionState> {
   ConnectionBloc(this._connectionRepository)
       : super(ConnectionState.initial()) {
     on<ConnectionEvent>((event, emit) async {
-      await event.map(
-        loadConnections: (_) async {
-          emit(state.copyWith(
-            isLoading: true,
-            failureOrSuccessOption: none(),
-          ));
+      await event.map(loadConnections: (_) async {
+        emit(state.copyWith(
+          isLoading: true,
+          failureOrSuccessOption: none(),
+        ));
 
-          final option = await _connectionRepository.getAllConnections();
+        final option = await _connectionRepository.getAllConnections();
 
-          emit(
-            option.fold(
-              (l) => state.copyWith(
-                isLoading: false,
-                failureOrSuccessOption: some(left(l)),
-              ),
-              (r) => state.copyWith(
-                isLoading: false,
-                connections: r,
-                failureOrSuccessOption: some(right(unit)),
-              ),
+        emit(
+          option.fold(
+            (l) => state.copyWith(
+              isLoading: false,
+              failureOrSuccessOption: some(left(l)),
             ),
-          );
-        },
-      );
+            (r) => state.copyWith(
+              isLoading: false,
+              connections: r,
+              failureOrSuccessOption: some(right(unit)),
+            ),
+          ),
+        );
+      }, deleteConnection: (e) async {
+        emit(state.copyWith(
+          isLoading: true,
+          failureOrSuccessOption: none(),
+        ));
+
+        final option = await _connectionRepository.deleteConnection(key: e.key);
+
+        emit(
+          option.fold(
+            (l) => state.copyWith(
+              isLoading: false,
+              failureOrSuccessOption: some(left(l)),
+            ),
+            (r) {
+              add(const ConnectionEvent.loadConnections());
+              return state.copyWith(
+                isLoading: false,
+                failureOrSuccessOption: some(right(r)),
+              );
+            },
+          ),
+        );
+      });
     });
   }
 }
