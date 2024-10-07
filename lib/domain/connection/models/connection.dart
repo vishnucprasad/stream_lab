@@ -33,6 +33,16 @@ class Connection extends HiveObject {
     );
   }
 
+  Connection copyWith({
+    String? connectionName,
+    String? connectionUrl,
+  }) {
+    return Connection(
+      connectionName: connectionName ?? this.connectionName,
+      connectionUrl: connectionUrl ?? this.connectionUrl,
+    );
+  }
+
   @override
   String toString() {
     return 'Connection(connectionName: $connectionName, connectionUrl: $connectionUrl)';

@@ -80,8 +80,13 @@ class StreamLabDrawer extends StatelessWidget {
                                   title: Text('Connect to Server'),
                                 ),
                               ),
-                              const PopupMenuItem(
-                                child: ListTile(
+                              PopupMenuItem(
+                                onTap: () => context
+                                    .read<ConnectionBloc>()
+                                    .add(ConnectionEvent.duplicateConnection(
+                                      connection: connection,
+                                    )),
+                                child: const ListTile(
                                   leading: Icon(
                                     Icons.control_point_duplicate,
                                     color: Colors.blue,

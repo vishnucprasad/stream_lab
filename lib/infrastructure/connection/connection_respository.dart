@@ -45,6 +45,22 @@ class ConnectionRespository implements IConnectionRepository {
   }
 
   @override
+  Future<Either<ConnectionFailure, Unit>> duplicateConnection({
+    required Connection connection,
+  }) async {
+    try {
+      await connectionBox.add(connection.copyWith(
+        connectionName: '${connection.connectionName} copy',
+      ));
+      return right(unit);
+    } catch (_) {
+      return left(const ConnectionFailure.clientFailure(
+        messsage: 'Something went wrong, please try again.',
+      ));
+    }
+  }
+
+  @override
   Future<Either<ConnectionFailure, Unit>> deleteConnection({
     required dynamic key,
   }) async {

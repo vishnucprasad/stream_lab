@@ -20,37 +20,43 @@ mixin _$ConnectionEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() loadConnections,
     required TResult Function(dynamic key) deleteConnection,
+    required TResult Function(Connection connection) duplicateConnection,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loadConnections,
     TResult? Function(dynamic key)? deleteConnection,
+    TResult? Function(Connection connection)? duplicateConnection,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loadConnections,
     TResult Function(dynamic key)? deleteConnection,
+    TResult Function(Connection connection)? duplicateConnection,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_LoadConnections value) loadConnections,
-    required TResult Function(_deleteConnection value) deleteConnection,
+    required TResult Function(_DeleteConnection value) deleteConnection,
+    required TResult Function(_DuplicateConnection value) duplicateConnection,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_LoadConnections value)? loadConnections,
-    TResult? Function(_deleteConnection value)? deleteConnection,
+    TResult? Function(_DeleteConnection value)? deleteConnection,
+    TResult? Function(_DuplicateConnection value)? duplicateConnection,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_LoadConnections value)? loadConnections,
-    TResult Function(_deleteConnection value)? deleteConnection,
+    TResult Function(_DeleteConnection value)? deleteConnection,
+    TResult Function(_DuplicateConnection value)? duplicateConnection,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -114,6 +120,7 @@ class _$LoadConnectionsImpl implements _LoadConnections {
   TResult when<TResult extends Object?>({
     required TResult Function() loadConnections,
     required TResult Function(dynamic key) deleteConnection,
+    required TResult Function(Connection connection) duplicateConnection,
   }) {
     return loadConnections();
   }
@@ -123,6 +130,7 @@ class _$LoadConnectionsImpl implements _LoadConnections {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loadConnections,
     TResult? Function(dynamic key)? deleteConnection,
+    TResult? Function(Connection connection)? duplicateConnection,
   }) {
     return loadConnections?.call();
   }
@@ -132,6 +140,7 @@ class _$LoadConnectionsImpl implements _LoadConnections {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loadConnections,
     TResult Function(dynamic key)? deleteConnection,
+    TResult Function(Connection connection)? duplicateConnection,
     required TResult orElse(),
   }) {
     if (loadConnections != null) {
@@ -144,7 +153,8 @@ class _$LoadConnectionsImpl implements _LoadConnections {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_LoadConnections value) loadConnections,
-    required TResult Function(_deleteConnection value) deleteConnection,
+    required TResult Function(_DeleteConnection value) deleteConnection,
+    required TResult Function(_DuplicateConnection value) duplicateConnection,
   }) {
     return loadConnections(this);
   }
@@ -153,7 +163,8 @@ class _$LoadConnectionsImpl implements _LoadConnections {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_LoadConnections value)? loadConnections,
-    TResult? Function(_deleteConnection value)? deleteConnection,
+    TResult? Function(_DeleteConnection value)? deleteConnection,
+    TResult? Function(_DuplicateConnection value)? duplicateConnection,
   }) {
     return loadConnections?.call(this);
   }
@@ -162,7 +173,8 @@ class _$LoadConnectionsImpl implements _LoadConnections {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_LoadConnections value)? loadConnections,
-    TResult Function(_deleteConnection value)? deleteConnection,
+    TResult Function(_DeleteConnection value)? deleteConnection,
+    TResult Function(_DuplicateConnection value)? duplicateConnection,
     required TResult orElse(),
   }) {
     if (loadConnections != null) {
@@ -177,20 +189,20 @@ abstract class _LoadConnections implements ConnectionEvent {
 }
 
 /// @nodoc
-abstract class _$$deleteConnectionImplCopyWith<$Res> {
-  factory _$$deleteConnectionImplCopyWith(_$deleteConnectionImpl value,
-          $Res Function(_$deleteConnectionImpl) then) =
-      __$$deleteConnectionImplCopyWithImpl<$Res>;
+abstract class _$$DeleteConnectionImplCopyWith<$Res> {
+  factory _$$DeleteConnectionImplCopyWith(_$DeleteConnectionImpl value,
+          $Res Function(_$DeleteConnectionImpl) then) =
+      __$$DeleteConnectionImplCopyWithImpl<$Res>;
   @useResult
   $Res call({dynamic key});
 }
 
 /// @nodoc
-class __$$deleteConnectionImplCopyWithImpl<$Res>
-    extends _$ConnectionEventCopyWithImpl<$Res, _$deleteConnectionImpl>
-    implements _$$deleteConnectionImplCopyWith<$Res> {
-  __$$deleteConnectionImplCopyWithImpl(_$deleteConnectionImpl _value,
-      $Res Function(_$deleteConnectionImpl) _then)
+class __$$DeleteConnectionImplCopyWithImpl<$Res>
+    extends _$ConnectionEventCopyWithImpl<$Res, _$DeleteConnectionImpl>
+    implements _$$DeleteConnectionImplCopyWith<$Res> {
+  __$$DeleteConnectionImplCopyWithImpl(_$DeleteConnectionImpl _value,
+      $Res Function(_$DeleteConnectionImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -198,7 +210,7 @@ class __$$deleteConnectionImplCopyWithImpl<$Res>
   $Res call({
     Object? key = freezed,
   }) {
-    return _then(_$deleteConnectionImpl(
+    return _then(_$DeleteConnectionImpl(
       key: freezed == key
           ? _value.key
           : key // ignore: cast_nullable_to_non_nullable
@@ -209,8 +221,8 @@ class __$$deleteConnectionImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$deleteConnectionImpl implements _deleteConnection {
-  const _$deleteConnectionImpl({required this.key});
+class _$DeleteConnectionImpl implements _DeleteConnection {
+  const _$DeleteConnectionImpl({required this.key});
 
   @override
   final dynamic key;
@@ -224,7 +236,7 @@ class _$deleteConnectionImpl implements _deleteConnection {
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$deleteConnectionImpl &&
+            other is _$DeleteConnectionImpl &&
             const DeepCollectionEquality().equals(other.key, key));
   }
 
@@ -235,8 +247,8 @@ class _$deleteConnectionImpl implements _deleteConnection {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$deleteConnectionImplCopyWith<_$deleteConnectionImpl> get copyWith =>
-      __$$deleteConnectionImplCopyWithImpl<_$deleteConnectionImpl>(
+  _$$DeleteConnectionImplCopyWith<_$DeleteConnectionImpl> get copyWith =>
+      __$$DeleteConnectionImplCopyWithImpl<_$DeleteConnectionImpl>(
           this, _$identity);
 
   @override
@@ -244,6 +256,7 @@ class _$deleteConnectionImpl implements _deleteConnection {
   TResult when<TResult extends Object?>({
     required TResult Function() loadConnections,
     required TResult Function(dynamic key) deleteConnection,
+    required TResult Function(Connection connection) duplicateConnection,
   }) {
     return deleteConnection(key);
   }
@@ -253,6 +266,7 @@ class _$deleteConnectionImpl implements _deleteConnection {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loadConnections,
     TResult? Function(dynamic key)? deleteConnection,
+    TResult? Function(Connection connection)? duplicateConnection,
   }) {
     return deleteConnection?.call(key);
   }
@@ -262,6 +276,7 @@ class _$deleteConnectionImpl implements _deleteConnection {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loadConnections,
     TResult Function(dynamic key)? deleteConnection,
+    TResult Function(Connection connection)? duplicateConnection,
     required TResult orElse(),
   }) {
     if (deleteConnection != null) {
@@ -274,7 +289,8 @@ class _$deleteConnectionImpl implements _deleteConnection {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_LoadConnections value) loadConnections,
-    required TResult Function(_deleteConnection value) deleteConnection,
+    required TResult Function(_DeleteConnection value) deleteConnection,
+    required TResult Function(_DuplicateConnection value) duplicateConnection,
   }) {
     return deleteConnection(this);
   }
@@ -283,7 +299,8 @@ class _$deleteConnectionImpl implements _deleteConnection {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_LoadConnections value)? loadConnections,
-    TResult? Function(_deleteConnection value)? deleteConnection,
+    TResult? Function(_DeleteConnection value)? deleteConnection,
+    TResult? Function(_DuplicateConnection value)? duplicateConnection,
   }) {
     return deleteConnection?.call(this);
   }
@@ -292,7 +309,8 @@ class _$deleteConnectionImpl implements _deleteConnection {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_LoadConnections value)? loadConnections,
-    TResult Function(_deleteConnection value)? deleteConnection,
+    TResult Function(_DeleteConnection value)? deleteConnection,
+    TResult Function(_DuplicateConnection value)? duplicateConnection,
     required TResult orElse(),
   }) {
     if (deleteConnection != null) {
@@ -302,13 +320,155 @@ class _$deleteConnectionImpl implements _deleteConnection {
   }
 }
 
-abstract class _deleteConnection implements ConnectionEvent {
-  const factory _deleteConnection({required final dynamic key}) =
-      _$deleteConnectionImpl;
+abstract class _DeleteConnection implements ConnectionEvent {
+  const factory _DeleteConnection({required final dynamic key}) =
+      _$DeleteConnectionImpl;
 
   dynamic get key;
   @JsonKey(ignore: true)
-  _$$deleteConnectionImplCopyWith<_$deleteConnectionImpl> get copyWith =>
+  _$$DeleteConnectionImplCopyWith<_$DeleteConnectionImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$DuplicateConnectionImplCopyWith<$Res> {
+  factory _$$DuplicateConnectionImplCopyWith(_$DuplicateConnectionImpl value,
+          $Res Function(_$DuplicateConnectionImpl) then) =
+      __$$DuplicateConnectionImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({Connection connection});
+}
+
+/// @nodoc
+class __$$DuplicateConnectionImplCopyWithImpl<$Res>
+    extends _$ConnectionEventCopyWithImpl<$Res, _$DuplicateConnectionImpl>
+    implements _$$DuplicateConnectionImplCopyWith<$Res> {
+  __$$DuplicateConnectionImplCopyWithImpl(_$DuplicateConnectionImpl _value,
+      $Res Function(_$DuplicateConnectionImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? connection = null,
+  }) {
+    return _then(_$DuplicateConnectionImpl(
+      connection: null == connection
+          ? _value.connection
+          : connection // ignore: cast_nullable_to_non_nullable
+              as Connection,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$DuplicateConnectionImpl implements _DuplicateConnection {
+  const _$DuplicateConnectionImpl({required this.connection});
+
+  @override
+  final Connection connection;
+
+  @override
+  String toString() {
+    return 'ConnectionEvent.duplicateConnection(connection: $connection)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DuplicateConnectionImpl &&
+            (identical(other.connection, connection) ||
+                other.connection == connection));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, connection);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DuplicateConnectionImplCopyWith<_$DuplicateConnectionImpl> get copyWith =>
+      __$$DuplicateConnectionImplCopyWithImpl<_$DuplicateConnectionImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() loadConnections,
+    required TResult Function(dynamic key) deleteConnection,
+    required TResult Function(Connection connection) duplicateConnection,
+  }) {
+    return duplicateConnection(connection);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? loadConnections,
+    TResult? Function(dynamic key)? deleteConnection,
+    TResult? Function(Connection connection)? duplicateConnection,
+  }) {
+    return duplicateConnection?.call(connection);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? loadConnections,
+    TResult Function(dynamic key)? deleteConnection,
+    TResult Function(Connection connection)? duplicateConnection,
+    required TResult orElse(),
+  }) {
+    if (duplicateConnection != null) {
+      return duplicateConnection(connection);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_LoadConnections value) loadConnections,
+    required TResult Function(_DeleteConnection value) deleteConnection,
+    required TResult Function(_DuplicateConnection value) duplicateConnection,
+  }) {
+    return duplicateConnection(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_LoadConnections value)? loadConnections,
+    TResult? Function(_DeleteConnection value)? deleteConnection,
+    TResult? Function(_DuplicateConnection value)? duplicateConnection,
+  }) {
+    return duplicateConnection?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_LoadConnections value)? loadConnections,
+    TResult Function(_DeleteConnection value)? deleteConnection,
+    TResult Function(_DuplicateConnection value)? duplicateConnection,
+    required TResult orElse(),
+  }) {
+    if (duplicateConnection != null) {
+      return duplicateConnection(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _DuplicateConnection implements ConnectionEvent {
+  const factory _DuplicateConnection({required final Connection connection}) =
+      _$DuplicateConnectionImpl;
+
+  Connection get connection;
+  @JsonKey(ignore: true)
+  _$$DuplicateConnectionImplCopyWith<_$DuplicateConnectionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
