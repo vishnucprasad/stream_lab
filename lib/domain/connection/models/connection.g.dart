@@ -19,17 +19,23 @@ class ConnectionAdapter extends TypeAdapter<Connection> {
     return Connection(
       connectionName: fields[0] as String,
       connectionUrl: fields[1] as String,
+      eventEmitters: (fields[2] as List).cast<Event>(),
+      eventListeners: (fields[4] as List).cast<Event>(),
     );
   }
 
   @override
   void write(BinaryWriter writer, Connection obj) {
     writer
-      ..writeByte(2)
+      ..writeByte(4)
       ..writeByte(0)
       ..write(obj.connectionName)
       ..writeByte(1)
-      ..write(obj.connectionUrl);
+      ..write(obj.connectionUrl)
+      ..writeByte(2)
+      ..write(obj.eventEmitters)
+      ..writeByte(4)
+      ..write(obj.eventListeners);
   }
 
   @override

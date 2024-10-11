@@ -22,6 +22,8 @@ class ConnectionConfigurationsContainer extends StatelessWidget {
           color: Colors.grey[400],
         ),
         child: BlocListener<ConnectionFormBloc, ConnectionFormState>(
+          listenWhen: (p, c) =>
+              p.failureOrSucessOption != c.failureOrSucessOption,
           listener: (context, state) {
             state.failureOrSucessOption.fold(
               () => null,

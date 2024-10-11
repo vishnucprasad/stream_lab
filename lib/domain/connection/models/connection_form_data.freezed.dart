@@ -18,6 +18,8 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$ConnectionFormData {
   ConnectionName get connectionName => throw _privateConstructorUsedError;
   ConnectionURL get connectionUrl => throw _privateConstructorUsedError;
+  List<EventFormData> get eventEmitters => throw _privateConstructorUsedError;
+  List<EventFormData> get eventListeners => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $ConnectionFormDataCopyWith<ConnectionFormData> get copyWith =>
@@ -30,7 +32,11 @@ abstract class $ConnectionFormDataCopyWith<$Res> {
           ConnectionFormData value, $Res Function(ConnectionFormData) then) =
       _$ConnectionFormDataCopyWithImpl<$Res, ConnectionFormData>;
   @useResult
-  $Res call({ConnectionName connectionName, ConnectionURL connectionUrl});
+  $Res call(
+      {ConnectionName connectionName,
+      ConnectionURL connectionUrl,
+      List<EventFormData> eventEmitters,
+      List<EventFormData> eventListeners});
 }
 
 /// @nodoc
@@ -48,6 +54,8 @@ class _$ConnectionFormDataCopyWithImpl<$Res, $Val extends ConnectionFormData>
   $Res call({
     Object? connectionName = null,
     Object? connectionUrl = null,
+    Object? eventEmitters = null,
+    Object? eventListeners = null,
   }) {
     return _then(_value.copyWith(
       connectionName: null == connectionName
@@ -58,6 +66,14 @@ class _$ConnectionFormDataCopyWithImpl<$Res, $Val extends ConnectionFormData>
           ? _value.connectionUrl
           : connectionUrl // ignore: cast_nullable_to_non_nullable
               as ConnectionURL,
+      eventEmitters: null == eventEmitters
+          ? _value.eventEmitters
+          : eventEmitters // ignore: cast_nullable_to_non_nullable
+              as List<EventFormData>,
+      eventListeners: null == eventListeners
+          ? _value.eventListeners
+          : eventListeners // ignore: cast_nullable_to_non_nullable
+              as List<EventFormData>,
     ) as $Val);
   }
 }
@@ -70,7 +86,11 @@ abstract class _$$ConnectionFormDataImplCopyWith<$Res>
       __$$ConnectionFormDataImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({ConnectionName connectionName, ConnectionURL connectionUrl});
+  $Res call(
+      {ConnectionName connectionName,
+      ConnectionURL connectionUrl,
+      List<EventFormData> eventEmitters,
+      List<EventFormData> eventListeners});
 }
 
 /// @nodoc
@@ -86,6 +106,8 @@ class __$$ConnectionFormDataImplCopyWithImpl<$Res>
   $Res call({
     Object? connectionName = null,
     Object? connectionUrl = null,
+    Object? eventEmitters = null,
+    Object? eventListeners = null,
   }) {
     return _then(_$ConnectionFormDataImpl(
       connectionName: null == connectionName
@@ -96,6 +118,14 @@ class __$$ConnectionFormDataImplCopyWithImpl<$Res>
           ? _value.connectionUrl
           : connectionUrl // ignore: cast_nullable_to_non_nullable
               as ConnectionURL,
+      eventEmitters: null == eventEmitters
+          ? _value._eventEmitters
+          : eventEmitters // ignore: cast_nullable_to_non_nullable
+              as List<EventFormData>,
+      eventListeners: null == eventListeners
+          ? _value._eventListeners
+          : eventListeners // ignore: cast_nullable_to_non_nullable
+              as List<EventFormData>,
     ));
   }
 }
@@ -104,17 +134,37 @@ class __$$ConnectionFormDataImplCopyWithImpl<$Res>
 
 class _$ConnectionFormDataImpl extends _ConnectionFormData {
   const _$ConnectionFormDataImpl(
-      {required this.connectionName, required this.connectionUrl})
-      : super._();
+      {required this.connectionName,
+      required this.connectionUrl,
+      required final List<EventFormData> eventEmitters,
+      required final List<EventFormData> eventListeners})
+      : _eventEmitters = eventEmitters,
+        _eventListeners = eventListeners,
+        super._();
 
   @override
   final ConnectionName connectionName;
   @override
   final ConnectionURL connectionUrl;
+  final List<EventFormData> _eventEmitters;
+  @override
+  List<EventFormData> get eventEmitters {
+    if (_eventEmitters is EqualUnmodifiableListView) return _eventEmitters;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_eventEmitters);
+  }
+
+  final List<EventFormData> _eventListeners;
+  @override
+  List<EventFormData> get eventListeners {
+    if (_eventListeners is EqualUnmodifiableListView) return _eventListeners;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_eventListeners);
+  }
 
   @override
   String toString() {
-    return 'ConnectionFormData(connectionName: $connectionName, connectionUrl: $connectionUrl)';
+    return 'ConnectionFormData(connectionName: $connectionName, connectionUrl: $connectionUrl, eventEmitters: $eventEmitters, eventListeners: $eventListeners)';
   }
 
   @override
@@ -125,11 +175,20 @@ class _$ConnectionFormDataImpl extends _ConnectionFormData {
             (identical(other.connectionName, connectionName) ||
                 other.connectionName == connectionName) &&
             (identical(other.connectionUrl, connectionUrl) ||
-                other.connectionUrl == connectionUrl));
+                other.connectionUrl == connectionUrl) &&
+            const DeepCollectionEquality()
+                .equals(other._eventEmitters, _eventEmitters) &&
+            const DeepCollectionEquality()
+                .equals(other._eventListeners, _eventListeners));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, connectionName, connectionUrl);
+  int get hashCode => Object.hash(
+      runtimeType,
+      connectionName,
+      connectionUrl,
+      const DeepCollectionEquality().hash(_eventEmitters),
+      const DeepCollectionEquality().hash(_eventListeners));
 
   @JsonKey(ignore: true)
   @override
@@ -141,14 +200,21 @@ class _$ConnectionFormDataImpl extends _ConnectionFormData {
 
 abstract class _ConnectionFormData extends ConnectionFormData {
   const factory _ConnectionFormData(
-      {required final ConnectionName connectionName,
-      required final ConnectionURL connectionUrl}) = _$ConnectionFormDataImpl;
+          {required final ConnectionName connectionName,
+          required final ConnectionURL connectionUrl,
+          required final List<EventFormData> eventEmitters,
+          required final List<EventFormData> eventListeners}) =
+      _$ConnectionFormDataImpl;
   const _ConnectionFormData._() : super._();
 
   @override
   ConnectionName get connectionName;
   @override
   ConnectionURL get connectionUrl;
+  @override
+  List<EventFormData> get eventEmitters;
+  @override
+  List<EventFormData> get eventListeners;
   @override
   @JsonKey(ignore: true)
   _$$ConnectionFormDataImplCopyWith<_$ConnectionFormDataImpl> get copyWith =>
