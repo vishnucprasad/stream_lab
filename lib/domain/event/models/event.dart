@@ -21,11 +21,15 @@ class Event extends HiveObject {
   @HiveField(3)
   final String data;
 
+  @HiveField(4)
+  final bool isEnabled;
+
   Event({
     required this.name,
     required this.typeIndex,
     required this.dataTypeIndex,
     required this.data,
+    required this.isEnabled,
   });
 
   factory Event.fromDomain(EventFormData eventFormData) {
@@ -34,6 +38,7 @@ class Event extends HiveObject {
       typeIndex: eventFormData.type.index,
       dataTypeIndex: eventFormData.dataType.index,
       data: eventFormData.data,
+      isEnabled: eventFormData.isEnabled,
     );
   }
 
@@ -43,6 +48,7 @@ class Event extends HiveObject {
       type: EventType.values[typeIndex],
       dataType: EventDataType.values[dataTypeIndex],
       data: data,
+      isEnabled: isEnabled,
     );
   }
 
@@ -51,17 +57,19 @@ class Event extends HiveObject {
     int? typeIndex,
     int? dataTypeIndex,
     String? data,
+    bool? isEnabled,
   }) {
     return Event(
       name: name ?? this.name,
       typeIndex: typeIndex ?? this.typeIndex,
       dataTypeIndex: dataTypeIndex ?? this.dataTypeIndex,
       data: data ?? this.data,
+      isEnabled: isEnabled ?? this.isEnabled,
     );
   }
 
   @override
   String toString() {
-    return 'Event(name: $name, typeIndex: $typeIndex, dataTypeIndex: $dataTypeIndex, data: $data)';
+    return 'Event(name: $name, typeIndex: $typeIndex, dataTypeIndex: $dataTypeIndex, data: $data, isEnabled: $isEnabled)';
   }
 }

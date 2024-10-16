@@ -1206,10 +1206,12 @@ mixin _$ConnectionFormState {
   bool get showValidationError => throw _privateConstructorUsedError;
   bool get isSaved => throw _privateConstructorUsedError;
   dynamic get connectionKey => throw _privateConstructorUsedError;
-  int? get eventIndex => throw _privateConstructorUsedError;
+  int? get emitterIndex => throw _privateConstructorUsedError;
+  int? get listenerIndex => throw _privateConstructorUsedError;
   ConnectionFormData get connectionFormData =>
       throw _privateConstructorUsedError;
-  EventFormData? get eventFormData => throw _privateConstructorUsedError;
+  EventFormData? get emitterFormData => throw _privateConstructorUsedError;
+  EventFormData? get listenerFormData => throw _privateConstructorUsedError;
   Option<Either<ConnectionFailure, Unit>> get failureOrSucessOption =>
       throw _privateConstructorUsedError;
 
@@ -1229,13 +1231,16 @@ abstract class $ConnectionFormStateCopyWith<$Res> {
       bool showValidationError,
       bool isSaved,
       dynamic connectionKey,
-      int? eventIndex,
+      int? emitterIndex,
+      int? listenerIndex,
       ConnectionFormData connectionFormData,
-      EventFormData? eventFormData,
+      EventFormData? emitterFormData,
+      EventFormData? listenerFormData,
       Option<Either<ConnectionFailure, Unit>> failureOrSucessOption});
 
   $ConnectionFormDataCopyWith<$Res> get connectionFormData;
-  $EventFormDataCopyWith<$Res>? get eventFormData;
+  $EventFormDataCopyWith<$Res>? get emitterFormData;
+  $EventFormDataCopyWith<$Res>? get listenerFormData;
 }
 
 /// @nodoc
@@ -1255,9 +1260,11 @@ class _$ConnectionFormStateCopyWithImpl<$Res, $Val extends ConnectionFormState>
     Object? showValidationError = null,
     Object? isSaved = null,
     Object? connectionKey = freezed,
-    Object? eventIndex = freezed,
+    Object? emitterIndex = freezed,
+    Object? listenerIndex = freezed,
     Object? connectionFormData = null,
-    Object? eventFormData = freezed,
+    Object? emitterFormData = freezed,
+    Object? listenerFormData = freezed,
     Object? failureOrSucessOption = null,
   }) {
     return _then(_value.copyWith(
@@ -1277,17 +1284,25 @@ class _$ConnectionFormStateCopyWithImpl<$Res, $Val extends ConnectionFormState>
           ? _value.connectionKey
           : connectionKey // ignore: cast_nullable_to_non_nullable
               as dynamic,
-      eventIndex: freezed == eventIndex
-          ? _value.eventIndex
-          : eventIndex // ignore: cast_nullable_to_non_nullable
+      emitterIndex: freezed == emitterIndex
+          ? _value.emitterIndex
+          : emitterIndex // ignore: cast_nullable_to_non_nullable
+              as int?,
+      listenerIndex: freezed == listenerIndex
+          ? _value.listenerIndex
+          : listenerIndex // ignore: cast_nullable_to_non_nullable
               as int?,
       connectionFormData: null == connectionFormData
           ? _value.connectionFormData
           : connectionFormData // ignore: cast_nullable_to_non_nullable
               as ConnectionFormData,
-      eventFormData: freezed == eventFormData
-          ? _value.eventFormData
-          : eventFormData // ignore: cast_nullable_to_non_nullable
+      emitterFormData: freezed == emitterFormData
+          ? _value.emitterFormData
+          : emitterFormData // ignore: cast_nullable_to_non_nullable
+              as EventFormData?,
+      listenerFormData: freezed == listenerFormData
+          ? _value.listenerFormData
+          : listenerFormData // ignore: cast_nullable_to_non_nullable
               as EventFormData?,
       failureOrSucessOption: null == failureOrSucessOption
           ? _value.failureOrSucessOption
@@ -1307,13 +1322,25 @@ class _$ConnectionFormStateCopyWithImpl<$Res, $Val extends ConnectionFormState>
 
   @override
   @pragma('vm:prefer-inline')
-  $EventFormDataCopyWith<$Res>? get eventFormData {
-    if (_value.eventFormData == null) {
+  $EventFormDataCopyWith<$Res>? get emitterFormData {
+    if (_value.emitterFormData == null) {
       return null;
     }
 
-    return $EventFormDataCopyWith<$Res>(_value.eventFormData!, (value) {
-      return _then(_value.copyWith(eventFormData: value) as $Val);
+    return $EventFormDataCopyWith<$Res>(_value.emitterFormData!, (value) {
+      return _then(_value.copyWith(emitterFormData: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $EventFormDataCopyWith<$Res>? get listenerFormData {
+    if (_value.listenerFormData == null) {
+      return null;
+    }
+
+    return $EventFormDataCopyWith<$Res>(_value.listenerFormData!, (value) {
+      return _then(_value.copyWith(listenerFormData: value) as $Val);
     });
   }
 }
@@ -1331,15 +1358,19 @@ abstract class _$$ConnectionFormStateImplCopyWith<$Res>
       bool showValidationError,
       bool isSaved,
       dynamic connectionKey,
-      int? eventIndex,
+      int? emitterIndex,
+      int? listenerIndex,
       ConnectionFormData connectionFormData,
-      EventFormData? eventFormData,
+      EventFormData? emitterFormData,
+      EventFormData? listenerFormData,
       Option<Either<ConnectionFailure, Unit>> failureOrSucessOption});
 
   @override
   $ConnectionFormDataCopyWith<$Res> get connectionFormData;
   @override
-  $EventFormDataCopyWith<$Res>? get eventFormData;
+  $EventFormDataCopyWith<$Res>? get emitterFormData;
+  @override
+  $EventFormDataCopyWith<$Res>? get listenerFormData;
 }
 
 /// @nodoc
@@ -1357,9 +1388,11 @@ class __$$ConnectionFormStateImplCopyWithImpl<$Res>
     Object? showValidationError = null,
     Object? isSaved = null,
     Object? connectionKey = freezed,
-    Object? eventIndex = freezed,
+    Object? emitterIndex = freezed,
+    Object? listenerIndex = freezed,
     Object? connectionFormData = null,
-    Object? eventFormData = freezed,
+    Object? emitterFormData = freezed,
+    Object? listenerFormData = freezed,
     Object? failureOrSucessOption = null,
   }) {
     return _then(_$ConnectionFormStateImpl(
@@ -1379,17 +1412,25 @@ class __$$ConnectionFormStateImplCopyWithImpl<$Res>
           ? _value.connectionKey
           : connectionKey // ignore: cast_nullable_to_non_nullable
               as dynamic,
-      eventIndex: freezed == eventIndex
-          ? _value.eventIndex
-          : eventIndex // ignore: cast_nullable_to_non_nullable
+      emitterIndex: freezed == emitterIndex
+          ? _value.emitterIndex
+          : emitterIndex // ignore: cast_nullable_to_non_nullable
+              as int?,
+      listenerIndex: freezed == listenerIndex
+          ? _value.listenerIndex
+          : listenerIndex // ignore: cast_nullable_to_non_nullable
               as int?,
       connectionFormData: null == connectionFormData
           ? _value.connectionFormData
           : connectionFormData // ignore: cast_nullable_to_non_nullable
               as ConnectionFormData,
-      eventFormData: freezed == eventFormData
-          ? _value.eventFormData
-          : eventFormData // ignore: cast_nullable_to_non_nullable
+      emitterFormData: freezed == emitterFormData
+          ? _value.emitterFormData
+          : emitterFormData // ignore: cast_nullable_to_non_nullable
+              as EventFormData?,
+      listenerFormData: freezed == listenerFormData
+          ? _value.listenerFormData
+          : listenerFormData // ignore: cast_nullable_to_non_nullable
               as EventFormData?,
       failureOrSucessOption: null == failureOrSucessOption
           ? _value.failureOrSucessOption
@@ -1407,9 +1448,11 @@ class _$ConnectionFormStateImpl implements _ConnectionFormState {
       required this.showValidationError,
       required this.isSaved,
       required this.connectionKey,
-      required this.eventIndex,
+      required this.emitterIndex,
+      required this.listenerIndex,
       required this.connectionFormData,
-      required this.eventFormData,
+      required this.emitterFormData,
+      required this.listenerFormData,
       required this.failureOrSucessOption});
 
   @override
@@ -1421,17 +1464,21 @@ class _$ConnectionFormStateImpl implements _ConnectionFormState {
   @override
   final dynamic connectionKey;
   @override
-  final int? eventIndex;
+  final int? emitterIndex;
+  @override
+  final int? listenerIndex;
   @override
   final ConnectionFormData connectionFormData;
   @override
-  final EventFormData? eventFormData;
+  final EventFormData? emitterFormData;
+  @override
+  final EventFormData? listenerFormData;
   @override
   final Option<Either<ConnectionFailure, Unit>> failureOrSucessOption;
 
   @override
   String toString() {
-    return 'ConnectionFormState(isSubmitting: $isSubmitting, showValidationError: $showValidationError, isSaved: $isSaved, connectionKey: $connectionKey, eventIndex: $eventIndex, connectionFormData: $connectionFormData, eventFormData: $eventFormData, failureOrSucessOption: $failureOrSucessOption)';
+    return 'ConnectionFormState(isSubmitting: $isSubmitting, showValidationError: $showValidationError, isSaved: $isSaved, connectionKey: $connectionKey, emitterIndex: $emitterIndex, listenerIndex: $listenerIndex, connectionFormData: $connectionFormData, emitterFormData: $emitterFormData, listenerFormData: $listenerFormData, failureOrSucessOption: $failureOrSucessOption)';
   }
 
   @override
@@ -1446,12 +1493,16 @@ class _$ConnectionFormStateImpl implements _ConnectionFormState {
             (identical(other.isSaved, isSaved) || other.isSaved == isSaved) &&
             const DeepCollectionEquality()
                 .equals(other.connectionKey, connectionKey) &&
-            (identical(other.eventIndex, eventIndex) ||
-                other.eventIndex == eventIndex) &&
+            (identical(other.emitterIndex, emitterIndex) ||
+                other.emitterIndex == emitterIndex) &&
+            (identical(other.listenerIndex, listenerIndex) ||
+                other.listenerIndex == listenerIndex) &&
             (identical(other.connectionFormData, connectionFormData) ||
                 other.connectionFormData == connectionFormData) &&
-            (identical(other.eventFormData, eventFormData) ||
-                other.eventFormData == eventFormData) &&
+            (identical(other.emitterFormData, emitterFormData) ||
+                other.emitterFormData == emitterFormData) &&
+            (identical(other.listenerFormData, listenerFormData) ||
+                other.listenerFormData == listenerFormData) &&
             (identical(other.failureOrSucessOption, failureOrSucessOption) ||
                 other.failureOrSucessOption == failureOrSucessOption));
   }
@@ -1463,9 +1514,11 @@ class _$ConnectionFormStateImpl implements _ConnectionFormState {
       showValidationError,
       isSaved,
       const DeepCollectionEquality().hash(connectionKey),
-      eventIndex,
+      emitterIndex,
+      listenerIndex,
       connectionFormData,
-      eventFormData,
+      emitterFormData,
+      listenerFormData,
       failureOrSucessOption);
 
   @JsonKey(ignore: true)
@@ -1482,9 +1535,11 @@ abstract class _ConnectionFormState implements ConnectionFormState {
       required final bool showValidationError,
       required final bool isSaved,
       required final dynamic connectionKey,
-      required final int? eventIndex,
+      required final int? emitterIndex,
+      required final int? listenerIndex,
       required final ConnectionFormData connectionFormData,
-      required final EventFormData? eventFormData,
+      required final EventFormData? emitterFormData,
+      required final EventFormData? listenerFormData,
       required final Option<Either<ConnectionFailure, Unit>>
           failureOrSucessOption}) = _$ConnectionFormStateImpl;
 
@@ -1497,11 +1552,15 @@ abstract class _ConnectionFormState implements ConnectionFormState {
   @override
   dynamic get connectionKey;
   @override
-  int? get eventIndex;
+  int? get emitterIndex;
+  @override
+  int? get listenerIndex;
   @override
   ConnectionFormData get connectionFormData;
   @override
-  EventFormData? get eventFormData;
+  EventFormData? get emitterFormData;
+  @override
+  EventFormData? get listenerFormData;
   @override
   Option<Either<ConnectionFailure, Unit>> get failureOrSucessOption;
   @override

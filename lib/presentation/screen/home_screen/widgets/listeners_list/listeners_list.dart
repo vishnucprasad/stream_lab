@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:stream_lab/application/connection/connection_form/connection_form_bloc.dart';
+import 'package:stream_lab/core/constants.dart';
 import 'package:stream_lab/presentation/core/constants.dart';
 import 'package:stream_lab/presentation/screen/home_screen/widgets/listeners_list/listeners_list_tile.dart';
 
@@ -15,34 +18,63 @@ class ListenersList extends StatelessWidget {
           borderRadius: BorderRadius.circular(8),
           color: Colors.grey[200],
         ),
-        child: Column(
-          children: [
-            Row(
+        child: BlocBuilder<ConnectionFormBloc, ConnectionFormState>(
+          builder: (context, state) {
+            return Column(
               children: [
-                kWidth,
-                const Text(
-                  'Event Listeners',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                  ),
+                Row(
+                  children: [
+                    kWidth,
+                    const Text(
+                      'Event Listeners',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    const Spacer(),
+                    IconButton(
+                      onPressed: () => context
+                          .read<ConnectionFormBloc>()
+                          .add(const ConnectionFormEvent.addEvent(
+                            type: EventType.listener,
+                          )),
+                      icon: const Icon(Icons.add),
+                    ),
+                  ],
                 ),
-                const Spacer(),
-                IconButton(
-                  onPressed: () {},
-                  icon: const Icon(Icons.add),
+                Expanded(
+                  child: state.connectionKey != null
+                      ? state.connectionFormData.eventListeners.isNotEmpty
+                          ? ListView.separated(
+                              itemCount: state
+                                  .connectionFormData.eventListeners.length,
+                              itemBuilder: (context, index) {
+                                return ListenersListTile(
+                                  listenerIndex: index,
+                                );
+                              },
+                              separatorBuilder: (_, __) => kHeight,
+                            )
+                          : const Center(
+                              child: SizedBox(
+                                width: 300,
+                                child: Text(
+                                  'Oops! It seems like there are no event listeners available.',
+                                ),
+                              ),
+                            )
+                      : const Center(
+                          child: SizedBox(
+                            width: 300,
+                            child: Text(
+                              'Select a connection or save this connection to work with events.',
+                            ),
+                          ),
+                        ),
                 ),
               ],
-            ),
-            Expanded(
-              child: ListView.separated(
-                itemCount: 1,
-                itemBuilder: (context, index) {
-                  return const ListenersListTile();
-                },
-                separatorBuilder: (_, __) => kHeight,
-              ),
-            ),
-          ],
+            );
+          },
         ),
       ),
     );

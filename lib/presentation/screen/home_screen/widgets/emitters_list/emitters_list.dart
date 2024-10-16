@@ -49,20 +49,29 @@ class EmittersList extends StatelessWidget {
                 ),
                 Expanded(
                   child: state.connectionKey != null
-                      ? ListView.separated(
-                          itemCount:
-                              Connection.fromDomain(state.connectionFormData)
+                      ? state.connectionFormData.eventEmitters.isNotEmpty
+                          ? ListView.separated(
+                              itemCount: Connection.fromDomain(
+                                      state.connectionFormData)
                                   .eventEmitters
                                   .length,
-                          itemBuilder: (context, index) {
-                            return EmittersListTile(
-                              event: Connection.fromDomain(
-                                state.connectionFormData,
-                              ).eventEmitters[index],
-                            );
-                          },
-                          separatorBuilder: (_, __) => kHeight,
-                        )
+                              itemBuilder: (context, index) {
+                                return EmittersListTile(
+                                  event: Connection.fromDomain(
+                                    state.connectionFormData,
+                                  ).eventEmitters[index],
+                                );
+                              },
+                              separatorBuilder: (_, __) => kHeight,
+                            )
+                          : const Center(
+                              child: SizedBox(
+                                width: 300,
+                                child: Text(
+                                  'Oops! It seems like there are no event emitters available.',
+                                ),
+                              ),
+                            )
                       : const Center(
                           child: SizedBox(
                             width: 300,

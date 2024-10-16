@@ -21,13 +21,14 @@ class EventAdapter extends TypeAdapter<Event> {
       typeIndex: fields[1] as int,
       dataTypeIndex: fields[2] as int,
       data: fields[3] as String,
+      isEnabled: fields[4] as bool,
     );
   }
 
   @override
   void write(BinaryWriter writer, Event obj) {
     writer
-      ..writeByte(4)
+      ..writeByte(5)
       ..writeByte(0)
       ..write(obj.name)
       ..writeByte(1)
@@ -35,7 +36,9 @@ class EventAdapter extends TypeAdapter<Event> {
       ..writeByte(2)
       ..write(obj.dataTypeIndex)
       ..writeByte(3)
-      ..write(obj.data);
+      ..write(obj.data)
+      ..writeByte(4)
+      ..write(obj.isEnabled);
   }
 
   @override

@@ -20,6 +20,7 @@ mixin _$EventFormData {
   EventType get type => throw _privateConstructorUsedError;
   EventDataType get dataType => throw _privateConstructorUsedError;
   String get data => throw _privateConstructorUsedError;
+  bool get isEnabled => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $EventFormDataCopyWith<EventFormData> get copyWith =>
@@ -33,7 +34,11 @@ abstract class $EventFormDataCopyWith<$Res> {
       _$EventFormDataCopyWithImpl<$Res, EventFormData>;
   @useResult
   $Res call(
-      {EventName name, EventType type, EventDataType dataType, String data});
+      {EventName name,
+      EventType type,
+      EventDataType dataType,
+      String data,
+      bool isEnabled});
 }
 
 /// @nodoc
@@ -53,6 +58,7 @@ class _$EventFormDataCopyWithImpl<$Res, $Val extends EventFormData>
     Object? type = null,
     Object? dataType = null,
     Object? data = null,
+    Object? isEnabled = null,
   }) {
     return _then(_value.copyWith(
       name: null == name
@@ -71,6 +77,10 @@ class _$EventFormDataCopyWithImpl<$Res, $Val extends EventFormData>
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as String,
+      isEnabled: null == isEnabled
+          ? _value.isEnabled
+          : isEnabled // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 }
@@ -84,7 +94,11 @@ abstract class _$$EventFormDataImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {EventName name, EventType type, EventDataType dataType, String data});
+      {EventName name,
+      EventType type,
+      EventDataType dataType,
+      String data,
+      bool isEnabled});
 }
 
 /// @nodoc
@@ -102,6 +116,7 @@ class __$$EventFormDataImplCopyWithImpl<$Res>
     Object? type = null,
     Object? dataType = null,
     Object? data = null,
+    Object? isEnabled = null,
   }) {
     return _then(_$EventFormDataImpl(
       name: null == name
@@ -120,6 +135,10 @@ class __$$EventFormDataImplCopyWithImpl<$Res>
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as String,
+      isEnabled: null == isEnabled
+          ? _value.isEnabled
+          : isEnabled // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -131,7 +150,8 @@ class _$EventFormDataImpl extends _EventFormData {
       {required this.name,
       required this.type,
       required this.dataType,
-      required this.data})
+      required this.data,
+      required this.isEnabled})
       : super._();
 
   @override
@@ -142,10 +162,12 @@ class _$EventFormDataImpl extends _EventFormData {
   final EventDataType dataType;
   @override
   final String data;
+  @override
+  final bool isEnabled;
 
   @override
   String toString() {
-    return 'EventFormData(name: $name, type: $type, dataType: $dataType, data: $data)';
+    return 'EventFormData(name: $name, type: $type, dataType: $dataType, data: $data, isEnabled: $isEnabled)';
   }
 
   @override
@@ -157,11 +179,14 @@ class _$EventFormDataImpl extends _EventFormData {
             (identical(other.type, type) || other.type == type) &&
             (identical(other.dataType, dataType) ||
                 other.dataType == dataType) &&
-            (identical(other.data, data) || other.data == data));
+            (identical(other.data, data) || other.data == data) &&
+            (identical(other.isEnabled, isEnabled) ||
+                other.isEnabled == isEnabled));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, name, type, dataType, data);
+  int get hashCode =>
+      Object.hash(runtimeType, name, type, dataType, data, isEnabled);
 
   @JsonKey(ignore: true)
   @override
@@ -175,7 +200,8 @@ abstract class _EventFormData extends EventFormData {
       {required final EventName name,
       required final EventType type,
       required final EventDataType dataType,
-      required final String data}) = _$EventFormDataImpl;
+      required final String data,
+      required final bool isEnabled}) = _$EventFormDataImpl;
   const _EventFormData._() : super._();
 
   @override
@@ -186,6 +212,8 @@ abstract class _EventFormData extends EventFormData {
   EventDataType get dataType;
   @override
   String get data;
+  @override
+  bool get isEnabled;
   @override
   @JsonKey(ignore: true)
   _$$EventFormDataImplCopyWith<_$EventFormDataImpl> get copyWith =>

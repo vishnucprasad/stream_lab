@@ -57,8 +57,8 @@ class ConnectionFormBloc
           if (e.type == EventType.emitter) {
             emit(state.copyWith(
               isSaved: false,
-              eventIndex: state.connectionFormData.eventEmitters.length,
-              eventFormData: EventFormData.empty().copyWith(type: e.type),
+              emitterIndex: state.connectionFormData.eventEmitters.length,
+              emitterFormData: EventFormData.empty().copyWith(type: e.type),
               connectionFormData: state.connectionFormData.copyWith(
                 eventEmitters: [
                   ...state.connectionFormData.eventEmitters,
@@ -71,11 +71,11 @@ class ConnectionFormBloc
           } else {
             emit(state.copyWith(
               isSaved: false,
-              eventIndex: state.connectionFormData.eventListeners.length,
-              eventFormData: EventFormData.empty().copyWith(type: e.type),
+              listenerIndex: state.connectionFormData.eventListeners.length,
+              listenerFormData: EventFormData.empty().copyWith(type: e.type),
               connectionFormData: state.connectionFormData.copyWith(
-                eventEmitters: [
-                  ...state.connectionFormData.eventEmitters,
+                eventListeners: [
+                  ...state.connectionFormData.eventListeners,
                   EventFormData.empty().copyWith(type: e.type),
                 ],
               ),

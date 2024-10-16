@@ -14,6 +14,7 @@ class EventFormData with _$EventFormData {
     required EventType type,
     required EventDataType dataType,
     required String data,
+    required bool isEnabled,
   }) = _EventFormData;
 
   factory EventFormData.empty() {
@@ -22,6 +23,7 @@ class EventFormData with _$EventFormData {
       type: EventType.listener,
       dataType: EventDataType.text,
       data: '',
+      isEnabled: true,
     );
   }
 

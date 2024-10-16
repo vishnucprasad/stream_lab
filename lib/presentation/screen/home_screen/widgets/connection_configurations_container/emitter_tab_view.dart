@@ -14,7 +14,7 @@ class EmitterTabView extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<ConnectionFormBloc, ConnectionFormState>(
       builder: (context, state) {
-        return state.eventFormData != null
+        return state.emitterFormData != null
             ? const Column(
                 children: [
                   Expanded(
@@ -26,7 +26,9 @@ class EmitterTabView extends StatelessWidget {
                 ],
               )
             : const Center(
-                child: Text('No emitters were selected'),
+                child: Text(
+                  'Oops! It seems like there are no event emitters selected.',
+                ),
               );
       },
     );
