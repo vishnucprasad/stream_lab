@@ -1208,7 +1208,7 @@ mixin _$ConnectionFormState {
   dynamic get connectionKey => throw _privateConstructorUsedError;
   int? get emitterIndex => throw _privateConstructorUsedError;
   int? get listenerIndex => throw _privateConstructorUsedError;
-  ConnectionFormData get connectionFormData =>
+  ConnectionFormData? get connectionFormData =>
       throw _privateConstructorUsedError;
   EventFormData? get emitterFormData => throw _privateConstructorUsedError;
   EventFormData? get listenerFormData => throw _privateConstructorUsedError;
@@ -1233,12 +1233,12 @@ abstract class $ConnectionFormStateCopyWith<$Res> {
       dynamic connectionKey,
       int? emitterIndex,
       int? listenerIndex,
-      ConnectionFormData connectionFormData,
+      ConnectionFormData? connectionFormData,
       EventFormData? emitterFormData,
       EventFormData? listenerFormData,
       Option<Either<ConnectionFailure, Unit>> failureOrSucessOption});
 
-  $ConnectionFormDataCopyWith<$Res> get connectionFormData;
+  $ConnectionFormDataCopyWith<$Res>? get connectionFormData;
   $EventFormDataCopyWith<$Res>? get emitterFormData;
   $EventFormDataCopyWith<$Res>? get listenerFormData;
 }
@@ -1262,7 +1262,7 @@ class _$ConnectionFormStateCopyWithImpl<$Res, $Val extends ConnectionFormState>
     Object? connectionKey = freezed,
     Object? emitterIndex = freezed,
     Object? listenerIndex = freezed,
-    Object? connectionFormData = null,
+    Object? connectionFormData = freezed,
     Object? emitterFormData = freezed,
     Object? listenerFormData = freezed,
     Object? failureOrSucessOption = null,
@@ -1292,10 +1292,10 @@ class _$ConnectionFormStateCopyWithImpl<$Res, $Val extends ConnectionFormState>
           ? _value.listenerIndex
           : listenerIndex // ignore: cast_nullable_to_non_nullable
               as int?,
-      connectionFormData: null == connectionFormData
+      connectionFormData: freezed == connectionFormData
           ? _value.connectionFormData
           : connectionFormData // ignore: cast_nullable_to_non_nullable
-              as ConnectionFormData,
+              as ConnectionFormData?,
       emitterFormData: freezed == emitterFormData
           ? _value.emitterFormData
           : emitterFormData // ignore: cast_nullable_to_non_nullable
@@ -1313,8 +1313,12 @@ class _$ConnectionFormStateCopyWithImpl<$Res, $Val extends ConnectionFormState>
 
   @override
   @pragma('vm:prefer-inline')
-  $ConnectionFormDataCopyWith<$Res> get connectionFormData {
-    return $ConnectionFormDataCopyWith<$Res>(_value.connectionFormData,
+  $ConnectionFormDataCopyWith<$Res>? get connectionFormData {
+    if (_value.connectionFormData == null) {
+      return null;
+    }
+
+    return $ConnectionFormDataCopyWith<$Res>(_value.connectionFormData!,
         (value) {
       return _then(_value.copyWith(connectionFormData: value) as $Val);
     });
@@ -1360,13 +1364,13 @@ abstract class _$$ConnectionFormStateImplCopyWith<$Res>
       dynamic connectionKey,
       int? emitterIndex,
       int? listenerIndex,
-      ConnectionFormData connectionFormData,
+      ConnectionFormData? connectionFormData,
       EventFormData? emitterFormData,
       EventFormData? listenerFormData,
       Option<Either<ConnectionFailure, Unit>> failureOrSucessOption});
 
   @override
-  $ConnectionFormDataCopyWith<$Res> get connectionFormData;
+  $ConnectionFormDataCopyWith<$Res>? get connectionFormData;
   @override
   $EventFormDataCopyWith<$Res>? get emitterFormData;
   @override
@@ -1390,7 +1394,7 @@ class __$$ConnectionFormStateImplCopyWithImpl<$Res>
     Object? connectionKey = freezed,
     Object? emitterIndex = freezed,
     Object? listenerIndex = freezed,
-    Object? connectionFormData = null,
+    Object? connectionFormData = freezed,
     Object? emitterFormData = freezed,
     Object? listenerFormData = freezed,
     Object? failureOrSucessOption = null,
@@ -1420,10 +1424,10 @@ class __$$ConnectionFormStateImplCopyWithImpl<$Res>
           ? _value.listenerIndex
           : listenerIndex // ignore: cast_nullable_to_non_nullable
               as int?,
-      connectionFormData: null == connectionFormData
+      connectionFormData: freezed == connectionFormData
           ? _value.connectionFormData
           : connectionFormData // ignore: cast_nullable_to_non_nullable
-              as ConnectionFormData,
+              as ConnectionFormData?,
       emitterFormData: freezed == emitterFormData
           ? _value.emitterFormData
           : emitterFormData // ignore: cast_nullable_to_non_nullable
@@ -1468,7 +1472,7 @@ class _$ConnectionFormStateImpl implements _ConnectionFormState {
   @override
   final int? listenerIndex;
   @override
-  final ConnectionFormData connectionFormData;
+  final ConnectionFormData? connectionFormData;
   @override
   final EventFormData? emitterFormData;
   @override
@@ -1537,7 +1541,7 @@ abstract class _ConnectionFormState implements ConnectionFormState {
       required final dynamic connectionKey,
       required final int? emitterIndex,
       required final int? listenerIndex,
-      required final ConnectionFormData connectionFormData,
+      required final ConnectionFormData? connectionFormData,
       required final EventFormData? emitterFormData,
       required final EventFormData? listenerFormData,
       required final Option<Either<ConnectionFailure, Unit>>
@@ -1556,7 +1560,7 @@ abstract class _ConnectionFormState implements ConnectionFormState {
   @override
   int? get listenerIndex;
   @override
-  ConnectionFormData get connectionFormData;
+  ConnectionFormData? get connectionFormData;
   @override
   EventFormData? get emitterFormData;
   @override

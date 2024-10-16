@@ -16,14 +16,16 @@ class ConnectionUrlInputField extends HookWidget {
       child: BlocConsumer<ConnectionFormBloc, ConnectionFormState>(
         listenWhen: (p, c) => p.showValidationError != c.showValidationError,
         listener: (context, state) => controller.text =
-            state.connectionFormData.connectionUrl.value.getOrElse(() => ""),
+            state.connectionFormData?.connectionUrl.value.getOrElse(() => "") ??
+                "",
         buildWhen: (p, c) =>
             p.showValidationError != c.showValidationError ||
             p.connectionKey != c.connectionKey,
         builder: (context, state) {
           if (!state.showValidationError || state.connectionKey != null) {
-            controller.text = state.connectionFormData.connectionUrl.value
-                .getOrElse(() => "");
+            controller.text = state.connectionFormData?.connectionUrl.value
+                    .getOrElse(() => "") ??
+                "";
           }
 
           return TextFormField(
@@ -45,7 +47,7 @@ class ConnectionUrlInputField extends HookWidget {
                 .read<ConnectionFormBloc>()
                 .state
                 .connectionFormData
-                .connectionUrl
+                ?.connectionUrl
                 .value
                 .fold(
                   (l) => l.maybeMap(

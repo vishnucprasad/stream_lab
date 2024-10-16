@@ -63,7 +63,7 @@ class ListenerNameInputField extends HookWidget {
                     .read<ConnectionFormBloc>()
                     .state
                     .connectionFormData
-                    .connectionName
+                    ?.connectionName
                     .value
                     .fold(
                       (l) => l.maybeMap(

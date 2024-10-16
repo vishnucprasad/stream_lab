@@ -25,14 +25,14 @@ class ConnectionFormBloc
         initialize: (_) async => emit(ConnectionFormState.initial()),
         connectionNameChanged: (e) async => emit(state.copyWith(
           isSaved: false,
-          connectionFormData: state.connectionFormData.copyWith(
+          connectionFormData: state.connectionFormData?.copyWith(
             connectionName: ConnectionName(e.connectionName),
           ),
           failureOrSucessOption: none(),
         )),
         connectionUrlChanged: (e) async => emit(state.copyWith(
           isSaved: false,
-          connectionFormData: state.connectionFormData.copyWith(
+          connectionFormData: state.connectionFormData?.copyWith(
             connectionUrl: ConnectionURL(e.connectionUrl),
           ),
           failureOrSucessOption: none(),
@@ -57,11 +57,11 @@ class ConnectionFormBloc
           if (e.type == EventType.emitter) {
             emit(state.copyWith(
               isSaved: false,
-              emitterIndex: state.connectionFormData.eventEmitters.length,
+              emitterIndex: state.connectionFormData?.eventEmitters.length,
               emitterFormData: EventFormData.empty().copyWith(type: e.type),
-              connectionFormData: state.connectionFormData.copyWith(
+              connectionFormData: state.connectionFormData?.copyWith(
                 eventEmitters: [
-                  ...state.connectionFormData.eventEmitters,
+                  ...state.connectionFormData?.eventEmitters ?? [],
                   EventFormData.empty().copyWith(type: e.type),
                 ],
               ),
@@ -71,11 +71,11 @@ class ConnectionFormBloc
           } else {
             emit(state.copyWith(
               isSaved: false,
-              listenerIndex: state.connectionFormData.eventListeners.length,
+              listenerIndex: state.connectionFormData?.eventListeners.length,
               listenerFormData: EventFormData.empty().copyWith(type: e.type),
-              connectionFormData: state.connectionFormData.copyWith(
+              connectionFormData: state.connectionFormData?.copyWith(
                 eventListeners: [
-                  ...state.connectionFormData.eventListeners,
+                  ...state.connectionFormData?.eventListeners ?? [],
                   EventFormData.empty().copyWith(type: e.type),
                 ],
               ),
@@ -93,11 +93,12 @@ class ConnectionFormBloc
             failureOrSucessOption: none(),
           ));
 
-          if (state.connectionFormData.failureOption.isNone()) {
+          if (state.connectionFormData != null &&
+              state.connectionFormData!.failureOption.isNone()) {
             if (state.connectionKey == null) {
               final option = await _connectionRepository.createConnection(
                 connection: Connection.fromDomain(
-                  state.connectionFormData,
+                  state.connectionFormData!,
                 ),
               );
 
@@ -113,7 +114,7 @@ class ConnectionFormBloc
               failureOrSuccess = await _connectionRepository.updateConnection(
                 key: state.connectionKey,
                 connection: Connection.fromDomain(
-                  state.connectionFormData,
+                  state.connectionFormData!,
                 ),
               );
             }

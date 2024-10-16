@@ -43,11 +43,12 @@ class ListenersList extends StatelessWidget {
                   ],
                 ),
                 Expanded(
-                  child: state.connectionKey != null
-                      ? state.connectionFormData.eventListeners.isNotEmpty
+                  child: state.connectionKey != null &&
+                          state.connectionFormData != null
+                      ? state.connectionFormData!.eventListeners.isNotEmpty
                           ? ListView.separated(
                               itemCount: state
-                                  .connectionFormData.eventListeners.length,
+                                  .connectionFormData!.eventListeners.length,
                               itemBuilder: (context, index) {
                                 return ListenersListTile(
                                   listenerIndex: index,

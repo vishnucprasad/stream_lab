@@ -16,7 +16,8 @@ class ListenersListTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<ConnectionFormBloc, ConnectionFormState>(
       builder: (context, state) {
-        final listener = state.connectionFormData.eventListeners[listenerIndex];
+        final listener =
+            state.connectionFormData?.eventListeners[listenerIndex];
 
         return Container(
           decoration: BoxDecoration(
@@ -69,7 +70,7 @@ class ListenersListTile extends StatelessWidget {
                                   BorderRadius.circular(4), // Rounded corners
                             ),
                             child: Text(
-                              listener.name.getOrCrash(),
+                              listener?.name.getOrCrash(),
                               style: const TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.orange,

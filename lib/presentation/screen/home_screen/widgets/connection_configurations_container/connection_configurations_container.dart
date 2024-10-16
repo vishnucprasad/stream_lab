@@ -32,7 +32,7 @@ class ConnectionConfigurationsContainer extends StatelessWidget {
                   message: f.map(
                     clientFailure: (_) => 'Something went wrong.',
                     duplicateConnectionName: (_) =>
-                        'Connection name ${state.connectionFormData.connectionName.getOrCrash()} is already exists.',
+                        'Connection name ${state.connectionFormData?.connectionName.getOrCrash()} is already exists.',
                     serverFailure: (_) =>
                         'Something went wrong on the server side.',
                   ),

@@ -48,17 +48,17 @@ class EmittersList extends StatelessWidget {
                   ],
                 ),
                 Expanded(
-                  child: state.connectionKey != null
-                      ? state.connectionFormData.eventEmitters.isNotEmpty
+                  child: state.connectionKey != null &&
+                          state.connectionFormData != null
+                      ? state.connectionFormData!.eventEmitters.isNotEmpty
                           ? ListView.separated(
                               itemCount: Connection.fromDomain(
-                                      state.connectionFormData)
-                                  .eventEmitters
-                                  .length,
+                                state.connectionFormData!,
+                              ).eventEmitters.length,
                               itemBuilder: (context, index) {
                                 return EmittersListTile(
                                   event: Connection.fromDomain(
-                                    state.connectionFormData,
+                                    state.connectionFormData!,
                                   ).eventEmitters[index],
                                 );
                               },

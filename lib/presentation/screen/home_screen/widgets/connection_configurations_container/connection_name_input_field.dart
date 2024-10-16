@@ -15,16 +15,19 @@ class ConnectionNameInputField extends HookWidget {
         height: 24,
         child: BlocConsumer<ConnectionFormBloc, ConnectionFormState>(
           listenWhen: (p, c) => p.showValidationError != c.showValidationError,
-          listener: (context, state) => controller.text =
-              state.connectionFormData.connectionName.value.getOrElse(() => ""),
+          listener: (context, state) => controller.text = state
+                  .connectionFormData?.connectionName.value
+                  .getOrElse(() => "") ??
+              "",
           buildWhen: (p, c) =>
               p.showValidationError != c.showValidationError ||
               p.connectionKey != c.connectionKey,
           builder: (context, state) {
             if (!state.showValidationError || state.connectionKey != null) {
               controller.value = TextEditingValue(
-                text: state.connectionFormData.connectionName.value
-                    .getOrElse(() => ""),
+                text: state.connectionFormData?.connectionName.value
+                        .getOrElse(() => "") ??
+                    "",
                 selection: TextSelection(
                   baseOffset: 0,
                   extentOffset: controller.text.length,
@@ -54,7 +57,7 @@ class ConnectionNameInputField extends HookWidget {
                   .read<ConnectionFormBloc>()
                   .state
                   .connectionFormData
-                  .connectionName
+                  ?.connectionName
                   .value
                   .fold(
                     (l) => l.maybeMap(
