@@ -16,8 +16,6 @@ import 'package:stream_lab/application/connection/connection_bloc.dart'
     as _i776;
 import 'package:stream_lab/application/connection/connection_form/connection_form_bloc.dart'
     as _i341;
-import 'package:stream_lab/application/event/event_form/event_form_bloc.dart'
-    as _i614;
 import 'package:stream_lab/domain/connection/i_connection_repository.dart'
     as _i955;
 import 'package:stream_lab/infrastructure/connection/connection_respository.dart'
@@ -35,7 +33,6 @@ extension GetItInjectableX on _i174.GetIt {
       environmentFilter,
     );
     gh.factory<_i690.AppActionCubit>(() => _i690.AppActionCubit());
-    gh.factory<_i614.EventFormBloc>(() => _i614.EventFormBloc());
     gh.lazySingleton<_i955.IConnectionRepository>(
         () => _i272.ConnectionRespository());
     gh.factory<_i776.ConnectionBloc>(

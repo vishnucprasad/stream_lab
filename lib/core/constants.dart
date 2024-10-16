@@ -9,3 +9,9 @@ enum EventDataType {
   text,
   json,
 }
+
+enum ConnectionStatus {
+  connecting,
+  connected,
+  disconnected,
+}

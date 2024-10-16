@@ -107,9 +107,20 @@ class StreamLabDrawer extends StatelessWidget {
                                           ),
                                           onPressed: () {
                                             context.read<ConnectionBloc>().add(
-                                                ConnectionEvent
-                                                    .deleteConnection(
-                                                        key: connection.key));
+                                                  ConnectionEvent
+                                                      .deleteConnection(
+                                                    key: connection.key,
+                                                  ),
+                                                );
+                                            if (connection.key ==
+                                                formState.connectionKey) {
+                                              context
+                                                  .read<ConnectionFormBloc>()
+                                                  .add(
+                                                    const ConnectionFormEvent
+                                                        .initialize(),
+                                                  );
+                                            }
                                             Navigator.pop(context);
                                           },
                                           child: const Text('DELETE'),

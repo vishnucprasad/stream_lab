@@ -7,7 +7,9 @@ class ConnectionFormState with _$ConnectionFormState {
     required bool showValidationError,
     required bool isSaved,
     required dynamic connectionKey,
+    required int? eventIndex,
     required ConnectionFormData connectionFormData,
+    required EventFormData? eventFormData,
     required Option<Either<ConnectionFailure, Unit>> failureOrSucessOption,
   }) = _ConnectionFormState;
 
@@ -17,7 +19,9 @@ class ConnectionFormState with _$ConnectionFormState {
       showValidationError: false,
       isSaved: false,
       connectionKey: null,
+      eventIndex: null,
       connectionFormData: ConnectionFormData.empty(),
+      eventFormData: null,
       failureOrSucessOption: none(),
     );
   }

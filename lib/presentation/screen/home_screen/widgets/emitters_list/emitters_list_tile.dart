@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:stream_lab/domain/event/models/event.dart';
 import 'package:stream_lab/presentation/core/constants.dart';
 
 class EmittersListTile extends StatelessWidget {
   const EmittersListTile({
     super.key,
+    required this.event,
   });
+
+  final Event event;
 
   @override
   Widget build(BuildContext context) {
@@ -33,9 +37,9 @@ class EmittersListTile extends StatelessWidget {
               ),
               borderRadius: BorderRadius.circular(4), // Rounded corners
             ),
-            child: const Text(
-              'JOIN',
-              style: TextStyle(
+            child: Text(
+              event.name,
+              style: const TextStyle(
                 color: Colors.blue,
                 fontWeight: FontWeight.bold,
               ),

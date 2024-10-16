@@ -15,7 +15,7 @@ class ConnectionRespository implements IConnectionRepository {
   }
 
   @override
-  Future<Either<ConnectionFailure, Unit>> createConnection({
+  Future<Either<ConnectionFailure, int>> createConnection({
     required Connection connection,
   }) async {
     try {
@@ -23,8 +23,8 @@ class ConnectionRespository implements IConnectionRepository {
         return left(const ConnectionFailure.duplicateConnectionName());
       }
 
-      await connectionBox.add(connection);
-      return right(unit);
+      final int key = await connectionBox.add(connection);
+      return right(key);
     } catch (_) {
       return left(const ConnectionFailure.clientFailure(
         messsage: 'Something went wrong, please try again.',

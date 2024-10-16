@@ -56,6 +56,9 @@ dev_dependencies:
   hive_generator: ^2.0.1
   injectable_generator: ^2.6.2
 
+dependency_overrides:
+  extended_text_field: 16.0.0
+
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 # The following section is specific to Flutter packages.

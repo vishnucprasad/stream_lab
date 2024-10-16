@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:stream_lab/presentation/core/constants.dart';
 import 'package:stream_lab/presentation/screen/home_screen/widgets/connection_configurations_container/connection_name_input_field.dart';
 import 'package:stream_lab/presentation/screen/home_screen/widgets/connection_configurations_container/save_button.dart';
-import 'package:stream_lab/presentation/screen/home_screen/widgets/connection_configurations_container/unsaved_badge.dart';
+import 'package:stream_lab/presentation/screen/home_screen/widgets/connection_configurations_container/saved_status_badge.dart';
 
 class ConfigurationHeader extends StatelessWidget {
   const ConfigurationHeader({
@@ -33,7 +33,7 @@ class ConfigurationHeader extends StatelessWidget {
               ),
             ),
           ),
-          if (true) UnsavedBadge(),
+          SavedStatusBadge(),
           kWidth,
           SaveButton()
         ],

@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:stream_lab/application/app_action/app_action_cubit.dart';
 import 'package:stream_lab/application/connection/connection_bloc.dart';
 import 'package:stream_lab/application/connection/connection_form/connection_form_bloc.dart';
-import 'package:stream_lab/application/event/event_form/event_form_bloc.dart';
 import 'package:stream_lab/core/injection/injection.dart';
 import 'package:stream_lab/presentation/screen/home_screen/home_screen.dart';
 import 'package:stream_lab/presentation/theme/app_theme.dart';
@@ -20,7 +19,6 @@ class StreamLabApp extends StatelessWidget {
         BlocProvider(
             create: (_) => getIt<ConnectionBloc>()
               ..add(const ConnectionEvent.loadConnections())),
-        BlocProvider(create: (_) => getIt<EventFormBloc>()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

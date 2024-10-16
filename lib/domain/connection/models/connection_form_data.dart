@@ -1,5 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:stream_lab/core/constants.dart';
 import 'package:stream_lab/domain/connection/models/connection_value_objects.dart';
 import 'package:stream_lab/domain/core/value_failure.dart';
 import 'package:stream_lab/domain/event/models/event_form_data.dart';
@@ -14,6 +15,7 @@ class ConnectionFormData with _$ConnectionFormData {
     required ConnectionURL connectionUrl,
     required List<EventFormData> eventEmitters,
     required List<EventFormData> eventListeners,
+    required ConnectionStatus connectionStatus,
   }) = _ConnectionFormData;
 
   factory ConnectionFormData.empty() {
@@ -22,6 +24,7 @@ class ConnectionFormData with _$ConnectionFormData {
       connectionUrl: ConnectionURL(""),
       eventEmitters: [],
       eventListeners: [],
+      connectionStatus: ConnectionStatus.disconnected,
     );
   }
 

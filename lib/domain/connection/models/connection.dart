@@ -1,6 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:hive_flutter/hive_flutter.dart';
 
+import 'package:stream_lab/core/constants.dart';
 import 'package:stream_lab/domain/connection/models/connection_form_data.dart';
 import 'package:stream_lab/domain/connection/models/connection_value_objects.dart';
 import 'package:stream_lab/domain/event/models/event.dart';
@@ -21,11 +22,15 @@ class Connection extends HiveObject {
   @HiveField(4)
   final List<Event> eventListeners;
 
+  @HiveField(5)
+  final int connectionStatusIndex;
+
   Connection({
     required this.connectionName,
     required this.connectionUrl,
     required this.eventEmitters,
     required this.eventListeners,
+    required this.connectionStatusIndex,
   });
 
   factory Connection.fromDomain(ConnectionFormData connectionFormData) {
@@ -38,6 +43,7 @@ class Connection extends HiveObject {
       eventListeners: connectionFormData.eventListeners
           .map((event) => Event.fromDomain(event))
           .toList(),
+      connectionStatusIndex: connectionFormData.connectionStatus.index,
     );
   }
 
@@ -47,6 +53,7 @@ class Connection extends HiveObject {
       connectionUrl: ConnectionURL(connectionUrl),
       eventEmitters: eventEmitters.map((event) => event.toDomain()).toList(),
       eventListeners: eventListeners.map((event) => event.toDomain()).toList(),
+      connectionStatus: ConnectionStatus.values[connectionStatusIndex],
     );
   }
 
@@ -55,17 +62,20 @@ class Connection extends HiveObject {
     String? connectionUrl,
     List<Event>? eventEmitters,
     List<Event>? eventListeners,
+    int? connectionStatusIndex,
   }) {
     return Connection(
       connectionName: connectionName ?? this.connectionName,
       connectionUrl: connectionUrl ?? this.connectionUrl,
       eventEmitters: eventEmitters ?? this.eventEmitters,
       eventListeners: eventListeners ?? this.eventListeners,
+      connectionStatusIndex:
+          connectionStatusIndex ?? this.connectionStatusIndex,
     );
   }
 
   @override
   String toString() {
-    return 'Connection(connectionName: $connectionName, connectionUrl: $connectionUrl, eventEmitters: $eventEmitters, eventListeners: $eventListeners)';
+    return 'Connection(connectionName: $connectionName, connectionUrl: $connectionUrl, eventEmitters: $eventEmitters, eventListeners: $eventListeners, connectionStatusIndex: $connectionStatusIndex)';
   }
 }

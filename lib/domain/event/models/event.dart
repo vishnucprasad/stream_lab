@@ -5,6 +5,8 @@ import 'package:stream_lab/core/constants.dart';
 import 'package:stream_lab/domain/event/models/event_form_data.dart';
 import 'package:stream_lab/domain/event/models/event_value_objects.dart';
 
+part 'event.g.dart';
+
 @HiveType(typeId: 1)
 class Event extends HiveObject {
   @HiveField(0)

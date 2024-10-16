@@ -20,6 +20,7 @@ mixin _$ConnectionFormData {
   ConnectionURL get connectionUrl => throw _privateConstructorUsedError;
   List<EventFormData> get eventEmitters => throw _privateConstructorUsedError;
   List<EventFormData> get eventListeners => throw _privateConstructorUsedError;
+  ConnectionStatus get connectionStatus => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $ConnectionFormDataCopyWith<ConnectionFormData> get copyWith =>
@@ -36,7 +37,8 @@ abstract class $ConnectionFormDataCopyWith<$Res> {
       {ConnectionName connectionName,
       ConnectionURL connectionUrl,
       List<EventFormData> eventEmitters,
-      List<EventFormData> eventListeners});
+      List<EventFormData> eventListeners,
+      ConnectionStatus connectionStatus});
 }
 
 /// @nodoc
@@ -56,6 +58,7 @@ class _$ConnectionFormDataCopyWithImpl<$Res, $Val extends ConnectionFormData>
     Object? connectionUrl = null,
     Object? eventEmitters = null,
     Object? eventListeners = null,
+    Object? connectionStatus = null,
   }) {
     return _then(_value.copyWith(
       connectionName: null == connectionName
@@ -74,6 +77,10 @@ class _$ConnectionFormDataCopyWithImpl<$Res, $Val extends ConnectionFormData>
           ? _value.eventListeners
           : eventListeners // ignore: cast_nullable_to_non_nullable
               as List<EventFormData>,
+      connectionStatus: null == connectionStatus
+          ? _value.connectionStatus
+          : connectionStatus // ignore: cast_nullable_to_non_nullable
+              as ConnectionStatus,
     ) as $Val);
   }
 }
@@ -90,7 +97,8 @@ abstract class _$$ConnectionFormDataImplCopyWith<$Res>
       {ConnectionName connectionName,
       ConnectionURL connectionUrl,
       List<EventFormData> eventEmitters,
-      List<EventFormData> eventListeners});
+      List<EventFormData> eventListeners,
+      ConnectionStatus connectionStatus});
 }
 
 /// @nodoc
@@ -108,6 +116,7 @@ class __$$ConnectionFormDataImplCopyWithImpl<$Res>
     Object? connectionUrl = null,
     Object? eventEmitters = null,
     Object? eventListeners = null,
+    Object? connectionStatus = null,
   }) {
     return _then(_$ConnectionFormDataImpl(
       connectionName: null == connectionName
@@ -126,6 +135,10 @@ class __$$ConnectionFormDataImplCopyWithImpl<$Res>
           ? _value._eventListeners
           : eventListeners // ignore: cast_nullable_to_non_nullable
               as List<EventFormData>,
+      connectionStatus: null == connectionStatus
+          ? _value.connectionStatus
+          : connectionStatus // ignore: cast_nullable_to_non_nullable
+              as ConnectionStatus,
     ));
   }
 }
@@ -137,7 +150,8 @@ class _$ConnectionFormDataImpl extends _ConnectionFormData {
       {required this.connectionName,
       required this.connectionUrl,
       required final List<EventFormData> eventEmitters,
-      required final List<EventFormData> eventListeners})
+      required final List<EventFormData> eventListeners,
+      required this.connectionStatus})
       : _eventEmitters = eventEmitters,
         _eventListeners = eventListeners,
         super._();
@@ -163,8 +177,11 @@ class _$ConnectionFormDataImpl extends _ConnectionFormData {
   }
 
   @override
+  final ConnectionStatus connectionStatus;
+
+  @override
   String toString() {
-    return 'ConnectionFormData(connectionName: $connectionName, connectionUrl: $connectionUrl, eventEmitters: $eventEmitters, eventListeners: $eventListeners)';
+    return 'ConnectionFormData(connectionName: $connectionName, connectionUrl: $connectionUrl, eventEmitters: $eventEmitters, eventListeners: $eventListeners, connectionStatus: $connectionStatus)';
   }
 
   @override
@@ -179,7 +196,9 @@ class _$ConnectionFormDataImpl extends _ConnectionFormData {
             const DeepCollectionEquality()
                 .equals(other._eventEmitters, _eventEmitters) &&
             const DeepCollectionEquality()
-                .equals(other._eventListeners, _eventListeners));
+                .equals(other._eventListeners, _eventListeners) &&
+            (identical(other.connectionStatus, connectionStatus) ||
+                other.connectionStatus == connectionStatus));
   }
 
   @override
@@ -188,7 +207,8 @@ class _$ConnectionFormDataImpl extends _ConnectionFormData {
       connectionName,
       connectionUrl,
       const DeepCollectionEquality().hash(_eventEmitters),
-      const DeepCollectionEquality().hash(_eventListeners));
+      const DeepCollectionEquality().hash(_eventListeners),
+      connectionStatus);
 
   @JsonKey(ignore: true)
   @override
@@ -203,7 +223,8 @@ abstract class _ConnectionFormData extends ConnectionFormData {
           {required final ConnectionName connectionName,
           required final ConnectionURL connectionUrl,
           required final List<EventFormData> eventEmitters,
-          required final List<EventFormData> eventListeners}) =
+          required final List<EventFormData> eventListeners,
+          required final ConnectionStatus connectionStatus}) =
       _$ConnectionFormDataImpl;
   const _ConnectionFormData._() : super._();
 
@@ -215,6 +236,8 @@ abstract class _ConnectionFormData extends ConnectionFormData {
   List<EventFormData> get eventEmitters;
   @override
   List<EventFormData> get eventListeners;
+  @override
+  ConnectionStatus get connectionStatus;
   @override
   @JsonKey(ignore: true)
   _$$ConnectionFormDataImplCopyWith<_$ConnectionFormDataImpl> get copyWith =>
