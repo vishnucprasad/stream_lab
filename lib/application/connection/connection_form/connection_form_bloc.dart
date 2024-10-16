@@ -21,7 +21,7 @@ class ConnectionFormBloc
   ConnectionFormBloc(this._connectionRepository)
       : super(ConnectionFormState.initial()) {
     on<ConnectionFormEvent>((event, emit) async {
-      await event.map(
+      event.map(
         initialize: (_) async => emit(ConnectionFormState.initial()),
         connectionNameChanged: (e) async => emit(state.copyWith(
           isSaved: false,
@@ -98,6 +98,17 @@ class ConnectionFormBloc
           emitterFormData:
               state.connectionFormData?.eventEmitters[e.emitterIndex],
           failureOrSucessOption: none(),
+        )),
+        listenerSelected: (e) async => emit(state.copyWith(
+          showValidationError: false,
+          listenerIndex: e.listenerIndex,
+          listenerFormData:
+              state.connectionFormData?.eventListeners[e.listenerIndex],
+          failureOrSucessOption: none(),
+        )),
+        unSelectListener: (_) => emit(state.copyWith(
+          listenerIndex: null,
+          listenerFormData: null,
         )),
         saveButtonPressed: (_) async {
           Either<ConnectionFailure, Unit>? failureOrSuccess;

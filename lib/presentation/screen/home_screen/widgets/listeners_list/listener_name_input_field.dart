@@ -56,6 +56,10 @@ class ListenerNameInputField extends HookWidget {
                   baseOffset: 0,
                   extentOffset: controller.text.length,
                 ),
+                onTapOutside: (_) => context
+                    .read<ConnectionFormBloc>()
+                    .add(const ConnectionFormEvent.unSelectListener()),
+                autofocus: true,
                 autovalidateMode: state.showValidationError
                     ? AutovalidateMode.always
                     : AutovalidateMode.disabled,

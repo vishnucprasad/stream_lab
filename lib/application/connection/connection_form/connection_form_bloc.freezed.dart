@@ -25,6 +25,8 @@ mixin _$ConnectionFormEvent {
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
     required TResult Function(int emitterIndex) emitterSelected,
+    required TResult Function(int listenerIndex) listenerSelected,
+    required TResult Function() unSelectListener,
     required TResult Function() saveButtonPressed,
   }) =>
       throw _privateConstructorUsedError;
@@ -37,6 +39,8 @@ mixin _$ConnectionFormEvent {
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
+    TResult? Function(int listenerIndex)? listenerSelected,
+    TResult? Function()? unSelectListener,
     TResult? Function()? saveButtonPressed,
   }) =>
       throw _privateConstructorUsedError;
@@ -49,6 +53,8 @@ mixin _$ConnectionFormEvent {
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
     TResult Function(int emitterIndex)? emitterSelected,
+    TResult Function(int listenerIndex)? listenerSelected,
+    TResult Function()? unSelectListener,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) =>
@@ -64,6 +70,8 @@ mixin _$ConnectionFormEvent {
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
+    required TResult Function(_ListenerSelected value) listenerSelected,
+    required TResult Function(_UnSelectListener value) unSelectListener,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) =>
       throw _privateConstructorUsedError;
@@ -77,6 +85,8 @@ mixin _$ConnectionFormEvent {
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
+    TResult? Function(_ListenerSelected value)? listenerSelected,
+    TResult? Function(_UnSelectListener value)? unSelectListener,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) =>
       throw _privateConstructorUsedError;
@@ -90,6 +100,8 @@ mixin _$ConnectionFormEvent {
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
+    TResult Function(_ListenerSelected value)? listenerSelected,
+    TResult Function(_UnSelectListener value)? unSelectListener,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) =>
@@ -159,6 +171,8 @@ class _$InitializeImpl implements _Initialize {
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
     required TResult Function(int emitterIndex) emitterSelected,
+    required TResult Function(int listenerIndex) listenerSelected,
+    required TResult Function() unSelectListener,
     required TResult Function() saveButtonPressed,
   }) {
     return initialize();
@@ -174,6 +188,8 @@ class _$InitializeImpl implements _Initialize {
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
+    TResult? Function(int listenerIndex)? listenerSelected,
+    TResult? Function()? unSelectListener,
     TResult? Function()? saveButtonPressed,
   }) {
     return initialize?.call();
@@ -189,6 +205,8 @@ class _$InitializeImpl implements _Initialize {
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
     TResult Function(int emitterIndex)? emitterSelected,
+    TResult Function(int listenerIndex)? listenerSelected,
+    TResult Function()? unSelectListener,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -210,6 +228,8 @@ class _$InitializeImpl implements _Initialize {
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
+    required TResult Function(_ListenerSelected value) listenerSelected,
+    required TResult Function(_UnSelectListener value) unSelectListener,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return initialize(this);
@@ -226,6 +246,8 @@ class _$InitializeImpl implements _Initialize {
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
+    TResult? Function(_ListenerSelected value)? listenerSelected,
+    TResult? Function(_UnSelectListener value)? unSelectListener,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return initialize?.call(this);
@@ -242,6 +264,8 @@ class _$InitializeImpl implements _Initialize {
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
+    TResult Function(_ListenerSelected value)? listenerSelected,
+    TResult Function(_UnSelectListener value)? unSelectListener,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -330,6 +354,8 @@ class _$ConnectionNameChangedImpl implements _ConnectionNameChanged {
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
     required TResult Function(int emitterIndex) emitterSelected,
+    required TResult Function(int listenerIndex) listenerSelected,
+    required TResult Function() unSelectListener,
     required TResult Function() saveButtonPressed,
   }) {
     return connectionNameChanged(connectionName);
@@ -345,6 +371,8 @@ class _$ConnectionNameChangedImpl implements _ConnectionNameChanged {
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
+    TResult? Function(int listenerIndex)? listenerSelected,
+    TResult? Function()? unSelectListener,
     TResult? Function()? saveButtonPressed,
   }) {
     return connectionNameChanged?.call(connectionName);
@@ -360,6 +388,8 @@ class _$ConnectionNameChangedImpl implements _ConnectionNameChanged {
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
     TResult Function(int emitterIndex)? emitterSelected,
+    TResult Function(int listenerIndex)? listenerSelected,
+    TResult Function()? unSelectListener,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -381,6 +411,8 @@ class _$ConnectionNameChangedImpl implements _ConnectionNameChanged {
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
+    required TResult Function(_ListenerSelected value) listenerSelected,
+    required TResult Function(_UnSelectListener value) unSelectListener,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return connectionNameChanged(this);
@@ -397,6 +429,8 @@ class _$ConnectionNameChangedImpl implements _ConnectionNameChanged {
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
+    TResult? Function(_ListenerSelected value)? listenerSelected,
+    TResult? Function(_UnSelectListener value)? unSelectListener,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return connectionNameChanged?.call(this);
@@ -413,6 +447,8 @@ class _$ConnectionNameChangedImpl implements _ConnectionNameChanged {
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
+    TResult Function(_ListenerSelected value)? listenerSelected,
+    TResult Function(_UnSelectListener value)? unSelectListener,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -507,6 +543,8 @@ class _$ConnectionUrlChangedImpl implements _ConnectionUrlChanged {
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
     required TResult Function(int emitterIndex) emitterSelected,
+    required TResult Function(int listenerIndex) listenerSelected,
+    required TResult Function() unSelectListener,
     required TResult Function() saveButtonPressed,
   }) {
     return connectionUrlChanged(connectionUrl);
@@ -522,6 +560,8 @@ class _$ConnectionUrlChangedImpl implements _ConnectionUrlChanged {
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
+    TResult? Function(int listenerIndex)? listenerSelected,
+    TResult? Function()? unSelectListener,
     TResult? Function()? saveButtonPressed,
   }) {
     return connectionUrlChanged?.call(connectionUrl);
@@ -537,6 +577,8 @@ class _$ConnectionUrlChangedImpl implements _ConnectionUrlChanged {
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
     TResult Function(int emitterIndex)? emitterSelected,
+    TResult Function(int listenerIndex)? listenerSelected,
+    TResult Function()? unSelectListener,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -558,6 +600,8 @@ class _$ConnectionUrlChangedImpl implements _ConnectionUrlChanged {
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
+    required TResult Function(_ListenerSelected value) listenerSelected,
+    required TResult Function(_UnSelectListener value) unSelectListener,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return connectionUrlChanged(this);
@@ -574,6 +618,8 @@ class _$ConnectionUrlChangedImpl implements _ConnectionUrlChanged {
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
+    TResult? Function(_ListenerSelected value)? listenerSelected,
+    TResult? Function(_UnSelectListener value)? unSelectListener,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return connectionUrlChanged?.call(this);
@@ -590,6 +636,8 @@ class _$ConnectionUrlChangedImpl implements _ConnectionUrlChanged {
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
+    TResult Function(_ListenerSelected value)? listenerSelected,
+    TResult Function(_UnSelectListener value)? unSelectListener,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -683,6 +731,8 @@ class _$ConnectionSelectedImpl implements _ConnectionSelected {
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
     required TResult Function(int emitterIndex) emitterSelected,
+    required TResult Function(int listenerIndex) listenerSelected,
+    required TResult Function() unSelectListener,
     required TResult Function() saveButtonPressed,
   }) {
     return connectionSelected(connection);
@@ -698,6 +748,8 @@ class _$ConnectionSelectedImpl implements _ConnectionSelected {
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
+    TResult? Function(int listenerIndex)? listenerSelected,
+    TResult? Function()? unSelectListener,
     TResult? Function()? saveButtonPressed,
   }) {
     return connectionSelected?.call(connection);
@@ -713,6 +765,8 @@ class _$ConnectionSelectedImpl implements _ConnectionSelected {
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
     TResult Function(int emitterIndex)? emitterSelected,
+    TResult Function(int listenerIndex)? listenerSelected,
+    TResult Function()? unSelectListener,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -734,6 +788,8 @@ class _$ConnectionSelectedImpl implements _ConnectionSelected {
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
+    required TResult Function(_ListenerSelected value) listenerSelected,
+    required TResult Function(_UnSelectListener value) unSelectListener,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return connectionSelected(this);
@@ -750,6 +806,8 @@ class _$ConnectionSelectedImpl implements _ConnectionSelected {
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
+    TResult? Function(_ListenerSelected value)? listenerSelected,
+    TResult? Function(_UnSelectListener value)? unSelectListener,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return connectionSelected?.call(this);
@@ -766,6 +824,8 @@ class _$ConnectionSelectedImpl implements _ConnectionSelected {
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
+    TResult Function(_ListenerSelected value)? listenerSelected,
+    TResult Function(_UnSelectListener value)? unSelectListener,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -835,6 +895,8 @@ class _$NewConnectionButtonPressedImpl implements _NewConnectionButtonPressed {
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
     required TResult Function(int emitterIndex) emitterSelected,
+    required TResult Function(int listenerIndex) listenerSelected,
+    required TResult Function() unSelectListener,
     required TResult Function() saveButtonPressed,
   }) {
     return newConnectionButtonPressed();
@@ -850,6 +912,8 @@ class _$NewConnectionButtonPressedImpl implements _NewConnectionButtonPressed {
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
+    TResult? Function(int listenerIndex)? listenerSelected,
+    TResult? Function()? unSelectListener,
     TResult? Function()? saveButtonPressed,
   }) {
     return newConnectionButtonPressed?.call();
@@ -865,6 +929,8 @@ class _$NewConnectionButtonPressedImpl implements _NewConnectionButtonPressed {
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
     TResult Function(int emitterIndex)? emitterSelected,
+    TResult Function(int listenerIndex)? listenerSelected,
+    TResult Function()? unSelectListener,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -886,6 +952,8 @@ class _$NewConnectionButtonPressedImpl implements _NewConnectionButtonPressed {
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
+    required TResult Function(_ListenerSelected value) listenerSelected,
+    required TResult Function(_UnSelectListener value) unSelectListener,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return newConnectionButtonPressed(this);
@@ -902,6 +970,8 @@ class _$NewConnectionButtonPressedImpl implements _NewConnectionButtonPressed {
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
+    TResult? Function(_ListenerSelected value)? listenerSelected,
+    TResult? Function(_UnSelectListener value)? unSelectListener,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return newConnectionButtonPressed?.call(this);
@@ -918,6 +988,8 @@ class _$NewConnectionButtonPressedImpl implements _NewConnectionButtonPressed {
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
+    TResult Function(_ListenerSelected value)? listenerSelected,
+    TResult Function(_UnSelectListener value)? unSelectListener,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -1004,6 +1076,8 @@ class _$AddEventImpl implements _AddEvent {
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
     required TResult Function(int emitterIndex) emitterSelected,
+    required TResult Function(int listenerIndex) listenerSelected,
+    required TResult Function() unSelectListener,
     required TResult Function() saveButtonPressed,
   }) {
     return addEvent(type);
@@ -1019,6 +1093,8 @@ class _$AddEventImpl implements _AddEvent {
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
+    TResult? Function(int listenerIndex)? listenerSelected,
+    TResult? Function()? unSelectListener,
     TResult? Function()? saveButtonPressed,
   }) {
     return addEvent?.call(type);
@@ -1034,6 +1110,8 @@ class _$AddEventImpl implements _AddEvent {
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
     TResult Function(int emitterIndex)? emitterSelected,
+    TResult Function(int listenerIndex)? listenerSelected,
+    TResult Function()? unSelectListener,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -1055,6 +1133,8 @@ class _$AddEventImpl implements _AddEvent {
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
+    required TResult Function(_ListenerSelected value) listenerSelected,
+    required TResult Function(_UnSelectListener value) unSelectListener,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return addEvent(this);
@@ -1071,6 +1151,8 @@ class _$AddEventImpl implements _AddEvent {
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
+    TResult? Function(_ListenerSelected value)? listenerSelected,
+    TResult? Function(_UnSelectListener value)? unSelectListener,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return addEvent?.call(this);
@@ -1087,6 +1169,8 @@ class _$AddEventImpl implements _AddEvent {
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
+    TResult Function(_ListenerSelected value)? listenerSelected,
+    TResult Function(_UnSelectListener value)? unSelectListener,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -1179,6 +1263,8 @@ class _$EmitterSelectedImpl implements _EmitterSelected {
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
     required TResult Function(int emitterIndex) emitterSelected,
+    required TResult Function(int listenerIndex) listenerSelected,
+    required TResult Function() unSelectListener,
     required TResult Function() saveButtonPressed,
   }) {
     return emitterSelected(emitterIndex);
@@ -1194,6 +1280,8 @@ class _$EmitterSelectedImpl implements _EmitterSelected {
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
+    TResult? Function(int listenerIndex)? listenerSelected,
+    TResult? Function()? unSelectListener,
     TResult? Function()? saveButtonPressed,
   }) {
     return emitterSelected?.call(emitterIndex);
@@ -1209,6 +1297,8 @@ class _$EmitterSelectedImpl implements _EmitterSelected {
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
     TResult Function(int emitterIndex)? emitterSelected,
+    TResult Function(int listenerIndex)? listenerSelected,
+    TResult Function()? unSelectListener,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -1230,6 +1320,8 @@ class _$EmitterSelectedImpl implements _EmitterSelected {
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
+    required TResult Function(_ListenerSelected value) listenerSelected,
+    required TResult Function(_UnSelectListener value) unSelectListener,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return emitterSelected(this);
@@ -1246,6 +1338,8 @@ class _$EmitterSelectedImpl implements _EmitterSelected {
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
+    TResult? Function(_ListenerSelected value)? listenerSelected,
+    TResult? Function(_UnSelectListener value)? unSelectListener,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return emitterSelected?.call(this);
@@ -1262,6 +1356,8 @@ class _$EmitterSelectedImpl implements _EmitterSelected {
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
+    TResult Function(_ListenerSelected value)? listenerSelected,
+    TResult Function(_UnSelectListener value)? unSelectListener,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -1280,6 +1376,348 @@ abstract class _EmitterSelected implements ConnectionFormEvent {
   @JsonKey(ignore: true)
   _$$EmitterSelectedImplCopyWith<_$EmitterSelectedImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ListenerSelectedImplCopyWith<$Res> {
+  factory _$$ListenerSelectedImplCopyWith(_$ListenerSelectedImpl value,
+          $Res Function(_$ListenerSelectedImpl) then) =
+      __$$ListenerSelectedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int listenerIndex});
+}
+
+/// @nodoc
+class __$$ListenerSelectedImplCopyWithImpl<$Res>
+    extends _$ConnectionFormEventCopyWithImpl<$Res, _$ListenerSelectedImpl>
+    implements _$$ListenerSelectedImplCopyWith<$Res> {
+  __$$ListenerSelectedImplCopyWithImpl(_$ListenerSelectedImpl _value,
+      $Res Function(_$ListenerSelectedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? listenerIndex = null,
+  }) {
+    return _then(_$ListenerSelectedImpl(
+      listenerIndex: null == listenerIndex
+          ? _value.listenerIndex
+          : listenerIndex // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ListenerSelectedImpl implements _ListenerSelected {
+  const _$ListenerSelectedImpl({required this.listenerIndex});
+
+  @override
+  final int listenerIndex;
+
+  @override
+  String toString() {
+    return 'ConnectionFormEvent.listenerSelected(listenerIndex: $listenerIndex)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ListenerSelectedImpl &&
+            (identical(other.listenerIndex, listenerIndex) ||
+                other.listenerIndex == listenerIndex));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, listenerIndex);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ListenerSelectedImplCopyWith<_$ListenerSelectedImpl> get copyWith =>
+      __$$ListenerSelectedImplCopyWithImpl<_$ListenerSelectedImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initialize,
+    required TResult Function(String connectionName) connectionNameChanged,
+    required TResult Function(String connectionUrl) connectionUrlChanged,
+    required TResult Function(Connection connection) connectionSelected,
+    required TResult Function() newConnectionButtonPressed,
+    required TResult Function(EventType type) addEvent,
+    required TResult Function(int emitterIndex) emitterSelected,
+    required TResult Function(int listenerIndex) listenerSelected,
+    required TResult Function() unSelectListener,
+    required TResult Function() saveButtonPressed,
+  }) {
+    return listenerSelected(listenerIndex);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initialize,
+    TResult? Function(String connectionName)? connectionNameChanged,
+    TResult? Function(String connectionUrl)? connectionUrlChanged,
+    TResult? Function(Connection connection)? connectionSelected,
+    TResult? Function()? newConnectionButtonPressed,
+    TResult? Function(EventType type)? addEvent,
+    TResult? Function(int emitterIndex)? emitterSelected,
+    TResult? Function(int listenerIndex)? listenerSelected,
+    TResult? Function()? unSelectListener,
+    TResult? Function()? saveButtonPressed,
+  }) {
+    return listenerSelected?.call(listenerIndex);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initialize,
+    TResult Function(String connectionName)? connectionNameChanged,
+    TResult Function(String connectionUrl)? connectionUrlChanged,
+    TResult Function(Connection connection)? connectionSelected,
+    TResult Function()? newConnectionButtonPressed,
+    TResult Function(EventType type)? addEvent,
+    TResult Function(int emitterIndex)? emitterSelected,
+    TResult Function(int listenerIndex)? listenerSelected,
+    TResult Function()? unSelectListener,
+    TResult Function()? saveButtonPressed,
+    required TResult orElse(),
+  }) {
+    if (listenerSelected != null) {
+      return listenerSelected(listenerIndex);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initialize value) initialize,
+    required TResult Function(_ConnectionNameChanged value)
+        connectionNameChanged,
+    required TResult Function(_ConnectionUrlChanged value) connectionUrlChanged,
+    required TResult Function(_ConnectionSelected value) connectionSelected,
+    required TResult Function(_NewConnectionButtonPressed value)
+        newConnectionButtonPressed,
+    required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_EmitterSelected value) emitterSelected,
+    required TResult Function(_ListenerSelected value) listenerSelected,
+    required TResult Function(_UnSelectListener value) unSelectListener,
+    required TResult Function(_SaveButtonPressed value) saveButtonPressed,
+  }) {
+    return listenerSelected(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialize value)? initialize,
+    TResult? Function(_ConnectionNameChanged value)? connectionNameChanged,
+    TResult? Function(_ConnectionUrlChanged value)? connectionUrlChanged,
+    TResult? Function(_ConnectionSelected value)? connectionSelected,
+    TResult? Function(_NewConnectionButtonPressed value)?
+        newConnectionButtonPressed,
+    TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_EmitterSelected value)? emitterSelected,
+    TResult? Function(_ListenerSelected value)? listenerSelected,
+    TResult? Function(_UnSelectListener value)? unSelectListener,
+    TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
+  }) {
+    return listenerSelected?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialize value)? initialize,
+    TResult Function(_ConnectionNameChanged value)? connectionNameChanged,
+    TResult Function(_ConnectionUrlChanged value)? connectionUrlChanged,
+    TResult Function(_ConnectionSelected value)? connectionSelected,
+    TResult Function(_NewConnectionButtonPressed value)?
+        newConnectionButtonPressed,
+    TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_EmitterSelected value)? emitterSelected,
+    TResult Function(_ListenerSelected value)? listenerSelected,
+    TResult Function(_UnSelectListener value)? unSelectListener,
+    TResult Function(_SaveButtonPressed value)? saveButtonPressed,
+    required TResult orElse(),
+  }) {
+    if (listenerSelected != null) {
+      return listenerSelected(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ListenerSelected implements ConnectionFormEvent {
+  const factory _ListenerSelected({required final int listenerIndex}) =
+      _$ListenerSelectedImpl;
+
+  int get listenerIndex;
+  @JsonKey(ignore: true)
+  _$$ListenerSelectedImplCopyWith<_$ListenerSelectedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UnSelectListenerImplCopyWith<$Res> {
+  factory _$$UnSelectListenerImplCopyWith(_$UnSelectListenerImpl value,
+          $Res Function(_$UnSelectListenerImpl) then) =
+      __$$UnSelectListenerImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$UnSelectListenerImplCopyWithImpl<$Res>
+    extends _$ConnectionFormEventCopyWithImpl<$Res, _$UnSelectListenerImpl>
+    implements _$$UnSelectListenerImplCopyWith<$Res> {
+  __$$UnSelectListenerImplCopyWithImpl(_$UnSelectListenerImpl _value,
+      $Res Function(_$UnSelectListenerImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$UnSelectListenerImpl implements _UnSelectListener {
+  const _$UnSelectListenerImpl();
+
+  @override
+  String toString() {
+    return 'ConnectionFormEvent.unSelectListener()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$UnSelectListenerImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initialize,
+    required TResult Function(String connectionName) connectionNameChanged,
+    required TResult Function(String connectionUrl) connectionUrlChanged,
+    required TResult Function(Connection connection) connectionSelected,
+    required TResult Function() newConnectionButtonPressed,
+    required TResult Function(EventType type) addEvent,
+    required TResult Function(int emitterIndex) emitterSelected,
+    required TResult Function(int listenerIndex) listenerSelected,
+    required TResult Function() unSelectListener,
+    required TResult Function() saveButtonPressed,
+  }) {
+    return unSelectListener();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initialize,
+    TResult? Function(String connectionName)? connectionNameChanged,
+    TResult? Function(String connectionUrl)? connectionUrlChanged,
+    TResult? Function(Connection connection)? connectionSelected,
+    TResult? Function()? newConnectionButtonPressed,
+    TResult? Function(EventType type)? addEvent,
+    TResult? Function(int emitterIndex)? emitterSelected,
+    TResult? Function(int listenerIndex)? listenerSelected,
+    TResult? Function()? unSelectListener,
+    TResult? Function()? saveButtonPressed,
+  }) {
+    return unSelectListener?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initialize,
+    TResult Function(String connectionName)? connectionNameChanged,
+    TResult Function(String connectionUrl)? connectionUrlChanged,
+    TResult Function(Connection connection)? connectionSelected,
+    TResult Function()? newConnectionButtonPressed,
+    TResult Function(EventType type)? addEvent,
+    TResult Function(int emitterIndex)? emitterSelected,
+    TResult Function(int listenerIndex)? listenerSelected,
+    TResult Function()? unSelectListener,
+    TResult Function()? saveButtonPressed,
+    required TResult orElse(),
+  }) {
+    if (unSelectListener != null) {
+      return unSelectListener();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initialize value) initialize,
+    required TResult Function(_ConnectionNameChanged value)
+        connectionNameChanged,
+    required TResult Function(_ConnectionUrlChanged value) connectionUrlChanged,
+    required TResult Function(_ConnectionSelected value) connectionSelected,
+    required TResult Function(_NewConnectionButtonPressed value)
+        newConnectionButtonPressed,
+    required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_EmitterSelected value) emitterSelected,
+    required TResult Function(_ListenerSelected value) listenerSelected,
+    required TResult Function(_UnSelectListener value) unSelectListener,
+    required TResult Function(_SaveButtonPressed value) saveButtonPressed,
+  }) {
+    return unSelectListener(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialize value)? initialize,
+    TResult? Function(_ConnectionNameChanged value)? connectionNameChanged,
+    TResult? Function(_ConnectionUrlChanged value)? connectionUrlChanged,
+    TResult? Function(_ConnectionSelected value)? connectionSelected,
+    TResult? Function(_NewConnectionButtonPressed value)?
+        newConnectionButtonPressed,
+    TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_EmitterSelected value)? emitterSelected,
+    TResult? Function(_ListenerSelected value)? listenerSelected,
+    TResult? Function(_UnSelectListener value)? unSelectListener,
+    TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
+  }) {
+    return unSelectListener?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialize value)? initialize,
+    TResult Function(_ConnectionNameChanged value)? connectionNameChanged,
+    TResult Function(_ConnectionUrlChanged value)? connectionUrlChanged,
+    TResult Function(_ConnectionSelected value)? connectionSelected,
+    TResult Function(_NewConnectionButtonPressed value)?
+        newConnectionButtonPressed,
+    TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_EmitterSelected value)? emitterSelected,
+    TResult Function(_ListenerSelected value)? listenerSelected,
+    TResult Function(_UnSelectListener value)? unSelectListener,
+    TResult Function(_SaveButtonPressed value)? saveButtonPressed,
+    required TResult orElse(),
+  }) {
+    if (unSelectListener != null) {
+      return unSelectListener(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UnSelectListener implements ConnectionFormEvent {
+  const factory _UnSelectListener() = _$UnSelectListenerImpl;
 }
 
 /// @nodoc
@@ -1327,6 +1765,8 @@ class _$SaveButtonPressedImpl implements _SaveButtonPressed {
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
     required TResult Function(int emitterIndex) emitterSelected,
+    required TResult Function(int listenerIndex) listenerSelected,
+    required TResult Function() unSelectListener,
     required TResult Function() saveButtonPressed,
   }) {
     return saveButtonPressed();
@@ -1342,6 +1782,8 @@ class _$SaveButtonPressedImpl implements _SaveButtonPressed {
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
+    TResult? Function(int listenerIndex)? listenerSelected,
+    TResult? Function()? unSelectListener,
     TResult? Function()? saveButtonPressed,
   }) {
     return saveButtonPressed?.call();
@@ -1357,6 +1799,8 @@ class _$SaveButtonPressedImpl implements _SaveButtonPressed {
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
     TResult Function(int emitterIndex)? emitterSelected,
+    TResult Function(int listenerIndex)? listenerSelected,
+    TResult Function()? unSelectListener,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -1378,6 +1822,8 @@ class _$SaveButtonPressedImpl implements _SaveButtonPressed {
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
+    required TResult Function(_ListenerSelected value) listenerSelected,
+    required TResult Function(_UnSelectListener value) unSelectListener,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return saveButtonPressed(this);
@@ -1394,6 +1840,8 @@ class _$SaveButtonPressedImpl implements _SaveButtonPressed {
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
+    TResult? Function(_ListenerSelected value)? listenerSelected,
+    TResult? Function(_UnSelectListener value)? unSelectListener,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return saveButtonPressed?.call(this);
@@ -1410,6 +1858,8 @@ class _$SaveButtonPressedImpl implements _SaveButtonPressed {
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
+    TResult Function(_ListenerSelected value)? listenerSelected,
+    TResult Function(_UnSelectListener value)? unSelectListener,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {

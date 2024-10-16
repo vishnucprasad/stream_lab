@@ -57,23 +57,33 @@ class ListenersListTile extends StatelessWidget {
                     kWidth,
                     state.listenerIndex == listenerIndex
                         ? const ListenerNameInputField()
-                        : Container(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 8,
-                            ),
-                            decoration: BoxDecoration(
-                              color: Colors.transparent, // No fill color
-                              border: Border.all(
-                                color: Colors.orange,
-                              ),
-                              borderRadius:
-                                  BorderRadius.circular(4), // Rounded corners
-                            ),
-                            child: Text(
-                              listener?.name.getOrCrash(),
-                              style: const TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.orange,
+                        : MouseRegion(
+                            cursor: SystemMouseCursors.click,
+                            child: GestureDetector(
+                              onTap: () => context
+                                  .read<ConnectionFormBloc>()
+                                  .add(ConnectionFormEvent.listenerSelected(
+                                    listenerIndex: listenerIndex,
+                                  )),
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 8,
+                                ),
+                                decoration: BoxDecoration(
+                                  color: Colors.transparent, // No fill color
+                                  border: Border.all(
+                                    color: Colors.orange,
+                                  ),
+                                  borderRadius: BorderRadius.circular(
+                                      4), // Rounded corners
+                                ),
+                                child: Text(
+                                  listener?.name.getOrCrash(),
+                                  style: const TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.orange,
+                                  ),
+                                ),
                               ),
                             ),
                           ),
