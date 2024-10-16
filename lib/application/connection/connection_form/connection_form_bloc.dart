@@ -40,17 +40,25 @@ class ConnectionFormBloc
         connectionSelected: (e) async => emit(state.copyWith(
           isSubmitting: false,
           isSaved: true,
+          showValidationError: false,
           connectionKey: e.connection.key,
           connectionFormData: e.connection.toDomain(),
-          showValidationError: false,
+          emitterIndex: null,
+          listenerIndex: null,
+          emitterFormData: null,
+          listenerFormData: null,
           failureOrSucessOption: none(),
         )),
         newConnectionButtonPressed: (_) async => emit(state.copyWith(
           isSubmitting: false,
           isSaved: false,
+          showValidationError: false,
           connectionKey: null,
           connectionFormData: ConnectionFormData.empty(),
-          showValidationError: false,
+          emitterIndex: null,
+          listenerIndex: null,
+          emitterFormData: null,
+          listenerFormData: null,
           failureOrSucessOption: none(),
         )),
         addEvent: (e) async {
@@ -84,6 +92,13 @@ class ConnectionFormBloc
             ));
           }
         },
+        emitterSelected: (e) async => emit(state.copyWith(
+          showValidationError: false,
+          emitterIndex: e.emitterIndex,
+          emitterFormData:
+              state.connectionFormData?.eventEmitters[e.emitterIndex],
+          failureOrSucessOption: none(),
+        )),
         saveButtonPressed: (_) async {
           Either<ConnectionFailure, Unit>? failureOrSuccess;
 

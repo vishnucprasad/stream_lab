@@ -57,9 +57,7 @@ class EmittersList extends StatelessWidget {
                               ).eventEmitters.length,
                               itemBuilder: (context, index) {
                                 return EmittersListTile(
-                                  event: Connection.fromDomain(
-                                    state.connectionFormData!,
-                                  ).eventEmitters[index],
+                                  emitterIndex: index,
                                 );
                               },
                               separatorBuilder: (_, __) => kHeight,
