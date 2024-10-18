@@ -27,5 +27,8 @@ class ConnectionFormEvent with _$ConnectionFormEvent {
   const factory ConnectionFormEvent.emitterNameChanged({
     required String name,
   }) = _EmitterNameChanged;
+  const factory ConnectionFormEvent.emitterDataTypeChanged({
+    required EventDataType dataType,
+  }) = _RmitterDataTypeChanged;
   const factory ConnectionFormEvent.saveButtonPressed() = _SaveButtonPressed;
 }

@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:stream_lab/application/connection/connection_form/connection_form_bloc.dart';
+import 'package:stream_lab/core/constants.dart';
 
 class ArgumentTypeDropdown extends StatelessWidget {
   const ArgumentTypeDropdown({
@@ -7,25 +10,38 @@ class ArgumentTypeDropdown extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DropdownButton<String>(
-      underline: const SizedBox.shrink(),
-      items: <String>['Text', 'JSON'].map((String value) {
-        return DropdownMenuItem<String>(
-          value: value,
-          child: Text(value),
+    return BlocBuilder<ConnectionFormBloc, ConnectionFormState>(
+      builder: (context, state) {
+        return DropdownButton<EventDataType>(
+          underline: const SizedBox.shrink(),
+          items: EventDataType.values.map((EventDataType value) {
+            return DropdownMenuItem<EventDataType>(
+              value: value,
+              child: Text(value.name.toUpperCase()),
+            );
+          }).toList(),
+          value: state
+              .connectionFormData!.eventEmitters[state.emitterIndex!].dataType,
+          onChanged: (EventDataType? newValue) {
+            if (newValue != null) {
+              context
+                  .read<ConnectionFormBloc>()
+                  .add(ConnectionFormEvent.emitterDataTypeChanged(
+                    dataType: newValue,
+                  ));
+            }
+          },
+          style: TextStyle(
+            color: Colors.grey[800],
+            fontSize: 14,
+          ),
+          icon: Icon(
+            Icons.arrow_drop_down,
+            color: Colors.grey[800],
+          ),
+          dropdownColor: Colors.grey[400],
         );
-      }).toList(),
-      value: 'JSON',
-      onChanged: (String? newValue) {},
-      style: TextStyle(
-        color: Colors.grey[800],
-        fontSize: 14,
-      ),
-      icon: Icon(
-        Icons.arrow_drop_down,
-        color: Colors.grey[800],
-      ),
-      dropdownColor: Colors.grey[400],
+      },
     );
   }
 }
