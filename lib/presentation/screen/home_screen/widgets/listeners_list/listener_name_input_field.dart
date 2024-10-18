@@ -15,15 +15,22 @@ class ListenerNameInputField extends HookWidget {
         height: 24,
         child: BlocConsumer<ConnectionFormBloc, ConnectionFormState>(
           listenWhen: (p, c) => p.showValidationError != c.showValidationError,
-          listener: (context, state) => controller.text =
-              state.listenerFormData?.name.value.getOrElse(() => "") ?? "",
+          listener: (context, state) => controller.text = state
+                  .connectionFormData
+                  ?.eventListeners[state.listenerIndex!]
+                  .name
+                  .value
+                  .getOrElse(() => "") ??
+              "",
           buildWhen: (p, c) =>
               p.showValidationError != c.showValidationError &&
               p.listenerIndex != c.listenerIndex,
           builder: (context, state) {
             if (!state.showValidationError || state.listenerIndex != null) {
-              controller.text =
-                  state.listenerFormData?.name.value.getOrElse(() => "") ?? "";
+              controller.text = state.connectionFormData
+                      ?.eventListeners[state.listenerIndex!].name.value
+                      .getOrElse(() => "") ??
+                  "";
             }
 
             return IntrinsicWidth(
@@ -67,11 +74,12 @@ class ListenerNameInputField extends HookWidget {
                     .read<ConnectionFormBloc>()
                     .state
                     .connectionFormData
-                    ?.connectionName
+                    ?.eventListeners[state.listenerIndex!]
+                    .name
                     .value
                     .fold(
                       (l) => l.maybeMap(
-                        empty: (_) => "Connection name can't be empty.",
+                        empty: (_) => "Listener name can't be empty.",
                         invalid: (_) => "Invalid connection name.",
                         orElse: () => null,
                       ),

@@ -14,15 +14,19 @@ class EventNameInputField extends HookWidget {
 
     return BlocConsumer<ConnectionFormBloc, ConnectionFormState>(
       listenWhen: (p, c) => p.showValidationError != c.showValidationError,
-      listener: (context, state) => controller.text =
-          state.emitterFormData?.name.value.getOrElse(() => "") ?? "",
+      listener: (context, state) => controller.text = state
+              .connectionFormData?.eventEmitters[state.emitterIndex!].name.value
+              .getOrElse(() => "") ??
+          "",
       buildWhen: (p, c) =>
           p.showValidationError != c.showValidationError &&
           p.emitterIndex != c.emitterIndex,
       builder: (context, state) {
         if (!state.showValidationError || state.emitterIndex != null) {
-          controller.text =
-              state.emitterFormData?.name.value.getOrElse(() => "") ?? "";
+          controller.text = state.connectionFormData
+                  ?.eventEmitters[state.emitterIndex!].name.value
+                  .getOrElse(() => "") ??
+              "";
         }
 
         return SizedBox(
@@ -46,8 +50,9 @@ class EventNameInputField extends HookWidget {
             validator: (_) => context
                 .read<ConnectionFormBloc>()
                 .state
-                .emitterFormData
-                ?.name
+                .connectionFormData
+                ?.eventEmitters[state.emitterIndex!]
+                .name
                 .value
                 .fold(
                   (l) => l.maybeMap(

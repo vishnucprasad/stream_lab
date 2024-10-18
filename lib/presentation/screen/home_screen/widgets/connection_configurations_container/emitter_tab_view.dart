@@ -14,7 +14,7 @@ class EmitterTabView extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<ConnectionFormBloc, ConnectionFormState>(
       builder: (context, state) {
-        return state.emitterFormData != null
+        return state.emitterIndex != null
             ? const Column(
                 children: [
                   Expanded(

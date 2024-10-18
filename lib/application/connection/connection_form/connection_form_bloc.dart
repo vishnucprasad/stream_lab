@@ -21,7 +21,7 @@ class ConnectionFormBloc
   ConnectionFormBloc(this._connectionRepository)
       : super(ConnectionFormState.initial()) {
     on<ConnectionFormEvent>((event, emit) async {
-      event.map(
+      await event.map(
         initialize: (_) async => emit(ConnectionFormState.initial()),
         connectionNameChanged: (e) async => emit(state.copyWith(
           isSaved: false,
@@ -45,8 +45,6 @@ class ConnectionFormBloc
           connectionFormData: e.connection.toDomain(),
           emitterIndex: null,
           listenerIndex: null,
-          emitterFormData: null,
-          listenerFormData: null,
           failureOrSucessOption: none(),
         )),
         newConnectionButtonPressed: (_) async => emit(state.copyWith(
@@ -57,8 +55,6 @@ class ConnectionFormBloc
           connectionFormData: ConnectionFormData.empty(),
           emitterIndex: null,
           listenerIndex: null,
-          emitterFormData: null,
-          listenerFormData: null,
           failureOrSucessOption: none(),
         )),
         addEvent: (e) async {
@@ -66,7 +62,6 @@ class ConnectionFormBloc
             emit(state.copyWith(
               isSaved: false,
               emitterIndex: state.connectionFormData?.eventEmitters.length,
-              emitterFormData: EventFormData.empty().copyWith(type: e.type),
               connectionFormData: state.connectionFormData?.copyWith(
                 eventEmitters: [
                   ...state.connectionFormData?.eventEmitters ?? [],
@@ -80,7 +75,6 @@ class ConnectionFormBloc
             emit(state.copyWith(
               isSaved: false,
               listenerIndex: state.connectionFormData?.eventListeners.length,
-              listenerFormData: EventFormData.empty().copyWith(type: e.type),
               connectionFormData: state.connectionFormData?.copyWith(
                 eventListeners: [
                   ...state.connectionFormData?.eventListeners ?? [],
@@ -95,20 +89,15 @@ class ConnectionFormBloc
         emitterSelected: (e) async => emit(state.copyWith(
           showValidationError: false,
           emitterIndex: e.emitterIndex,
-          emitterFormData:
-              state.connectionFormData?.eventEmitters[e.emitterIndex],
           failureOrSucessOption: none(),
         )),
         listenerSelected: (e) async => emit(state.copyWith(
           showValidationError: false,
           listenerIndex: e.listenerIndex,
-          listenerFormData:
-              state.connectionFormData?.eventListeners[e.listenerIndex],
           failureOrSucessOption: none(),
         )),
-        unSelectListener: (_) => emit(state.copyWith(
+        unSelectListener: (_) async => emit(state.copyWith(
           listenerIndex: null,
-          listenerFormData: null,
         )),
         saveButtonPressed: (_) async {
           Either<ConnectionFailure, Unit>? failureOrSuccess;

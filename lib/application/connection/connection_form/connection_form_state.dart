@@ -10,8 +10,6 @@ class ConnectionFormState with _$ConnectionFormState {
     required int? emitterIndex,
     required int? listenerIndex,
     required ConnectionFormData? connectionFormData,
-    required EventFormData? emitterFormData,
-    required EventFormData? listenerFormData,
     required Option<Either<ConnectionFailure, Unit>> failureOrSucessOption,
   }) = _ConnectionFormState;
 
@@ -24,8 +22,6 @@ class ConnectionFormState with _$ConnectionFormState {
       emitterIndex: null,
       listenerIndex: null,
       connectionFormData: null,
-      emitterFormData: null,
-      listenerFormData: null,
       failureOrSucessOption: none(),
     );
   }
