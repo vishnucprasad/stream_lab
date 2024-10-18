@@ -24,5 +24,8 @@ class ConnectionFormEvent with _$ConnectionFormEvent {
     required int listenerIndex,
   }) = _ListenerSelected;
   const factory ConnectionFormEvent.unSelectListener() = _UnSelectListener;
+  const factory ConnectionFormEvent.emitterNameChanged({
+    required String name,
+  }) = _EmitterNameChanged;
   const factory ConnectionFormEvent.saveButtonPressed() = _SaveButtonPressed;
 }

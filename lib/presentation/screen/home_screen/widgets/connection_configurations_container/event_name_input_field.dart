@@ -62,6 +62,13 @@ class EventNameInputField extends HookWidget {
                   ),
                   (r) => null,
                 ),
+            onTap: () => controller.selection = TextSelection(
+              baseOffset: 0,
+              extentOffset: controller.text.length,
+            ),
+            onChanged: (name) => context
+                .read<ConnectionFormBloc>()
+                .add(ConnectionFormEvent.emitterNameChanged(name: name)),
           ),
         );
       },

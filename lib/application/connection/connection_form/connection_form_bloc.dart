@@ -9,6 +9,7 @@ import 'package:stream_lab/domain/connection/models/connection.dart';
 import 'package:stream_lab/domain/connection/models/connection_form_data.dart';
 import 'package:stream_lab/domain/connection/models/connection_value_objects.dart';
 import 'package:stream_lab/domain/event/models/event_form_data.dart';
+import 'package:stream_lab/domain/event/models/event_value_objects.dart';
 
 part 'connection_form_event.dart';
 part 'connection_form_state.dart';
@@ -98,6 +99,23 @@ class ConnectionFormBloc
         )),
         unSelectListener: (_) async => emit(state.copyWith(
           listenerIndex: null,
+        )),
+        emitterNameChanged: (e) async => emit(state.copyWith(
+          isSaved: false,
+          connectionFormData: state.connectionFormData?.copyWith(
+            eventEmitters: state.connectionFormData!.eventEmitters
+                .asMap()
+                .entries
+                .map(
+                  (entry) => entry.key == state.emitterIndex
+                      ? state.connectionFormData!
+                          .eventEmitters[state.emitterIndex!]
+                          .copyWith(name: EventName(e.name))
+                      : entry.value,
+                )
+                .toList(),
+          ),
+          failureOrSucessOption: none(),
         )),
         saveButtonPressed: (_) async {
           Either<ConnectionFailure, Unit>? failureOrSuccess;
