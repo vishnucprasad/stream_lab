@@ -136,6 +136,8 @@ class ConnectionFormBloc
         )),
         saveButtonPressed: (_) async {
           Either<ConnectionFailure, Unit>? failureOrSuccess;
+          EventFormData? eventEmitter;
+          EventFormData? eventListener;
 
           emit(state.copyWith(
             isSubmitting: true,
@@ -143,8 +145,20 @@ class ConnectionFormBloc
             failureOrSucessOption: none(),
           ));
 
+          if (state.emitterIndex != null) {
+            eventEmitter =
+                state.connectionFormData!.eventEmitters[state.emitterIndex!];
+          }
+
+          if (state.listenerIndex != null) {
+            eventListener =
+                state.connectionFormData!.eventListeners[state.listenerIndex!];
+          }
+
           if (state.connectionFormData != null &&
-              state.connectionFormData!.failureOption.isNone()) {
+              state.connectionFormData!.failureOption.isNone() &&
+              (eventEmitter == null || eventEmitter.failureOption.isNone()) &&
+              (eventListener == null || eventListener.failureOption.isNone())) {
             if (state.connectionKey == null) {
               final option = await _connectionRepository.createConnection(
                 connection: Connection.fromDomain(

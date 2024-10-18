@@ -12,34 +12,37 @@ class ArgumentTypeDropdown extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<ConnectionFormBloc, ConnectionFormState>(
       builder: (context, state) {
-        return DropdownButton<EventDataType>(
-          underline: const SizedBox.shrink(),
-          items: EventDataType.values.map((EventDataType value) {
-            return DropdownMenuItem<EventDataType>(
-              value: value,
-              child: Text(value.name.toUpperCase()),
-            );
-          }).toList(),
-          value: state
-              .connectionFormData!.eventEmitters[state.emitterIndex!].dataType,
-          onChanged: (EventDataType? newValue) {
-            if (newValue != null) {
-              context
-                  .read<ConnectionFormBloc>()
-                  .add(ConnectionFormEvent.emitterDataTypeChanged(
-                    dataType: newValue,
-                  ));
-            }
-          },
-          style: TextStyle(
-            color: Colors.grey[800],
-            fontSize: 14,
+        return SizedBox(
+          height: 30,
+          child: DropdownButton<EventDataType>(
+            underline: const SizedBox.shrink(),
+            items: EventDataType.values.map((EventDataType value) {
+              return DropdownMenuItem<EventDataType>(
+                value: value,
+                child: Text(value.name.toUpperCase()),
+              );
+            }).toList(),
+            value: state.connectionFormData!.eventEmitters[state.emitterIndex!]
+                .dataType,
+            onChanged: (EventDataType? newValue) {
+              if (newValue != null) {
+                context
+                    .read<ConnectionFormBloc>()
+                    .add(ConnectionFormEvent.emitterDataTypeChanged(
+                      dataType: newValue,
+                    ));
+              }
+            },
+            style: TextStyle(
+              color: Colors.grey[800],
+              fontSize: 14,
+            ),
+            icon: Icon(
+              Icons.arrow_drop_down,
+              color: Colors.grey[800],
+            ),
+            dropdownColor: Colors.grey[400],
           ),
-          icon: Icon(
-            Icons.arrow_drop_down,
-            color: Colors.grey[800],
-          ),
-          dropdownColor: Colors.grey[400],
         );
       },
     );

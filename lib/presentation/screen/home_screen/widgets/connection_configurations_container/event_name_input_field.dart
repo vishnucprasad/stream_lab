@@ -19,7 +19,7 @@ class EventNameInputField extends HookWidget {
               .getOrElse(() => "") ??
           "",
       buildWhen: (p, c) =>
-          p.showValidationError != c.showValidationError &&
+          p.showValidationError != c.showValidationError ||
           p.emitterIndex != c.emitterIndex,
       builder: (context, state) {
         if (!state.showValidationError || state.emitterIndex != null) {
@@ -29,47 +29,64 @@ class EventNameInputField extends HookWidget {
               "";
         }
 
-        return SizedBox(
-          width: 200,
-          height: 30,
-          child: TextFormField(
-            controller: controller,
-            decoration: InputDecoration(
-              contentPadding: const EdgeInsets.symmetric(
-                vertical: 0,
-                horizontal: 8,
-              ),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(8),
-              ),
-              hintText: 'Event name',
-            ),
-            autovalidateMode: state.showValidationError
-                ? AutovalidateMode.always
-                : AutovalidateMode.disabled,
-            validator: (_) => context
-                .read<ConnectionFormBloc>()
-                .state
-                .connectionFormData
-                ?.eventEmitters[state.emitterIndex!]
-                .name
-                .value
-                .fold(
-                  (l) => l.maybeMap(
-                    empty: (_) => "Event name can't be empty.",
-                    invalid: (_) => "Invalid event name.",
-                    orElse: () => null,
+        return BlocBuilder<ConnectionFormBloc, ConnectionFormState>(
+          buildWhen: (p, c) =>
+              p.showValidationError != c.showValidationError ||
+              p.connectionFormData?.eventEmitters[state.emitterIndex!].name !=
+                  c.connectionFormData?.eventEmitters[state.emitterIndex!].name,
+          builder: (context, state) {
+            return SizedBox(
+              width: 200,
+              height: state.showValidationError &&
+                      context
+                          .read<ConnectionFormBloc>()
+                          .state
+                          .connectionFormData!
+                          .eventEmitters[state.emitterIndex!]
+                          .name
+                          .isInvalid()
+                  ? 50
+                  : 30,
+              child: TextFormField(
+                controller: controller,
+                decoration: InputDecoration(
+                  contentPadding: const EdgeInsets.symmetric(
+                    vertical: 0,
+                    horizontal: 8,
                   ),
-                  (r) => null,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  hintText: 'Event name',
                 ),
-            onTap: () => controller.selection = TextSelection(
-              baseOffset: 0,
-              extentOffset: controller.text.length,
-            ),
-            onChanged: (name) => context
-                .read<ConnectionFormBloc>()
-                .add(ConnectionFormEvent.emitterNameChanged(name: name)),
-          ),
+                autovalidateMode: state.showValidationError
+                    ? AutovalidateMode.always
+                    : AutovalidateMode.disabled,
+                validator: (_) => context
+                    .read<ConnectionFormBloc>()
+                    .state
+                    .connectionFormData
+                    ?.eventEmitters[state.emitterIndex!]
+                    .name
+                    .value
+                    .fold(
+                      (l) => l.maybeMap(
+                        empty: (_) => "Event name can't be empty.",
+                        invalid: (_) => "Invalid event name.",
+                        orElse: () => null,
+                      ),
+                      (r) => null,
+                    ),
+                onTap: () => controller.selection = TextSelection(
+                  baseOffset: 0,
+                  extentOffset: controller.text.length,
+                ),
+                onChanged: (name) => context
+                    .read<ConnectionFormBloc>()
+                    .add(ConnectionFormEvent.emitterNameChanged(name: name)),
+              ),
+            );
+          },
         );
       },
     );
