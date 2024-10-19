@@ -13,7 +13,7 @@ class EventFormData with _$EventFormData {
     required EventName name,
     required EventType type,
     required EventDataType dataType,
-    required String data,
+    required EventData? data,
     required bool isEnabled,
   }) = _EventFormData;
 
@@ -22,12 +22,14 @@ class EventFormData with _$EventFormData {
       name: EventName('NEW_EVENT'),
       type: EventType.listener,
       dataType: EventDataType.text,
-      data: '',
+      data: null,
       isEnabled: true,
     );
   }
 
   Option<ValueFailure<dynamic>> get failureOption {
-    return name.failureOrUnit.fold((f) => some(f), (_) => none());
+    return name.failureOrUnit
+        .andThen(data == null ? right(unit) : data!.failureOrUnit)
+        .fold((f) => some(f), (_) => none());
   }
 }

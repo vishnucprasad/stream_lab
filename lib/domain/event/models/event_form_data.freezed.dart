@@ -19,7 +19,7 @@ mixin _$EventFormData {
   EventName get name => throw _privateConstructorUsedError;
   EventType get type => throw _privateConstructorUsedError;
   EventDataType get dataType => throw _privateConstructorUsedError;
-  String get data => throw _privateConstructorUsedError;
+  EventData? get data => throw _privateConstructorUsedError;
   bool get isEnabled => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -37,7 +37,7 @@ abstract class $EventFormDataCopyWith<$Res> {
       {EventName name,
       EventType type,
       EventDataType dataType,
-      String data,
+      EventData? data,
       bool isEnabled});
 }
 
@@ -57,7 +57,7 @@ class _$EventFormDataCopyWithImpl<$Res, $Val extends EventFormData>
     Object? name = null,
     Object? type = null,
     Object? dataType = null,
-    Object? data = null,
+    Object? data = freezed,
     Object? isEnabled = null,
   }) {
     return _then(_value.copyWith(
@@ -73,10 +73,10 @@ class _$EventFormDataCopyWithImpl<$Res, $Val extends EventFormData>
           ? _value.dataType
           : dataType // ignore: cast_nullable_to_non_nullable
               as EventDataType,
-      data: null == data
+      data: freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as String,
+              as EventData?,
       isEnabled: null == isEnabled
           ? _value.isEnabled
           : isEnabled // ignore: cast_nullable_to_non_nullable
@@ -97,7 +97,7 @@ abstract class _$$EventFormDataImplCopyWith<$Res>
       {EventName name,
       EventType type,
       EventDataType dataType,
-      String data,
+      EventData? data,
       bool isEnabled});
 }
 
@@ -115,7 +115,7 @@ class __$$EventFormDataImplCopyWithImpl<$Res>
     Object? name = null,
     Object? type = null,
     Object? dataType = null,
-    Object? data = null,
+    Object? data = freezed,
     Object? isEnabled = null,
   }) {
     return _then(_$EventFormDataImpl(
@@ -131,10 +131,10 @@ class __$$EventFormDataImplCopyWithImpl<$Res>
           ? _value.dataType
           : dataType // ignore: cast_nullable_to_non_nullable
               as EventDataType,
-      data: null == data
+      data: freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as String,
+              as EventData?,
       isEnabled: null == isEnabled
           ? _value.isEnabled
           : isEnabled // ignore: cast_nullable_to_non_nullable
@@ -161,7 +161,7 @@ class _$EventFormDataImpl extends _EventFormData {
   @override
   final EventDataType dataType;
   @override
-  final String data;
+  final EventData? data;
   @override
   final bool isEnabled;
 
@@ -200,7 +200,7 @@ abstract class _EventFormData extends EventFormData {
       {required final EventName name,
       required final EventType type,
       required final EventDataType dataType,
-      required final String data,
+      required final EventData? data,
       required final bool isEnabled}) = _$EventFormDataImpl;
   const _EventFormData._() : super._();
 
@@ -211,7 +211,7 @@ abstract class _EventFormData extends EventFormData {
   @override
   EventDataType get dataType;
   @override
-  String get data;
+  EventData? get data;
   @override
   bool get isEnabled;
   @override

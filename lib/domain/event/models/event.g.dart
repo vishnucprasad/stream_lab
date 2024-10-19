@@ -20,7 +20,7 @@ class EventAdapter extends TypeAdapter<Event> {
       name: fields[0] as String,
       typeIndex: fields[1] as int,
       dataTypeIndex: fields[2] as int,
-      data: fields[3] as String,
+      data: fields[3] as String?,
       isEnabled: fields[4] as bool,
     );
   }

@@ -13,9 +13,13 @@ class SaveButton extends StatelessWidget {
     return BlocBuilder<ConnectionFormBloc, ConnectionFormState>(
       builder: (context, state) {
         return ElevatedButton.icon(
-          onPressed: () => context
-              .read<ConnectionFormBloc>()
-              .add(const ConnectionFormEvent.saveButtonPressed()),
+          onPressed: () {
+            if (!state.isSaved) {
+              context
+                  .read<ConnectionFormBloc>()
+                  .add(const ConnectionFormEvent.saveButtonPressed());
+            }
+          },
           icon: state.isSubmitting
               ? const CircularProgressIndicator()
               : const Icon(Icons.save),

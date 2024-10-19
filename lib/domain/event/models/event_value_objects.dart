@@ -11,3 +11,12 @@ class EventName extends ValueObject {
   }
   const EventName._(this.value);
 }
+
+class EventData extends ValueObject {
+  @override
+  final Either<ValueFailure<String>, String> value;
+  factory EventData(String input) {
+    return EventData._(validateStringNotEmpty(input));
+  }
+  const EventData._(this.value);
+}

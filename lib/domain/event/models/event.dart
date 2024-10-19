@@ -19,7 +19,7 @@ class Event extends HiveObject {
   final int dataTypeIndex;
 
   @HiveField(3)
-  final String data;
+  final String? data;
 
   @HiveField(4)
   final bool isEnabled;
@@ -37,7 +37,7 @@ class Event extends HiveObject {
       name: eventFormData.name.getOrCrash(),
       typeIndex: eventFormData.type.index,
       dataTypeIndex: eventFormData.dataType.index,
-      data: eventFormData.data,
+      data: eventFormData.data?.getOrCrash(),
       isEnabled: eventFormData.isEnabled,
     );
   }
@@ -47,7 +47,7 @@ class Event extends HiveObject {
       name: EventName(name),
       type: EventType.values[typeIndex],
       dataType: EventDataType.values[dataTypeIndex],
-      data: data,
+      data: data != null ? EventData(data!) : null,
       isEnabled: isEnabled,
     );
   }
