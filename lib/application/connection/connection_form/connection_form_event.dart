@@ -29,9 +29,16 @@ class ConnectionFormEvent with _$ConnectionFormEvent {
   }) = _EmitterNameChanged;
   const factory ConnectionFormEvent.emitterDataTypeChanged({
     required EventDataType dataType,
-  }) = _RmitterDataTypeChanged;
+  }) = _EmitterDataTypeChanged;
   const factory ConnectionFormEvent.emitterDataChanged({
     required String data,
   }) = _EmitterDataChanged;
+  const factory ConnectionFormEvent.listenerNameChanged({
+    required String name,
+  }) = _ListenerNameChanged;
+  const factory ConnectionFormEvent.listenerSwitchToggled({
+    required bool value,
+    required int listenerIndex,
+  }) = _ListenerSwitchToggled;
   const factory ConnectionFormEvent.saveButtonPressed() = _SaveButtonPressed;
 }

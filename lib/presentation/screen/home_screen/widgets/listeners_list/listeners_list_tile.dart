@@ -41,8 +41,15 @@ class ListenersListTile extends StatelessWidget {
                         height: 50,
                         width: 50,
                         child: Switch(
-                          value: true,
-                          onChanged: (value) {},
+                          value: listener?.isEnabled == true,
+                          onChanged: (value) {
+                            context
+                                .read<ConnectionFormBloc>()
+                                .add(ConnectionFormEvent.listenerSwitchToggled(
+                                  value: value,
+                                  listenerIndex: listenerIndex,
+                                ));
+                          },
                           thumbColor: WidgetStatePropertyAll<Color?>(
                             Colors.grey[200],
                           ),

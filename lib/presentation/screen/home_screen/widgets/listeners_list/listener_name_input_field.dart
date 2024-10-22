@@ -85,7 +85,9 @@ class ListenerNameInputField extends HookWidget {
                       ),
                       (r) => null,
                     ),
-                onChanged: (value) {},
+                onChanged: (name) => context
+                    .read<ConnectionFormBloc>()
+                    .add(ConnectionFormEvent.listenerNameChanged(name: name)),
               ),
             );
           },
