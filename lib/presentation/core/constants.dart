@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pluto_grid/pluto_grid.dart';
 
 // Consraints
 const kMobileMaxWidth = 500;
@@ -44,3 +45,28 @@ final kDefaultButtonStyle = ButtonStyle(
     Colors.white,
   ),
 );
+
+final kDefalutPlutoColumns = [
+  PlutoColumn(
+    title: 'Key',
+    field: 'key',
+    type: PlutoColumnType.text(),
+    enableRowChecked: true,
+    enableContextMenu: false,
+    enableSorting: false,
+  ),
+  PlutoColumn(
+    title: 'Value',
+    field: 'value',
+    type: PlutoColumnType.text(),
+    enableContextMenu: false,
+    enableSorting: false,
+  ),
+  PlutoColumn(
+    title: 'Description',
+    field: 'description',
+    type: PlutoColumnType.text(),
+    enableContextMenu: false,
+    enableSorting: false,
+  ),
+];

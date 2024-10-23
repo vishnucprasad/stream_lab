@@ -1,5 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pluto_grid/pluto_grid.dart';
 import 'package:stream_lab/core/constants.dart';
 import 'package:stream_lab/domain/connection/models/connection_value_objects.dart';
 import 'package:stream_lab/domain/core/value_failure.dart';
@@ -16,6 +17,9 @@ class ConnectionFormData with _$ConnectionFormData {
     required List<EventFormData> eventEmitters,
     required List<EventFormData> eventListeners,
     required ConnectionStatus connectionStatus,
+    required List<PlutoRow> queryParameters,
+    required List<PlutoRow> headers,
+    required List<PlutoRow> auth,
   }) = _ConnectionFormData;
 
   factory ConnectionFormData.empty() {
@@ -25,6 +29,9 @@ class ConnectionFormData with _$ConnectionFormData {
       eventEmitters: [],
       eventListeners: [],
       connectionStatus: ConnectionStatus.disconnected,
+      queryParameters: [],
+      headers: [],
+      auth: [],
     );
   }
 

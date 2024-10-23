@@ -8,31 +8,6 @@ class AuthTable extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final List<PlutoColumn> columns = [
-      PlutoColumn(
-        title: 'Key',
-        field: 'key',
-        type: PlutoColumnType.text(),
-        enableRowChecked: true,
-        enableContextMenu: false,
-        enableSorting: false,
-      ),
-      PlutoColumn(
-        title: 'Value',
-        field: 'value',
-        type: PlutoColumnType.text(),
-        enableContextMenu: false,
-        enableSorting: false,
-      ),
-      PlutoColumn(
-        title: 'Description',
-        field: 'description',
-        type: PlutoColumnType.text(),
-        enableContextMenu: false,
-        enableSorting: false,
-      ),
-    ];
-
     final List<PlutoRow> rows = [];
 
     return Padding(
@@ -59,7 +34,7 @@ class AuthTable extends StatelessWidget {
           ),
           Expanded(
             child: PlutoGrid(
-              columns: columns,
+              columns: kDefalutPlutoColumns,
               rows: rows,
               onRowChecked: (event) {},
               configuration: PlutoGridConfiguration(

@@ -22,13 +22,22 @@ class ConnectionAdapter extends TypeAdapter<Connection> {
       eventEmitters: (fields[2] as List).cast<Event>(),
       eventListeners: (fields[4] as List).cast<Event>(),
       connectionStatusIndex: fields[5] as int,
+      queryParameters: (fields[6] as List)
+          .map((dynamic e) => (e as Map).cast<String, dynamic>())
+          .toList(),
+      headers: (fields[7] as List)
+          .map((dynamic e) => (e as Map).cast<String, dynamic>())
+          .toList(),
+      auth: (fields[8] as List)
+          .map((dynamic e) => (e as Map).cast<String, dynamic>())
+          .toList(),
     );
   }
 
   @override
   void write(BinaryWriter writer, Connection obj) {
     writer
-      ..writeByte(5)
+      ..writeByte(8)
       ..writeByte(0)
       ..write(obj.connectionName)
       ..writeByte(1)
@@ -38,7 +47,13 @@ class ConnectionAdapter extends TypeAdapter<Connection> {
       ..writeByte(4)
       ..write(obj.eventListeners)
       ..writeByte(5)
-      ..write(obj.connectionStatusIndex);
+      ..write(obj.connectionStatusIndex)
+      ..writeByte(6)
+      ..write(obj.queryParameters)
+      ..writeByte(7)
+      ..write(obj.headers)
+      ..writeByte(8)
+      ..write(obj.auth);
   }
 
   @override

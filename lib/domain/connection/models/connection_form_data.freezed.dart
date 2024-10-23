@@ -21,6 +21,9 @@ mixin _$ConnectionFormData {
   List<EventFormData> get eventEmitters => throw _privateConstructorUsedError;
   List<EventFormData> get eventListeners => throw _privateConstructorUsedError;
   ConnectionStatus get connectionStatus => throw _privateConstructorUsedError;
+  List<PlutoRow> get queryParameters => throw _privateConstructorUsedError;
+  List<PlutoRow> get headers => throw _privateConstructorUsedError;
+  List<PlutoRow> get auth => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $ConnectionFormDataCopyWith<ConnectionFormData> get copyWith =>
@@ -38,7 +41,10 @@ abstract class $ConnectionFormDataCopyWith<$Res> {
       ConnectionURL connectionUrl,
       List<EventFormData> eventEmitters,
       List<EventFormData> eventListeners,
-      ConnectionStatus connectionStatus});
+      ConnectionStatus connectionStatus,
+      List<PlutoRow> queryParameters,
+      List<PlutoRow> headers,
+      List<PlutoRow> auth});
 }
 
 /// @nodoc
@@ -59,6 +65,9 @@ class _$ConnectionFormDataCopyWithImpl<$Res, $Val extends ConnectionFormData>
     Object? eventEmitters = null,
     Object? eventListeners = null,
     Object? connectionStatus = null,
+    Object? queryParameters = null,
+    Object? headers = null,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
       connectionName: null == connectionName
@@ -81,6 +90,18 @@ class _$ConnectionFormDataCopyWithImpl<$Res, $Val extends ConnectionFormData>
           ? _value.connectionStatus
           : connectionStatus // ignore: cast_nullable_to_non_nullable
               as ConnectionStatus,
+      queryParameters: null == queryParameters
+          ? _value.queryParameters
+          : queryParameters // ignore: cast_nullable_to_non_nullable
+              as List<PlutoRow>,
+      headers: null == headers
+          ? _value.headers
+          : headers // ignore: cast_nullable_to_non_nullable
+              as List<PlutoRow>,
+      auth: null == auth
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as List<PlutoRow>,
     ) as $Val);
   }
 }
@@ -98,7 +119,10 @@ abstract class _$$ConnectionFormDataImplCopyWith<$Res>
       ConnectionURL connectionUrl,
       List<EventFormData> eventEmitters,
       List<EventFormData> eventListeners,
-      ConnectionStatus connectionStatus});
+      ConnectionStatus connectionStatus,
+      List<PlutoRow> queryParameters,
+      List<PlutoRow> headers,
+      List<PlutoRow> auth});
 }
 
 /// @nodoc
@@ -117,6 +141,9 @@ class __$$ConnectionFormDataImplCopyWithImpl<$Res>
     Object? eventEmitters = null,
     Object? eventListeners = null,
     Object? connectionStatus = null,
+    Object? queryParameters = null,
+    Object? headers = null,
+    Object? auth = null,
   }) {
     return _then(_$ConnectionFormDataImpl(
       connectionName: null == connectionName
@@ -139,6 +166,18 @@ class __$$ConnectionFormDataImplCopyWithImpl<$Res>
           ? _value.connectionStatus
           : connectionStatus // ignore: cast_nullable_to_non_nullable
               as ConnectionStatus,
+      queryParameters: null == queryParameters
+          ? _value._queryParameters
+          : queryParameters // ignore: cast_nullable_to_non_nullable
+              as List<PlutoRow>,
+      headers: null == headers
+          ? _value._headers
+          : headers // ignore: cast_nullable_to_non_nullable
+              as List<PlutoRow>,
+      auth: null == auth
+          ? _value._auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as List<PlutoRow>,
     ));
   }
 }
@@ -151,9 +190,15 @@ class _$ConnectionFormDataImpl extends _ConnectionFormData {
       required this.connectionUrl,
       required final List<EventFormData> eventEmitters,
       required final List<EventFormData> eventListeners,
-      required this.connectionStatus})
+      required this.connectionStatus,
+      required final List<PlutoRow> queryParameters,
+      required final List<PlutoRow> headers,
+      required final List<PlutoRow> auth})
       : _eventEmitters = eventEmitters,
         _eventListeners = eventListeners,
+        _queryParameters = queryParameters,
+        _headers = headers,
+        _auth = auth,
         super._();
 
   @override
@@ -178,10 +223,33 @@ class _$ConnectionFormDataImpl extends _ConnectionFormData {
 
   @override
   final ConnectionStatus connectionStatus;
+  final List<PlutoRow> _queryParameters;
+  @override
+  List<PlutoRow> get queryParameters {
+    if (_queryParameters is EqualUnmodifiableListView) return _queryParameters;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_queryParameters);
+  }
+
+  final List<PlutoRow> _headers;
+  @override
+  List<PlutoRow> get headers {
+    if (_headers is EqualUnmodifiableListView) return _headers;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_headers);
+  }
+
+  final List<PlutoRow> _auth;
+  @override
+  List<PlutoRow> get auth {
+    if (_auth is EqualUnmodifiableListView) return _auth;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_auth);
+  }
 
   @override
   String toString() {
-    return 'ConnectionFormData(connectionName: $connectionName, connectionUrl: $connectionUrl, eventEmitters: $eventEmitters, eventListeners: $eventListeners, connectionStatus: $connectionStatus)';
+    return 'ConnectionFormData(connectionName: $connectionName, connectionUrl: $connectionUrl, eventEmitters: $eventEmitters, eventListeners: $eventListeners, connectionStatus: $connectionStatus, queryParameters: $queryParameters, headers: $headers, auth: $auth)';
   }
 
   @override
@@ -198,7 +266,11 @@ class _$ConnectionFormDataImpl extends _ConnectionFormData {
             const DeepCollectionEquality()
                 .equals(other._eventListeners, _eventListeners) &&
             (identical(other.connectionStatus, connectionStatus) ||
-                other.connectionStatus == connectionStatus));
+                other.connectionStatus == connectionStatus) &&
+            const DeepCollectionEquality()
+                .equals(other._queryParameters, _queryParameters) &&
+            const DeepCollectionEquality().equals(other._headers, _headers) &&
+            const DeepCollectionEquality().equals(other._auth, _auth));
   }
 
   @override
@@ -208,7 +280,10 @@ class _$ConnectionFormDataImpl extends _ConnectionFormData {
       connectionUrl,
       const DeepCollectionEquality().hash(_eventEmitters),
       const DeepCollectionEquality().hash(_eventListeners),
-      connectionStatus);
+      connectionStatus,
+      const DeepCollectionEquality().hash(_queryParameters),
+      const DeepCollectionEquality().hash(_headers),
+      const DeepCollectionEquality().hash(_auth));
 
   @JsonKey(ignore: true)
   @override
@@ -220,12 +295,14 @@ class _$ConnectionFormDataImpl extends _ConnectionFormData {
 
 abstract class _ConnectionFormData extends ConnectionFormData {
   const factory _ConnectionFormData(
-          {required final ConnectionName connectionName,
-          required final ConnectionURL connectionUrl,
-          required final List<EventFormData> eventEmitters,
-          required final List<EventFormData> eventListeners,
-          required final ConnectionStatus connectionStatus}) =
-      _$ConnectionFormDataImpl;
+      {required final ConnectionName connectionName,
+      required final ConnectionURL connectionUrl,
+      required final List<EventFormData> eventEmitters,
+      required final List<EventFormData> eventListeners,
+      required final ConnectionStatus connectionStatus,
+      required final List<PlutoRow> queryParameters,
+      required final List<PlutoRow> headers,
+      required final List<PlutoRow> auth}) = _$ConnectionFormDataImpl;
   const _ConnectionFormData._() : super._();
 
   @override
@@ -238,6 +315,12 @@ abstract class _ConnectionFormData extends ConnectionFormData {
   List<EventFormData> get eventListeners;
   @override
   ConnectionStatus get connectionStatus;
+  @override
+  List<PlutoRow> get queryParameters;
+  @override
+  List<PlutoRow> get headers;
+  @override
+  List<PlutoRow> get auth;
   @override
   @JsonKey(ignore: true)
   _$$ConnectionFormDataImplCopyWith<_$ConnectionFormDataImpl> get copyWith =>
