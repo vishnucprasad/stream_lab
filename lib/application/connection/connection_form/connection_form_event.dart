@@ -40,5 +40,6 @@ class ConnectionFormEvent with _$ConnectionFormEvent {
     required bool value,
     required int listenerIndex,
   }) = _ListenerSwitchToggled;
+  const factory ConnectionFormEvent.addQueryParameter() = _AddQueryParameter;
   const factory ConnectionFormEvent.saveButtonPressed() = _SaveButtonPressed;
 }

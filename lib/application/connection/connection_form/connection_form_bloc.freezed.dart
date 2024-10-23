@@ -33,6 +33,7 @@ mixin _$ConnectionFormEvent {
     required TResult Function(String name) listenerNameChanged,
     required TResult Function(bool value, int listenerIndex)
         listenerSwitchToggled,
+    required TResult Function() addQueryParameter,
     required TResult Function() saveButtonPressed,
   }) =>
       throw _privateConstructorUsedError;
@@ -52,6 +53,7 @@ mixin _$ConnectionFormEvent {
     TResult? Function(String data)? emitterDataChanged,
     TResult? Function(String name)? listenerNameChanged,
     TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult? Function()? addQueryParameter,
     TResult? Function()? saveButtonPressed,
   }) =>
       throw _privateConstructorUsedError;
@@ -71,6 +73,7 @@ mixin _$ConnectionFormEvent {
     TResult Function(String data)? emitterDataChanged,
     TResult Function(String name)? listenerNameChanged,
     TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult Function()? addQueryParameter,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) =>
@@ -95,6 +98,7 @@ mixin _$ConnectionFormEvent {
     required TResult Function(_ListenerNameChanged value) listenerNameChanged,
     required TResult Function(_ListenerSwitchToggled value)
         listenerSwitchToggled,
+    required TResult Function(_AddQueryParameter value) addQueryParameter,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) =>
       throw _privateConstructorUsedError;
@@ -115,6 +119,7 @@ mixin _$ConnectionFormEvent {
     TResult? Function(_EmitterDataChanged value)? emitterDataChanged,
     TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult? Function(_AddQueryParameter value)? addQueryParameter,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) =>
       throw _privateConstructorUsedError;
@@ -135,6 +140,7 @@ mixin _$ConnectionFormEvent {
     TResult Function(_EmitterDataChanged value)? emitterDataChanged,
     TResult Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult Function(_AddQueryParameter value)? addQueryParameter,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) =>
@@ -212,6 +218,7 @@ class _$InitializeImpl implements _Initialize {
     required TResult Function(String name) listenerNameChanged,
     required TResult Function(bool value, int listenerIndex)
         listenerSwitchToggled,
+    required TResult Function() addQueryParameter,
     required TResult Function() saveButtonPressed,
   }) {
     return initialize();
@@ -234,6 +241,7 @@ class _$InitializeImpl implements _Initialize {
     TResult? Function(String data)? emitterDataChanged,
     TResult? Function(String name)? listenerNameChanged,
     TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult? Function()? addQueryParameter,
     TResult? Function()? saveButtonPressed,
   }) {
     return initialize?.call();
@@ -256,6 +264,7 @@ class _$InitializeImpl implements _Initialize {
     TResult Function(String data)? emitterDataChanged,
     TResult Function(String name)? listenerNameChanged,
     TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult Function()? addQueryParameter,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -286,6 +295,7 @@ class _$InitializeImpl implements _Initialize {
     required TResult Function(_ListenerNameChanged value) listenerNameChanged,
     required TResult Function(_ListenerSwitchToggled value)
         listenerSwitchToggled,
+    required TResult Function(_AddQueryParameter value) addQueryParameter,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return initialize(this);
@@ -309,6 +319,7 @@ class _$InitializeImpl implements _Initialize {
     TResult? Function(_EmitterDataChanged value)? emitterDataChanged,
     TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult? Function(_AddQueryParameter value)? addQueryParameter,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return initialize?.call(this);
@@ -332,6 +343,7 @@ class _$InitializeImpl implements _Initialize {
     TResult Function(_EmitterDataChanged value)? emitterDataChanged,
     TResult Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult Function(_AddQueryParameter value)? addQueryParameter,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -428,6 +440,7 @@ class _$ConnectionNameChangedImpl implements _ConnectionNameChanged {
     required TResult Function(String name) listenerNameChanged,
     required TResult Function(bool value, int listenerIndex)
         listenerSwitchToggled,
+    required TResult Function() addQueryParameter,
     required TResult Function() saveButtonPressed,
   }) {
     return connectionNameChanged(connectionName);
@@ -450,6 +463,7 @@ class _$ConnectionNameChangedImpl implements _ConnectionNameChanged {
     TResult? Function(String data)? emitterDataChanged,
     TResult? Function(String name)? listenerNameChanged,
     TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult? Function()? addQueryParameter,
     TResult? Function()? saveButtonPressed,
   }) {
     return connectionNameChanged?.call(connectionName);
@@ -472,6 +486,7 @@ class _$ConnectionNameChangedImpl implements _ConnectionNameChanged {
     TResult Function(String data)? emitterDataChanged,
     TResult Function(String name)? listenerNameChanged,
     TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult Function()? addQueryParameter,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -502,6 +517,7 @@ class _$ConnectionNameChangedImpl implements _ConnectionNameChanged {
     required TResult Function(_ListenerNameChanged value) listenerNameChanged,
     required TResult Function(_ListenerSwitchToggled value)
         listenerSwitchToggled,
+    required TResult Function(_AddQueryParameter value) addQueryParameter,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return connectionNameChanged(this);
@@ -525,6 +541,7 @@ class _$ConnectionNameChangedImpl implements _ConnectionNameChanged {
     TResult? Function(_EmitterDataChanged value)? emitterDataChanged,
     TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult? Function(_AddQueryParameter value)? addQueryParameter,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return connectionNameChanged?.call(this);
@@ -548,6 +565,7 @@ class _$ConnectionNameChangedImpl implements _ConnectionNameChanged {
     TResult Function(_EmitterDataChanged value)? emitterDataChanged,
     TResult Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult Function(_AddQueryParameter value)? addQueryParameter,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -650,6 +668,7 @@ class _$ConnectionUrlChangedImpl implements _ConnectionUrlChanged {
     required TResult Function(String name) listenerNameChanged,
     required TResult Function(bool value, int listenerIndex)
         listenerSwitchToggled,
+    required TResult Function() addQueryParameter,
     required TResult Function() saveButtonPressed,
   }) {
     return connectionUrlChanged(connectionUrl);
@@ -672,6 +691,7 @@ class _$ConnectionUrlChangedImpl implements _ConnectionUrlChanged {
     TResult? Function(String data)? emitterDataChanged,
     TResult? Function(String name)? listenerNameChanged,
     TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult? Function()? addQueryParameter,
     TResult? Function()? saveButtonPressed,
   }) {
     return connectionUrlChanged?.call(connectionUrl);
@@ -694,6 +714,7 @@ class _$ConnectionUrlChangedImpl implements _ConnectionUrlChanged {
     TResult Function(String data)? emitterDataChanged,
     TResult Function(String name)? listenerNameChanged,
     TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult Function()? addQueryParameter,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -724,6 +745,7 @@ class _$ConnectionUrlChangedImpl implements _ConnectionUrlChanged {
     required TResult Function(_ListenerNameChanged value) listenerNameChanged,
     required TResult Function(_ListenerSwitchToggled value)
         listenerSwitchToggled,
+    required TResult Function(_AddQueryParameter value) addQueryParameter,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return connectionUrlChanged(this);
@@ -747,6 +769,7 @@ class _$ConnectionUrlChangedImpl implements _ConnectionUrlChanged {
     TResult? Function(_EmitterDataChanged value)? emitterDataChanged,
     TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult? Function(_AddQueryParameter value)? addQueryParameter,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return connectionUrlChanged?.call(this);
@@ -770,6 +793,7 @@ class _$ConnectionUrlChangedImpl implements _ConnectionUrlChanged {
     TResult Function(_EmitterDataChanged value)? emitterDataChanged,
     TResult Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult Function(_AddQueryParameter value)? addQueryParameter,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -871,6 +895,7 @@ class _$ConnectionSelectedImpl implements _ConnectionSelected {
     required TResult Function(String name) listenerNameChanged,
     required TResult Function(bool value, int listenerIndex)
         listenerSwitchToggled,
+    required TResult Function() addQueryParameter,
     required TResult Function() saveButtonPressed,
   }) {
     return connectionSelected(connection);
@@ -893,6 +918,7 @@ class _$ConnectionSelectedImpl implements _ConnectionSelected {
     TResult? Function(String data)? emitterDataChanged,
     TResult? Function(String name)? listenerNameChanged,
     TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult? Function()? addQueryParameter,
     TResult? Function()? saveButtonPressed,
   }) {
     return connectionSelected?.call(connection);
@@ -915,6 +941,7 @@ class _$ConnectionSelectedImpl implements _ConnectionSelected {
     TResult Function(String data)? emitterDataChanged,
     TResult Function(String name)? listenerNameChanged,
     TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult Function()? addQueryParameter,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -945,6 +972,7 @@ class _$ConnectionSelectedImpl implements _ConnectionSelected {
     required TResult Function(_ListenerNameChanged value) listenerNameChanged,
     required TResult Function(_ListenerSwitchToggled value)
         listenerSwitchToggled,
+    required TResult Function(_AddQueryParameter value) addQueryParameter,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return connectionSelected(this);
@@ -968,6 +996,7 @@ class _$ConnectionSelectedImpl implements _ConnectionSelected {
     TResult? Function(_EmitterDataChanged value)? emitterDataChanged,
     TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult? Function(_AddQueryParameter value)? addQueryParameter,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return connectionSelected?.call(this);
@@ -991,6 +1020,7 @@ class _$ConnectionSelectedImpl implements _ConnectionSelected {
     TResult Function(_EmitterDataChanged value)? emitterDataChanged,
     TResult Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult Function(_AddQueryParameter value)? addQueryParameter,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -1068,6 +1098,7 @@ class _$NewConnectionButtonPressedImpl implements _NewConnectionButtonPressed {
     required TResult Function(String name) listenerNameChanged,
     required TResult Function(bool value, int listenerIndex)
         listenerSwitchToggled,
+    required TResult Function() addQueryParameter,
     required TResult Function() saveButtonPressed,
   }) {
     return newConnectionButtonPressed();
@@ -1090,6 +1121,7 @@ class _$NewConnectionButtonPressedImpl implements _NewConnectionButtonPressed {
     TResult? Function(String data)? emitterDataChanged,
     TResult? Function(String name)? listenerNameChanged,
     TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult? Function()? addQueryParameter,
     TResult? Function()? saveButtonPressed,
   }) {
     return newConnectionButtonPressed?.call();
@@ -1112,6 +1144,7 @@ class _$NewConnectionButtonPressedImpl implements _NewConnectionButtonPressed {
     TResult Function(String data)? emitterDataChanged,
     TResult Function(String name)? listenerNameChanged,
     TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult Function()? addQueryParameter,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -1142,6 +1175,7 @@ class _$NewConnectionButtonPressedImpl implements _NewConnectionButtonPressed {
     required TResult Function(_ListenerNameChanged value) listenerNameChanged,
     required TResult Function(_ListenerSwitchToggled value)
         listenerSwitchToggled,
+    required TResult Function(_AddQueryParameter value) addQueryParameter,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return newConnectionButtonPressed(this);
@@ -1165,6 +1199,7 @@ class _$NewConnectionButtonPressedImpl implements _NewConnectionButtonPressed {
     TResult? Function(_EmitterDataChanged value)? emitterDataChanged,
     TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult? Function(_AddQueryParameter value)? addQueryParameter,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return newConnectionButtonPressed?.call(this);
@@ -1188,6 +1223,7 @@ class _$NewConnectionButtonPressedImpl implements _NewConnectionButtonPressed {
     TResult Function(_EmitterDataChanged value)? emitterDataChanged,
     TResult Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult Function(_AddQueryParameter value)? addQueryParameter,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -1282,6 +1318,7 @@ class _$AddEventImpl implements _AddEvent {
     required TResult Function(String name) listenerNameChanged,
     required TResult Function(bool value, int listenerIndex)
         listenerSwitchToggled,
+    required TResult Function() addQueryParameter,
     required TResult Function() saveButtonPressed,
   }) {
     return addEvent(type);
@@ -1304,6 +1341,7 @@ class _$AddEventImpl implements _AddEvent {
     TResult? Function(String data)? emitterDataChanged,
     TResult? Function(String name)? listenerNameChanged,
     TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult? Function()? addQueryParameter,
     TResult? Function()? saveButtonPressed,
   }) {
     return addEvent?.call(type);
@@ -1326,6 +1364,7 @@ class _$AddEventImpl implements _AddEvent {
     TResult Function(String data)? emitterDataChanged,
     TResult Function(String name)? listenerNameChanged,
     TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult Function()? addQueryParameter,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -1356,6 +1395,7 @@ class _$AddEventImpl implements _AddEvent {
     required TResult Function(_ListenerNameChanged value) listenerNameChanged,
     required TResult Function(_ListenerSwitchToggled value)
         listenerSwitchToggled,
+    required TResult Function(_AddQueryParameter value) addQueryParameter,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return addEvent(this);
@@ -1379,6 +1419,7 @@ class _$AddEventImpl implements _AddEvent {
     TResult? Function(_EmitterDataChanged value)? emitterDataChanged,
     TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult? Function(_AddQueryParameter value)? addQueryParameter,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return addEvent?.call(this);
@@ -1402,6 +1443,7 @@ class _$AddEventImpl implements _AddEvent {
     TResult Function(_EmitterDataChanged value)? emitterDataChanged,
     TResult Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult Function(_AddQueryParameter value)? addQueryParameter,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -1502,6 +1544,7 @@ class _$EmitterSelectedImpl implements _EmitterSelected {
     required TResult Function(String name) listenerNameChanged,
     required TResult Function(bool value, int listenerIndex)
         listenerSwitchToggled,
+    required TResult Function() addQueryParameter,
     required TResult Function() saveButtonPressed,
   }) {
     return emitterSelected(emitterIndex);
@@ -1524,6 +1567,7 @@ class _$EmitterSelectedImpl implements _EmitterSelected {
     TResult? Function(String data)? emitterDataChanged,
     TResult? Function(String name)? listenerNameChanged,
     TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult? Function()? addQueryParameter,
     TResult? Function()? saveButtonPressed,
   }) {
     return emitterSelected?.call(emitterIndex);
@@ -1546,6 +1590,7 @@ class _$EmitterSelectedImpl implements _EmitterSelected {
     TResult Function(String data)? emitterDataChanged,
     TResult Function(String name)? listenerNameChanged,
     TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult Function()? addQueryParameter,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -1576,6 +1621,7 @@ class _$EmitterSelectedImpl implements _EmitterSelected {
     required TResult Function(_ListenerNameChanged value) listenerNameChanged,
     required TResult Function(_ListenerSwitchToggled value)
         listenerSwitchToggled,
+    required TResult Function(_AddQueryParameter value) addQueryParameter,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return emitterSelected(this);
@@ -1599,6 +1645,7 @@ class _$EmitterSelectedImpl implements _EmitterSelected {
     TResult? Function(_EmitterDataChanged value)? emitterDataChanged,
     TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult? Function(_AddQueryParameter value)? addQueryParameter,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return emitterSelected?.call(this);
@@ -1622,6 +1669,7 @@ class _$EmitterSelectedImpl implements _EmitterSelected {
     TResult Function(_EmitterDataChanged value)? emitterDataChanged,
     TResult Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult Function(_AddQueryParameter value)? addQueryParameter,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -1723,6 +1771,7 @@ class _$ListenerSelectedImpl implements _ListenerSelected {
     required TResult Function(String name) listenerNameChanged,
     required TResult Function(bool value, int listenerIndex)
         listenerSwitchToggled,
+    required TResult Function() addQueryParameter,
     required TResult Function() saveButtonPressed,
   }) {
     return listenerSelected(listenerIndex);
@@ -1745,6 +1794,7 @@ class _$ListenerSelectedImpl implements _ListenerSelected {
     TResult? Function(String data)? emitterDataChanged,
     TResult? Function(String name)? listenerNameChanged,
     TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult? Function()? addQueryParameter,
     TResult? Function()? saveButtonPressed,
   }) {
     return listenerSelected?.call(listenerIndex);
@@ -1767,6 +1817,7 @@ class _$ListenerSelectedImpl implements _ListenerSelected {
     TResult Function(String data)? emitterDataChanged,
     TResult Function(String name)? listenerNameChanged,
     TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult Function()? addQueryParameter,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -1797,6 +1848,7 @@ class _$ListenerSelectedImpl implements _ListenerSelected {
     required TResult Function(_ListenerNameChanged value) listenerNameChanged,
     required TResult Function(_ListenerSwitchToggled value)
         listenerSwitchToggled,
+    required TResult Function(_AddQueryParameter value) addQueryParameter,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return listenerSelected(this);
@@ -1820,6 +1872,7 @@ class _$ListenerSelectedImpl implements _ListenerSelected {
     TResult? Function(_EmitterDataChanged value)? emitterDataChanged,
     TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult? Function(_AddQueryParameter value)? addQueryParameter,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return listenerSelected?.call(this);
@@ -1843,6 +1896,7 @@ class _$ListenerSelectedImpl implements _ListenerSelected {
     TResult Function(_EmitterDataChanged value)? emitterDataChanged,
     TResult Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult Function(_AddQueryParameter value)? addQueryParameter,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -1916,6 +1970,7 @@ class _$UnSelectListenerImpl implements _UnSelectListener {
     required TResult Function(String name) listenerNameChanged,
     required TResult Function(bool value, int listenerIndex)
         listenerSwitchToggled,
+    required TResult Function() addQueryParameter,
     required TResult Function() saveButtonPressed,
   }) {
     return unSelectListener();
@@ -1938,6 +1993,7 @@ class _$UnSelectListenerImpl implements _UnSelectListener {
     TResult? Function(String data)? emitterDataChanged,
     TResult? Function(String name)? listenerNameChanged,
     TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult? Function()? addQueryParameter,
     TResult? Function()? saveButtonPressed,
   }) {
     return unSelectListener?.call();
@@ -1960,6 +2016,7 @@ class _$UnSelectListenerImpl implements _UnSelectListener {
     TResult Function(String data)? emitterDataChanged,
     TResult Function(String name)? listenerNameChanged,
     TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult Function()? addQueryParameter,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -1990,6 +2047,7 @@ class _$UnSelectListenerImpl implements _UnSelectListener {
     required TResult Function(_ListenerNameChanged value) listenerNameChanged,
     required TResult Function(_ListenerSwitchToggled value)
         listenerSwitchToggled,
+    required TResult Function(_AddQueryParameter value) addQueryParameter,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return unSelectListener(this);
@@ -2013,6 +2071,7 @@ class _$UnSelectListenerImpl implements _UnSelectListener {
     TResult? Function(_EmitterDataChanged value)? emitterDataChanged,
     TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult? Function(_AddQueryParameter value)? addQueryParameter,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return unSelectListener?.call(this);
@@ -2036,6 +2095,7 @@ class _$UnSelectListenerImpl implements _UnSelectListener {
     TResult Function(_EmitterDataChanged value)? emitterDataChanged,
     TResult Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult Function(_AddQueryParameter value)? addQueryParameter,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -2130,6 +2190,7 @@ class _$EmitterNameChangedImpl implements _EmitterNameChanged {
     required TResult Function(String name) listenerNameChanged,
     required TResult Function(bool value, int listenerIndex)
         listenerSwitchToggled,
+    required TResult Function() addQueryParameter,
     required TResult Function() saveButtonPressed,
   }) {
     return emitterNameChanged(name);
@@ -2152,6 +2213,7 @@ class _$EmitterNameChangedImpl implements _EmitterNameChanged {
     TResult? Function(String data)? emitterDataChanged,
     TResult? Function(String name)? listenerNameChanged,
     TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult? Function()? addQueryParameter,
     TResult? Function()? saveButtonPressed,
   }) {
     return emitterNameChanged?.call(name);
@@ -2174,6 +2236,7 @@ class _$EmitterNameChangedImpl implements _EmitterNameChanged {
     TResult Function(String data)? emitterDataChanged,
     TResult Function(String name)? listenerNameChanged,
     TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult Function()? addQueryParameter,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -2204,6 +2267,7 @@ class _$EmitterNameChangedImpl implements _EmitterNameChanged {
     required TResult Function(_ListenerNameChanged value) listenerNameChanged,
     required TResult Function(_ListenerSwitchToggled value)
         listenerSwitchToggled,
+    required TResult Function(_AddQueryParameter value) addQueryParameter,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return emitterNameChanged(this);
@@ -2227,6 +2291,7 @@ class _$EmitterNameChangedImpl implements _EmitterNameChanged {
     TResult? Function(_EmitterDataChanged value)? emitterDataChanged,
     TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult? Function(_AddQueryParameter value)? addQueryParameter,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return emitterNameChanged?.call(this);
@@ -2250,6 +2315,7 @@ class _$EmitterNameChangedImpl implements _EmitterNameChanged {
     TResult Function(_EmitterDataChanged value)? emitterDataChanged,
     TResult Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult Function(_AddQueryParameter value)? addQueryParameter,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -2354,6 +2420,7 @@ class _$EmitterDataTypeChangedImpl implements _EmitterDataTypeChanged {
     required TResult Function(String name) listenerNameChanged,
     required TResult Function(bool value, int listenerIndex)
         listenerSwitchToggled,
+    required TResult Function() addQueryParameter,
     required TResult Function() saveButtonPressed,
   }) {
     return emitterDataTypeChanged(dataType);
@@ -2376,6 +2443,7 @@ class _$EmitterDataTypeChangedImpl implements _EmitterDataTypeChanged {
     TResult? Function(String data)? emitterDataChanged,
     TResult? Function(String name)? listenerNameChanged,
     TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult? Function()? addQueryParameter,
     TResult? Function()? saveButtonPressed,
   }) {
     return emitterDataTypeChanged?.call(dataType);
@@ -2398,6 +2466,7 @@ class _$EmitterDataTypeChangedImpl implements _EmitterDataTypeChanged {
     TResult Function(String data)? emitterDataChanged,
     TResult Function(String name)? listenerNameChanged,
     TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult Function()? addQueryParameter,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -2428,6 +2497,7 @@ class _$EmitterDataTypeChangedImpl implements _EmitterDataTypeChanged {
     required TResult Function(_ListenerNameChanged value) listenerNameChanged,
     required TResult Function(_ListenerSwitchToggled value)
         listenerSwitchToggled,
+    required TResult Function(_AddQueryParameter value) addQueryParameter,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return emitterDataTypeChanged(this);
@@ -2451,6 +2521,7 @@ class _$EmitterDataTypeChangedImpl implements _EmitterDataTypeChanged {
     TResult? Function(_EmitterDataChanged value)? emitterDataChanged,
     TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult? Function(_AddQueryParameter value)? addQueryParameter,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return emitterDataTypeChanged?.call(this);
@@ -2474,6 +2545,7 @@ class _$EmitterDataTypeChangedImpl implements _EmitterDataTypeChanged {
     TResult Function(_EmitterDataChanged value)? emitterDataChanged,
     TResult Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult Function(_AddQueryParameter value)? addQueryParameter,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -2574,6 +2646,7 @@ class _$EmitterDataChangedImpl implements _EmitterDataChanged {
     required TResult Function(String name) listenerNameChanged,
     required TResult Function(bool value, int listenerIndex)
         listenerSwitchToggled,
+    required TResult Function() addQueryParameter,
     required TResult Function() saveButtonPressed,
   }) {
     return emitterDataChanged(data);
@@ -2596,6 +2669,7 @@ class _$EmitterDataChangedImpl implements _EmitterDataChanged {
     TResult? Function(String data)? emitterDataChanged,
     TResult? Function(String name)? listenerNameChanged,
     TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult? Function()? addQueryParameter,
     TResult? Function()? saveButtonPressed,
   }) {
     return emitterDataChanged?.call(data);
@@ -2618,6 +2692,7 @@ class _$EmitterDataChangedImpl implements _EmitterDataChanged {
     TResult Function(String data)? emitterDataChanged,
     TResult Function(String name)? listenerNameChanged,
     TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult Function()? addQueryParameter,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -2648,6 +2723,7 @@ class _$EmitterDataChangedImpl implements _EmitterDataChanged {
     required TResult Function(_ListenerNameChanged value) listenerNameChanged,
     required TResult Function(_ListenerSwitchToggled value)
         listenerSwitchToggled,
+    required TResult Function(_AddQueryParameter value) addQueryParameter,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return emitterDataChanged(this);
@@ -2671,6 +2747,7 @@ class _$EmitterDataChangedImpl implements _EmitterDataChanged {
     TResult? Function(_EmitterDataChanged value)? emitterDataChanged,
     TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult? Function(_AddQueryParameter value)? addQueryParameter,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return emitterDataChanged?.call(this);
@@ -2694,6 +2771,7 @@ class _$EmitterDataChangedImpl implements _EmitterDataChanged {
     TResult Function(_EmitterDataChanged value)? emitterDataChanged,
     TResult Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult Function(_AddQueryParameter value)? addQueryParameter,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -2794,6 +2872,7 @@ class _$ListenerNameChangedImpl implements _ListenerNameChanged {
     required TResult Function(String name) listenerNameChanged,
     required TResult Function(bool value, int listenerIndex)
         listenerSwitchToggled,
+    required TResult Function() addQueryParameter,
     required TResult Function() saveButtonPressed,
   }) {
     return listenerNameChanged(name);
@@ -2816,6 +2895,7 @@ class _$ListenerNameChangedImpl implements _ListenerNameChanged {
     TResult? Function(String data)? emitterDataChanged,
     TResult? Function(String name)? listenerNameChanged,
     TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult? Function()? addQueryParameter,
     TResult? Function()? saveButtonPressed,
   }) {
     return listenerNameChanged?.call(name);
@@ -2838,6 +2918,7 @@ class _$ListenerNameChangedImpl implements _ListenerNameChanged {
     TResult Function(String data)? emitterDataChanged,
     TResult Function(String name)? listenerNameChanged,
     TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult Function()? addQueryParameter,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -2868,6 +2949,7 @@ class _$ListenerNameChangedImpl implements _ListenerNameChanged {
     required TResult Function(_ListenerNameChanged value) listenerNameChanged,
     required TResult Function(_ListenerSwitchToggled value)
         listenerSwitchToggled,
+    required TResult Function(_AddQueryParameter value) addQueryParameter,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return listenerNameChanged(this);
@@ -2891,6 +2973,7 @@ class _$ListenerNameChangedImpl implements _ListenerNameChanged {
     TResult? Function(_EmitterDataChanged value)? emitterDataChanged,
     TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult? Function(_AddQueryParameter value)? addQueryParameter,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return listenerNameChanged?.call(this);
@@ -2914,6 +2997,7 @@ class _$ListenerNameChangedImpl implements _ListenerNameChanged {
     TResult Function(_EmitterDataChanged value)? emitterDataChanged,
     TResult Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult Function(_AddQueryParameter value)? addQueryParameter,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -3025,6 +3109,7 @@ class _$ListenerSwitchToggledImpl implements _ListenerSwitchToggled {
     required TResult Function(String name) listenerNameChanged,
     required TResult Function(bool value, int listenerIndex)
         listenerSwitchToggled,
+    required TResult Function() addQueryParameter,
     required TResult Function() saveButtonPressed,
   }) {
     return listenerSwitchToggled(value, listenerIndex);
@@ -3047,6 +3132,7 @@ class _$ListenerSwitchToggledImpl implements _ListenerSwitchToggled {
     TResult? Function(String data)? emitterDataChanged,
     TResult? Function(String name)? listenerNameChanged,
     TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult? Function()? addQueryParameter,
     TResult? Function()? saveButtonPressed,
   }) {
     return listenerSwitchToggled?.call(value, listenerIndex);
@@ -3069,6 +3155,7 @@ class _$ListenerSwitchToggledImpl implements _ListenerSwitchToggled {
     TResult Function(String data)? emitterDataChanged,
     TResult Function(String name)? listenerNameChanged,
     TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult Function()? addQueryParameter,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -3099,6 +3186,7 @@ class _$ListenerSwitchToggledImpl implements _ListenerSwitchToggled {
     required TResult Function(_ListenerNameChanged value) listenerNameChanged,
     required TResult Function(_ListenerSwitchToggled value)
         listenerSwitchToggled,
+    required TResult Function(_AddQueryParameter value) addQueryParameter,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return listenerSwitchToggled(this);
@@ -3122,6 +3210,7 @@ class _$ListenerSwitchToggledImpl implements _ListenerSwitchToggled {
     TResult? Function(_EmitterDataChanged value)? emitterDataChanged,
     TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult? Function(_AddQueryParameter value)? addQueryParameter,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return listenerSwitchToggled?.call(this);
@@ -3145,6 +3234,7 @@ class _$ListenerSwitchToggledImpl implements _ListenerSwitchToggled {
     TResult Function(_EmitterDataChanged value)? emitterDataChanged,
     TResult Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult Function(_AddQueryParameter value)? addQueryParameter,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -3165,6 +3255,199 @@ abstract class _ListenerSwitchToggled implements ConnectionFormEvent {
   @JsonKey(ignore: true)
   _$$ListenerSwitchToggledImplCopyWith<_$ListenerSwitchToggledImpl>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AddQueryParameterImplCopyWith<$Res> {
+  factory _$$AddQueryParameterImplCopyWith(_$AddQueryParameterImpl value,
+          $Res Function(_$AddQueryParameterImpl) then) =
+      __$$AddQueryParameterImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AddQueryParameterImplCopyWithImpl<$Res>
+    extends _$ConnectionFormEventCopyWithImpl<$Res, _$AddQueryParameterImpl>
+    implements _$$AddQueryParameterImplCopyWith<$Res> {
+  __$$AddQueryParameterImplCopyWithImpl(_$AddQueryParameterImpl _value,
+      $Res Function(_$AddQueryParameterImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$AddQueryParameterImpl implements _AddQueryParameter {
+  const _$AddQueryParameterImpl();
+
+  @override
+  String toString() {
+    return 'ConnectionFormEvent.addQueryParameter()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$AddQueryParameterImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initialize,
+    required TResult Function(String connectionName) connectionNameChanged,
+    required TResult Function(String connectionUrl) connectionUrlChanged,
+    required TResult Function(Connection connection) connectionSelected,
+    required TResult Function() newConnectionButtonPressed,
+    required TResult Function(EventType type) addEvent,
+    required TResult Function(int emitterIndex) emitterSelected,
+    required TResult Function(int listenerIndex) listenerSelected,
+    required TResult Function() unSelectListener,
+    required TResult Function(String name) emitterNameChanged,
+    required TResult Function(EventDataType dataType) emitterDataTypeChanged,
+    required TResult Function(String data) emitterDataChanged,
+    required TResult Function(String name) listenerNameChanged,
+    required TResult Function(bool value, int listenerIndex)
+        listenerSwitchToggled,
+    required TResult Function() addQueryParameter,
+    required TResult Function() saveButtonPressed,
+  }) {
+    return addQueryParameter();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initialize,
+    TResult? Function(String connectionName)? connectionNameChanged,
+    TResult? Function(String connectionUrl)? connectionUrlChanged,
+    TResult? Function(Connection connection)? connectionSelected,
+    TResult? Function()? newConnectionButtonPressed,
+    TResult? Function(EventType type)? addEvent,
+    TResult? Function(int emitterIndex)? emitterSelected,
+    TResult? Function(int listenerIndex)? listenerSelected,
+    TResult? Function()? unSelectListener,
+    TResult? Function(String name)? emitterNameChanged,
+    TResult? Function(EventDataType dataType)? emitterDataTypeChanged,
+    TResult? Function(String data)? emitterDataChanged,
+    TResult? Function(String name)? listenerNameChanged,
+    TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult? Function()? addQueryParameter,
+    TResult? Function()? saveButtonPressed,
+  }) {
+    return addQueryParameter?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initialize,
+    TResult Function(String connectionName)? connectionNameChanged,
+    TResult Function(String connectionUrl)? connectionUrlChanged,
+    TResult Function(Connection connection)? connectionSelected,
+    TResult Function()? newConnectionButtonPressed,
+    TResult Function(EventType type)? addEvent,
+    TResult Function(int emitterIndex)? emitterSelected,
+    TResult Function(int listenerIndex)? listenerSelected,
+    TResult Function()? unSelectListener,
+    TResult Function(String name)? emitterNameChanged,
+    TResult Function(EventDataType dataType)? emitterDataTypeChanged,
+    TResult Function(String data)? emitterDataChanged,
+    TResult Function(String name)? listenerNameChanged,
+    TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult Function()? addQueryParameter,
+    TResult Function()? saveButtonPressed,
+    required TResult orElse(),
+  }) {
+    if (addQueryParameter != null) {
+      return addQueryParameter();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initialize value) initialize,
+    required TResult Function(_ConnectionNameChanged value)
+        connectionNameChanged,
+    required TResult Function(_ConnectionUrlChanged value) connectionUrlChanged,
+    required TResult Function(_ConnectionSelected value) connectionSelected,
+    required TResult Function(_NewConnectionButtonPressed value)
+        newConnectionButtonPressed,
+    required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_EmitterSelected value) emitterSelected,
+    required TResult Function(_ListenerSelected value) listenerSelected,
+    required TResult Function(_UnSelectListener value) unSelectListener,
+    required TResult Function(_EmitterNameChanged value) emitterNameChanged,
+    required TResult Function(_EmitterDataTypeChanged value)
+        emitterDataTypeChanged,
+    required TResult Function(_EmitterDataChanged value) emitterDataChanged,
+    required TResult Function(_ListenerNameChanged value) listenerNameChanged,
+    required TResult Function(_ListenerSwitchToggled value)
+        listenerSwitchToggled,
+    required TResult Function(_AddQueryParameter value) addQueryParameter,
+    required TResult Function(_SaveButtonPressed value) saveButtonPressed,
+  }) {
+    return addQueryParameter(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialize value)? initialize,
+    TResult? Function(_ConnectionNameChanged value)? connectionNameChanged,
+    TResult? Function(_ConnectionUrlChanged value)? connectionUrlChanged,
+    TResult? Function(_ConnectionSelected value)? connectionSelected,
+    TResult? Function(_NewConnectionButtonPressed value)?
+        newConnectionButtonPressed,
+    TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_EmitterSelected value)? emitterSelected,
+    TResult? Function(_ListenerSelected value)? listenerSelected,
+    TResult? Function(_UnSelectListener value)? unSelectListener,
+    TResult? Function(_EmitterNameChanged value)? emitterNameChanged,
+    TResult? Function(_EmitterDataTypeChanged value)? emitterDataTypeChanged,
+    TResult? Function(_EmitterDataChanged value)? emitterDataChanged,
+    TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
+    TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult? Function(_AddQueryParameter value)? addQueryParameter,
+    TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
+  }) {
+    return addQueryParameter?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialize value)? initialize,
+    TResult Function(_ConnectionNameChanged value)? connectionNameChanged,
+    TResult Function(_ConnectionUrlChanged value)? connectionUrlChanged,
+    TResult Function(_ConnectionSelected value)? connectionSelected,
+    TResult Function(_NewConnectionButtonPressed value)?
+        newConnectionButtonPressed,
+    TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_EmitterSelected value)? emitterSelected,
+    TResult Function(_ListenerSelected value)? listenerSelected,
+    TResult Function(_UnSelectListener value)? unSelectListener,
+    TResult Function(_EmitterNameChanged value)? emitterNameChanged,
+    TResult Function(_EmitterDataTypeChanged value)? emitterDataTypeChanged,
+    TResult Function(_EmitterDataChanged value)? emitterDataChanged,
+    TResult Function(_ListenerNameChanged value)? listenerNameChanged,
+    TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult Function(_AddQueryParameter value)? addQueryParameter,
+    TResult Function(_SaveButtonPressed value)? saveButtonPressed,
+    required TResult orElse(),
+  }) {
+    if (addQueryParameter != null) {
+      return addQueryParameter(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _AddQueryParameter implements ConnectionFormEvent {
+  const factory _AddQueryParameter() = _$AddQueryParameterImpl;
 }
 
 /// @nodoc
@@ -3220,6 +3503,7 @@ class _$SaveButtonPressedImpl implements _SaveButtonPressed {
     required TResult Function(String name) listenerNameChanged,
     required TResult Function(bool value, int listenerIndex)
         listenerSwitchToggled,
+    required TResult Function() addQueryParameter,
     required TResult Function() saveButtonPressed,
   }) {
     return saveButtonPressed();
@@ -3242,6 +3526,7 @@ class _$SaveButtonPressedImpl implements _SaveButtonPressed {
     TResult? Function(String data)? emitterDataChanged,
     TResult? Function(String name)? listenerNameChanged,
     TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult? Function()? addQueryParameter,
     TResult? Function()? saveButtonPressed,
   }) {
     return saveButtonPressed?.call();
@@ -3264,6 +3549,7 @@ class _$SaveButtonPressedImpl implements _SaveButtonPressed {
     TResult Function(String data)? emitterDataChanged,
     TResult Function(String name)? listenerNameChanged,
     TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult Function()? addQueryParameter,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -3294,6 +3580,7 @@ class _$SaveButtonPressedImpl implements _SaveButtonPressed {
     required TResult Function(_ListenerNameChanged value) listenerNameChanged,
     required TResult Function(_ListenerSwitchToggled value)
         listenerSwitchToggled,
+    required TResult Function(_AddQueryParameter value) addQueryParameter,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return saveButtonPressed(this);
@@ -3317,6 +3604,7 @@ class _$SaveButtonPressedImpl implements _SaveButtonPressed {
     TResult? Function(_EmitterDataChanged value)? emitterDataChanged,
     TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult? Function(_AddQueryParameter value)? addQueryParameter,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return saveButtonPressed?.call(this);
@@ -3340,6 +3628,7 @@ class _$SaveButtonPressedImpl implements _SaveButtonPressed {
     TResult Function(_EmitterDataChanged value)? emitterDataChanged,
     TResult Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult Function(_AddQueryParameter value)? addQueryParameter,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {

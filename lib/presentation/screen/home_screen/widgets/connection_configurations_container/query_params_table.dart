@@ -10,60 +10,71 @@ class QueryParamsTable extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<ConnectionFormBloc, ConnectionFormState>(
-      builder: (context, state) {
-        return Padding(
-          padding: const EdgeInsets.fromLTRB(8, 0, 8, 8),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+    PlutoGridStateManager? stateManager;
+
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(8, 0, 8, 8),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
             children: [
-              Row(
-                children: [
-                  kWidth,
-                  const Text(
-                    'Query params',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  const Spacer(),
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(Icons.add),
-                  ),
-                  kWidth,
-                ],
-              ),
-              Expanded(
-                child: PlutoGrid(
-                  columns: kDefalutPlutoColumns,
-                  rows: state.connectionFormData!.queryParameters,
-                  onRowChecked: (event) {},
-                  configuration: PlutoGridConfiguration(
-                    enterKeyAction: PlutoGridEnterKeyAction.editingAndMoveRight,
-                    columnSize: const PlutoGridColumnSizeConfig(
-                      autoSizeMode: PlutoAutoSizeMode.scale,
-                    ),
-                    style: PlutoGridStyleConfig(
-                      gridBackgroundColor: Colors.transparent,
-                      rowColor: Colors.transparent,
-                      activatedColor: Colors.transparent,
-                      cellColorInEditState: Colors.grey[400]!,
-                      activatedBorderColor: kPrimaryColor!,
-                    ),
-                  ),
-                  noRowsWidget: TableNoRowWidget(
-                    text:
-                        'There is no query parameters available at this moment',
-                    onPressed: () {},
-                  ),
-                  onChanged: (event) => debugPrint(event.value),
+              kWidth,
+              const Text(
+                'Query params',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
                 ),
               ),
+              const Spacer(),
+              IconButton(
+                onPressed: () => context
+                    .read<ConnectionFormBloc>()
+                    .add(const ConnectionFormEvent.addQueryParameter()),
+                icon: const Icon(Icons.add),
+              ),
+              kWidth,
             ],
           ),
-        );
-      },
+          Expanded(
+            child: BlocConsumer<ConnectionFormBloc, ConnectionFormState>(
+              listener: (context, state) {
+                stateManager?.removeAllRows();
+                stateManager
+                    ?.appendRows(state.connectionFormData!.queryParameters);
+              },
+              builder: (context, state) => PlutoGrid(
+                columns: kDefalutPlutoColumns,
+                rows: state.connectionFormData!.queryParameters.toList(),
+                configuration: PlutoGridConfiguration(
+                  enterKeyAction: PlutoGridEnterKeyAction.editingAndMoveRight,
+                  columnSize: const PlutoGridColumnSizeConfig(
+                    autoSizeMode: PlutoAutoSizeMode.scale,
+                  ),
+                  style: PlutoGridStyleConfig(
+                    gridBackgroundColor: Colors.transparent,
+                    rowColor: Colors.transparent,
+                    activatedColor: Colors.transparent,
+                    cellColorInEditState: Colors.grey[400]!,
+                    activatedBorderColor: kPrimaryColor!,
+                  ),
+                ),
+                noRowsWidget: TableNoRowWidget(
+                  text: 'There is no query parameters available at this moment',
+                  onPressed: () => context
+                      .read<ConnectionFormBloc>()
+                      .add(const ConnectionFormEvent.addQueryParameter()),
+                ),
+                onLoaded: (PlutoGridOnLoadedEvent event) {
+                  stateManager = event.stateManager;
+                },
+                onRowChecked: (event) {},
+                onChanged: (event) => debugPrint(event.value),
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

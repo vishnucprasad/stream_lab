@@ -2,6 +2,7 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
+import 'package:pluto_grid/pluto_grid.dart';
 import 'package:stream_lab/core/constants.dart';
 import 'package:stream_lab/domain/connection/failures/connection_failure.dart';
 import 'package:stream_lab/domain/connection/i_connection_repository.dart';
@@ -181,6 +182,20 @@ class ConnectionFormBloc
                       : entry.value,
                 )
                 .toList(),
+          ),
+          failureOrSucessOption: none(),
+        )),
+        addQueryParameter: (_) async => emit(state.copyWith(
+          isSaved: false,
+          connectionFormData: state.connectionFormData?.copyWith(
+            queryParameters: [
+              ...state.connectionFormData!.queryParameters,
+              PlutoRow(cells: {
+                "key": PlutoCell(value: ''),
+                "value": PlutoCell(value: ''),
+                "description": PlutoCell(value: ''),
+              }),
+            ],
           ),
           failureOrSucessOption: none(),
         )),
