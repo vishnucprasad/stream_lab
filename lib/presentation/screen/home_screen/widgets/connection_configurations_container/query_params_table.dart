@@ -1,3 +1,4 @@
+import 'package:another_flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pluto_grid/pluto_grid.dart';
@@ -34,7 +35,30 @@ class QueryParamsTable extends StatelessWidget {
                   ),
                   const Spacer(),
                   IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      if (state.connectionFormData!.queryParameters
+                          .any((element) => element.checked == true)) {
+                        FlushbarHelper.createAction(
+                          message:
+                              'Are you sure you want to delete selected rows?',
+                          button: TextButton(
+                            style: const ButtonStyle(
+                              foregroundColor: WidgetStatePropertyAll<Color>(
+                                Colors.red,
+                              ),
+                            ),
+                            onPressed: () {
+                              context.read<ConnectionFormBloc>().add(
+                                  const ConnectionFormEvent
+                                      .deleteSelectedQueryParameters());
+                              Navigator.pop(context);
+                            },
+                            child: const Text('DELETE'),
+                          ),
+                          duration: const Duration(seconds: 5),
+                        ).show(context);
+                      }
+                    },
                     icon: Icon(
                       Icons.delete,
                       color: state.connectionFormData!.queryParameters

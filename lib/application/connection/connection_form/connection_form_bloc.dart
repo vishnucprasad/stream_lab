@@ -233,6 +233,19 @@ class ConnectionFormBloc
           ),
           failureOrSucessOption: none(),
         )),
+        deleteSelectedQueryParameters: (_) async {
+          emit(state.copyWith(
+            connectionFormData: state.connectionFormData?.copyWith(
+              queryParameters: state.connectionFormData!.queryParameters
+                  .where((element) => element.checked != true)
+                  .toList(),
+            ),
+            failureOrSucessOption: none(),
+          ));
+          if (state.isSaved) {
+            add(const ConnectionFormEvent.saveButtonPressed());
+          }
+        },
         saveButtonPressed: (_) async {
           Either<ConnectionFailure, Unit>? failureOrSuccess;
           EventFormData? eventEmitter;

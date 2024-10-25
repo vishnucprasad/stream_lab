@@ -52,5 +52,7 @@ class ConnectionFormEvent with _$ConnectionFormEvent {
   const factory ConnectionFormEvent.queryAllRowsChecked({
     required bool isChecked,
   }) = _QueryAllRowsChecked;
+  const factory ConnectionFormEvent.deleteSelectedQueryParameters() =
+      _DeleteSelectedQueryParameters;
   const factory ConnectionFormEvent.saveButtonPressed() = _SaveButtonPressed;
 }
