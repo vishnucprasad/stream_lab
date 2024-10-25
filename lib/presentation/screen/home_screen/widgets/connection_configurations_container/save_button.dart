@@ -21,7 +21,13 @@ class SaveButton extends StatelessWidget {
             }
           },
           icon: state.isSubmitting
-              ? const CircularProgressIndicator()
+              ? const SizedBox(
+                  height: 24,
+                  width: 24,
+                  child: CircularProgressIndicator(
+                    color: Colors.white,
+                  ),
+                )
               : const Icon(Icons.save),
           label: const Text('Save'),
           style: kDefaultButtonStyle,
