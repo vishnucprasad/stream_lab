@@ -69,7 +69,12 @@ class QueryParamsTable extends StatelessWidget {
                   stateManager = event.stateManager;
                 },
                 onRowChecked: (event) {},
-                onChanged: (event) => debugPrint(event.value),
+                onChanged: (event) => context
+                    .read<ConnectionFormBloc>()
+                    .add(ConnectionFormEvent.queryRowChanged(
+                      rowIndex: event.rowIdx,
+                      row: event.row,
+                    )),
               ),
             ),
           ),

@@ -199,6 +199,17 @@ class ConnectionFormBloc
           ),
           failureOrSucessOption: none(),
         )),
+        queryRowChanged: (e) async => emit(state.copyWith(
+          isSaved: false,
+          connectionFormData: state.connectionFormData?.copyWith(
+            queryParameters: state.connectionFormData!.queryParameters
+                .asMap()
+                .entries
+                .map((entry) => entry.key == e.rowIndex ? e.row : entry.value)
+                .toList(),
+          ),
+          failureOrSucessOption: none(),
+        )),
         saveButtonPressed: (_) async {
           Either<ConnectionFailure, Unit>? failureOrSuccess;
           EventFormData? eventEmitter;

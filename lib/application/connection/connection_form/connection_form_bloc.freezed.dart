@@ -34,6 +34,7 @@ mixin _$ConnectionFormEvent {
     required TResult Function(bool value, int listenerIndex)
         listenerSwitchToggled,
     required TResult Function() addQueryParameter,
+    required TResult Function(int rowIndex, PlutoRow row) queryRowChanged,
     required TResult Function() saveButtonPressed,
   }) =>
       throw _privateConstructorUsedError;
@@ -54,6 +55,7 @@ mixin _$ConnectionFormEvent {
     TResult? Function(String name)? listenerNameChanged,
     TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
     TResult? Function()? addQueryParameter,
+    TResult? Function(int rowIndex, PlutoRow row)? queryRowChanged,
     TResult? Function()? saveButtonPressed,
   }) =>
       throw _privateConstructorUsedError;
@@ -74,6 +76,7 @@ mixin _$ConnectionFormEvent {
     TResult Function(String name)? listenerNameChanged,
     TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
     TResult Function()? addQueryParameter,
+    TResult Function(int rowIndex, PlutoRow row)? queryRowChanged,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) =>
@@ -99,6 +102,7 @@ mixin _$ConnectionFormEvent {
     required TResult Function(_ListenerSwitchToggled value)
         listenerSwitchToggled,
     required TResult Function(_AddQueryParameter value) addQueryParameter,
+    required TResult Function(_QueryRowChanged value) queryRowChanged,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) =>
       throw _privateConstructorUsedError;
@@ -120,6 +124,7 @@ mixin _$ConnectionFormEvent {
     TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
     TResult? Function(_AddQueryParameter value)? addQueryParameter,
+    TResult? Function(_QueryRowChanged value)? queryRowChanged,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) =>
       throw _privateConstructorUsedError;
@@ -141,6 +146,7 @@ mixin _$ConnectionFormEvent {
     TResult Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
     TResult Function(_AddQueryParameter value)? addQueryParameter,
+    TResult Function(_QueryRowChanged value)? queryRowChanged,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) =>
@@ -219,6 +225,7 @@ class _$InitializeImpl implements _Initialize {
     required TResult Function(bool value, int listenerIndex)
         listenerSwitchToggled,
     required TResult Function() addQueryParameter,
+    required TResult Function(int rowIndex, PlutoRow row) queryRowChanged,
     required TResult Function() saveButtonPressed,
   }) {
     return initialize();
@@ -242,6 +249,7 @@ class _$InitializeImpl implements _Initialize {
     TResult? Function(String name)? listenerNameChanged,
     TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
     TResult? Function()? addQueryParameter,
+    TResult? Function(int rowIndex, PlutoRow row)? queryRowChanged,
     TResult? Function()? saveButtonPressed,
   }) {
     return initialize?.call();
@@ -265,6 +273,7 @@ class _$InitializeImpl implements _Initialize {
     TResult Function(String name)? listenerNameChanged,
     TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
     TResult Function()? addQueryParameter,
+    TResult Function(int rowIndex, PlutoRow row)? queryRowChanged,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -296,6 +305,7 @@ class _$InitializeImpl implements _Initialize {
     required TResult Function(_ListenerSwitchToggled value)
         listenerSwitchToggled,
     required TResult Function(_AddQueryParameter value) addQueryParameter,
+    required TResult Function(_QueryRowChanged value) queryRowChanged,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return initialize(this);
@@ -320,6 +330,7 @@ class _$InitializeImpl implements _Initialize {
     TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
     TResult? Function(_AddQueryParameter value)? addQueryParameter,
+    TResult? Function(_QueryRowChanged value)? queryRowChanged,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return initialize?.call(this);
@@ -344,6 +355,7 @@ class _$InitializeImpl implements _Initialize {
     TResult Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
     TResult Function(_AddQueryParameter value)? addQueryParameter,
+    TResult Function(_QueryRowChanged value)? queryRowChanged,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -441,6 +453,7 @@ class _$ConnectionNameChangedImpl implements _ConnectionNameChanged {
     required TResult Function(bool value, int listenerIndex)
         listenerSwitchToggled,
     required TResult Function() addQueryParameter,
+    required TResult Function(int rowIndex, PlutoRow row) queryRowChanged,
     required TResult Function() saveButtonPressed,
   }) {
     return connectionNameChanged(connectionName);
@@ -464,6 +477,7 @@ class _$ConnectionNameChangedImpl implements _ConnectionNameChanged {
     TResult? Function(String name)? listenerNameChanged,
     TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
     TResult? Function()? addQueryParameter,
+    TResult? Function(int rowIndex, PlutoRow row)? queryRowChanged,
     TResult? Function()? saveButtonPressed,
   }) {
     return connectionNameChanged?.call(connectionName);
@@ -487,6 +501,7 @@ class _$ConnectionNameChangedImpl implements _ConnectionNameChanged {
     TResult Function(String name)? listenerNameChanged,
     TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
     TResult Function()? addQueryParameter,
+    TResult Function(int rowIndex, PlutoRow row)? queryRowChanged,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -518,6 +533,7 @@ class _$ConnectionNameChangedImpl implements _ConnectionNameChanged {
     required TResult Function(_ListenerSwitchToggled value)
         listenerSwitchToggled,
     required TResult Function(_AddQueryParameter value) addQueryParameter,
+    required TResult Function(_QueryRowChanged value) queryRowChanged,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return connectionNameChanged(this);
@@ -542,6 +558,7 @@ class _$ConnectionNameChangedImpl implements _ConnectionNameChanged {
     TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
     TResult? Function(_AddQueryParameter value)? addQueryParameter,
+    TResult? Function(_QueryRowChanged value)? queryRowChanged,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return connectionNameChanged?.call(this);
@@ -566,6 +583,7 @@ class _$ConnectionNameChangedImpl implements _ConnectionNameChanged {
     TResult Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
     TResult Function(_AddQueryParameter value)? addQueryParameter,
+    TResult Function(_QueryRowChanged value)? queryRowChanged,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -669,6 +687,7 @@ class _$ConnectionUrlChangedImpl implements _ConnectionUrlChanged {
     required TResult Function(bool value, int listenerIndex)
         listenerSwitchToggled,
     required TResult Function() addQueryParameter,
+    required TResult Function(int rowIndex, PlutoRow row) queryRowChanged,
     required TResult Function() saveButtonPressed,
   }) {
     return connectionUrlChanged(connectionUrl);
@@ -692,6 +711,7 @@ class _$ConnectionUrlChangedImpl implements _ConnectionUrlChanged {
     TResult? Function(String name)? listenerNameChanged,
     TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
     TResult? Function()? addQueryParameter,
+    TResult? Function(int rowIndex, PlutoRow row)? queryRowChanged,
     TResult? Function()? saveButtonPressed,
   }) {
     return connectionUrlChanged?.call(connectionUrl);
@@ -715,6 +735,7 @@ class _$ConnectionUrlChangedImpl implements _ConnectionUrlChanged {
     TResult Function(String name)? listenerNameChanged,
     TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
     TResult Function()? addQueryParameter,
+    TResult Function(int rowIndex, PlutoRow row)? queryRowChanged,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -746,6 +767,7 @@ class _$ConnectionUrlChangedImpl implements _ConnectionUrlChanged {
     required TResult Function(_ListenerSwitchToggled value)
         listenerSwitchToggled,
     required TResult Function(_AddQueryParameter value) addQueryParameter,
+    required TResult Function(_QueryRowChanged value) queryRowChanged,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return connectionUrlChanged(this);
@@ -770,6 +792,7 @@ class _$ConnectionUrlChangedImpl implements _ConnectionUrlChanged {
     TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
     TResult? Function(_AddQueryParameter value)? addQueryParameter,
+    TResult? Function(_QueryRowChanged value)? queryRowChanged,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return connectionUrlChanged?.call(this);
@@ -794,6 +817,7 @@ class _$ConnectionUrlChangedImpl implements _ConnectionUrlChanged {
     TResult Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
     TResult Function(_AddQueryParameter value)? addQueryParameter,
+    TResult Function(_QueryRowChanged value)? queryRowChanged,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -896,6 +920,7 @@ class _$ConnectionSelectedImpl implements _ConnectionSelected {
     required TResult Function(bool value, int listenerIndex)
         listenerSwitchToggled,
     required TResult Function() addQueryParameter,
+    required TResult Function(int rowIndex, PlutoRow row) queryRowChanged,
     required TResult Function() saveButtonPressed,
   }) {
     return connectionSelected(connection);
@@ -919,6 +944,7 @@ class _$ConnectionSelectedImpl implements _ConnectionSelected {
     TResult? Function(String name)? listenerNameChanged,
     TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
     TResult? Function()? addQueryParameter,
+    TResult? Function(int rowIndex, PlutoRow row)? queryRowChanged,
     TResult? Function()? saveButtonPressed,
   }) {
     return connectionSelected?.call(connection);
@@ -942,6 +968,7 @@ class _$ConnectionSelectedImpl implements _ConnectionSelected {
     TResult Function(String name)? listenerNameChanged,
     TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
     TResult Function()? addQueryParameter,
+    TResult Function(int rowIndex, PlutoRow row)? queryRowChanged,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -973,6 +1000,7 @@ class _$ConnectionSelectedImpl implements _ConnectionSelected {
     required TResult Function(_ListenerSwitchToggled value)
         listenerSwitchToggled,
     required TResult Function(_AddQueryParameter value) addQueryParameter,
+    required TResult Function(_QueryRowChanged value) queryRowChanged,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return connectionSelected(this);
@@ -997,6 +1025,7 @@ class _$ConnectionSelectedImpl implements _ConnectionSelected {
     TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
     TResult? Function(_AddQueryParameter value)? addQueryParameter,
+    TResult? Function(_QueryRowChanged value)? queryRowChanged,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return connectionSelected?.call(this);
@@ -1021,6 +1050,7 @@ class _$ConnectionSelectedImpl implements _ConnectionSelected {
     TResult Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
     TResult Function(_AddQueryParameter value)? addQueryParameter,
+    TResult Function(_QueryRowChanged value)? queryRowChanged,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -1099,6 +1129,7 @@ class _$NewConnectionButtonPressedImpl implements _NewConnectionButtonPressed {
     required TResult Function(bool value, int listenerIndex)
         listenerSwitchToggled,
     required TResult Function() addQueryParameter,
+    required TResult Function(int rowIndex, PlutoRow row) queryRowChanged,
     required TResult Function() saveButtonPressed,
   }) {
     return newConnectionButtonPressed();
@@ -1122,6 +1153,7 @@ class _$NewConnectionButtonPressedImpl implements _NewConnectionButtonPressed {
     TResult? Function(String name)? listenerNameChanged,
     TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
     TResult? Function()? addQueryParameter,
+    TResult? Function(int rowIndex, PlutoRow row)? queryRowChanged,
     TResult? Function()? saveButtonPressed,
   }) {
     return newConnectionButtonPressed?.call();
@@ -1145,6 +1177,7 @@ class _$NewConnectionButtonPressedImpl implements _NewConnectionButtonPressed {
     TResult Function(String name)? listenerNameChanged,
     TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
     TResult Function()? addQueryParameter,
+    TResult Function(int rowIndex, PlutoRow row)? queryRowChanged,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -1176,6 +1209,7 @@ class _$NewConnectionButtonPressedImpl implements _NewConnectionButtonPressed {
     required TResult Function(_ListenerSwitchToggled value)
         listenerSwitchToggled,
     required TResult Function(_AddQueryParameter value) addQueryParameter,
+    required TResult Function(_QueryRowChanged value) queryRowChanged,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return newConnectionButtonPressed(this);
@@ -1200,6 +1234,7 @@ class _$NewConnectionButtonPressedImpl implements _NewConnectionButtonPressed {
     TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
     TResult? Function(_AddQueryParameter value)? addQueryParameter,
+    TResult? Function(_QueryRowChanged value)? queryRowChanged,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return newConnectionButtonPressed?.call(this);
@@ -1224,6 +1259,7 @@ class _$NewConnectionButtonPressedImpl implements _NewConnectionButtonPressed {
     TResult Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
     TResult Function(_AddQueryParameter value)? addQueryParameter,
+    TResult Function(_QueryRowChanged value)? queryRowChanged,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -1319,6 +1355,7 @@ class _$AddEventImpl implements _AddEvent {
     required TResult Function(bool value, int listenerIndex)
         listenerSwitchToggled,
     required TResult Function() addQueryParameter,
+    required TResult Function(int rowIndex, PlutoRow row) queryRowChanged,
     required TResult Function() saveButtonPressed,
   }) {
     return addEvent(type);
@@ -1342,6 +1379,7 @@ class _$AddEventImpl implements _AddEvent {
     TResult? Function(String name)? listenerNameChanged,
     TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
     TResult? Function()? addQueryParameter,
+    TResult? Function(int rowIndex, PlutoRow row)? queryRowChanged,
     TResult? Function()? saveButtonPressed,
   }) {
     return addEvent?.call(type);
@@ -1365,6 +1403,7 @@ class _$AddEventImpl implements _AddEvent {
     TResult Function(String name)? listenerNameChanged,
     TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
     TResult Function()? addQueryParameter,
+    TResult Function(int rowIndex, PlutoRow row)? queryRowChanged,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -1396,6 +1435,7 @@ class _$AddEventImpl implements _AddEvent {
     required TResult Function(_ListenerSwitchToggled value)
         listenerSwitchToggled,
     required TResult Function(_AddQueryParameter value) addQueryParameter,
+    required TResult Function(_QueryRowChanged value) queryRowChanged,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return addEvent(this);
@@ -1420,6 +1460,7 @@ class _$AddEventImpl implements _AddEvent {
     TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
     TResult? Function(_AddQueryParameter value)? addQueryParameter,
+    TResult? Function(_QueryRowChanged value)? queryRowChanged,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return addEvent?.call(this);
@@ -1444,6 +1485,7 @@ class _$AddEventImpl implements _AddEvent {
     TResult Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
     TResult Function(_AddQueryParameter value)? addQueryParameter,
+    TResult Function(_QueryRowChanged value)? queryRowChanged,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -1545,6 +1587,7 @@ class _$EmitterSelectedImpl implements _EmitterSelected {
     required TResult Function(bool value, int listenerIndex)
         listenerSwitchToggled,
     required TResult Function() addQueryParameter,
+    required TResult Function(int rowIndex, PlutoRow row) queryRowChanged,
     required TResult Function() saveButtonPressed,
   }) {
     return emitterSelected(emitterIndex);
@@ -1568,6 +1611,7 @@ class _$EmitterSelectedImpl implements _EmitterSelected {
     TResult? Function(String name)? listenerNameChanged,
     TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
     TResult? Function()? addQueryParameter,
+    TResult? Function(int rowIndex, PlutoRow row)? queryRowChanged,
     TResult? Function()? saveButtonPressed,
   }) {
     return emitterSelected?.call(emitterIndex);
@@ -1591,6 +1635,7 @@ class _$EmitterSelectedImpl implements _EmitterSelected {
     TResult Function(String name)? listenerNameChanged,
     TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
     TResult Function()? addQueryParameter,
+    TResult Function(int rowIndex, PlutoRow row)? queryRowChanged,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -1622,6 +1667,7 @@ class _$EmitterSelectedImpl implements _EmitterSelected {
     required TResult Function(_ListenerSwitchToggled value)
         listenerSwitchToggled,
     required TResult Function(_AddQueryParameter value) addQueryParameter,
+    required TResult Function(_QueryRowChanged value) queryRowChanged,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return emitterSelected(this);
@@ -1646,6 +1692,7 @@ class _$EmitterSelectedImpl implements _EmitterSelected {
     TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
     TResult? Function(_AddQueryParameter value)? addQueryParameter,
+    TResult? Function(_QueryRowChanged value)? queryRowChanged,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return emitterSelected?.call(this);
@@ -1670,6 +1717,7 @@ class _$EmitterSelectedImpl implements _EmitterSelected {
     TResult Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
     TResult Function(_AddQueryParameter value)? addQueryParameter,
+    TResult Function(_QueryRowChanged value)? queryRowChanged,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -1772,6 +1820,7 @@ class _$ListenerSelectedImpl implements _ListenerSelected {
     required TResult Function(bool value, int listenerIndex)
         listenerSwitchToggled,
     required TResult Function() addQueryParameter,
+    required TResult Function(int rowIndex, PlutoRow row) queryRowChanged,
     required TResult Function() saveButtonPressed,
   }) {
     return listenerSelected(listenerIndex);
@@ -1795,6 +1844,7 @@ class _$ListenerSelectedImpl implements _ListenerSelected {
     TResult? Function(String name)? listenerNameChanged,
     TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
     TResult? Function()? addQueryParameter,
+    TResult? Function(int rowIndex, PlutoRow row)? queryRowChanged,
     TResult? Function()? saveButtonPressed,
   }) {
     return listenerSelected?.call(listenerIndex);
@@ -1818,6 +1868,7 @@ class _$ListenerSelectedImpl implements _ListenerSelected {
     TResult Function(String name)? listenerNameChanged,
     TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
     TResult Function()? addQueryParameter,
+    TResult Function(int rowIndex, PlutoRow row)? queryRowChanged,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -1849,6 +1900,7 @@ class _$ListenerSelectedImpl implements _ListenerSelected {
     required TResult Function(_ListenerSwitchToggled value)
         listenerSwitchToggled,
     required TResult Function(_AddQueryParameter value) addQueryParameter,
+    required TResult Function(_QueryRowChanged value) queryRowChanged,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return listenerSelected(this);
@@ -1873,6 +1925,7 @@ class _$ListenerSelectedImpl implements _ListenerSelected {
     TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
     TResult? Function(_AddQueryParameter value)? addQueryParameter,
+    TResult? Function(_QueryRowChanged value)? queryRowChanged,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return listenerSelected?.call(this);
@@ -1897,6 +1950,7 @@ class _$ListenerSelectedImpl implements _ListenerSelected {
     TResult Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
     TResult Function(_AddQueryParameter value)? addQueryParameter,
+    TResult Function(_QueryRowChanged value)? queryRowChanged,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -1971,6 +2025,7 @@ class _$UnSelectListenerImpl implements _UnSelectListener {
     required TResult Function(bool value, int listenerIndex)
         listenerSwitchToggled,
     required TResult Function() addQueryParameter,
+    required TResult Function(int rowIndex, PlutoRow row) queryRowChanged,
     required TResult Function() saveButtonPressed,
   }) {
     return unSelectListener();
@@ -1994,6 +2049,7 @@ class _$UnSelectListenerImpl implements _UnSelectListener {
     TResult? Function(String name)? listenerNameChanged,
     TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
     TResult? Function()? addQueryParameter,
+    TResult? Function(int rowIndex, PlutoRow row)? queryRowChanged,
     TResult? Function()? saveButtonPressed,
   }) {
     return unSelectListener?.call();
@@ -2017,6 +2073,7 @@ class _$UnSelectListenerImpl implements _UnSelectListener {
     TResult Function(String name)? listenerNameChanged,
     TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
     TResult Function()? addQueryParameter,
+    TResult Function(int rowIndex, PlutoRow row)? queryRowChanged,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -2048,6 +2105,7 @@ class _$UnSelectListenerImpl implements _UnSelectListener {
     required TResult Function(_ListenerSwitchToggled value)
         listenerSwitchToggled,
     required TResult Function(_AddQueryParameter value) addQueryParameter,
+    required TResult Function(_QueryRowChanged value) queryRowChanged,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return unSelectListener(this);
@@ -2072,6 +2130,7 @@ class _$UnSelectListenerImpl implements _UnSelectListener {
     TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
     TResult? Function(_AddQueryParameter value)? addQueryParameter,
+    TResult? Function(_QueryRowChanged value)? queryRowChanged,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return unSelectListener?.call(this);
@@ -2096,6 +2155,7 @@ class _$UnSelectListenerImpl implements _UnSelectListener {
     TResult Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
     TResult Function(_AddQueryParameter value)? addQueryParameter,
+    TResult Function(_QueryRowChanged value)? queryRowChanged,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -2191,6 +2251,7 @@ class _$EmitterNameChangedImpl implements _EmitterNameChanged {
     required TResult Function(bool value, int listenerIndex)
         listenerSwitchToggled,
     required TResult Function() addQueryParameter,
+    required TResult Function(int rowIndex, PlutoRow row) queryRowChanged,
     required TResult Function() saveButtonPressed,
   }) {
     return emitterNameChanged(name);
@@ -2214,6 +2275,7 @@ class _$EmitterNameChangedImpl implements _EmitterNameChanged {
     TResult? Function(String name)? listenerNameChanged,
     TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
     TResult? Function()? addQueryParameter,
+    TResult? Function(int rowIndex, PlutoRow row)? queryRowChanged,
     TResult? Function()? saveButtonPressed,
   }) {
     return emitterNameChanged?.call(name);
@@ -2237,6 +2299,7 @@ class _$EmitterNameChangedImpl implements _EmitterNameChanged {
     TResult Function(String name)? listenerNameChanged,
     TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
     TResult Function()? addQueryParameter,
+    TResult Function(int rowIndex, PlutoRow row)? queryRowChanged,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -2268,6 +2331,7 @@ class _$EmitterNameChangedImpl implements _EmitterNameChanged {
     required TResult Function(_ListenerSwitchToggled value)
         listenerSwitchToggled,
     required TResult Function(_AddQueryParameter value) addQueryParameter,
+    required TResult Function(_QueryRowChanged value) queryRowChanged,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return emitterNameChanged(this);
@@ -2292,6 +2356,7 @@ class _$EmitterNameChangedImpl implements _EmitterNameChanged {
     TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
     TResult? Function(_AddQueryParameter value)? addQueryParameter,
+    TResult? Function(_QueryRowChanged value)? queryRowChanged,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return emitterNameChanged?.call(this);
@@ -2316,6 +2381,7 @@ class _$EmitterNameChangedImpl implements _EmitterNameChanged {
     TResult Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
     TResult Function(_AddQueryParameter value)? addQueryParameter,
+    TResult Function(_QueryRowChanged value)? queryRowChanged,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -2421,6 +2487,7 @@ class _$EmitterDataTypeChangedImpl implements _EmitterDataTypeChanged {
     required TResult Function(bool value, int listenerIndex)
         listenerSwitchToggled,
     required TResult Function() addQueryParameter,
+    required TResult Function(int rowIndex, PlutoRow row) queryRowChanged,
     required TResult Function() saveButtonPressed,
   }) {
     return emitterDataTypeChanged(dataType);
@@ -2444,6 +2511,7 @@ class _$EmitterDataTypeChangedImpl implements _EmitterDataTypeChanged {
     TResult? Function(String name)? listenerNameChanged,
     TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
     TResult? Function()? addQueryParameter,
+    TResult? Function(int rowIndex, PlutoRow row)? queryRowChanged,
     TResult? Function()? saveButtonPressed,
   }) {
     return emitterDataTypeChanged?.call(dataType);
@@ -2467,6 +2535,7 @@ class _$EmitterDataTypeChangedImpl implements _EmitterDataTypeChanged {
     TResult Function(String name)? listenerNameChanged,
     TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
     TResult Function()? addQueryParameter,
+    TResult Function(int rowIndex, PlutoRow row)? queryRowChanged,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -2498,6 +2567,7 @@ class _$EmitterDataTypeChangedImpl implements _EmitterDataTypeChanged {
     required TResult Function(_ListenerSwitchToggled value)
         listenerSwitchToggled,
     required TResult Function(_AddQueryParameter value) addQueryParameter,
+    required TResult Function(_QueryRowChanged value) queryRowChanged,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return emitterDataTypeChanged(this);
@@ -2522,6 +2592,7 @@ class _$EmitterDataTypeChangedImpl implements _EmitterDataTypeChanged {
     TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
     TResult? Function(_AddQueryParameter value)? addQueryParameter,
+    TResult? Function(_QueryRowChanged value)? queryRowChanged,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return emitterDataTypeChanged?.call(this);
@@ -2546,6 +2617,7 @@ class _$EmitterDataTypeChangedImpl implements _EmitterDataTypeChanged {
     TResult Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
     TResult Function(_AddQueryParameter value)? addQueryParameter,
+    TResult Function(_QueryRowChanged value)? queryRowChanged,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -2647,6 +2719,7 @@ class _$EmitterDataChangedImpl implements _EmitterDataChanged {
     required TResult Function(bool value, int listenerIndex)
         listenerSwitchToggled,
     required TResult Function() addQueryParameter,
+    required TResult Function(int rowIndex, PlutoRow row) queryRowChanged,
     required TResult Function() saveButtonPressed,
   }) {
     return emitterDataChanged(data);
@@ -2670,6 +2743,7 @@ class _$EmitterDataChangedImpl implements _EmitterDataChanged {
     TResult? Function(String name)? listenerNameChanged,
     TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
     TResult? Function()? addQueryParameter,
+    TResult? Function(int rowIndex, PlutoRow row)? queryRowChanged,
     TResult? Function()? saveButtonPressed,
   }) {
     return emitterDataChanged?.call(data);
@@ -2693,6 +2767,7 @@ class _$EmitterDataChangedImpl implements _EmitterDataChanged {
     TResult Function(String name)? listenerNameChanged,
     TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
     TResult Function()? addQueryParameter,
+    TResult Function(int rowIndex, PlutoRow row)? queryRowChanged,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -2724,6 +2799,7 @@ class _$EmitterDataChangedImpl implements _EmitterDataChanged {
     required TResult Function(_ListenerSwitchToggled value)
         listenerSwitchToggled,
     required TResult Function(_AddQueryParameter value) addQueryParameter,
+    required TResult Function(_QueryRowChanged value) queryRowChanged,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return emitterDataChanged(this);
@@ -2748,6 +2824,7 @@ class _$EmitterDataChangedImpl implements _EmitterDataChanged {
     TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
     TResult? Function(_AddQueryParameter value)? addQueryParameter,
+    TResult? Function(_QueryRowChanged value)? queryRowChanged,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return emitterDataChanged?.call(this);
@@ -2772,6 +2849,7 @@ class _$EmitterDataChangedImpl implements _EmitterDataChanged {
     TResult Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
     TResult Function(_AddQueryParameter value)? addQueryParameter,
+    TResult Function(_QueryRowChanged value)? queryRowChanged,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -2873,6 +2951,7 @@ class _$ListenerNameChangedImpl implements _ListenerNameChanged {
     required TResult Function(bool value, int listenerIndex)
         listenerSwitchToggled,
     required TResult Function() addQueryParameter,
+    required TResult Function(int rowIndex, PlutoRow row) queryRowChanged,
     required TResult Function() saveButtonPressed,
   }) {
     return listenerNameChanged(name);
@@ -2896,6 +2975,7 @@ class _$ListenerNameChangedImpl implements _ListenerNameChanged {
     TResult? Function(String name)? listenerNameChanged,
     TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
     TResult? Function()? addQueryParameter,
+    TResult? Function(int rowIndex, PlutoRow row)? queryRowChanged,
     TResult? Function()? saveButtonPressed,
   }) {
     return listenerNameChanged?.call(name);
@@ -2919,6 +2999,7 @@ class _$ListenerNameChangedImpl implements _ListenerNameChanged {
     TResult Function(String name)? listenerNameChanged,
     TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
     TResult Function()? addQueryParameter,
+    TResult Function(int rowIndex, PlutoRow row)? queryRowChanged,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -2950,6 +3031,7 @@ class _$ListenerNameChangedImpl implements _ListenerNameChanged {
     required TResult Function(_ListenerSwitchToggled value)
         listenerSwitchToggled,
     required TResult Function(_AddQueryParameter value) addQueryParameter,
+    required TResult Function(_QueryRowChanged value) queryRowChanged,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return listenerNameChanged(this);
@@ -2974,6 +3056,7 @@ class _$ListenerNameChangedImpl implements _ListenerNameChanged {
     TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
     TResult? Function(_AddQueryParameter value)? addQueryParameter,
+    TResult? Function(_QueryRowChanged value)? queryRowChanged,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return listenerNameChanged?.call(this);
@@ -2998,6 +3081,7 @@ class _$ListenerNameChangedImpl implements _ListenerNameChanged {
     TResult Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
     TResult Function(_AddQueryParameter value)? addQueryParameter,
+    TResult Function(_QueryRowChanged value)? queryRowChanged,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -3110,6 +3194,7 @@ class _$ListenerSwitchToggledImpl implements _ListenerSwitchToggled {
     required TResult Function(bool value, int listenerIndex)
         listenerSwitchToggled,
     required TResult Function() addQueryParameter,
+    required TResult Function(int rowIndex, PlutoRow row) queryRowChanged,
     required TResult Function() saveButtonPressed,
   }) {
     return listenerSwitchToggled(value, listenerIndex);
@@ -3133,6 +3218,7 @@ class _$ListenerSwitchToggledImpl implements _ListenerSwitchToggled {
     TResult? Function(String name)? listenerNameChanged,
     TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
     TResult? Function()? addQueryParameter,
+    TResult? Function(int rowIndex, PlutoRow row)? queryRowChanged,
     TResult? Function()? saveButtonPressed,
   }) {
     return listenerSwitchToggled?.call(value, listenerIndex);
@@ -3156,6 +3242,7 @@ class _$ListenerSwitchToggledImpl implements _ListenerSwitchToggled {
     TResult Function(String name)? listenerNameChanged,
     TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
     TResult Function()? addQueryParameter,
+    TResult Function(int rowIndex, PlutoRow row)? queryRowChanged,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -3187,6 +3274,7 @@ class _$ListenerSwitchToggledImpl implements _ListenerSwitchToggled {
     required TResult Function(_ListenerSwitchToggled value)
         listenerSwitchToggled,
     required TResult Function(_AddQueryParameter value) addQueryParameter,
+    required TResult Function(_QueryRowChanged value) queryRowChanged,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return listenerSwitchToggled(this);
@@ -3211,6 +3299,7 @@ class _$ListenerSwitchToggledImpl implements _ListenerSwitchToggled {
     TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
     TResult? Function(_AddQueryParameter value)? addQueryParameter,
+    TResult? Function(_QueryRowChanged value)? queryRowChanged,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return listenerSwitchToggled?.call(this);
@@ -3235,6 +3324,7 @@ class _$ListenerSwitchToggledImpl implements _ListenerSwitchToggled {
     TResult Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
     TResult Function(_AddQueryParameter value)? addQueryParameter,
+    TResult Function(_QueryRowChanged value)? queryRowChanged,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -3311,6 +3401,7 @@ class _$AddQueryParameterImpl implements _AddQueryParameter {
     required TResult Function(bool value, int listenerIndex)
         listenerSwitchToggled,
     required TResult Function() addQueryParameter,
+    required TResult Function(int rowIndex, PlutoRow row) queryRowChanged,
     required TResult Function() saveButtonPressed,
   }) {
     return addQueryParameter();
@@ -3334,6 +3425,7 @@ class _$AddQueryParameterImpl implements _AddQueryParameter {
     TResult? Function(String name)? listenerNameChanged,
     TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
     TResult? Function()? addQueryParameter,
+    TResult? Function(int rowIndex, PlutoRow row)? queryRowChanged,
     TResult? Function()? saveButtonPressed,
   }) {
     return addQueryParameter?.call();
@@ -3357,6 +3449,7 @@ class _$AddQueryParameterImpl implements _AddQueryParameter {
     TResult Function(String name)? listenerNameChanged,
     TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
     TResult Function()? addQueryParameter,
+    TResult Function(int rowIndex, PlutoRow row)? queryRowChanged,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -3388,6 +3481,7 @@ class _$AddQueryParameterImpl implements _AddQueryParameter {
     required TResult Function(_ListenerSwitchToggled value)
         listenerSwitchToggled,
     required TResult Function(_AddQueryParameter value) addQueryParameter,
+    required TResult Function(_QueryRowChanged value) queryRowChanged,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return addQueryParameter(this);
@@ -3412,6 +3506,7 @@ class _$AddQueryParameterImpl implements _AddQueryParameter {
     TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
     TResult? Function(_AddQueryParameter value)? addQueryParameter,
+    TResult? Function(_QueryRowChanged value)? queryRowChanged,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return addQueryParameter?.call(this);
@@ -3436,6 +3531,7 @@ class _$AddQueryParameterImpl implements _AddQueryParameter {
     TResult Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
     TResult Function(_AddQueryParameter value)? addQueryParameter,
+    TResult Function(_QueryRowChanged value)? queryRowChanged,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -3448,6 +3544,249 @@ class _$AddQueryParameterImpl implements _AddQueryParameter {
 
 abstract class _AddQueryParameter implements ConnectionFormEvent {
   const factory _AddQueryParameter() = _$AddQueryParameterImpl;
+}
+
+/// @nodoc
+abstract class _$$QueryRowChangedImplCopyWith<$Res> {
+  factory _$$QueryRowChangedImplCopyWith(_$QueryRowChangedImpl value,
+          $Res Function(_$QueryRowChangedImpl) then) =
+      __$$QueryRowChangedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int rowIndex, PlutoRow row});
+}
+
+/// @nodoc
+class __$$QueryRowChangedImplCopyWithImpl<$Res>
+    extends _$ConnectionFormEventCopyWithImpl<$Res, _$QueryRowChangedImpl>
+    implements _$$QueryRowChangedImplCopyWith<$Res> {
+  __$$QueryRowChangedImplCopyWithImpl(
+      _$QueryRowChangedImpl _value, $Res Function(_$QueryRowChangedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? rowIndex = null,
+    Object? row = null,
+  }) {
+    return _then(_$QueryRowChangedImpl(
+      rowIndex: null == rowIndex
+          ? _value.rowIndex
+          : rowIndex // ignore: cast_nullable_to_non_nullable
+              as int,
+      row: null == row
+          ? _value.row
+          : row // ignore: cast_nullable_to_non_nullable
+              as PlutoRow,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$QueryRowChangedImpl implements _QueryRowChanged {
+  const _$QueryRowChangedImpl({required this.rowIndex, required this.row});
+
+  @override
+  final int rowIndex;
+  @override
+  final PlutoRow row;
+
+  @override
+  String toString() {
+    return 'ConnectionFormEvent.queryRowChanged(rowIndex: $rowIndex, row: $row)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$QueryRowChangedImpl &&
+            (identical(other.rowIndex, rowIndex) ||
+                other.rowIndex == rowIndex) &&
+            (identical(other.row, row) || other.row == row));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, rowIndex, row);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$QueryRowChangedImplCopyWith<_$QueryRowChangedImpl> get copyWith =>
+      __$$QueryRowChangedImplCopyWithImpl<_$QueryRowChangedImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initialize,
+    required TResult Function(String connectionName) connectionNameChanged,
+    required TResult Function(String connectionUrl) connectionUrlChanged,
+    required TResult Function(Connection connection) connectionSelected,
+    required TResult Function() newConnectionButtonPressed,
+    required TResult Function(EventType type) addEvent,
+    required TResult Function(int emitterIndex) emitterSelected,
+    required TResult Function(int listenerIndex) listenerSelected,
+    required TResult Function() unSelectListener,
+    required TResult Function(String name) emitterNameChanged,
+    required TResult Function(EventDataType dataType) emitterDataTypeChanged,
+    required TResult Function(String data) emitterDataChanged,
+    required TResult Function(String name) listenerNameChanged,
+    required TResult Function(bool value, int listenerIndex)
+        listenerSwitchToggled,
+    required TResult Function() addQueryParameter,
+    required TResult Function(int rowIndex, PlutoRow row) queryRowChanged,
+    required TResult Function() saveButtonPressed,
+  }) {
+    return queryRowChanged(rowIndex, row);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initialize,
+    TResult? Function(String connectionName)? connectionNameChanged,
+    TResult? Function(String connectionUrl)? connectionUrlChanged,
+    TResult? Function(Connection connection)? connectionSelected,
+    TResult? Function()? newConnectionButtonPressed,
+    TResult? Function(EventType type)? addEvent,
+    TResult? Function(int emitterIndex)? emitterSelected,
+    TResult? Function(int listenerIndex)? listenerSelected,
+    TResult? Function()? unSelectListener,
+    TResult? Function(String name)? emitterNameChanged,
+    TResult? Function(EventDataType dataType)? emitterDataTypeChanged,
+    TResult? Function(String data)? emitterDataChanged,
+    TResult? Function(String name)? listenerNameChanged,
+    TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult? Function()? addQueryParameter,
+    TResult? Function(int rowIndex, PlutoRow row)? queryRowChanged,
+    TResult? Function()? saveButtonPressed,
+  }) {
+    return queryRowChanged?.call(rowIndex, row);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initialize,
+    TResult Function(String connectionName)? connectionNameChanged,
+    TResult Function(String connectionUrl)? connectionUrlChanged,
+    TResult Function(Connection connection)? connectionSelected,
+    TResult Function()? newConnectionButtonPressed,
+    TResult Function(EventType type)? addEvent,
+    TResult Function(int emitterIndex)? emitterSelected,
+    TResult Function(int listenerIndex)? listenerSelected,
+    TResult Function()? unSelectListener,
+    TResult Function(String name)? emitterNameChanged,
+    TResult Function(EventDataType dataType)? emitterDataTypeChanged,
+    TResult Function(String data)? emitterDataChanged,
+    TResult Function(String name)? listenerNameChanged,
+    TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult Function()? addQueryParameter,
+    TResult Function(int rowIndex, PlutoRow row)? queryRowChanged,
+    TResult Function()? saveButtonPressed,
+    required TResult orElse(),
+  }) {
+    if (queryRowChanged != null) {
+      return queryRowChanged(rowIndex, row);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initialize value) initialize,
+    required TResult Function(_ConnectionNameChanged value)
+        connectionNameChanged,
+    required TResult Function(_ConnectionUrlChanged value) connectionUrlChanged,
+    required TResult Function(_ConnectionSelected value) connectionSelected,
+    required TResult Function(_NewConnectionButtonPressed value)
+        newConnectionButtonPressed,
+    required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_EmitterSelected value) emitterSelected,
+    required TResult Function(_ListenerSelected value) listenerSelected,
+    required TResult Function(_UnSelectListener value) unSelectListener,
+    required TResult Function(_EmitterNameChanged value) emitterNameChanged,
+    required TResult Function(_EmitterDataTypeChanged value)
+        emitterDataTypeChanged,
+    required TResult Function(_EmitterDataChanged value) emitterDataChanged,
+    required TResult Function(_ListenerNameChanged value) listenerNameChanged,
+    required TResult Function(_ListenerSwitchToggled value)
+        listenerSwitchToggled,
+    required TResult Function(_AddQueryParameter value) addQueryParameter,
+    required TResult Function(_QueryRowChanged value) queryRowChanged,
+    required TResult Function(_SaveButtonPressed value) saveButtonPressed,
+  }) {
+    return queryRowChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialize value)? initialize,
+    TResult? Function(_ConnectionNameChanged value)? connectionNameChanged,
+    TResult? Function(_ConnectionUrlChanged value)? connectionUrlChanged,
+    TResult? Function(_ConnectionSelected value)? connectionSelected,
+    TResult? Function(_NewConnectionButtonPressed value)?
+        newConnectionButtonPressed,
+    TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_EmitterSelected value)? emitterSelected,
+    TResult? Function(_ListenerSelected value)? listenerSelected,
+    TResult? Function(_UnSelectListener value)? unSelectListener,
+    TResult? Function(_EmitterNameChanged value)? emitterNameChanged,
+    TResult? Function(_EmitterDataTypeChanged value)? emitterDataTypeChanged,
+    TResult? Function(_EmitterDataChanged value)? emitterDataChanged,
+    TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
+    TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult? Function(_AddQueryParameter value)? addQueryParameter,
+    TResult? Function(_QueryRowChanged value)? queryRowChanged,
+    TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
+  }) {
+    return queryRowChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialize value)? initialize,
+    TResult Function(_ConnectionNameChanged value)? connectionNameChanged,
+    TResult Function(_ConnectionUrlChanged value)? connectionUrlChanged,
+    TResult Function(_ConnectionSelected value)? connectionSelected,
+    TResult Function(_NewConnectionButtonPressed value)?
+        newConnectionButtonPressed,
+    TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_EmitterSelected value)? emitterSelected,
+    TResult Function(_ListenerSelected value)? listenerSelected,
+    TResult Function(_UnSelectListener value)? unSelectListener,
+    TResult Function(_EmitterNameChanged value)? emitterNameChanged,
+    TResult Function(_EmitterDataTypeChanged value)? emitterDataTypeChanged,
+    TResult Function(_EmitterDataChanged value)? emitterDataChanged,
+    TResult Function(_ListenerNameChanged value)? listenerNameChanged,
+    TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult Function(_AddQueryParameter value)? addQueryParameter,
+    TResult Function(_QueryRowChanged value)? queryRowChanged,
+    TResult Function(_SaveButtonPressed value)? saveButtonPressed,
+    required TResult orElse(),
+  }) {
+    if (queryRowChanged != null) {
+      return queryRowChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _QueryRowChanged implements ConnectionFormEvent {
+  const factory _QueryRowChanged(
+      {required final int rowIndex,
+      required final PlutoRow row}) = _$QueryRowChangedImpl;
+
+  int get rowIndex;
+  PlutoRow get row;
+  @JsonKey(ignore: true)
+  _$$QueryRowChangedImplCopyWith<_$QueryRowChangedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3504,6 +3843,7 @@ class _$SaveButtonPressedImpl implements _SaveButtonPressed {
     required TResult Function(bool value, int listenerIndex)
         listenerSwitchToggled,
     required TResult Function() addQueryParameter,
+    required TResult Function(int rowIndex, PlutoRow row) queryRowChanged,
     required TResult Function() saveButtonPressed,
   }) {
     return saveButtonPressed();
@@ -3527,6 +3867,7 @@ class _$SaveButtonPressedImpl implements _SaveButtonPressed {
     TResult? Function(String name)? listenerNameChanged,
     TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
     TResult? Function()? addQueryParameter,
+    TResult? Function(int rowIndex, PlutoRow row)? queryRowChanged,
     TResult? Function()? saveButtonPressed,
   }) {
     return saveButtonPressed?.call();
@@ -3550,6 +3891,7 @@ class _$SaveButtonPressedImpl implements _SaveButtonPressed {
     TResult Function(String name)? listenerNameChanged,
     TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
     TResult Function()? addQueryParameter,
+    TResult Function(int rowIndex, PlutoRow row)? queryRowChanged,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -3581,6 +3923,7 @@ class _$SaveButtonPressedImpl implements _SaveButtonPressed {
     required TResult Function(_ListenerSwitchToggled value)
         listenerSwitchToggled,
     required TResult Function(_AddQueryParameter value) addQueryParameter,
+    required TResult Function(_QueryRowChanged value) queryRowChanged,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return saveButtonPressed(this);
@@ -3605,6 +3948,7 @@ class _$SaveButtonPressedImpl implements _SaveButtonPressed {
     TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
     TResult? Function(_AddQueryParameter value)? addQueryParameter,
+    TResult? Function(_QueryRowChanged value)? queryRowChanged,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return saveButtonPressed?.call(this);
@@ -3629,6 +3973,7 @@ class _$SaveButtonPressedImpl implements _SaveButtonPressed {
     TResult Function(_ListenerNameChanged value)? listenerNameChanged,
     TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
     TResult Function(_AddQueryParameter value)? addQueryParameter,
+    TResult Function(_QueryRowChanged value)? queryRowChanged,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {

@@ -41,5 +41,9 @@ class ConnectionFormEvent with _$ConnectionFormEvent {
     required int listenerIndex,
   }) = _ListenerSwitchToggled;
   const factory ConnectionFormEvent.addQueryParameter() = _AddQueryParameter;
+  const factory ConnectionFormEvent.queryRowChanged({
+    required int rowIndex,
+    required PlutoRow row,
+  }) = _QueryRowChanged;
   const factory ConnectionFormEvent.saveButtonPressed() = _SaveButtonPressed;
 }
