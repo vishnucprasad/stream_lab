@@ -45,5 +45,12 @@ class ConnectionFormEvent with _$ConnectionFormEvent {
     required int rowIndex,
     required PlutoRow row,
   }) = _QueryRowChanged;
+  const factory ConnectionFormEvent.queryRowChecked({
+    required int rowIndex,
+    required PlutoRow row,
+  }) = _QueryRowChecked;
+  const factory ConnectionFormEvent.queryAllRowsChecked({
+    required bool isChecked,
+  }) = _QueryAllRowsChecked;
   const factory ConnectionFormEvent.saveButtonPressed() = _SaveButtonPressed;
 }

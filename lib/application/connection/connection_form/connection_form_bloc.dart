@@ -210,6 +210,29 @@ class ConnectionFormBloc
           ),
           failureOrSucessOption: none(),
         )),
+        queryRowChecked: (e) async => emit(state.copyWith(
+          isRowChecked: !state.isRowChecked,
+          connectionFormData: state.connectionFormData?.copyWith(
+            queryParameters: state.connectionFormData!.queryParameters
+                .asMap()
+                .entries
+                .map((entry) => entry.key == e.rowIndex ? e.row : entry.value)
+                .toList(),
+          ),
+          failureOrSucessOption: none(),
+        )),
+        queryAllRowsChecked: (e) async => emit(state.copyWith(
+          isRowChecked: !state.isRowChecked,
+          connectionFormData: state.connectionFormData?.copyWith(
+            queryParameters: state.connectionFormData!.queryParameters.map(
+              (element) {
+                element.setChecked(e.isChecked);
+                return element;
+              },
+            ).toList(),
+          ),
+          failureOrSucessOption: none(),
+        )),
         saveButtonPressed: (_) async {
           Either<ConnectionFailure, Unit>? failureOrSuccess;
           EventFormData? eventEmitter;
