@@ -22,6 +22,7 @@ class StreamLabApp extends StatelessWidget {
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
+        title: 'Stream Lab',
         theme: AppTheme.light(),
         home: const HomeScreen(),
       ),
