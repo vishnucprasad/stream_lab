@@ -38,6 +38,11 @@ mixin _$ConnectionFormEvent {
     required TResult Function(int rowIndex, PlutoRow row) queryRowChecked,
     required TResult Function(bool isChecked) queryAllRowsChecked,
     required TResult Function() deleteSelectedQueryParameters,
+    required TResult Function() addHeader,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChanged,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChecked,
+    required TResult Function(bool isChecked) headerAllRowsChecked,
+    required TResult Function() deleteSelectedHeaders,
     required TResult Function() saveButtonPressed,
   }) =>
       throw _privateConstructorUsedError;
@@ -62,6 +67,11 @@ mixin _$ConnectionFormEvent {
     TResult? Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult? Function(bool isChecked)? queryAllRowsChecked,
     TResult? Function()? deleteSelectedQueryParameters,
+    TResult? Function()? addHeader,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult? Function(bool isChecked)? headerAllRowsChecked,
+    TResult? Function()? deleteSelectedHeaders,
     TResult? Function()? saveButtonPressed,
   }) =>
       throw _privateConstructorUsedError;
@@ -86,6 +96,11 @@ mixin _$ConnectionFormEvent {
     TResult Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult Function(bool isChecked)? queryAllRowsChecked,
     TResult Function()? deleteSelectedQueryParameters,
+    TResult Function()? addHeader,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult Function(bool isChecked)? headerAllRowsChecked,
+    TResult Function()? deleteSelectedHeaders,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) =>
@@ -116,6 +131,12 @@ mixin _$ConnectionFormEvent {
     required TResult Function(_QueryAllRowsChecked value) queryAllRowsChecked,
     required TResult Function(_DeleteSelectedQueryParameters value)
         deleteSelectedQueryParameters,
+    required TResult Function(_AddHeader value) addHeader,
+    required TResult Function(_HeaderRowChanged value) headerRowChanged,
+    required TResult Function(_HeaderRowChecked value) headerRowChecked,
+    required TResult Function(_HeaderAllRowsChecked value) headerAllRowsChecked,
+    required TResult Function(_DeleteSelectedHeaders value)
+        deleteSelectedHeaders,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) =>
       throw _privateConstructorUsedError;
@@ -142,6 +163,11 @@ mixin _$ConnectionFormEvent {
     TResult? Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult? Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult? Function(_AddHeader value)? addHeader,
+    TResult? Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult? Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult? Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult? Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) =>
       throw _privateConstructorUsedError;
@@ -168,6 +194,11 @@ mixin _$ConnectionFormEvent {
     TResult Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult Function(_AddHeader value)? addHeader,
+    TResult Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) =>
@@ -250,6 +281,11 @@ class _$InitializeImpl implements _Initialize {
     required TResult Function(int rowIndex, PlutoRow row) queryRowChecked,
     required TResult Function(bool isChecked) queryAllRowsChecked,
     required TResult Function() deleteSelectedQueryParameters,
+    required TResult Function() addHeader,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChanged,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChecked,
+    required TResult Function(bool isChecked) headerAllRowsChecked,
+    required TResult Function() deleteSelectedHeaders,
     required TResult Function() saveButtonPressed,
   }) {
     return initialize();
@@ -277,6 +313,11 @@ class _$InitializeImpl implements _Initialize {
     TResult? Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult? Function(bool isChecked)? queryAllRowsChecked,
     TResult? Function()? deleteSelectedQueryParameters,
+    TResult? Function()? addHeader,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult? Function(bool isChecked)? headerAllRowsChecked,
+    TResult? Function()? deleteSelectedHeaders,
     TResult? Function()? saveButtonPressed,
   }) {
     return initialize?.call();
@@ -304,6 +345,11 @@ class _$InitializeImpl implements _Initialize {
     TResult Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult Function(bool isChecked)? queryAllRowsChecked,
     TResult Function()? deleteSelectedQueryParameters,
+    TResult Function()? addHeader,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult Function(bool isChecked)? headerAllRowsChecked,
+    TResult Function()? deleteSelectedHeaders,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -340,6 +386,12 @@ class _$InitializeImpl implements _Initialize {
     required TResult Function(_QueryAllRowsChecked value) queryAllRowsChecked,
     required TResult Function(_DeleteSelectedQueryParameters value)
         deleteSelectedQueryParameters,
+    required TResult Function(_AddHeader value) addHeader,
+    required TResult Function(_HeaderRowChanged value) headerRowChanged,
+    required TResult Function(_HeaderRowChecked value) headerRowChecked,
+    required TResult Function(_HeaderAllRowsChecked value) headerAllRowsChecked,
+    required TResult Function(_DeleteSelectedHeaders value)
+        deleteSelectedHeaders,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return initialize(this);
@@ -369,6 +421,11 @@ class _$InitializeImpl implements _Initialize {
     TResult? Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult? Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult? Function(_AddHeader value)? addHeader,
+    TResult? Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult? Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult? Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult? Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return initialize?.call(this);
@@ -398,6 +455,11 @@ class _$InitializeImpl implements _Initialize {
     TResult Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult Function(_AddHeader value)? addHeader,
+    TResult Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -499,6 +561,11 @@ class _$ConnectionNameChangedImpl implements _ConnectionNameChanged {
     required TResult Function(int rowIndex, PlutoRow row) queryRowChecked,
     required TResult Function(bool isChecked) queryAllRowsChecked,
     required TResult Function() deleteSelectedQueryParameters,
+    required TResult Function() addHeader,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChanged,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChecked,
+    required TResult Function(bool isChecked) headerAllRowsChecked,
+    required TResult Function() deleteSelectedHeaders,
     required TResult Function() saveButtonPressed,
   }) {
     return connectionNameChanged(connectionName);
@@ -526,6 +593,11 @@ class _$ConnectionNameChangedImpl implements _ConnectionNameChanged {
     TResult? Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult? Function(bool isChecked)? queryAllRowsChecked,
     TResult? Function()? deleteSelectedQueryParameters,
+    TResult? Function()? addHeader,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult? Function(bool isChecked)? headerAllRowsChecked,
+    TResult? Function()? deleteSelectedHeaders,
     TResult? Function()? saveButtonPressed,
   }) {
     return connectionNameChanged?.call(connectionName);
@@ -553,6 +625,11 @@ class _$ConnectionNameChangedImpl implements _ConnectionNameChanged {
     TResult Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult Function(bool isChecked)? queryAllRowsChecked,
     TResult Function()? deleteSelectedQueryParameters,
+    TResult Function()? addHeader,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult Function(bool isChecked)? headerAllRowsChecked,
+    TResult Function()? deleteSelectedHeaders,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -589,6 +666,12 @@ class _$ConnectionNameChangedImpl implements _ConnectionNameChanged {
     required TResult Function(_QueryAllRowsChecked value) queryAllRowsChecked,
     required TResult Function(_DeleteSelectedQueryParameters value)
         deleteSelectedQueryParameters,
+    required TResult Function(_AddHeader value) addHeader,
+    required TResult Function(_HeaderRowChanged value) headerRowChanged,
+    required TResult Function(_HeaderRowChecked value) headerRowChecked,
+    required TResult Function(_HeaderAllRowsChecked value) headerAllRowsChecked,
+    required TResult Function(_DeleteSelectedHeaders value)
+        deleteSelectedHeaders,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return connectionNameChanged(this);
@@ -618,6 +701,11 @@ class _$ConnectionNameChangedImpl implements _ConnectionNameChanged {
     TResult? Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult? Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult? Function(_AddHeader value)? addHeader,
+    TResult? Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult? Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult? Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult? Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return connectionNameChanged?.call(this);
@@ -647,6 +735,11 @@ class _$ConnectionNameChangedImpl implements _ConnectionNameChanged {
     TResult Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult Function(_AddHeader value)? addHeader,
+    TResult Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -754,6 +847,11 @@ class _$ConnectionUrlChangedImpl implements _ConnectionUrlChanged {
     required TResult Function(int rowIndex, PlutoRow row) queryRowChecked,
     required TResult Function(bool isChecked) queryAllRowsChecked,
     required TResult Function() deleteSelectedQueryParameters,
+    required TResult Function() addHeader,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChanged,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChecked,
+    required TResult Function(bool isChecked) headerAllRowsChecked,
+    required TResult Function() deleteSelectedHeaders,
     required TResult Function() saveButtonPressed,
   }) {
     return connectionUrlChanged(connectionUrl);
@@ -781,6 +879,11 @@ class _$ConnectionUrlChangedImpl implements _ConnectionUrlChanged {
     TResult? Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult? Function(bool isChecked)? queryAllRowsChecked,
     TResult? Function()? deleteSelectedQueryParameters,
+    TResult? Function()? addHeader,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult? Function(bool isChecked)? headerAllRowsChecked,
+    TResult? Function()? deleteSelectedHeaders,
     TResult? Function()? saveButtonPressed,
   }) {
     return connectionUrlChanged?.call(connectionUrl);
@@ -808,6 +911,11 @@ class _$ConnectionUrlChangedImpl implements _ConnectionUrlChanged {
     TResult Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult Function(bool isChecked)? queryAllRowsChecked,
     TResult Function()? deleteSelectedQueryParameters,
+    TResult Function()? addHeader,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult Function(bool isChecked)? headerAllRowsChecked,
+    TResult Function()? deleteSelectedHeaders,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -844,6 +952,12 @@ class _$ConnectionUrlChangedImpl implements _ConnectionUrlChanged {
     required TResult Function(_QueryAllRowsChecked value) queryAllRowsChecked,
     required TResult Function(_DeleteSelectedQueryParameters value)
         deleteSelectedQueryParameters,
+    required TResult Function(_AddHeader value) addHeader,
+    required TResult Function(_HeaderRowChanged value) headerRowChanged,
+    required TResult Function(_HeaderRowChecked value) headerRowChecked,
+    required TResult Function(_HeaderAllRowsChecked value) headerAllRowsChecked,
+    required TResult Function(_DeleteSelectedHeaders value)
+        deleteSelectedHeaders,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return connectionUrlChanged(this);
@@ -873,6 +987,11 @@ class _$ConnectionUrlChangedImpl implements _ConnectionUrlChanged {
     TResult? Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult? Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult? Function(_AddHeader value)? addHeader,
+    TResult? Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult? Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult? Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult? Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return connectionUrlChanged?.call(this);
@@ -902,6 +1021,11 @@ class _$ConnectionUrlChangedImpl implements _ConnectionUrlChanged {
     TResult Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult Function(_AddHeader value)? addHeader,
+    TResult Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -1008,6 +1132,11 @@ class _$ConnectionSelectedImpl implements _ConnectionSelected {
     required TResult Function(int rowIndex, PlutoRow row) queryRowChecked,
     required TResult Function(bool isChecked) queryAllRowsChecked,
     required TResult Function() deleteSelectedQueryParameters,
+    required TResult Function() addHeader,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChanged,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChecked,
+    required TResult Function(bool isChecked) headerAllRowsChecked,
+    required TResult Function() deleteSelectedHeaders,
     required TResult Function() saveButtonPressed,
   }) {
     return connectionSelected(connection);
@@ -1035,6 +1164,11 @@ class _$ConnectionSelectedImpl implements _ConnectionSelected {
     TResult? Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult? Function(bool isChecked)? queryAllRowsChecked,
     TResult? Function()? deleteSelectedQueryParameters,
+    TResult? Function()? addHeader,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult? Function(bool isChecked)? headerAllRowsChecked,
+    TResult? Function()? deleteSelectedHeaders,
     TResult? Function()? saveButtonPressed,
   }) {
     return connectionSelected?.call(connection);
@@ -1062,6 +1196,11 @@ class _$ConnectionSelectedImpl implements _ConnectionSelected {
     TResult Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult Function(bool isChecked)? queryAllRowsChecked,
     TResult Function()? deleteSelectedQueryParameters,
+    TResult Function()? addHeader,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult Function(bool isChecked)? headerAllRowsChecked,
+    TResult Function()? deleteSelectedHeaders,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -1098,6 +1237,12 @@ class _$ConnectionSelectedImpl implements _ConnectionSelected {
     required TResult Function(_QueryAllRowsChecked value) queryAllRowsChecked,
     required TResult Function(_DeleteSelectedQueryParameters value)
         deleteSelectedQueryParameters,
+    required TResult Function(_AddHeader value) addHeader,
+    required TResult Function(_HeaderRowChanged value) headerRowChanged,
+    required TResult Function(_HeaderRowChecked value) headerRowChecked,
+    required TResult Function(_HeaderAllRowsChecked value) headerAllRowsChecked,
+    required TResult Function(_DeleteSelectedHeaders value)
+        deleteSelectedHeaders,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return connectionSelected(this);
@@ -1127,6 +1272,11 @@ class _$ConnectionSelectedImpl implements _ConnectionSelected {
     TResult? Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult? Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult? Function(_AddHeader value)? addHeader,
+    TResult? Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult? Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult? Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult? Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return connectionSelected?.call(this);
@@ -1156,6 +1306,11 @@ class _$ConnectionSelectedImpl implements _ConnectionSelected {
     TResult Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult Function(_AddHeader value)? addHeader,
+    TResult Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -1238,6 +1393,11 @@ class _$NewConnectionButtonPressedImpl implements _NewConnectionButtonPressed {
     required TResult Function(int rowIndex, PlutoRow row) queryRowChecked,
     required TResult Function(bool isChecked) queryAllRowsChecked,
     required TResult Function() deleteSelectedQueryParameters,
+    required TResult Function() addHeader,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChanged,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChecked,
+    required TResult Function(bool isChecked) headerAllRowsChecked,
+    required TResult Function() deleteSelectedHeaders,
     required TResult Function() saveButtonPressed,
   }) {
     return newConnectionButtonPressed();
@@ -1265,6 +1425,11 @@ class _$NewConnectionButtonPressedImpl implements _NewConnectionButtonPressed {
     TResult? Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult? Function(bool isChecked)? queryAllRowsChecked,
     TResult? Function()? deleteSelectedQueryParameters,
+    TResult? Function()? addHeader,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult? Function(bool isChecked)? headerAllRowsChecked,
+    TResult? Function()? deleteSelectedHeaders,
     TResult? Function()? saveButtonPressed,
   }) {
     return newConnectionButtonPressed?.call();
@@ -1292,6 +1457,11 @@ class _$NewConnectionButtonPressedImpl implements _NewConnectionButtonPressed {
     TResult Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult Function(bool isChecked)? queryAllRowsChecked,
     TResult Function()? deleteSelectedQueryParameters,
+    TResult Function()? addHeader,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult Function(bool isChecked)? headerAllRowsChecked,
+    TResult Function()? deleteSelectedHeaders,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -1328,6 +1498,12 @@ class _$NewConnectionButtonPressedImpl implements _NewConnectionButtonPressed {
     required TResult Function(_QueryAllRowsChecked value) queryAllRowsChecked,
     required TResult Function(_DeleteSelectedQueryParameters value)
         deleteSelectedQueryParameters,
+    required TResult Function(_AddHeader value) addHeader,
+    required TResult Function(_HeaderRowChanged value) headerRowChanged,
+    required TResult Function(_HeaderRowChecked value) headerRowChecked,
+    required TResult Function(_HeaderAllRowsChecked value) headerAllRowsChecked,
+    required TResult Function(_DeleteSelectedHeaders value)
+        deleteSelectedHeaders,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return newConnectionButtonPressed(this);
@@ -1357,6 +1533,11 @@ class _$NewConnectionButtonPressedImpl implements _NewConnectionButtonPressed {
     TResult? Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult? Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult? Function(_AddHeader value)? addHeader,
+    TResult? Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult? Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult? Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult? Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return newConnectionButtonPressed?.call(this);
@@ -1386,6 +1567,11 @@ class _$NewConnectionButtonPressedImpl implements _NewConnectionButtonPressed {
     TResult Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult Function(_AddHeader value)? addHeader,
+    TResult Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -1485,6 +1671,11 @@ class _$AddEventImpl implements _AddEvent {
     required TResult Function(int rowIndex, PlutoRow row) queryRowChecked,
     required TResult Function(bool isChecked) queryAllRowsChecked,
     required TResult Function() deleteSelectedQueryParameters,
+    required TResult Function() addHeader,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChanged,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChecked,
+    required TResult Function(bool isChecked) headerAllRowsChecked,
+    required TResult Function() deleteSelectedHeaders,
     required TResult Function() saveButtonPressed,
   }) {
     return addEvent(type);
@@ -1512,6 +1703,11 @@ class _$AddEventImpl implements _AddEvent {
     TResult? Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult? Function(bool isChecked)? queryAllRowsChecked,
     TResult? Function()? deleteSelectedQueryParameters,
+    TResult? Function()? addHeader,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult? Function(bool isChecked)? headerAllRowsChecked,
+    TResult? Function()? deleteSelectedHeaders,
     TResult? Function()? saveButtonPressed,
   }) {
     return addEvent?.call(type);
@@ -1539,6 +1735,11 @@ class _$AddEventImpl implements _AddEvent {
     TResult Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult Function(bool isChecked)? queryAllRowsChecked,
     TResult Function()? deleteSelectedQueryParameters,
+    TResult Function()? addHeader,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult Function(bool isChecked)? headerAllRowsChecked,
+    TResult Function()? deleteSelectedHeaders,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -1575,6 +1776,12 @@ class _$AddEventImpl implements _AddEvent {
     required TResult Function(_QueryAllRowsChecked value) queryAllRowsChecked,
     required TResult Function(_DeleteSelectedQueryParameters value)
         deleteSelectedQueryParameters,
+    required TResult Function(_AddHeader value) addHeader,
+    required TResult Function(_HeaderRowChanged value) headerRowChanged,
+    required TResult Function(_HeaderRowChecked value) headerRowChecked,
+    required TResult Function(_HeaderAllRowsChecked value) headerAllRowsChecked,
+    required TResult Function(_DeleteSelectedHeaders value)
+        deleteSelectedHeaders,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return addEvent(this);
@@ -1604,6 +1811,11 @@ class _$AddEventImpl implements _AddEvent {
     TResult? Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult? Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult? Function(_AddHeader value)? addHeader,
+    TResult? Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult? Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult? Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult? Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return addEvent?.call(this);
@@ -1633,6 +1845,11 @@ class _$AddEventImpl implements _AddEvent {
     TResult Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult Function(_AddHeader value)? addHeader,
+    TResult Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -1738,6 +1955,11 @@ class _$EmitterSelectedImpl implements _EmitterSelected {
     required TResult Function(int rowIndex, PlutoRow row) queryRowChecked,
     required TResult Function(bool isChecked) queryAllRowsChecked,
     required TResult Function() deleteSelectedQueryParameters,
+    required TResult Function() addHeader,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChanged,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChecked,
+    required TResult Function(bool isChecked) headerAllRowsChecked,
+    required TResult Function() deleteSelectedHeaders,
     required TResult Function() saveButtonPressed,
   }) {
     return emitterSelected(emitterIndex);
@@ -1765,6 +1987,11 @@ class _$EmitterSelectedImpl implements _EmitterSelected {
     TResult? Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult? Function(bool isChecked)? queryAllRowsChecked,
     TResult? Function()? deleteSelectedQueryParameters,
+    TResult? Function()? addHeader,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult? Function(bool isChecked)? headerAllRowsChecked,
+    TResult? Function()? deleteSelectedHeaders,
     TResult? Function()? saveButtonPressed,
   }) {
     return emitterSelected?.call(emitterIndex);
@@ -1792,6 +2019,11 @@ class _$EmitterSelectedImpl implements _EmitterSelected {
     TResult Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult Function(bool isChecked)? queryAllRowsChecked,
     TResult Function()? deleteSelectedQueryParameters,
+    TResult Function()? addHeader,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult Function(bool isChecked)? headerAllRowsChecked,
+    TResult Function()? deleteSelectedHeaders,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -1828,6 +2060,12 @@ class _$EmitterSelectedImpl implements _EmitterSelected {
     required TResult Function(_QueryAllRowsChecked value) queryAllRowsChecked,
     required TResult Function(_DeleteSelectedQueryParameters value)
         deleteSelectedQueryParameters,
+    required TResult Function(_AddHeader value) addHeader,
+    required TResult Function(_HeaderRowChanged value) headerRowChanged,
+    required TResult Function(_HeaderRowChecked value) headerRowChecked,
+    required TResult Function(_HeaderAllRowsChecked value) headerAllRowsChecked,
+    required TResult Function(_DeleteSelectedHeaders value)
+        deleteSelectedHeaders,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return emitterSelected(this);
@@ -1857,6 +2095,11 @@ class _$EmitterSelectedImpl implements _EmitterSelected {
     TResult? Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult? Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult? Function(_AddHeader value)? addHeader,
+    TResult? Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult? Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult? Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult? Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return emitterSelected?.call(this);
@@ -1886,6 +2129,11 @@ class _$EmitterSelectedImpl implements _EmitterSelected {
     TResult Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult Function(_AddHeader value)? addHeader,
+    TResult Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -1992,6 +2240,11 @@ class _$ListenerSelectedImpl implements _ListenerSelected {
     required TResult Function(int rowIndex, PlutoRow row) queryRowChecked,
     required TResult Function(bool isChecked) queryAllRowsChecked,
     required TResult Function() deleteSelectedQueryParameters,
+    required TResult Function() addHeader,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChanged,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChecked,
+    required TResult Function(bool isChecked) headerAllRowsChecked,
+    required TResult Function() deleteSelectedHeaders,
     required TResult Function() saveButtonPressed,
   }) {
     return listenerSelected(listenerIndex);
@@ -2019,6 +2272,11 @@ class _$ListenerSelectedImpl implements _ListenerSelected {
     TResult? Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult? Function(bool isChecked)? queryAllRowsChecked,
     TResult? Function()? deleteSelectedQueryParameters,
+    TResult? Function()? addHeader,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult? Function(bool isChecked)? headerAllRowsChecked,
+    TResult? Function()? deleteSelectedHeaders,
     TResult? Function()? saveButtonPressed,
   }) {
     return listenerSelected?.call(listenerIndex);
@@ -2046,6 +2304,11 @@ class _$ListenerSelectedImpl implements _ListenerSelected {
     TResult Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult Function(bool isChecked)? queryAllRowsChecked,
     TResult Function()? deleteSelectedQueryParameters,
+    TResult Function()? addHeader,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult Function(bool isChecked)? headerAllRowsChecked,
+    TResult Function()? deleteSelectedHeaders,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -2082,6 +2345,12 @@ class _$ListenerSelectedImpl implements _ListenerSelected {
     required TResult Function(_QueryAllRowsChecked value) queryAllRowsChecked,
     required TResult Function(_DeleteSelectedQueryParameters value)
         deleteSelectedQueryParameters,
+    required TResult Function(_AddHeader value) addHeader,
+    required TResult Function(_HeaderRowChanged value) headerRowChanged,
+    required TResult Function(_HeaderRowChecked value) headerRowChecked,
+    required TResult Function(_HeaderAllRowsChecked value) headerAllRowsChecked,
+    required TResult Function(_DeleteSelectedHeaders value)
+        deleteSelectedHeaders,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return listenerSelected(this);
@@ -2111,6 +2380,11 @@ class _$ListenerSelectedImpl implements _ListenerSelected {
     TResult? Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult? Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult? Function(_AddHeader value)? addHeader,
+    TResult? Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult? Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult? Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult? Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return listenerSelected?.call(this);
@@ -2140,6 +2414,11 @@ class _$ListenerSelectedImpl implements _ListenerSelected {
     TResult Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult Function(_AddHeader value)? addHeader,
+    TResult Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -2218,6 +2497,11 @@ class _$UnSelectListenerImpl implements _UnSelectListener {
     required TResult Function(int rowIndex, PlutoRow row) queryRowChecked,
     required TResult Function(bool isChecked) queryAllRowsChecked,
     required TResult Function() deleteSelectedQueryParameters,
+    required TResult Function() addHeader,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChanged,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChecked,
+    required TResult Function(bool isChecked) headerAllRowsChecked,
+    required TResult Function() deleteSelectedHeaders,
     required TResult Function() saveButtonPressed,
   }) {
     return unSelectListener();
@@ -2245,6 +2529,11 @@ class _$UnSelectListenerImpl implements _UnSelectListener {
     TResult? Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult? Function(bool isChecked)? queryAllRowsChecked,
     TResult? Function()? deleteSelectedQueryParameters,
+    TResult? Function()? addHeader,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult? Function(bool isChecked)? headerAllRowsChecked,
+    TResult? Function()? deleteSelectedHeaders,
     TResult? Function()? saveButtonPressed,
   }) {
     return unSelectListener?.call();
@@ -2272,6 +2561,11 @@ class _$UnSelectListenerImpl implements _UnSelectListener {
     TResult Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult Function(bool isChecked)? queryAllRowsChecked,
     TResult Function()? deleteSelectedQueryParameters,
+    TResult Function()? addHeader,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult Function(bool isChecked)? headerAllRowsChecked,
+    TResult Function()? deleteSelectedHeaders,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -2308,6 +2602,12 @@ class _$UnSelectListenerImpl implements _UnSelectListener {
     required TResult Function(_QueryAllRowsChecked value) queryAllRowsChecked,
     required TResult Function(_DeleteSelectedQueryParameters value)
         deleteSelectedQueryParameters,
+    required TResult Function(_AddHeader value) addHeader,
+    required TResult Function(_HeaderRowChanged value) headerRowChanged,
+    required TResult Function(_HeaderRowChecked value) headerRowChecked,
+    required TResult Function(_HeaderAllRowsChecked value) headerAllRowsChecked,
+    required TResult Function(_DeleteSelectedHeaders value)
+        deleteSelectedHeaders,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return unSelectListener(this);
@@ -2337,6 +2637,11 @@ class _$UnSelectListenerImpl implements _UnSelectListener {
     TResult? Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult? Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult? Function(_AddHeader value)? addHeader,
+    TResult? Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult? Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult? Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult? Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return unSelectListener?.call(this);
@@ -2366,6 +2671,11 @@ class _$UnSelectListenerImpl implements _UnSelectListener {
     TResult Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult Function(_AddHeader value)? addHeader,
+    TResult Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -2465,6 +2775,11 @@ class _$EmitterNameChangedImpl implements _EmitterNameChanged {
     required TResult Function(int rowIndex, PlutoRow row) queryRowChecked,
     required TResult Function(bool isChecked) queryAllRowsChecked,
     required TResult Function() deleteSelectedQueryParameters,
+    required TResult Function() addHeader,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChanged,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChecked,
+    required TResult Function(bool isChecked) headerAllRowsChecked,
+    required TResult Function() deleteSelectedHeaders,
     required TResult Function() saveButtonPressed,
   }) {
     return emitterNameChanged(name);
@@ -2492,6 +2807,11 @@ class _$EmitterNameChangedImpl implements _EmitterNameChanged {
     TResult? Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult? Function(bool isChecked)? queryAllRowsChecked,
     TResult? Function()? deleteSelectedQueryParameters,
+    TResult? Function()? addHeader,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult? Function(bool isChecked)? headerAllRowsChecked,
+    TResult? Function()? deleteSelectedHeaders,
     TResult? Function()? saveButtonPressed,
   }) {
     return emitterNameChanged?.call(name);
@@ -2519,6 +2839,11 @@ class _$EmitterNameChangedImpl implements _EmitterNameChanged {
     TResult Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult Function(bool isChecked)? queryAllRowsChecked,
     TResult Function()? deleteSelectedQueryParameters,
+    TResult Function()? addHeader,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult Function(bool isChecked)? headerAllRowsChecked,
+    TResult Function()? deleteSelectedHeaders,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -2555,6 +2880,12 @@ class _$EmitterNameChangedImpl implements _EmitterNameChanged {
     required TResult Function(_QueryAllRowsChecked value) queryAllRowsChecked,
     required TResult Function(_DeleteSelectedQueryParameters value)
         deleteSelectedQueryParameters,
+    required TResult Function(_AddHeader value) addHeader,
+    required TResult Function(_HeaderRowChanged value) headerRowChanged,
+    required TResult Function(_HeaderRowChecked value) headerRowChecked,
+    required TResult Function(_HeaderAllRowsChecked value) headerAllRowsChecked,
+    required TResult Function(_DeleteSelectedHeaders value)
+        deleteSelectedHeaders,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return emitterNameChanged(this);
@@ -2584,6 +2915,11 @@ class _$EmitterNameChangedImpl implements _EmitterNameChanged {
     TResult? Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult? Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult? Function(_AddHeader value)? addHeader,
+    TResult? Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult? Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult? Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult? Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return emitterNameChanged?.call(this);
@@ -2613,6 +2949,11 @@ class _$EmitterNameChangedImpl implements _EmitterNameChanged {
     TResult Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult Function(_AddHeader value)? addHeader,
+    TResult Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -2722,6 +3063,11 @@ class _$EmitterDataTypeChangedImpl implements _EmitterDataTypeChanged {
     required TResult Function(int rowIndex, PlutoRow row) queryRowChecked,
     required TResult Function(bool isChecked) queryAllRowsChecked,
     required TResult Function() deleteSelectedQueryParameters,
+    required TResult Function() addHeader,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChanged,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChecked,
+    required TResult Function(bool isChecked) headerAllRowsChecked,
+    required TResult Function() deleteSelectedHeaders,
     required TResult Function() saveButtonPressed,
   }) {
     return emitterDataTypeChanged(dataType);
@@ -2749,6 +3095,11 @@ class _$EmitterDataTypeChangedImpl implements _EmitterDataTypeChanged {
     TResult? Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult? Function(bool isChecked)? queryAllRowsChecked,
     TResult? Function()? deleteSelectedQueryParameters,
+    TResult? Function()? addHeader,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult? Function(bool isChecked)? headerAllRowsChecked,
+    TResult? Function()? deleteSelectedHeaders,
     TResult? Function()? saveButtonPressed,
   }) {
     return emitterDataTypeChanged?.call(dataType);
@@ -2776,6 +3127,11 @@ class _$EmitterDataTypeChangedImpl implements _EmitterDataTypeChanged {
     TResult Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult Function(bool isChecked)? queryAllRowsChecked,
     TResult Function()? deleteSelectedQueryParameters,
+    TResult Function()? addHeader,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult Function(bool isChecked)? headerAllRowsChecked,
+    TResult Function()? deleteSelectedHeaders,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -2812,6 +3168,12 @@ class _$EmitterDataTypeChangedImpl implements _EmitterDataTypeChanged {
     required TResult Function(_QueryAllRowsChecked value) queryAllRowsChecked,
     required TResult Function(_DeleteSelectedQueryParameters value)
         deleteSelectedQueryParameters,
+    required TResult Function(_AddHeader value) addHeader,
+    required TResult Function(_HeaderRowChanged value) headerRowChanged,
+    required TResult Function(_HeaderRowChecked value) headerRowChecked,
+    required TResult Function(_HeaderAllRowsChecked value) headerAllRowsChecked,
+    required TResult Function(_DeleteSelectedHeaders value)
+        deleteSelectedHeaders,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return emitterDataTypeChanged(this);
@@ -2841,6 +3203,11 @@ class _$EmitterDataTypeChangedImpl implements _EmitterDataTypeChanged {
     TResult? Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult? Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult? Function(_AddHeader value)? addHeader,
+    TResult? Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult? Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult? Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult? Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return emitterDataTypeChanged?.call(this);
@@ -2870,6 +3237,11 @@ class _$EmitterDataTypeChangedImpl implements _EmitterDataTypeChanged {
     TResult Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult Function(_AddHeader value)? addHeader,
+    TResult Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -2975,6 +3347,11 @@ class _$EmitterDataChangedImpl implements _EmitterDataChanged {
     required TResult Function(int rowIndex, PlutoRow row) queryRowChecked,
     required TResult Function(bool isChecked) queryAllRowsChecked,
     required TResult Function() deleteSelectedQueryParameters,
+    required TResult Function() addHeader,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChanged,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChecked,
+    required TResult Function(bool isChecked) headerAllRowsChecked,
+    required TResult Function() deleteSelectedHeaders,
     required TResult Function() saveButtonPressed,
   }) {
     return emitterDataChanged(data);
@@ -3002,6 +3379,11 @@ class _$EmitterDataChangedImpl implements _EmitterDataChanged {
     TResult? Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult? Function(bool isChecked)? queryAllRowsChecked,
     TResult? Function()? deleteSelectedQueryParameters,
+    TResult? Function()? addHeader,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult? Function(bool isChecked)? headerAllRowsChecked,
+    TResult? Function()? deleteSelectedHeaders,
     TResult? Function()? saveButtonPressed,
   }) {
     return emitterDataChanged?.call(data);
@@ -3029,6 +3411,11 @@ class _$EmitterDataChangedImpl implements _EmitterDataChanged {
     TResult Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult Function(bool isChecked)? queryAllRowsChecked,
     TResult Function()? deleteSelectedQueryParameters,
+    TResult Function()? addHeader,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult Function(bool isChecked)? headerAllRowsChecked,
+    TResult Function()? deleteSelectedHeaders,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -3065,6 +3452,12 @@ class _$EmitterDataChangedImpl implements _EmitterDataChanged {
     required TResult Function(_QueryAllRowsChecked value) queryAllRowsChecked,
     required TResult Function(_DeleteSelectedQueryParameters value)
         deleteSelectedQueryParameters,
+    required TResult Function(_AddHeader value) addHeader,
+    required TResult Function(_HeaderRowChanged value) headerRowChanged,
+    required TResult Function(_HeaderRowChecked value) headerRowChecked,
+    required TResult Function(_HeaderAllRowsChecked value) headerAllRowsChecked,
+    required TResult Function(_DeleteSelectedHeaders value)
+        deleteSelectedHeaders,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return emitterDataChanged(this);
@@ -3094,6 +3487,11 @@ class _$EmitterDataChangedImpl implements _EmitterDataChanged {
     TResult? Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult? Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult? Function(_AddHeader value)? addHeader,
+    TResult? Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult? Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult? Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult? Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return emitterDataChanged?.call(this);
@@ -3123,6 +3521,11 @@ class _$EmitterDataChangedImpl implements _EmitterDataChanged {
     TResult Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult Function(_AddHeader value)? addHeader,
+    TResult Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -3228,6 +3631,11 @@ class _$ListenerNameChangedImpl implements _ListenerNameChanged {
     required TResult Function(int rowIndex, PlutoRow row) queryRowChecked,
     required TResult Function(bool isChecked) queryAllRowsChecked,
     required TResult Function() deleteSelectedQueryParameters,
+    required TResult Function() addHeader,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChanged,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChecked,
+    required TResult Function(bool isChecked) headerAllRowsChecked,
+    required TResult Function() deleteSelectedHeaders,
     required TResult Function() saveButtonPressed,
   }) {
     return listenerNameChanged(name);
@@ -3255,6 +3663,11 @@ class _$ListenerNameChangedImpl implements _ListenerNameChanged {
     TResult? Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult? Function(bool isChecked)? queryAllRowsChecked,
     TResult? Function()? deleteSelectedQueryParameters,
+    TResult? Function()? addHeader,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult? Function(bool isChecked)? headerAllRowsChecked,
+    TResult? Function()? deleteSelectedHeaders,
     TResult? Function()? saveButtonPressed,
   }) {
     return listenerNameChanged?.call(name);
@@ -3282,6 +3695,11 @@ class _$ListenerNameChangedImpl implements _ListenerNameChanged {
     TResult Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult Function(bool isChecked)? queryAllRowsChecked,
     TResult Function()? deleteSelectedQueryParameters,
+    TResult Function()? addHeader,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult Function(bool isChecked)? headerAllRowsChecked,
+    TResult Function()? deleteSelectedHeaders,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -3318,6 +3736,12 @@ class _$ListenerNameChangedImpl implements _ListenerNameChanged {
     required TResult Function(_QueryAllRowsChecked value) queryAllRowsChecked,
     required TResult Function(_DeleteSelectedQueryParameters value)
         deleteSelectedQueryParameters,
+    required TResult Function(_AddHeader value) addHeader,
+    required TResult Function(_HeaderRowChanged value) headerRowChanged,
+    required TResult Function(_HeaderRowChecked value) headerRowChecked,
+    required TResult Function(_HeaderAllRowsChecked value) headerAllRowsChecked,
+    required TResult Function(_DeleteSelectedHeaders value)
+        deleteSelectedHeaders,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return listenerNameChanged(this);
@@ -3347,6 +3771,11 @@ class _$ListenerNameChangedImpl implements _ListenerNameChanged {
     TResult? Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult? Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult? Function(_AddHeader value)? addHeader,
+    TResult? Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult? Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult? Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult? Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return listenerNameChanged?.call(this);
@@ -3376,6 +3805,11 @@ class _$ListenerNameChangedImpl implements _ListenerNameChanged {
     TResult Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult Function(_AddHeader value)? addHeader,
+    TResult Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -3492,6 +3926,11 @@ class _$ListenerSwitchToggledImpl implements _ListenerSwitchToggled {
     required TResult Function(int rowIndex, PlutoRow row) queryRowChecked,
     required TResult Function(bool isChecked) queryAllRowsChecked,
     required TResult Function() deleteSelectedQueryParameters,
+    required TResult Function() addHeader,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChanged,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChecked,
+    required TResult Function(bool isChecked) headerAllRowsChecked,
+    required TResult Function() deleteSelectedHeaders,
     required TResult Function() saveButtonPressed,
   }) {
     return listenerSwitchToggled(value, listenerIndex);
@@ -3519,6 +3958,11 @@ class _$ListenerSwitchToggledImpl implements _ListenerSwitchToggled {
     TResult? Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult? Function(bool isChecked)? queryAllRowsChecked,
     TResult? Function()? deleteSelectedQueryParameters,
+    TResult? Function()? addHeader,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult? Function(bool isChecked)? headerAllRowsChecked,
+    TResult? Function()? deleteSelectedHeaders,
     TResult? Function()? saveButtonPressed,
   }) {
     return listenerSwitchToggled?.call(value, listenerIndex);
@@ -3546,6 +3990,11 @@ class _$ListenerSwitchToggledImpl implements _ListenerSwitchToggled {
     TResult Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult Function(bool isChecked)? queryAllRowsChecked,
     TResult Function()? deleteSelectedQueryParameters,
+    TResult Function()? addHeader,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult Function(bool isChecked)? headerAllRowsChecked,
+    TResult Function()? deleteSelectedHeaders,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -3582,6 +4031,12 @@ class _$ListenerSwitchToggledImpl implements _ListenerSwitchToggled {
     required TResult Function(_QueryAllRowsChecked value) queryAllRowsChecked,
     required TResult Function(_DeleteSelectedQueryParameters value)
         deleteSelectedQueryParameters,
+    required TResult Function(_AddHeader value) addHeader,
+    required TResult Function(_HeaderRowChanged value) headerRowChanged,
+    required TResult Function(_HeaderRowChecked value) headerRowChecked,
+    required TResult Function(_HeaderAllRowsChecked value) headerAllRowsChecked,
+    required TResult Function(_DeleteSelectedHeaders value)
+        deleteSelectedHeaders,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return listenerSwitchToggled(this);
@@ -3611,6 +4066,11 @@ class _$ListenerSwitchToggledImpl implements _ListenerSwitchToggled {
     TResult? Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult? Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult? Function(_AddHeader value)? addHeader,
+    TResult? Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult? Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult? Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult? Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return listenerSwitchToggled?.call(this);
@@ -3640,6 +4100,11 @@ class _$ListenerSwitchToggledImpl implements _ListenerSwitchToggled {
     TResult Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult Function(_AddHeader value)? addHeader,
+    TResult Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -3720,6 +4185,11 @@ class _$AddQueryParameterImpl implements _AddQueryParameter {
     required TResult Function(int rowIndex, PlutoRow row) queryRowChecked,
     required TResult Function(bool isChecked) queryAllRowsChecked,
     required TResult Function() deleteSelectedQueryParameters,
+    required TResult Function() addHeader,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChanged,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChecked,
+    required TResult Function(bool isChecked) headerAllRowsChecked,
+    required TResult Function() deleteSelectedHeaders,
     required TResult Function() saveButtonPressed,
   }) {
     return addQueryParameter();
@@ -3747,6 +4217,11 @@ class _$AddQueryParameterImpl implements _AddQueryParameter {
     TResult? Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult? Function(bool isChecked)? queryAllRowsChecked,
     TResult? Function()? deleteSelectedQueryParameters,
+    TResult? Function()? addHeader,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult? Function(bool isChecked)? headerAllRowsChecked,
+    TResult? Function()? deleteSelectedHeaders,
     TResult? Function()? saveButtonPressed,
   }) {
     return addQueryParameter?.call();
@@ -3774,6 +4249,11 @@ class _$AddQueryParameterImpl implements _AddQueryParameter {
     TResult Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult Function(bool isChecked)? queryAllRowsChecked,
     TResult Function()? deleteSelectedQueryParameters,
+    TResult Function()? addHeader,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult Function(bool isChecked)? headerAllRowsChecked,
+    TResult Function()? deleteSelectedHeaders,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -3810,6 +4290,12 @@ class _$AddQueryParameterImpl implements _AddQueryParameter {
     required TResult Function(_QueryAllRowsChecked value) queryAllRowsChecked,
     required TResult Function(_DeleteSelectedQueryParameters value)
         deleteSelectedQueryParameters,
+    required TResult Function(_AddHeader value) addHeader,
+    required TResult Function(_HeaderRowChanged value) headerRowChanged,
+    required TResult Function(_HeaderRowChecked value) headerRowChecked,
+    required TResult Function(_HeaderAllRowsChecked value) headerAllRowsChecked,
+    required TResult Function(_DeleteSelectedHeaders value)
+        deleteSelectedHeaders,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return addQueryParameter(this);
@@ -3839,6 +4325,11 @@ class _$AddQueryParameterImpl implements _AddQueryParameter {
     TResult? Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult? Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult? Function(_AddHeader value)? addHeader,
+    TResult? Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult? Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult? Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult? Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return addQueryParameter?.call(this);
@@ -3868,6 +4359,11 @@ class _$AddQueryParameterImpl implements _AddQueryParameter {
     TResult Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult Function(_AddHeader value)? addHeader,
+    TResult Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -3976,6 +4472,11 @@ class _$QueryRowChangedImpl implements _QueryRowChanged {
     required TResult Function(int rowIndex, PlutoRow row) queryRowChecked,
     required TResult Function(bool isChecked) queryAllRowsChecked,
     required TResult Function() deleteSelectedQueryParameters,
+    required TResult Function() addHeader,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChanged,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChecked,
+    required TResult Function(bool isChecked) headerAllRowsChecked,
+    required TResult Function() deleteSelectedHeaders,
     required TResult Function() saveButtonPressed,
   }) {
     return queryRowChanged(rowIndex, row);
@@ -4003,6 +4504,11 @@ class _$QueryRowChangedImpl implements _QueryRowChanged {
     TResult? Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult? Function(bool isChecked)? queryAllRowsChecked,
     TResult? Function()? deleteSelectedQueryParameters,
+    TResult? Function()? addHeader,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult? Function(bool isChecked)? headerAllRowsChecked,
+    TResult? Function()? deleteSelectedHeaders,
     TResult? Function()? saveButtonPressed,
   }) {
     return queryRowChanged?.call(rowIndex, row);
@@ -4030,6 +4536,11 @@ class _$QueryRowChangedImpl implements _QueryRowChanged {
     TResult Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult Function(bool isChecked)? queryAllRowsChecked,
     TResult Function()? deleteSelectedQueryParameters,
+    TResult Function()? addHeader,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult Function(bool isChecked)? headerAllRowsChecked,
+    TResult Function()? deleteSelectedHeaders,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -4066,6 +4577,12 @@ class _$QueryRowChangedImpl implements _QueryRowChanged {
     required TResult Function(_QueryAllRowsChecked value) queryAllRowsChecked,
     required TResult Function(_DeleteSelectedQueryParameters value)
         deleteSelectedQueryParameters,
+    required TResult Function(_AddHeader value) addHeader,
+    required TResult Function(_HeaderRowChanged value) headerRowChanged,
+    required TResult Function(_HeaderRowChecked value) headerRowChecked,
+    required TResult Function(_HeaderAllRowsChecked value) headerAllRowsChecked,
+    required TResult Function(_DeleteSelectedHeaders value)
+        deleteSelectedHeaders,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return queryRowChanged(this);
@@ -4095,6 +4612,11 @@ class _$QueryRowChangedImpl implements _QueryRowChanged {
     TResult? Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult? Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult? Function(_AddHeader value)? addHeader,
+    TResult? Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult? Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult? Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult? Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return queryRowChanged?.call(this);
@@ -4124,6 +4646,11 @@ class _$QueryRowChangedImpl implements _QueryRowChanged {
     TResult Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult Function(_AddHeader value)? addHeader,
+    TResult Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -4240,6 +4767,11 @@ class _$QueryRowCheckedImpl implements _QueryRowChecked {
     required TResult Function(int rowIndex, PlutoRow row) queryRowChecked,
     required TResult Function(bool isChecked) queryAllRowsChecked,
     required TResult Function() deleteSelectedQueryParameters,
+    required TResult Function() addHeader,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChanged,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChecked,
+    required TResult Function(bool isChecked) headerAllRowsChecked,
+    required TResult Function() deleteSelectedHeaders,
     required TResult Function() saveButtonPressed,
   }) {
     return queryRowChecked(rowIndex, row);
@@ -4267,6 +4799,11 @@ class _$QueryRowCheckedImpl implements _QueryRowChecked {
     TResult? Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult? Function(bool isChecked)? queryAllRowsChecked,
     TResult? Function()? deleteSelectedQueryParameters,
+    TResult? Function()? addHeader,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult? Function(bool isChecked)? headerAllRowsChecked,
+    TResult? Function()? deleteSelectedHeaders,
     TResult? Function()? saveButtonPressed,
   }) {
     return queryRowChecked?.call(rowIndex, row);
@@ -4294,6 +4831,11 @@ class _$QueryRowCheckedImpl implements _QueryRowChecked {
     TResult Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult Function(bool isChecked)? queryAllRowsChecked,
     TResult Function()? deleteSelectedQueryParameters,
+    TResult Function()? addHeader,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult Function(bool isChecked)? headerAllRowsChecked,
+    TResult Function()? deleteSelectedHeaders,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -4330,6 +4872,12 @@ class _$QueryRowCheckedImpl implements _QueryRowChecked {
     required TResult Function(_QueryAllRowsChecked value) queryAllRowsChecked,
     required TResult Function(_DeleteSelectedQueryParameters value)
         deleteSelectedQueryParameters,
+    required TResult Function(_AddHeader value) addHeader,
+    required TResult Function(_HeaderRowChanged value) headerRowChanged,
+    required TResult Function(_HeaderRowChecked value) headerRowChecked,
+    required TResult Function(_HeaderAllRowsChecked value) headerAllRowsChecked,
+    required TResult Function(_DeleteSelectedHeaders value)
+        deleteSelectedHeaders,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return queryRowChecked(this);
@@ -4359,6 +4907,11 @@ class _$QueryRowCheckedImpl implements _QueryRowChecked {
     TResult? Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult? Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult? Function(_AddHeader value)? addHeader,
+    TResult? Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult? Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult? Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult? Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return queryRowChecked?.call(this);
@@ -4388,6 +4941,11 @@ class _$QueryRowCheckedImpl implements _QueryRowChecked {
     TResult Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult Function(_AddHeader value)? addHeader,
+    TResult Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -4496,6 +5054,11 @@ class _$QueryAllRowsCheckedImpl implements _QueryAllRowsChecked {
     required TResult Function(int rowIndex, PlutoRow row) queryRowChecked,
     required TResult Function(bool isChecked) queryAllRowsChecked,
     required TResult Function() deleteSelectedQueryParameters,
+    required TResult Function() addHeader,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChanged,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChecked,
+    required TResult Function(bool isChecked) headerAllRowsChecked,
+    required TResult Function() deleteSelectedHeaders,
     required TResult Function() saveButtonPressed,
   }) {
     return queryAllRowsChecked(isChecked);
@@ -4523,6 +5086,11 @@ class _$QueryAllRowsCheckedImpl implements _QueryAllRowsChecked {
     TResult? Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult? Function(bool isChecked)? queryAllRowsChecked,
     TResult? Function()? deleteSelectedQueryParameters,
+    TResult? Function()? addHeader,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult? Function(bool isChecked)? headerAllRowsChecked,
+    TResult? Function()? deleteSelectedHeaders,
     TResult? Function()? saveButtonPressed,
   }) {
     return queryAllRowsChecked?.call(isChecked);
@@ -4550,6 +5118,11 @@ class _$QueryAllRowsCheckedImpl implements _QueryAllRowsChecked {
     TResult Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult Function(bool isChecked)? queryAllRowsChecked,
     TResult Function()? deleteSelectedQueryParameters,
+    TResult Function()? addHeader,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult Function(bool isChecked)? headerAllRowsChecked,
+    TResult Function()? deleteSelectedHeaders,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -4586,6 +5159,12 @@ class _$QueryAllRowsCheckedImpl implements _QueryAllRowsChecked {
     required TResult Function(_QueryAllRowsChecked value) queryAllRowsChecked,
     required TResult Function(_DeleteSelectedQueryParameters value)
         deleteSelectedQueryParameters,
+    required TResult Function(_AddHeader value) addHeader,
+    required TResult Function(_HeaderRowChanged value) headerRowChanged,
+    required TResult Function(_HeaderRowChecked value) headerRowChecked,
+    required TResult Function(_HeaderAllRowsChecked value) headerAllRowsChecked,
+    required TResult Function(_DeleteSelectedHeaders value)
+        deleteSelectedHeaders,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return queryAllRowsChecked(this);
@@ -4615,6 +5194,11 @@ class _$QueryAllRowsCheckedImpl implements _QueryAllRowsChecked {
     TResult? Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult? Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult? Function(_AddHeader value)? addHeader,
+    TResult? Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult? Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult? Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult? Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return queryAllRowsChecked?.call(this);
@@ -4644,6 +5228,11 @@ class _$QueryAllRowsCheckedImpl implements _QueryAllRowsChecked {
     TResult Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult Function(_AddHeader value)? addHeader,
+    TResult Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -4727,6 +5316,11 @@ class _$DeleteSelectedQueryParametersImpl
     required TResult Function(int rowIndex, PlutoRow row) queryRowChecked,
     required TResult Function(bool isChecked) queryAllRowsChecked,
     required TResult Function() deleteSelectedQueryParameters,
+    required TResult Function() addHeader,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChanged,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChecked,
+    required TResult Function(bool isChecked) headerAllRowsChecked,
+    required TResult Function() deleteSelectedHeaders,
     required TResult Function() saveButtonPressed,
   }) {
     return deleteSelectedQueryParameters();
@@ -4754,6 +5348,11 @@ class _$DeleteSelectedQueryParametersImpl
     TResult? Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult? Function(bool isChecked)? queryAllRowsChecked,
     TResult? Function()? deleteSelectedQueryParameters,
+    TResult? Function()? addHeader,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult? Function(bool isChecked)? headerAllRowsChecked,
+    TResult? Function()? deleteSelectedHeaders,
     TResult? Function()? saveButtonPressed,
   }) {
     return deleteSelectedQueryParameters?.call();
@@ -4781,6 +5380,11 @@ class _$DeleteSelectedQueryParametersImpl
     TResult Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult Function(bool isChecked)? queryAllRowsChecked,
     TResult Function()? deleteSelectedQueryParameters,
+    TResult Function()? addHeader,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult Function(bool isChecked)? headerAllRowsChecked,
+    TResult Function()? deleteSelectedHeaders,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -4817,6 +5421,12 @@ class _$DeleteSelectedQueryParametersImpl
     required TResult Function(_QueryAllRowsChecked value) queryAllRowsChecked,
     required TResult Function(_DeleteSelectedQueryParameters value)
         deleteSelectedQueryParameters,
+    required TResult Function(_AddHeader value) addHeader,
+    required TResult Function(_HeaderRowChanged value) headerRowChanged,
+    required TResult Function(_HeaderRowChecked value) headerRowChecked,
+    required TResult Function(_HeaderAllRowsChecked value) headerAllRowsChecked,
+    required TResult Function(_DeleteSelectedHeaders value)
+        deleteSelectedHeaders,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return deleteSelectedQueryParameters(this);
@@ -4846,6 +5456,11 @@ class _$DeleteSelectedQueryParametersImpl
     TResult? Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult? Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult? Function(_AddHeader value)? addHeader,
+    TResult? Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult? Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult? Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult? Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return deleteSelectedQueryParameters?.call(this);
@@ -4875,6 +5490,11 @@ class _$DeleteSelectedQueryParametersImpl
     TResult Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult Function(_AddHeader value)? addHeader,
+    TResult Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -4888,6 +5508,1386 @@ class _$DeleteSelectedQueryParametersImpl
 abstract class _DeleteSelectedQueryParameters implements ConnectionFormEvent {
   const factory _DeleteSelectedQueryParameters() =
       _$DeleteSelectedQueryParametersImpl;
+}
+
+/// @nodoc
+abstract class _$$AddHeaderImplCopyWith<$Res> {
+  factory _$$AddHeaderImplCopyWith(
+          _$AddHeaderImpl value, $Res Function(_$AddHeaderImpl) then) =
+      __$$AddHeaderImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AddHeaderImplCopyWithImpl<$Res>
+    extends _$ConnectionFormEventCopyWithImpl<$Res, _$AddHeaderImpl>
+    implements _$$AddHeaderImplCopyWith<$Res> {
+  __$$AddHeaderImplCopyWithImpl(
+      _$AddHeaderImpl _value, $Res Function(_$AddHeaderImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$AddHeaderImpl implements _AddHeader {
+  const _$AddHeaderImpl();
+
+  @override
+  String toString() {
+    return 'ConnectionFormEvent.addHeader()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$AddHeaderImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initialize,
+    required TResult Function(String connectionName) connectionNameChanged,
+    required TResult Function(String connectionUrl) connectionUrlChanged,
+    required TResult Function(Connection connection) connectionSelected,
+    required TResult Function() newConnectionButtonPressed,
+    required TResult Function(EventType type) addEvent,
+    required TResult Function(int emitterIndex) emitterSelected,
+    required TResult Function(int listenerIndex) listenerSelected,
+    required TResult Function() unSelectListener,
+    required TResult Function(String name) emitterNameChanged,
+    required TResult Function(EventDataType dataType) emitterDataTypeChanged,
+    required TResult Function(String data) emitterDataChanged,
+    required TResult Function(String name) listenerNameChanged,
+    required TResult Function(bool value, int listenerIndex)
+        listenerSwitchToggled,
+    required TResult Function() addQueryParameter,
+    required TResult Function(int rowIndex, PlutoRow row) queryRowChanged,
+    required TResult Function(int rowIndex, PlutoRow row) queryRowChecked,
+    required TResult Function(bool isChecked) queryAllRowsChecked,
+    required TResult Function() deleteSelectedQueryParameters,
+    required TResult Function() addHeader,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChanged,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChecked,
+    required TResult Function(bool isChecked) headerAllRowsChecked,
+    required TResult Function() deleteSelectedHeaders,
+    required TResult Function() saveButtonPressed,
+  }) {
+    return addHeader();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initialize,
+    TResult? Function(String connectionName)? connectionNameChanged,
+    TResult? Function(String connectionUrl)? connectionUrlChanged,
+    TResult? Function(Connection connection)? connectionSelected,
+    TResult? Function()? newConnectionButtonPressed,
+    TResult? Function(EventType type)? addEvent,
+    TResult? Function(int emitterIndex)? emitterSelected,
+    TResult? Function(int listenerIndex)? listenerSelected,
+    TResult? Function()? unSelectListener,
+    TResult? Function(String name)? emitterNameChanged,
+    TResult? Function(EventDataType dataType)? emitterDataTypeChanged,
+    TResult? Function(String data)? emitterDataChanged,
+    TResult? Function(String name)? listenerNameChanged,
+    TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult? Function()? addQueryParameter,
+    TResult? Function(int rowIndex, PlutoRow row)? queryRowChanged,
+    TResult? Function(int rowIndex, PlutoRow row)? queryRowChecked,
+    TResult? Function(bool isChecked)? queryAllRowsChecked,
+    TResult? Function()? deleteSelectedQueryParameters,
+    TResult? Function()? addHeader,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult? Function(bool isChecked)? headerAllRowsChecked,
+    TResult? Function()? deleteSelectedHeaders,
+    TResult? Function()? saveButtonPressed,
+  }) {
+    return addHeader?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initialize,
+    TResult Function(String connectionName)? connectionNameChanged,
+    TResult Function(String connectionUrl)? connectionUrlChanged,
+    TResult Function(Connection connection)? connectionSelected,
+    TResult Function()? newConnectionButtonPressed,
+    TResult Function(EventType type)? addEvent,
+    TResult Function(int emitterIndex)? emitterSelected,
+    TResult Function(int listenerIndex)? listenerSelected,
+    TResult Function()? unSelectListener,
+    TResult Function(String name)? emitterNameChanged,
+    TResult Function(EventDataType dataType)? emitterDataTypeChanged,
+    TResult Function(String data)? emitterDataChanged,
+    TResult Function(String name)? listenerNameChanged,
+    TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult Function()? addQueryParameter,
+    TResult Function(int rowIndex, PlutoRow row)? queryRowChanged,
+    TResult Function(int rowIndex, PlutoRow row)? queryRowChecked,
+    TResult Function(bool isChecked)? queryAllRowsChecked,
+    TResult Function()? deleteSelectedQueryParameters,
+    TResult Function()? addHeader,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult Function(bool isChecked)? headerAllRowsChecked,
+    TResult Function()? deleteSelectedHeaders,
+    TResult Function()? saveButtonPressed,
+    required TResult orElse(),
+  }) {
+    if (addHeader != null) {
+      return addHeader();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initialize value) initialize,
+    required TResult Function(_ConnectionNameChanged value)
+        connectionNameChanged,
+    required TResult Function(_ConnectionUrlChanged value) connectionUrlChanged,
+    required TResult Function(_ConnectionSelected value) connectionSelected,
+    required TResult Function(_NewConnectionButtonPressed value)
+        newConnectionButtonPressed,
+    required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_EmitterSelected value) emitterSelected,
+    required TResult Function(_ListenerSelected value) listenerSelected,
+    required TResult Function(_UnSelectListener value) unSelectListener,
+    required TResult Function(_EmitterNameChanged value) emitterNameChanged,
+    required TResult Function(_EmitterDataTypeChanged value)
+        emitterDataTypeChanged,
+    required TResult Function(_EmitterDataChanged value) emitterDataChanged,
+    required TResult Function(_ListenerNameChanged value) listenerNameChanged,
+    required TResult Function(_ListenerSwitchToggled value)
+        listenerSwitchToggled,
+    required TResult Function(_AddQueryParameter value) addQueryParameter,
+    required TResult Function(_QueryRowChanged value) queryRowChanged,
+    required TResult Function(_QueryRowChecked value) queryRowChecked,
+    required TResult Function(_QueryAllRowsChecked value) queryAllRowsChecked,
+    required TResult Function(_DeleteSelectedQueryParameters value)
+        deleteSelectedQueryParameters,
+    required TResult Function(_AddHeader value) addHeader,
+    required TResult Function(_HeaderRowChanged value) headerRowChanged,
+    required TResult Function(_HeaderRowChecked value) headerRowChecked,
+    required TResult Function(_HeaderAllRowsChecked value) headerAllRowsChecked,
+    required TResult Function(_DeleteSelectedHeaders value)
+        deleteSelectedHeaders,
+    required TResult Function(_SaveButtonPressed value) saveButtonPressed,
+  }) {
+    return addHeader(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialize value)? initialize,
+    TResult? Function(_ConnectionNameChanged value)? connectionNameChanged,
+    TResult? Function(_ConnectionUrlChanged value)? connectionUrlChanged,
+    TResult? Function(_ConnectionSelected value)? connectionSelected,
+    TResult? Function(_NewConnectionButtonPressed value)?
+        newConnectionButtonPressed,
+    TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_EmitterSelected value)? emitterSelected,
+    TResult? Function(_ListenerSelected value)? listenerSelected,
+    TResult? Function(_UnSelectListener value)? unSelectListener,
+    TResult? Function(_EmitterNameChanged value)? emitterNameChanged,
+    TResult? Function(_EmitterDataTypeChanged value)? emitterDataTypeChanged,
+    TResult? Function(_EmitterDataChanged value)? emitterDataChanged,
+    TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
+    TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult? Function(_AddQueryParameter value)? addQueryParameter,
+    TResult? Function(_QueryRowChanged value)? queryRowChanged,
+    TResult? Function(_QueryRowChecked value)? queryRowChecked,
+    TResult? Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
+    TResult? Function(_DeleteSelectedQueryParameters value)?
+        deleteSelectedQueryParameters,
+    TResult? Function(_AddHeader value)? addHeader,
+    TResult? Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult? Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult? Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult? Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
+    TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
+  }) {
+    return addHeader?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialize value)? initialize,
+    TResult Function(_ConnectionNameChanged value)? connectionNameChanged,
+    TResult Function(_ConnectionUrlChanged value)? connectionUrlChanged,
+    TResult Function(_ConnectionSelected value)? connectionSelected,
+    TResult Function(_NewConnectionButtonPressed value)?
+        newConnectionButtonPressed,
+    TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_EmitterSelected value)? emitterSelected,
+    TResult Function(_ListenerSelected value)? listenerSelected,
+    TResult Function(_UnSelectListener value)? unSelectListener,
+    TResult Function(_EmitterNameChanged value)? emitterNameChanged,
+    TResult Function(_EmitterDataTypeChanged value)? emitterDataTypeChanged,
+    TResult Function(_EmitterDataChanged value)? emitterDataChanged,
+    TResult Function(_ListenerNameChanged value)? listenerNameChanged,
+    TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult Function(_AddQueryParameter value)? addQueryParameter,
+    TResult Function(_QueryRowChanged value)? queryRowChanged,
+    TResult Function(_QueryRowChecked value)? queryRowChecked,
+    TResult Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
+    TResult Function(_DeleteSelectedQueryParameters value)?
+        deleteSelectedQueryParameters,
+    TResult Function(_AddHeader value)? addHeader,
+    TResult Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
+    TResult Function(_SaveButtonPressed value)? saveButtonPressed,
+    required TResult orElse(),
+  }) {
+    if (addHeader != null) {
+      return addHeader(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _AddHeader implements ConnectionFormEvent {
+  const factory _AddHeader() = _$AddHeaderImpl;
+}
+
+/// @nodoc
+abstract class _$$HeaderRowChangedImplCopyWith<$Res> {
+  factory _$$HeaderRowChangedImplCopyWith(_$HeaderRowChangedImpl value,
+          $Res Function(_$HeaderRowChangedImpl) then) =
+      __$$HeaderRowChangedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int rowIndex, PlutoRow row});
+}
+
+/// @nodoc
+class __$$HeaderRowChangedImplCopyWithImpl<$Res>
+    extends _$ConnectionFormEventCopyWithImpl<$Res, _$HeaderRowChangedImpl>
+    implements _$$HeaderRowChangedImplCopyWith<$Res> {
+  __$$HeaderRowChangedImplCopyWithImpl(_$HeaderRowChangedImpl _value,
+      $Res Function(_$HeaderRowChangedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? rowIndex = null,
+    Object? row = null,
+  }) {
+    return _then(_$HeaderRowChangedImpl(
+      rowIndex: null == rowIndex
+          ? _value.rowIndex
+          : rowIndex // ignore: cast_nullable_to_non_nullable
+              as int,
+      row: null == row
+          ? _value.row
+          : row // ignore: cast_nullable_to_non_nullable
+              as PlutoRow,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$HeaderRowChangedImpl implements _HeaderRowChanged {
+  const _$HeaderRowChangedImpl({required this.rowIndex, required this.row});
+
+  @override
+  final int rowIndex;
+  @override
+  final PlutoRow row;
+
+  @override
+  String toString() {
+    return 'ConnectionFormEvent.headerRowChanged(rowIndex: $rowIndex, row: $row)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$HeaderRowChangedImpl &&
+            (identical(other.rowIndex, rowIndex) ||
+                other.rowIndex == rowIndex) &&
+            (identical(other.row, row) || other.row == row));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, rowIndex, row);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$HeaderRowChangedImplCopyWith<_$HeaderRowChangedImpl> get copyWith =>
+      __$$HeaderRowChangedImplCopyWithImpl<_$HeaderRowChangedImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initialize,
+    required TResult Function(String connectionName) connectionNameChanged,
+    required TResult Function(String connectionUrl) connectionUrlChanged,
+    required TResult Function(Connection connection) connectionSelected,
+    required TResult Function() newConnectionButtonPressed,
+    required TResult Function(EventType type) addEvent,
+    required TResult Function(int emitterIndex) emitterSelected,
+    required TResult Function(int listenerIndex) listenerSelected,
+    required TResult Function() unSelectListener,
+    required TResult Function(String name) emitterNameChanged,
+    required TResult Function(EventDataType dataType) emitterDataTypeChanged,
+    required TResult Function(String data) emitterDataChanged,
+    required TResult Function(String name) listenerNameChanged,
+    required TResult Function(bool value, int listenerIndex)
+        listenerSwitchToggled,
+    required TResult Function() addQueryParameter,
+    required TResult Function(int rowIndex, PlutoRow row) queryRowChanged,
+    required TResult Function(int rowIndex, PlutoRow row) queryRowChecked,
+    required TResult Function(bool isChecked) queryAllRowsChecked,
+    required TResult Function() deleteSelectedQueryParameters,
+    required TResult Function() addHeader,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChanged,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChecked,
+    required TResult Function(bool isChecked) headerAllRowsChecked,
+    required TResult Function() deleteSelectedHeaders,
+    required TResult Function() saveButtonPressed,
+  }) {
+    return headerRowChanged(rowIndex, row);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initialize,
+    TResult? Function(String connectionName)? connectionNameChanged,
+    TResult? Function(String connectionUrl)? connectionUrlChanged,
+    TResult? Function(Connection connection)? connectionSelected,
+    TResult? Function()? newConnectionButtonPressed,
+    TResult? Function(EventType type)? addEvent,
+    TResult? Function(int emitterIndex)? emitterSelected,
+    TResult? Function(int listenerIndex)? listenerSelected,
+    TResult? Function()? unSelectListener,
+    TResult? Function(String name)? emitterNameChanged,
+    TResult? Function(EventDataType dataType)? emitterDataTypeChanged,
+    TResult? Function(String data)? emitterDataChanged,
+    TResult? Function(String name)? listenerNameChanged,
+    TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult? Function()? addQueryParameter,
+    TResult? Function(int rowIndex, PlutoRow row)? queryRowChanged,
+    TResult? Function(int rowIndex, PlutoRow row)? queryRowChecked,
+    TResult? Function(bool isChecked)? queryAllRowsChecked,
+    TResult? Function()? deleteSelectedQueryParameters,
+    TResult? Function()? addHeader,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult? Function(bool isChecked)? headerAllRowsChecked,
+    TResult? Function()? deleteSelectedHeaders,
+    TResult? Function()? saveButtonPressed,
+  }) {
+    return headerRowChanged?.call(rowIndex, row);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initialize,
+    TResult Function(String connectionName)? connectionNameChanged,
+    TResult Function(String connectionUrl)? connectionUrlChanged,
+    TResult Function(Connection connection)? connectionSelected,
+    TResult Function()? newConnectionButtonPressed,
+    TResult Function(EventType type)? addEvent,
+    TResult Function(int emitterIndex)? emitterSelected,
+    TResult Function(int listenerIndex)? listenerSelected,
+    TResult Function()? unSelectListener,
+    TResult Function(String name)? emitterNameChanged,
+    TResult Function(EventDataType dataType)? emitterDataTypeChanged,
+    TResult Function(String data)? emitterDataChanged,
+    TResult Function(String name)? listenerNameChanged,
+    TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult Function()? addQueryParameter,
+    TResult Function(int rowIndex, PlutoRow row)? queryRowChanged,
+    TResult Function(int rowIndex, PlutoRow row)? queryRowChecked,
+    TResult Function(bool isChecked)? queryAllRowsChecked,
+    TResult Function()? deleteSelectedQueryParameters,
+    TResult Function()? addHeader,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult Function(bool isChecked)? headerAllRowsChecked,
+    TResult Function()? deleteSelectedHeaders,
+    TResult Function()? saveButtonPressed,
+    required TResult orElse(),
+  }) {
+    if (headerRowChanged != null) {
+      return headerRowChanged(rowIndex, row);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initialize value) initialize,
+    required TResult Function(_ConnectionNameChanged value)
+        connectionNameChanged,
+    required TResult Function(_ConnectionUrlChanged value) connectionUrlChanged,
+    required TResult Function(_ConnectionSelected value) connectionSelected,
+    required TResult Function(_NewConnectionButtonPressed value)
+        newConnectionButtonPressed,
+    required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_EmitterSelected value) emitterSelected,
+    required TResult Function(_ListenerSelected value) listenerSelected,
+    required TResult Function(_UnSelectListener value) unSelectListener,
+    required TResult Function(_EmitterNameChanged value) emitterNameChanged,
+    required TResult Function(_EmitterDataTypeChanged value)
+        emitterDataTypeChanged,
+    required TResult Function(_EmitterDataChanged value) emitterDataChanged,
+    required TResult Function(_ListenerNameChanged value) listenerNameChanged,
+    required TResult Function(_ListenerSwitchToggled value)
+        listenerSwitchToggled,
+    required TResult Function(_AddQueryParameter value) addQueryParameter,
+    required TResult Function(_QueryRowChanged value) queryRowChanged,
+    required TResult Function(_QueryRowChecked value) queryRowChecked,
+    required TResult Function(_QueryAllRowsChecked value) queryAllRowsChecked,
+    required TResult Function(_DeleteSelectedQueryParameters value)
+        deleteSelectedQueryParameters,
+    required TResult Function(_AddHeader value) addHeader,
+    required TResult Function(_HeaderRowChanged value) headerRowChanged,
+    required TResult Function(_HeaderRowChecked value) headerRowChecked,
+    required TResult Function(_HeaderAllRowsChecked value) headerAllRowsChecked,
+    required TResult Function(_DeleteSelectedHeaders value)
+        deleteSelectedHeaders,
+    required TResult Function(_SaveButtonPressed value) saveButtonPressed,
+  }) {
+    return headerRowChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialize value)? initialize,
+    TResult? Function(_ConnectionNameChanged value)? connectionNameChanged,
+    TResult? Function(_ConnectionUrlChanged value)? connectionUrlChanged,
+    TResult? Function(_ConnectionSelected value)? connectionSelected,
+    TResult? Function(_NewConnectionButtonPressed value)?
+        newConnectionButtonPressed,
+    TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_EmitterSelected value)? emitterSelected,
+    TResult? Function(_ListenerSelected value)? listenerSelected,
+    TResult? Function(_UnSelectListener value)? unSelectListener,
+    TResult? Function(_EmitterNameChanged value)? emitterNameChanged,
+    TResult? Function(_EmitterDataTypeChanged value)? emitterDataTypeChanged,
+    TResult? Function(_EmitterDataChanged value)? emitterDataChanged,
+    TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
+    TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult? Function(_AddQueryParameter value)? addQueryParameter,
+    TResult? Function(_QueryRowChanged value)? queryRowChanged,
+    TResult? Function(_QueryRowChecked value)? queryRowChecked,
+    TResult? Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
+    TResult? Function(_DeleteSelectedQueryParameters value)?
+        deleteSelectedQueryParameters,
+    TResult? Function(_AddHeader value)? addHeader,
+    TResult? Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult? Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult? Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult? Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
+    TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
+  }) {
+    return headerRowChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialize value)? initialize,
+    TResult Function(_ConnectionNameChanged value)? connectionNameChanged,
+    TResult Function(_ConnectionUrlChanged value)? connectionUrlChanged,
+    TResult Function(_ConnectionSelected value)? connectionSelected,
+    TResult Function(_NewConnectionButtonPressed value)?
+        newConnectionButtonPressed,
+    TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_EmitterSelected value)? emitterSelected,
+    TResult Function(_ListenerSelected value)? listenerSelected,
+    TResult Function(_UnSelectListener value)? unSelectListener,
+    TResult Function(_EmitterNameChanged value)? emitterNameChanged,
+    TResult Function(_EmitterDataTypeChanged value)? emitterDataTypeChanged,
+    TResult Function(_EmitterDataChanged value)? emitterDataChanged,
+    TResult Function(_ListenerNameChanged value)? listenerNameChanged,
+    TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult Function(_AddQueryParameter value)? addQueryParameter,
+    TResult Function(_QueryRowChanged value)? queryRowChanged,
+    TResult Function(_QueryRowChecked value)? queryRowChecked,
+    TResult Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
+    TResult Function(_DeleteSelectedQueryParameters value)?
+        deleteSelectedQueryParameters,
+    TResult Function(_AddHeader value)? addHeader,
+    TResult Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
+    TResult Function(_SaveButtonPressed value)? saveButtonPressed,
+    required TResult orElse(),
+  }) {
+    if (headerRowChanged != null) {
+      return headerRowChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _HeaderRowChanged implements ConnectionFormEvent {
+  const factory _HeaderRowChanged(
+      {required final int rowIndex,
+      required final PlutoRow row}) = _$HeaderRowChangedImpl;
+
+  int get rowIndex;
+  PlutoRow get row;
+  @JsonKey(ignore: true)
+  _$$HeaderRowChangedImplCopyWith<_$HeaderRowChangedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$HeaderRowCheckedImplCopyWith<$Res> {
+  factory _$$HeaderRowCheckedImplCopyWith(_$HeaderRowCheckedImpl value,
+          $Res Function(_$HeaderRowCheckedImpl) then) =
+      __$$HeaderRowCheckedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int rowIndex, PlutoRow row});
+}
+
+/// @nodoc
+class __$$HeaderRowCheckedImplCopyWithImpl<$Res>
+    extends _$ConnectionFormEventCopyWithImpl<$Res, _$HeaderRowCheckedImpl>
+    implements _$$HeaderRowCheckedImplCopyWith<$Res> {
+  __$$HeaderRowCheckedImplCopyWithImpl(_$HeaderRowCheckedImpl _value,
+      $Res Function(_$HeaderRowCheckedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? rowIndex = null,
+    Object? row = null,
+  }) {
+    return _then(_$HeaderRowCheckedImpl(
+      rowIndex: null == rowIndex
+          ? _value.rowIndex
+          : rowIndex // ignore: cast_nullable_to_non_nullable
+              as int,
+      row: null == row
+          ? _value.row
+          : row // ignore: cast_nullable_to_non_nullable
+              as PlutoRow,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$HeaderRowCheckedImpl implements _HeaderRowChecked {
+  const _$HeaderRowCheckedImpl({required this.rowIndex, required this.row});
+
+  @override
+  final int rowIndex;
+  @override
+  final PlutoRow row;
+
+  @override
+  String toString() {
+    return 'ConnectionFormEvent.headerRowChecked(rowIndex: $rowIndex, row: $row)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$HeaderRowCheckedImpl &&
+            (identical(other.rowIndex, rowIndex) ||
+                other.rowIndex == rowIndex) &&
+            (identical(other.row, row) || other.row == row));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, rowIndex, row);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$HeaderRowCheckedImplCopyWith<_$HeaderRowCheckedImpl> get copyWith =>
+      __$$HeaderRowCheckedImplCopyWithImpl<_$HeaderRowCheckedImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initialize,
+    required TResult Function(String connectionName) connectionNameChanged,
+    required TResult Function(String connectionUrl) connectionUrlChanged,
+    required TResult Function(Connection connection) connectionSelected,
+    required TResult Function() newConnectionButtonPressed,
+    required TResult Function(EventType type) addEvent,
+    required TResult Function(int emitterIndex) emitterSelected,
+    required TResult Function(int listenerIndex) listenerSelected,
+    required TResult Function() unSelectListener,
+    required TResult Function(String name) emitterNameChanged,
+    required TResult Function(EventDataType dataType) emitterDataTypeChanged,
+    required TResult Function(String data) emitterDataChanged,
+    required TResult Function(String name) listenerNameChanged,
+    required TResult Function(bool value, int listenerIndex)
+        listenerSwitchToggled,
+    required TResult Function() addQueryParameter,
+    required TResult Function(int rowIndex, PlutoRow row) queryRowChanged,
+    required TResult Function(int rowIndex, PlutoRow row) queryRowChecked,
+    required TResult Function(bool isChecked) queryAllRowsChecked,
+    required TResult Function() deleteSelectedQueryParameters,
+    required TResult Function() addHeader,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChanged,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChecked,
+    required TResult Function(bool isChecked) headerAllRowsChecked,
+    required TResult Function() deleteSelectedHeaders,
+    required TResult Function() saveButtonPressed,
+  }) {
+    return headerRowChecked(rowIndex, row);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initialize,
+    TResult? Function(String connectionName)? connectionNameChanged,
+    TResult? Function(String connectionUrl)? connectionUrlChanged,
+    TResult? Function(Connection connection)? connectionSelected,
+    TResult? Function()? newConnectionButtonPressed,
+    TResult? Function(EventType type)? addEvent,
+    TResult? Function(int emitterIndex)? emitterSelected,
+    TResult? Function(int listenerIndex)? listenerSelected,
+    TResult? Function()? unSelectListener,
+    TResult? Function(String name)? emitterNameChanged,
+    TResult? Function(EventDataType dataType)? emitterDataTypeChanged,
+    TResult? Function(String data)? emitterDataChanged,
+    TResult? Function(String name)? listenerNameChanged,
+    TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult? Function()? addQueryParameter,
+    TResult? Function(int rowIndex, PlutoRow row)? queryRowChanged,
+    TResult? Function(int rowIndex, PlutoRow row)? queryRowChecked,
+    TResult? Function(bool isChecked)? queryAllRowsChecked,
+    TResult? Function()? deleteSelectedQueryParameters,
+    TResult? Function()? addHeader,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult? Function(bool isChecked)? headerAllRowsChecked,
+    TResult? Function()? deleteSelectedHeaders,
+    TResult? Function()? saveButtonPressed,
+  }) {
+    return headerRowChecked?.call(rowIndex, row);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initialize,
+    TResult Function(String connectionName)? connectionNameChanged,
+    TResult Function(String connectionUrl)? connectionUrlChanged,
+    TResult Function(Connection connection)? connectionSelected,
+    TResult Function()? newConnectionButtonPressed,
+    TResult Function(EventType type)? addEvent,
+    TResult Function(int emitterIndex)? emitterSelected,
+    TResult Function(int listenerIndex)? listenerSelected,
+    TResult Function()? unSelectListener,
+    TResult Function(String name)? emitterNameChanged,
+    TResult Function(EventDataType dataType)? emitterDataTypeChanged,
+    TResult Function(String data)? emitterDataChanged,
+    TResult Function(String name)? listenerNameChanged,
+    TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult Function()? addQueryParameter,
+    TResult Function(int rowIndex, PlutoRow row)? queryRowChanged,
+    TResult Function(int rowIndex, PlutoRow row)? queryRowChecked,
+    TResult Function(bool isChecked)? queryAllRowsChecked,
+    TResult Function()? deleteSelectedQueryParameters,
+    TResult Function()? addHeader,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult Function(bool isChecked)? headerAllRowsChecked,
+    TResult Function()? deleteSelectedHeaders,
+    TResult Function()? saveButtonPressed,
+    required TResult orElse(),
+  }) {
+    if (headerRowChecked != null) {
+      return headerRowChecked(rowIndex, row);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initialize value) initialize,
+    required TResult Function(_ConnectionNameChanged value)
+        connectionNameChanged,
+    required TResult Function(_ConnectionUrlChanged value) connectionUrlChanged,
+    required TResult Function(_ConnectionSelected value) connectionSelected,
+    required TResult Function(_NewConnectionButtonPressed value)
+        newConnectionButtonPressed,
+    required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_EmitterSelected value) emitterSelected,
+    required TResult Function(_ListenerSelected value) listenerSelected,
+    required TResult Function(_UnSelectListener value) unSelectListener,
+    required TResult Function(_EmitterNameChanged value) emitterNameChanged,
+    required TResult Function(_EmitterDataTypeChanged value)
+        emitterDataTypeChanged,
+    required TResult Function(_EmitterDataChanged value) emitterDataChanged,
+    required TResult Function(_ListenerNameChanged value) listenerNameChanged,
+    required TResult Function(_ListenerSwitchToggled value)
+        listenerSwitchToggled,
+    required TResult Function(_AddQueryParameter value) addQueryParameter,
+    required TResult Function(_QueryRowChanged value) queryRowChanged,
+    required TResult Function(_QueryRowChecked value) queryRowChecked,
+    required TResult Function(_QueryAllRowsChecked value) queryAllRowsChecked,
+    required TResult Function(_DeleteSelectedQueryParameters value)
+        deleteSelectedQueryParameters,
+    required TResult Function(_AddHeader value) addHeader,
+    required TResult Function(_HeaderRowChanged value) headerRowChanged,
+    required TResult Function(_HeaderRowChecked value) headerRowChecked,
+    required TResult Function(_HeaderAllRowsChecked value) headerAllRowsChecked,
+    required TResult Function(_DeleteSelectedHeaders value)
+        deleteSelectedHeaders,
+    required TResult Function(_SaveButtonPressed value) saveButtonPressed,
+  }) {
+    return headerRowChecked(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialize value)? initialize,
+    TResult? Function(_ConnectionNameChanged value)? connectionNameChanged,
+    TResult? Function(_ConnectionUrlChanged value)? connectionUrlChanged,
+    TResult? Function(_ConnectionSelected value)? connectionSelected,
+    TResult? Function(_NewConnectionButtonPressed value)?
+        newConnectionButtonPressed,
+    TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_EmitterSelected value)? emitterSelected,
+    TResult? Function(_ListenerSelected value)? listenerSelected,
+    TResult? Function(_UnSelectListener value)? unSelectListener,
+    TResult? Function(_EmitterNameChanged value)? emitterNameChanged,
+    TResult? Function(_EmitterDataTypeChanged value)? emitterDataTypeChanged,
+    TResult? Function(_EmitterDataChanged value)? emitterDataChanged,
+    TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
+    TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult? Function(_AddQueryParameter value)? addQueryParameter,
+    TResult? Function(_QueryRowChanged value)? queryRowChanged,
+    TResult? Function(_QueryRowChecked value)? queryRowChecked,
+    TResult? Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
+    TResult? Function(_DeleteSelectedQueryParameters value)?
+        deleteSelectedQueryParameters,
+    TResult? Function(_AddHeader value)? addHeader,
+    TResult? Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult? Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult? Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult? Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
+    TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
+  }) {
+    return headerRowChecked?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialize value)? initialize,
+    TResult Function(_ConnectionNameChanged value)? connectionNameChanged,
+    TResult Function(_ConnectionUrlChanged value)? connectionUrlChanged,
+    TResult Function(_ConnectionSelected value)? connectionSelected,
+    TResult Function(_NewConnectionButtonPressed value)?
+        newConnectionButtonPressed,
+    TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_EmitterSelected value)? emitterSelected,
+    TResult Function(_ListenerSelected value)? listenerSelected,
+    TResult Function(_UnSelectListener value)? unSelectListener,
+    TResult Function(_EmitterNameChanged value)? emitterNameChanged,
+    TResult Function(_EmitterDataTypeChanged value)? emitterDataTypeChanged,
+    TResult Function(_EmitterDataChanged value)? emitterDataChanged,
+    TResult Function(_ListenerNameChanged value)? listenerNameChanged,
+    TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult Function(_AddQueryParameter value)? addQueryParameter,
+    TResult Function(_QueryRowChanged value)? queryRowChanged,
+    TResult Function(_QueryRowChecked value)? queryRowChecked,
+    TResult Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
+    TResult Function(_DeleteSelectedQueryParameters value)?
+        deleteSelectedQueryParameters,
+    TResult Function(_AddHeader value)? addHeader,
+    TResult Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
+    TResult Function(_SaveButtonPressed value)? saveButtonPressed,
+    required TResult orElse(),
+  }) {
+    if (headerRowChecked != null) {
+      return headerRowChecked(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _HeaderRowChecked implements ConnectionFormEvent {
+  const factory _HeaderRowChecked(
+      {required final int rowIndex,
+      required final PlutoRow row}) = _$HeaderRowCheckedImpl;
+
+  int get rowIndex;
+  PlutoRow get row;
+  @JsonKey(ignore: true)
+  _$$HeaderRowCheckedImplCopyWith<_$HeaderRowCheckedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$HeaderAllRowsCheckedImplCopyWith<$Res> {
+  factory _$$HeaderAllRowsCheckedImplCopyWith(_$HeaderAllRowsCheckedImpl value,
+          $Res Function(_$HeaderAllRowsCheckedImpl) then) =
+      __$$HeaderAllRowsCheckedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({bool isChecked});
+}
+
+/// @nodoc
+class __$$HeaderAllRowsCheckedImplCopyWithImpl<$Res>
+    extends _$ConnectionFormEventCopyWithImpl<$Res, _$HeaderAllRowsCheckedImpl>
+    implements _$$HeaderAllRowsCheckedImplCopyWith<$Res> {
+  __$$HeaderAllRowsCheckedImplCopyWithImpl(_$HeaderAllRowsCheckedImpl _value,
+      $Res Function(_$HeaderAllRowsCheckedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? isChecked = null,
+  }) {
+    return _then(_$HeaderAllRowsCheckedImpl(
+      isChecked: null == isChecked
+          ? _value.isChecked
+          : isChecked // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$HeaderAllRowsCheckedImpl implements _HeaderAllRowsChecked {
+  const _$HeaderAllRowsCheckedImpl({required this.isChecked});
+
+  @override
+  final bool isChecked;
+
+  @override
+  String toString() {
+    return 'ConnectionFormEvent.headerAllRowsChecked(isChecked: $isChecked)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$HeaderAllRowsCheckedImpl &&
+            (identical(other.isChecked, isChecked) ||
+                other.isChecked == isChecked));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, isChecked);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$HeaderAllRowsCheckedImplCopyWith<_$HeaderAllRowsCheckedImpl>
+      get copyWith =>
+          __$$HeaderAllRowsCheckedImplCopyWithImpl<_$HeaderAllRowsCheckedImpl>(
+              this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initialize,
+    required TResult Function(String connectionName) connectionNameChanged,
+    required TResult Function(String connectionUrl) connectionUrlChanged,
+    required TResult Function(Connection connection) connectionSelected,
+    required TResult Function() newConnectionButtonPressed,
+    required TResult Function(EventType type) addEvent,
+    required TResult Function(int emitterIndex) emitterSelected,
+    required TResult Function(int listenerIndex) listenerSelected,
+    required TResult Function() unSelectListener,
+    required TResult Function(String name) emitterNameChanged,
+    required TResult Function(EventDataType dataType) emitterDataTypeChanged,
+    required TResult Function(String data) emitterDataChanged,
+    required TResult Function(String name) listenerNameChanged,
+    required TResult Function(bool value, int listenerIndex)
+        listenerSwitchToggled,
+    required TResult Function() addQueryParameter,
+    required TResult Function(int rowIndex, PlutoRow row) queryRowChanged,
+    required TResult Function(int rowIndex, PlutoRow row) queryRowChecked,
+    required TResult Function(bool isChecked) queryAllRowsChecked,
+    required TResult Function() deleteSelectedQueryParameters,
+    required TResult Function() addHeader,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChanged,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChecked,
+    required TResult Function(bool isChecked) headerAllRowsChecked,
+    required TResult Function() deleteSelectedHeaders,
+    required TResult Function() saveButtonPressed,
+  }) {
+    return headerAllRowsChecked(isChecked);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initialize,
+    TResult? Function(String connectionName)? connectionNameChanged,
+    TResult? Function(String connectionUrl)? connectionUrlChanged,
+    TResult? Function(Connection connection)? connectionSelected,
+    TResult? Function()? newConnectionButtonPressed,
+    TResult? Function(EventType type)? addEvent,
+    TResult? Function(int emitterIndex)? emitterSelected,
+    TResult? Function(int listenerIndex)? listenerSelected,
+    TResult? Function()? unSelectListener,
+    TResult? Function(String name)? emitterNameChanged,
+    TResult? Function(EventDataType dataType)? emitterDataTypeChanged,
+    TResult? Function(String data)? emitterDataChanged,
+    TResult? Function(String name)? listenerNameChanged,
+    TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult? Function()? addQueryParameter,
+    TResult? Function(int rowIndex, PlutoRow row)? queryRowChanged,
+    TResult? Function(int rowIndex, PlutoRow row)? queryRowChecked,
+    TResult? Function(bool isChecked)? queryAllRowsChecked,
+    TResult? Function()? deleteSelectedQueryParameters,
+    TResult? Function()? addHeader,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult? Function(bool isChecked)? headerAllRowsChecked,
+    TResult? Function()? deleteSelectedHeaders,
+    TResult? Function()? saveButtonPressed,
+  }) {
+    return headerAllRowsChecked?.call(isChecked);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initialize,
+    TResult Function(String connectionName)? connectionNameChanged,
+    TResult Function(String connectionUrl)? connectionUrlChanged,
+    TResult Function(Connection connection)? connectionSelected,
+    TResult Function()? newConnectionButtonPressed,
+    TResult Function(EventType type)? addEvent,
+    TResult Function(int emitterIndex)? emitterSelected,
+    TResult Function(int listenerIndex)? listenerSelected,
+    TResult Function()? unSelectListener,
+    TResult Function(String name)? emitterNameChanged,
+    TResult Function(EventDataType dataType)? emitterDataTypeChanged,
+    TResult Function(String data)? emitterDataChanged,
+    TResult Function(String name)? listenerNameChanged,
+    TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult Function()? addQueryParameter,
+    TResult Function(int rowIndex, PlutoRow row)? queryRowChanged,
+    TResult Function(int rowIndex, PlutoRow row)? queryRowChecked,
+    TResult Function(bool isChecked)? queryAllRowsChecked,
+    TResult Function()? deleteSelectedQueryParameters,
+    TResult Function()? addHeader,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult Function(bool isChecked)? headerAllRowsChecked,
+    TResult Function()? deleteSelectedHeaders,
+    TResult Function()? saveButtonPressed,
+    required TResult orElse(),
+  }) {
+    if (headerAllRowsChecked != null) {
+      return headerAllRowsChecked(isChecked);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initialize value) initialize,
+    required TResult Function(_ConnectionNameChanged value)
+        connectionNameChanged,
+    required TResult Function(_ConnectionUrlChanged value) connectionUrlChanged,
+    required TResult Function(_ConnectionSelected value) connectionSelected,
+    required TResult Function(_NewConnectionButtonPressed value)
+        newConnectionButtonPressed,
+    required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_EmitterSelected value) emitterSelected,
+    required TResult Function(_ListenerSelected value) listenerSelected,
+    required TResult Function(_UnSelectListener value) unSelectListener,
+    required TResult Function(_EmitterNameChanged value) emitterNameChanged,
+    required TResult Function(_EmitterDataTypeChanged value)
+        emitterDataTypeChanged,
+    required TResult Function(_EmitterDataChanged value) emitterDataChanged,
+    required TResult Function(_ListenerNameChanged value) listenerNameChanged,
+    required TResult Function(_ListenerSwitchToggled value)
+        listenerSwitchToggled,
+    required TResult Function(_AddQueryParameter value) addQueryParameter,
+    required TResult Function(_QueryRowChanged value) queryRowChanged,
+    required TResult Function(_QueryRowChecked value) queryRowChecked,
+    required TResult Function(_QueryAllRowsChecked value) queryAllRowsChecked,
+    required TResult Function(_DeleteSelectedQueryParameters value)
+        deleteSelectedQueryParameters,
+    required TResult Function(_AddHeader value) addHeader,
+    required TResult Function(_HeaderRowChanged value) headerRowChanged,
+    required TResult Function(_HeaderRowChecked value) headerRowChecked,
+    required TResult Function(_HeaderAllRowsChecked value) headerAllRowsChecked,
+    required TResult Function(_DeleteSelectedHeaders value)
+        deleteSelectedHeaders,
+    required TResult Function(_SaveButtonPressed value) saveButtonPressed,
+  }) {
+    return headerAllRowsChecked(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialize value)? initialize,
+    TResult? Function(_ConnectionNameChanged value)? connectionNameChanged,
+    TResult? Function(_ConnectionUrlChanged value)? connectionUrlChanged,
+    TResult? Function(_ConnectionSelected value)? connectionSelected,
+    TResult? Function(_NewConnectionButtonPressed value)?
+        newConnectionButtonPressed,
+    TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_EmitterSelected value)? emitterSelected,
+    TResult? Function(_ListenerSelected value)? listenerSelected,
+    TResult? Function(_UnSelectListener value)? unSelectListener,
+    TResult? Function(_EmitterNameChanged value)? emitterNameChanged,
+    TResult? Function(_EmitterDataTypeChanged value)? emitterDataTypeChanged,
+    TResult? Function(_EmitterDataChanged value)? emitterDataChanged,
+    TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
+    TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult? Function(_AddQueryParameter value)? addQueryParameter,
+    TResult? Function(_QueryRowChanged value)? queryRowChanged,
+    TResult? Function(_QueryRowChecked value)? queryRowChecked,
+    TResult? Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
+    TResult? Function(_DeleteSelectedQueryParameters value)?
+        deleteSelectedQueryParameters,
+    TResult? Function(_AddHeader value)? addHeader,
+    TResult? Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult? Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult? Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult? Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
+    TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
+  }) {
+    return headerAllRowsChecked?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialize value)? initialize,
+    TResult Function(_ConnectionNameChanged value)? connectionNameChanged,
+    TResult Function(_ConnectionUrlChanged value)? connectionUrlChanged,
+    TResult Function(_ConnectionSelected value)? connectionSelected,
+    TResult Function(_NewConnectionButtonPressed value)?
+        newConnectionButtonPressed,
+    TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_EmitterSelected value)? emitterSelected,
+    TResult Function(_ListenerSelected value)? listenerSelected,
+    TResult Function(_UnSelectListener value)? unSelectListener,
+    TResult Function(_EmitterNameChanged value)? emitterNameChanged,
+    TResult Function(_EmitterDataTypeChanged value)? emitterDataTypeChanged,
+    TResult Function(_EmitterDataChanged value)? emitterDataChanged,
+    TResult Function(_ListenerNameChanged value)? listenerNameChanged,
+    TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult Function(_AddQueryParameter value)? addQueryParameter,
+    TResult Function(_QueryRowChanged value)? queryRowChanged,
+    TResult Function(_QueryRowChecked value)? queryRowChecked,
+    TResult Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
+    TResult Function(_DeleteSelectedQueryParameters value)?
+        deleteSelectedQueryParameters,
+    TResult Function(_AddHeader value)? addHeader,
+    TResult Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
+    TResult Function(_SaveButtonPressed value)? saveButtonPressed,
+    required TResult orElse(),
+  }) {
+    if (headerAllRowsChecked != null) {
+      return headerAllRowsChecked(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _HeaderAllRowsChecked implements ConnectionFormEvent {
+  const factory _HeaderAllRowsChecked({required final bool isChecked}) =
+      _$HeaderAllRowsCheckedImpl;
+
+  bool get isChecked;
+  @JsonKey(ignore: true)
+  _$$HeaderAllRowsCheckedImplCopyWith<_$HeaderAllRowsCheckedImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$DeleteSelectedHeadersImplCopyWith<$Res> {
+  factory _$$DeleteSelectedHeadersImplCopyWith(
+          _$DeleteSelectedHeadersImpl value,
+          $Res Function(_$DeleteSelectedHeadersImpl) then) =
+      __$$DeleteSelectedHeadersImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$DeleteSelectedHeadersImplCopyWithImpl<$Res>
+    extends _$ConnectionFormEventCopyWithImpl<$Res, _$DeleteSelectedHeadersImpl>
+    implements _$$DeleteSelectedHeadersImplCopyWith<$Res> {
+  __$$DeleteSelectedHeadersImplCopyWithImpl(_$DeleteSelectedHeadersImpl _value,
+      $Res Function(_$DeleteSelectedHeadersImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$DeleteSelectedHeadersImpl implements _DeleteSelectedHeaders {
+  const _$DeleteSelectedHeadersImpl();
+
+  @override
+  String toString() {
+    return 'ConnectionFormEvent.deleteSelectedHeaders()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DeleteSelectedHeadersImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initialize,
+    required TResult Function(String connectionName) connectionNameChanged,
+    required TResult Function(String connectionUrl) connectionUrlChanged,
+    required TResult Function(Connection connection) connectionSelected,
+    required TResult Function() newConnectionButtonPressed,
+    required TResult Function(EventType type) addEvent,
+    required TResult Function(int emitterIndex) emitterSelected,
+    required TResult Function(int listenerIndex) listenerSelected,
+    required TResult Function() unSelectListener,
+    required TResult Function(String name) emitterNameChanged,
+    required TResult Function(EventDataType dataType) emitterDataTypeChanged,
+    required TResult Function(String data) emitterDataChanged,
+    required TResult Function(String name) listenerNameChanged,
+    required TResult Function(bool value, int listenerIndex)
+        listenerSwitchToggled,
+    required TResult Function() addQueryParameter,
+    required TResult Function(int rowIndex, PlutoRow row) queryRowChanged,
+    required TResult Function(int rowIndex, PlutoRow row) queryRowChecked,
+    required TResult Function(bool isChecked) queryAllRowsChecked,
+    required TResult Function() deleteSelectedQueryParameters,
+    required TResult Function() addHeader,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChanged,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChecked,
+    required TResult Function(bool isChecked) headerAllRowsChecked,
+    required TResult Function() deleteSelectedHeaders,
+    required TResult Function() saveButtonPressed,
+  }) {
+    return deleteSelectedHeaders();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initialize,
+    TResult? Function(String connectionName)? connectionNameChanged,
+    TResult? Function(String connectionUrl)? connectionUrlChanged,
+    TResult? Function(Connection connection)? connectionSelected,
+    TResult? Function()? newConnectionButtonPressed,
+    TResult? Function(EventType type)? addEvent,
+    TResult? Function(int emitterIndex)? emitterSelected,
+    TResult? Function(int listenerIndex)? listenerSelected,
+    TResult? Function()? unSelectListener,
+    TResult? Function(String name)? emitterNameChanged,
+    TResult? Function(EventDataType dataType)? emitterDataTypeChanged,
+    TResult? Function(String data)? emitterDataChanged,
+    TResult? Function(String name)? listenerNameChanged,
+    TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult? Function()? addQueryParameter,
+    TResult? Function(int rowIndex, PlutoRow row)? queryRowChanged,
+    TResult? Function(int rowIndex, PlutoRow row)? queryRowChecked,
+    TResult? Function(bool isChecked)? queryAllRowsChecked,
+    TResult? Function()? deleteSelectedQueryParameters,
+    TResult? Function()? addHeader,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult? Function(bool isChecked)? headerAllRowsChecked,
+    TResult? Function()? deleteSelectedHeaders,
+    TResult? Function()? saveButtonPressed,
+  }) {
+    return deleteSelectedHeaders?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initialize,
+    TResult Function(String connectionName)? connectionNameChanged,
+    TResult Function(String connectionUrl)? connectionUrlChanged,
+    TResult Function(Connection connection)? connectionSelected,
+    TResult Function()? newConnectionButtonPressed,
+    TResult Function(EventType type)? addEvent,
+    TResult Function(int emitterIndex)? emitterSelected,
+    TResult Function(int listenerIndex)? listenerSelected,
+    TResult Function()? unSelectListener,
+    TResult Function(String name)? emitterNameChanged,
+    TResult Function(EventDataType dataType)? emitterDataTypeChanged,
+    TResult Function(String data)? emitterDataChanged,
+    TResult Function(String name)? listenerNameChanged,
+    TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult Function()? addQueryParameter,
+    TResult Function(int rowIndex, PlutoRow row)? queryRowChanged,
+    TResult Function(int rowIndex, PlutoRow row)? queryRowChecked,
+    TResult Function(bool isChecked)? queryAllRowsChecked,
+    TResult Function()? deleteSelectedQueryParameters,
+    TResult Function()? addHeader,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult Function(bool isChecked)? headerAllRowsChecked,
+    TResult Function()? deleteSelectedHeaders,
+    TResult Function()? saveButtonPressed,
+    required TResult orElse(),
+  }) {
+    if (deleteSelectedHeaders != null) {
+      return deleteSelectedHeaders();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initialize value) initialize,
+    required TResult Function(_ConnectionNameChanged value)
+        connectionNameChanged,
+    required TResult Function(_ConnectionUrlChanged value) connectionUrlChanged,
+    required TResult Function(_ConnectionSelected value) connectionSelected,
+    required TResult Function(_NewConnectionButtonPressed value)
+        newConnectionButtonPressed,
+    required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_EmitterSelected value) emitterSelected,
+    required TResult Function(_ListenerSelected value) listenerSelected,
+    required TResult Function(_UnSelectListener value) unSelectListener,
+    required TResult Function(_EmitterNameChanged value) emitterNameChanged,
+    required TResult Function(_EmitterDataTypeChanged value)
+        emitterDataTypeChanged,
+    required TResult Function(_EmitterDataChanged value) emitterDataChanged,
+    required TResult Function(_ListenerNameChanged value) listenerNameChanged,
+    required TResult Function(_ListenerSwitchToggled value)
+        listenerSwitchToggled,
+    required TResult Function(_AddQueryParameter value) addQueryParameter,
+    required TResult Function(_QueryRowChanged value) queryRowChanged,
+    required TResult Function(_QueryRowChecked value) queryRowChecked,
+    required TResult Function(_QueryAllRowsChecked value) queryAllRowsChecked,
+    required TResult Function(_DeleteSelectedQueryParameters value)
+        deleteSelectedQueryParameters,
+    required TResult Function(_AddHeader value) addHeader,
+    required TResult Function(_HeaderRowChanged value) headerRowChanged,
+    required TResult Function(_HeaderRowChecked value) headerRowChecked,
+    required TResult Function(_HeaderAllRowsChecked value) headerAllRowsChecked,
+    required TResult Function(_DeleteSelectedHeaders value)
+        deleteSelectedHeaders,
+    required TResult Function(_SaveButtonPressed value) saveButtonPressed,
+  }) {
+    return deleteSelectedHeaders(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialize value)? initialize,
+    TResult? Function(_ConnectionNameChanged value)? connectionNameChanged,
+    TResult? Function(_ConnectionUrlChanged value)? connectionUrlChanged,
+    TResult? Function(_ConnectionSelected value)? connectionSelected,
+    TResult? Function(_NewConnectionButtonPressed value)?
+        newConnectionButtonPressed,
+    TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_EmitterSelected value)? emitterSelected,
+    TResult? Function(_ListenerSelected value)? listenerSelected,
+    TResult? Function(_UnSelectListener value)? unSelectListener,
+    TResult? Function(_EmitterNameChanged value)? emitterNameChanged,
+    TResult? Function(_EmitterDataTypeChanged value)? emitterDataTypeChanged,
+    TResult? Function(_EmitterDataChanged value)? emitterDataChanged,
+    TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
+    TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult? Function(_AddQueryParameter value)? addQueryParameter,
+    TResult? Function(_QueryRowChanged value)? queryRowChanged,
+    TResult? Function(_QueryRowChecked value)? queryRowChecked,
+    TResult? Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
+    TResult? Function(_DeleteSelectedQueryParameters value)?
+        deleteSelectedQueryParameters,
+    TResult? Function(_AddHeader value)? addHeader,
+    TResult? Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult? Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult? Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult? Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
+    TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
+  }) {
+    return deleteSelectedHeaders?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialize value)? initialize,
+    TResult Function(_ConnectionNameChanged value)? connectionNameChanged,
+    TResult Function(_ConnectionUrlChanged value)? connectionUrlChanged,
+    TResult Function(_ConnectionSelected value)? connectionSelected,
+    TResult Function(_NewConnectionButtonPressed value)?
+        newConnectionButtonPressed,
+    TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_EmitterSelected value)? emitterSelected,
+    TResult Function(_ListenerSelected value)? listenerSelected,
+    TResult Function(_UnSelectListener value)? unSelectListener,
+    TResult Function(_EmitterNameChanged value)? emitterNameChanged,
+    TResult Function(_EmitterDataTypeChanged value)? emitterDataTypeChanged,
+    TResult Function(_EmitterDataChanged value)? emitterDataChanged,
+    TResult Function(_ListenerNameChanged value)? listenerNameChanged,
+    TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult Function(_AddQueryParameter value)? addQueryParameter,
+    TResult Function(_QueryRowChanged value)? queryRowChanged,
+    TResult Function(_QueryRowChecked value)? queryRowChecked,
+    TResult Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
+    TResult Function(_DeleteSelectedQueryParameters value)?
+        deleteSelectedQueryParameters,
+    TResult Function(_AddHeader value)? addHeader,
+    TResult Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
+    TResult Function(_SaveButtonPressed value)? saveButtonPressed,
+    required TResult orElse(),
+  }) {
+    if (deleteSelectedHeaders != null) {
+      return deleteSelectedHeaders(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _DeleteSelectedHeaders implements ConnectionFormEvent {
+  const factory _DeleteSelectedHeaders() = _$DeleteSelectedHeadersImpl;
 }
 
 /// @nodoc
@@ -4948,6 +6948,11 @@ class _$SaveButtonPressedImpl implements _SaveButtonPressed {
     required TResult Function(int rowIndex, PlutoRow row) queryRowChecked,
     required TResult Function(bool isChecked) queryAllRowsChecked,
     required TResult Function() deleteSelectedQueryParameters,
+    required TResult Function() addHeader,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChanged,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChecked,
+    required TResult Function(bool isChecked) headerAllRowsChecked,
+    required TResult Function() deleteSelectedHeaders,
     required TResult Function() saveButtonPressed,
   }) {
     return saveButtonPressed();
@@ -4975,6 +6980,11 @@ class _$SaveButtonPressedImpl implements _SaveButtonPressed {
     TResult? Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult? Function(bool isChecked)? queryAllRowsChecked,
     TResult? Function()? deleteSelectedQueryParameters,
+    TResult? Function()? addHeader,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult? Function(bool isChecked)? headerAllRowsChecked,
+    TResult? Function()? deleteSelectedHeaders,
     TResult? Function()? saveButtonPressed,
   }) {
     return saveButtonPressed?.call();
@@ -5002,6 +7012,11 @@ class _$SaveButtonPressedImpl implements _SaveButtonPressed {
     TResult Function(int rowIndex, PlutoRow row)? queryRowChecked,
     TResult Function(bool isChecked)? queryAllRowsChecked,
     TResult Function()? deleteSelectedQueryParameters,
+    TResult Function()? addHeader,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult Function(bool isChecked)? headerAllRowsChecked,
+    TResult Function()? deleteSelectedHeaders,
     TResult Function()? saveButtonPressed,
     required TResult orElse(),
   }) {
@@ -5038,6 +7053,12 @@ class _$SaveButtonPressedImpl implements _SaveButtonPressed {
     required TResult Function(_QueryAllRowsChecked value) queryAllRowsChecked,
     required TResult Function(_DeleteSelectedQueryParameters value)
         deleteSelectedQueryParameters,
+    required TResult Function(_AddHeader value) addHeader,
+    required TResult Function(_HeaderRowChanged value) headerRowChanged,
+    required TResult Function(_HeaderRowChecked value) headerRowChecked,
+    required TResult Function(_HeaderAllRowsChecked value) headerAllRowsChecked,
+    required TResult Function(_DeleteSelectedHeaders value)
+        deleteSelectedHeaders,
     required TResult Function(_SaveButtonPressed value) saveButtonPressed,
   }) {
     return saveButtonPressed(this);
@@ -5067,6 +7088,11 @@ class _$SaveButtonPressedImpl implements _SaveButtonPressed {
     TResult? Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult? Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult? Function(_AddHeader value)? addHeader,
+    TResult? Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult? Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult? Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult? Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
   }) {
     return saveButtonPressed?.call(this);
@@ -5096,6 +7122,11 @@ class _$SaveButtonPressedImpl implements _SaveButtonPressed {
     TResult Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
     TResult Function(_DeleteSelectedQueryParameters value)?
         deleteSelectedQueryParameters,
+    TResult Function(_AddHeader value)? addHeader,
+    TResult Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
     TResult Function(_SaveButtonPressed value)? saveButtonPressed,
     required TResult orElse(),
   }) {

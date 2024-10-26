@@ -54,5 +54,19 @@ class ConnectionFormEvent with _$ConnectionFormEvent {
   }) = _QueryAllRowsChecked;
   const factory ConnectionFormEvent.deleteSelectedQueryParameters() =
       _DeleteSelectedQueryParameters;
+  const factory ConnectionFormEvent.addHeader() = _AddHeader;
+  const factory ConnectionFormEvent.headerRowChanged({
+    required int rowIndex,
+    required PlutoRow row,
+  }) = _HeaderRowChanged;
+  const factory ConnectionFormEvent.headerRowChecked({
+    required int rowIndex,
+    required PlutoRow row,
+  }) = _HeaderRowChecked;
+  const factory ConnectionFormEvent.headerAllRowsChecked({
+    required bool isChecked,
+  }) = _HeaderAllRowsChecked;
+  const factory ConnectionFormEvent.deleteSelectedHeaders() =
+      _DeleteSelectedHeaders;
   const factory ConnectionFormEvent.saveButtonPressed() = _SaveButtonPressed;
 }
