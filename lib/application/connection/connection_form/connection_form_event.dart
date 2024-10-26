@@ -68,5 +68,19 @@ class ConnectionFormEvent with _$ConnectionFormEvent {
   }) = _HeaderAllRowsChecked;
   const factory ConnectionFormEvent.deleteSelectedHeaders() =
       _DeleteSelectedHeaders;
+  const factory ConnectionFormEvent.addAuth() = _AddAuth;
+  const factory ConnectionFormEvent.authRowChanged({
+    required int rowIndex,
+    required PlutoRow row,
+  }) = _AuthRowChanged;
+  const factory ConnectionFormEvent.authRowChecked({
+    required int rowIndex,
+    required PlutoRow row,
+  }) = _AuthRowChecked;
+  const factory ConnectionFormEvent.authAllRowsChecked({
+    required bool isChecked,
+  }) = _AuthAllRowsChecked;
+  const factory ConnectionFormEvent.deleteSelectedAuthRows() =
+      _DeleteSelectedAuthRows;
   const factory ConnectionFormEvent.saveButtonPressed() = _SaveButtonPressed;
 }

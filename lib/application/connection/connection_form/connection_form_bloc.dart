@@ -307,6 +307,67 @@ class ConnectionFormBloc
             add(const ConnectionFormEvent.saveButtonPressed());
           }
         },
+        addAuth: (_) async => emit(state.copyWith(
+          isSaved: false,
+          connectionFormData: state.connectionFormData?.copyWith(
+            auth: [
+              ...state.connectionFormData!.auth,
+              PlutoRow(cells: {
+                "key": PlutoCell(value: ''),
+                "value": PlutoCell(value: ''),
+                "description": PlutoCell(value: ''),
+              }),
+            ],
+          ),
+          failureOrSucessOption: none(),
+        )),
+        authRowChanged: (e) async => emit(state.copyWith(
+          isSaved: false,
+          connectionFormData: state.connectionFormData?.copyWith(
+            auth: state.connectionFormData!.auth
+                .asMap()
+                .entries
+                .map((entry) => entry.key == e.rowIndex ? e.row : entry.value)
+                .toList(),
+          ),
+          failureOrSucessOption: none(),
+        )),
+        authRowChecked: (e) async => emit(state.copyWith(
+          isRowChecked: !state.isRowChecked,
+          connectionFormData: state.connectionFormData?.copyWith(
+            auth: state.connectionFormData!.auth
+                .asMap()
+                .entries
+                .map((entry) => entry.key == e.rowIndex ? e.row : entry.value)
+                .toList(),
+          ),
+          failureOrSucessOption: none(),
+        )),
+        authAllRowsChecked: (e) async => emit(state.copyWith(
+          isRowChecked: !state.isRowChecked,
+          connectionFormData: state.connectionFormData?.copyWith(
+            auth: state.connectionFormData!.auth.map(
+              (element) {
+                element.setChecked(e.isChecked);
+                return element;
+              },
+            ).toList(),
+          ),
+          failureOrSucessOption: none(),
+        )),
+        deleteSelectedAuthRows: (_) async {
+          emit(state.copyWith(
+            connectionFormData: state.connectionFormData?.copyWith(
+              auth: state.connectionFormData!.auth
+                  .where((element) => element.checked != true)
+                  .toList(),
+            ),
+            failureOrSucessOption: none(),
+          ));
+          if (state.isSaved) {
+            add(const ConnectionFormEvent.saveButtonPressed());
+          }
+        },
         saveButtonPressed: (_) async {
           Either<ConnectionFailure, Unit>? failureOrSuccess;
           EventFormData? eventEmitter;
