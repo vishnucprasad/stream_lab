@@ -24,6 +24,7 @@ mixin _$ConnectionFormEvent {
     required TResult Function(Connection connection) connectionSelected,
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
+    required TResult Function(EventType type, int eventIndex) deleteEvent,
     required TResult Function(int emitterIndex) emitterSelected,
     required TResult Function(int listenerIndex) listenerSelected,
     required TResult Function() unSelectListener,
@@ -59,6 +60,7 @@ mixin _$ConnectionFormEvent {
     TResult? Function(Connection connection)? connectionSelected,
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
+    TResult? Function(EventType type, int eventIndex)? deleteEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
     TResult? Function(int listenerIndex)? listenerSelected,
     TResult? Function()? unSelectListener,
@@ -93,6 +95,7 @@ mixin _$ConnectionFormEvent {
     TResult Function(Connection connection)? connectionSelected,
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
+    TResult Function(EventType type, int eventIndex)? deleteEvent,
     TResult Function(int emitterIndex)? emitterSelected,
     TResult Function(int listenerIndex)? listenerSelected,
     TResult Function()? unSelectListener,
@@ -130,6 +133,7 @@ mixin _$ConnectionFormEvent {
     required TResult Function(_NewConnectionButtonPressed value)
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_DeleteEvent value) deleteEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
     required TResult Function(_ListenerSelected value) listenerSelected,
     required TResult Function(_UnSelectListener value) unSelectListener,
@@ -170,6 +174,7 @@ mixin _$ConnectionFormEvent {
     TResult? Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_DeleteEvent value)? deleteEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
     TResult? Function(_ListenerSelected value)? listenerSelected,
     TResult? Function(_UnSelectListener value)? unSelectListener,
@@ -206,6 +211,7 @@ mixin _$ConnectionFormEvent {
     TResult Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_DeleteEvent value)? deleteEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
     TResult Function(_ListenerSelected value)? listenerSelected,
     TResult Function(_UnSelectListener value)? unSelectListener,
@@ -298,6 +304,7 @@ class _$InitializeImpl implements _Initialize {
     required TResult Function(Connection connection) connectionSelected,
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
+    required TResult Function(EventType type, int eventIndex) deleteEvent,
     required TResult Function(int emitterIndex) emitterSelected,
     required TResult Function(int listenerIndex) listenerSelected,
     required TResult Function() unSelectListener,
@@ -336,6 +343,7 @@ class _$InitializeImpl implements _Initialize {
     TResult? Function(Connection connection)? connectionSelected,
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
+    TResult? Function(EventType type, int eventIndex)? deleteEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
     TResult? Function(int listenerIndex)? listenerSelected,
     TResult? Function()? unSelectListener,
@@ -373,6 +381,7 @@ class _$InitializeImpl implements _Initialize {
     TResult Function(Connection connection)? connectionSelected,
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
+    TResult Function(EventType type, int eventIndex)? deleteEvent,
     TResult Function(int emitterIndex)? emitterSelected,
     TResult Function(int listenerIndex)? listenerSelected,
     TResult Function()? unSelectListener,
@@ -416,6 +425,7 @@ class _$InitializeImpl implements _Initialize {
     required TResult Function(_NewConnectionButtonPressed value)
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_DeleteEvent value) deleteEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
     required TResult Function(_ListenerSelected value) listenerSelected,
     required TResult Function(_UnSelectListener value) unSelectListener,
@@ -459,6 +469,7 @@ class _$InitializeImpl implements _Initialize {
     TResult? Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_DeleteEvent value)? deleteEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
     TResult? Function(_ListenerSelected value)? listenerSelected,
     TResult? Function(_UnSelectListener value)? unSelectListener,
@@ -498,6 +509,7 @@ class _$InitializeImpl implements _Initialize {
     TResult Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_DeleteEvent value)? deleteEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
     TResult Function(_ListenerSelected value)? listenerSelected,
     TResult Function(_UnSelectListener value)? unSelectListener,
@@ -609,6 +621,7 @@ class _$ConnectionNameChangedImpl implements _ConnectionNameChanged {
     required TResult Function(Connection connection) connectionSelected,
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
+    required TResult Function(EventType type, int eventIndex) deleteEvent,
     required TResult Function(int emitterIndex) emitterSelected,
     required TResult Function(int listenerIndex) listenerSelected,
     required TResult Function() unSelectListener,
@@ -647,6 +660,7 @@ class _$ConnectionNameChangedImpl implements _ConnectionNameChanged {
     TResult? Function(Connection connection)? connectionSelected,
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
+    TResult? Function(EventType type, int eventIndex)? deleteEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
     TResult? Function(int listenerIndex)? listenerSelected,
     TResult? Function()? unSelectListener,
@@ -684,6 +698,7 @@ class _$ConnectionNameChangedImpl implements _ConnectionNameChanged {
     TResult Function(Connection connection)? connectionSelected,
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
+    TResult Function(EventType type, int eventIndex)? deleteEvent,
     TResult Function(int emitterIndex)? emitterSelected,
     TResult Function(int listenerIndex)? listenerSelected,
     TResult Function()? unSelectListener,
@@ -727,6 +742,7 @@ class _$ConnectionNameChangedImpl implements _ConnectionNameChanged {
     required TResult Function(_NewConnectionButtonPressed value)
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_DeleteEvent value) deleteEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
     required TResult Function(_ListenerSelected value) listenerSelected,
     required TResult Function(_UnSelectListener value) unSelectListener,
@@ -770,6 +786,7 @@ class _$ConnectionNameChangedImpl implements _ConnectionNameChanged {
     TResult? Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_DeleteEvent value)? deleteEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
     TResult? Function(_ListenerSelected value)? listenerSelected,
     TResult? Function(_UnSelectListener value)? unSelectListener,
@@ -809,6 +826,7 @@ class _$ConnectionNameChangedImpl implements _ConnectionNameChanged {
     TResult Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_DeleteEvent value)? deleteEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
     TResult Function(_ListenerSelected value)? listenerSelected,
     TResult Function(_UnSelectListener value)? unSelectListener,
@@ -926,6 +944,7 @@ class _$ConnectionUrlChangedImpl implements _ConnectionUrlChanged {
     required TResult Function(Connection connection) connectionSelected,
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
+    required TResult Function(EventType type, int eventIndex) deleteEvent,
     required TResult Function(int emitterIndex) emitterSelected,
     required TResult Function(int listenerIndex) listenerSelected,
     required TResult Function() unSelectListener,
@@ -964,6 +983,7 @@ class _$ConnectionUrlChangedImpl implements _ConnectionUrlChanged {
     TResult? Function(Connection connection)? connectionSelected,
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
+    TResult? Function(EventType type, int eventIndex)? deleteEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
     TResult? Function(int listenerIndex)? listenerSelected,
     TResult? Function()? unSelectListener,
@@ -1001,6 +1021,7 @@ class _$ConnectionUrlChangedImpl implements _ConnectionUrlChanged {
     TResult Function(Connection connection)? connectionSelected,
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
+    TResult Function(EventType type, int eventIndex)? deleteEvent,
     TResult Function(int emitterIndex)? emitterSelected,
     TResult Function(int listenerIndex)? listenerSelected,
     TResult Function()? unSelectListener,
@@ -1044,6 +1065,7 @@ class _$ConnectionUrlChangedImpl implements _ConnectionUrlChanged {
     required TResult Function(_NewConnectionButtonPressed value)
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_DeleteEvent value) deleteEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
     required TResult Function(_ListenerSelected value) listenerSelected,
     required TResult Function(_UnSelectListener value) unSelectListener,
@@ -1087,6 +1109,7 @@ class _$ConnectionUrlChangedImpl implements _ConnectionUrlChanged {
     TResult? Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_DeleteEvent value)? deleteEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
     TResult? Function(_ListenerSelected value)? listenerSelected,
     TResult? Function(_UnSelectListener value)? unSelectListener,
@@ -1126,6 +1149,7 @@ class _$ConnectionUrlChangedImpl implements _ConnectionUrlChanged {
     TResult Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_DeleteEvent value)? deleteEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
     TResult Function(_ListenerSelected value)? listenerSelected,
     TResult Function(_UnSelectListener value)? unSelectListener,
@@ -1242,6 +1266,7 @@ class _$ConnectionSelectedImpl implements _ConnectionSelected {
     required TResult Function(Connection connection) connectionSelected,
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
+    required TResult Function(EventType type, int eventIndex) deleteEvent,
     required TResult Function(int emitterIndex) emitterSelected,
     required TResult Function(int listenerIndex) listenerSelected,
     required TResult Function() unSelectListener,
@@ -1280,6 +1305,7 @@ class _$ConnectionSelectedImpl implements _ConnectionSelected {
     TResult? Function(Connection connection)? connectionSelected,
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
+    TResult? Function(EventType type, int eventIndex)? deleteEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
     TResult? Function(int listenerIndex)? listenerSelected,
     TResult? Function()? unSelectListener,
@@ -1317,6 +1343,7 @@ class _$ConnectionSelectedImpl implements _ConnectionSelected {
     TResult Function(Connection connection)? connectionSelected,
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
+    TResult Function(EventType type, int eventIndex)? deleteEvent,
     TResult Function(int emitterIndex)? emitterSelected,
     TResult Function(int listenerIndex)? listenerSelected,
     TResult Function()? unSelectListener,
@@ -1360,6 +1387,7 @@ class _$ConnectionSelectedImpl implements _ConnectionSelected {
     required TResult Function(_NewConnectionButtonPressed value)
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_DeleteEvent value) deleteEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
     required TResult Function(_ListenerSelected value) listenerSelected,
     required TResult Function(_UnSelectListener value) unSelectListener,
@@ -1403,6 +1431,7 @@ class _$ConnectionSelectedImpl implements _ConnectionSelected {
     TResult? Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_DeleteEvent value)? deleteEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
     TResult? Function(_ListenerSelected value)? listenerSelected,
     TResult? Function(_UnSelectListener value)? unSelectListener,
@@ -1442,6 +1471,7 @@ class _$ConnectionSelectedImpl implements _ConnectionSelected {
     TResult Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_DeleteEvent value)? deleteEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
     TResult Function(_ListenerSelected value)? listenerSelected,
     TResult Function(_UnSelectListener value)? unSelectListener,
@@ -1534,6 +1564,7 @@ class _$NewConnectionButtonPressedImpl implements _NewConnectionButtonPressed {
     required TResult Function(Connection connection) connectionSelected,
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
+    required TResult Function(EventType type, int eventIndex) deleteEvent,
     required TResult Function(int emitterIndex) emitterSelected,
     required TResult Function(int listenerIndex) listenerSelected,
     required TResult Function() unSelectListener,
@@ -1572,6 +1603,7 @@ class _$NewConnectionButtonPressedImpl implements _NewConnectionButtonPressed {
     TResult? Function(Connection connection)? connectionSelected,
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
+    TResult? Function(EventType type, int eventIndex)? deleteEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
     TResult? Function(int listenerIndex)? listenerSelected,
     TResult? Function()? unSelectListener,
@@ -1609,6 +1641,7 @@ class _$NewConnectionButtonPressedImpl implements _NewConnectionButtonPressed {
     TResult Function(Connection connection)? connectionSelected,
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
+    TResult Function(EventType type, int eventIndex)? deleteEvent,
     TResult Function(int emitterIndex)? emitterSelected,
     TResult Function(int listenerIndex)? listenerSelected,
     TResult Function()? unSelectListener,
@@ -1652,6 +1685,7 @@ class _$NewConnectionButtonPressedImpl implements _NewConnectionButtonPressed {
     required TResult Function(_NewConnectionButtonPressed value)
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_DeleteEvent value) deleteEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
     required TResult Function(_ListenerSelected value) listenerSelected,
     required TResult Function(_UnSelectListener value) unSelectListener,
@@ -1695,6 +1729,7 @@ class _$NewConnectionButtonPressedImpl implements _NewConnectionButtonPressed {
     TResult? Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_DeleteEvent value)? deleteEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
     TResult? Function(_ListenerSelected value)? listenerSelected,
     TResult? Function(_UnSelectListener value)? unSelectListener,
@@ -1734,6 +1769,7 @@ class _$NewConnectionButtonPressedImpl implements _NewConnectionButtonPressed {
     TResult Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_DeleteEvent value)? deleteEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
     TResult Function(_ListenerSelected value)? listenerSelected,
     TResult Function(_UnSelectListener value)? unSelectListener,
@@ -1843,6 +1879,7 @@ class _$AddEventImpl implements _AddEvent {
     required TResult Function(Connection connection) connectionSelected,
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
+    required TResult Function(EventType type, int eventIndex) deleteEvent,
     required TResult Function(int emitterIndex) emitterSelected,
     required TResult Function(int listenerIndex) listenerSelected,
     required TResult Function() unSelectListener,
@@ -1881,6 +1918,7 @@ class _$AddEventImpl implements _AddEvent {
     TResult? Function(Connection connection)? connectionSelected,
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
+    TResult? Function(EventType type, int eventIndex)? deleteEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
     TResult? Function(int listenerIndex)? listenerSelected,
     TResult? Function()? unSelectListener,
@@ -1918,6 +1956,7 @@ class _$AddEventImpl implements _AddEvent {
     TResult Function(Connection connection)? connectionSelected,
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
+    TResult Function(EventType type, int eventIndex)? deleteEvent,
     TResult Function(int emitterIndex)? emitterSelected,
     TResult Function(int listenerIndex)? listenerSelected,
     TResult Function()? unSelectListener,
@@ -1961,6 +2000,7 @@ class _$AddEventImpl implements _AddEvent {
     required TResult Function(_NewConnectionButtonPressed value)
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_DeleteEvent value) deleteEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
     required TResult Function(_ListenerSelected value) listenerSelected,
     required TResult Function(_UnSelectListener value) unSelectListener,
@@ -2004,6 +2044,7 @@ class _$AddEventImpl implements _AddEvent {
     TResult? Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_DeleteEvent value)? deleteEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
     TResult? Function(_ListenerSelected value)? listenerSelected,
     TResult? Function(_UnSelectListener value)? unSelectListener,
@@ -2043,6 +2084,7 @@ class _$AddEventImpl implements _AddEvent {
     TResult Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_DeleteEvent value)? deleteEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
     TResult Function(_ListenerSelected value)? listenerSelected,
     TResult Function(_UnSelectListener value)? unSelectListener,
@@ -2083,6 +2125,337 @@ abstract class _AddEvent implements ConnectionFormEvent {
   EventType get type;
   @JsonKey(ignore: true)
   _$$AddEventImplCopyWith<_$AddEventImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$DeleteEventImplCopyWith<$Res> {
+  factory _$$DeleteEventImplCopyWith(
+          _$DeleteEventImpl value, $Res Function(_$DeleteEventImpl) then) =
+      __$$DeleteEventImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({EventType type, int eventIndex});
+}
+
+/// @nodoc
+class __$$DeleteEventImplCopyWithImpl<$Res>
+    extends _$ConnectionFormEventCopyWithImpl<$Res, _$DeleteEventImpl>
+    implements _$$DeleteEventImplCopyWith<$Res> {
+  __$$DeleteEventImplCopyWithImpl(
+      _$DeleteEventImpl _value, $Res Function(_$DeleteEventImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? type = null,
+    Object? eventIndex = null,
+  }) {
+    return _then(_$DeleteEventImpl(
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as EventType,
+      eventIndex: null == eventIndex
+          ? _value.eventIndex
+          : eventIndex // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$DeleteEventImpl implements _DeleteEvent {
+  const _$DeleteEventImpl({required this.type, required this.eventIndex});
+
+  @override
+  final EventType type;
+  @override
+  final int eventIndex;
+
+  @override
+  String toString() {
+    return 'ConnectionFormEvent.deleteEvent(type: $type, eventIndex: $eventIndex)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DeleteEventImpl &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.eventIndex, eventIndex) ||
+                other.eventIndex == eventIndex));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, type, eventIndex);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DeleteEventImplCopyWith<_$DeleteEventImpl> get copyWith =>
+      __$$DeleteEventImplCopyWithImpl<_$DeleteEventImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initialize,
+    required TResult Function(String connectionName) connectionNameChanged,
+    required TResult Function(String connectionUrl) connectionUrlChanged,
+    required TResult Function(Connection connection) connectionSelected,
+    required TResult Function() newConnectionButtonPressed,
+    required TResult Function(EventType type) addEvent,
+    required TResult Function(EventType type, int eventIndex) deleteEvent,
+    required TResult Function(int emitterIndex) emitterSelected,
+    required TResult Function(int listenerIndex) listenerSelected,
+    required TResult Function() unSelectListener,
+    required TResult Function(String name) emitterNameChanged,
+    required TResult Function(EventDataType dataType) emitterDataTypeChanged,
+    required TResult Function(String data) emitterDataChanged,
+    required TResult Function(String name) listenerNameChanged,
+    required TResult Function(bool value, int listenerIndex)
+        listenerSwitchToggled,
+    required TResult Function() addQueryParameter,
+    required TResult Function(int rowIndex, PlutoRow row) queryRowChanged,
+    required TResult Function(int rowIndex, PlutoRow row) queryRowChecked,
+    required TResult Function(bool isChecked) queryAllRowsChecked,
+    required TResult Function() deleteSelectedQueryParameters,
+    required TResult Function() addHeader,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChanged,
+    required TResult Function(int rowIndex, PlutoRow row) headerRowChecked,
+    required TResult Function(bool isChecked) headerAllRowsChecked,
+    required TResult Function() deleteSelectedHeaders,
+    required TResult Function() addAuth,
+    required TResult Function(int rowIndex, PlutoRow row) authRowChanged,
+    required TResult Function(int rowIndex, PlutoRow row) authRowChecked,
+    required TResult Function(bool isChecked) authAllRowsChecked,
+    required TResult Function() deleteSelectedAuthRows,
+    required TResult Function() saveButtonPressed,
+  }) {
+    return deleteEvent(type, eventIndex);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initialize,
+    TResult? Function(String connectionName)? connectionNameChanged,
+    TResult? Function(String connectionUrl)? connectionUrlChanged,
+    TResult? Function(Connection connection)? connectionSelected,
+    TResult? Function()? newConnectionButtonPressed,
+    TResult? Function(EventType type)? addEvent,
+    TResult? Function(EventType type, int eventIndex)? deleteEvent,
+    TResult? Function(int emitterIndex)? emitterSelected,
+    TResult? Function(int listenerIndex)? listenerSelected,
+    TResult? Function()? unSelectListener,
+    TResult? Function(String name)? emitterNameChanged,
+    TResult? Function(EventDataType dataType)? emitterDataTypeChanged,
+    TResult? Function(String data)? emitterDataChanged,
+    TResult? Function(String name)? listenerNameChanged,
+    TResult? Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult? Function()? addQueryParameter,
+    TResult? Function(int rowIndex, PlutoRow row)? queryRowChanged,
+    TResult? Function(int rowIndex, PlutoRow row)? queryRowChecked,
+    TResult? Function(bool isChecked)? queryAllRowsChecked,
+    TResult? Function()? deleteSelectedQueryParameters,
+    TResult? Function()? addHeader,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult? Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult? Function(bool isChecked)? headerAllRowsChecked,
+    TResult? Function()? deleteSelectedHeaders,
+    TResult? Function()? addAuth,
+    TResult? Function(int rowIndex, PlutoRow row)? authRowChanged,
+    TResult? Function(int rowIndex, PlutoRow row)? authRowChecked,
+    TResult? Function(bool isChecked)? authAllRowsChecked,
+    TResult? Function()? deleteSelectedAuthRows,
+    TResult? Function()? saveButtonPressed,
+  }) {
+    return deleteEvent?.call(type, eventIndex);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initialize,
+    TResult Function(String connectionName)? connectionNameChanged,
+    TResult Function(String connectionUrl)? connectionUrlChanged,
+    TResult Function(Connection connection)? connectionSelected,
+    TResult Function()? newConnectionButtonPressed,
+    TResult Function(EventType type)? addEvent,
+    TResult Function(EventType type, int eventIndex)? deleteEvent,
+    TResult Function(int emitterIndex)? emitterSelected,
+    TResult Function(int listenerIndex)? listenerSelected,
+    TResult Function()? unSelectListener,
+    TResult Function(String name)? emitterNameChanged,
+    TResult Function(EventDataType dataType)? emitterDataTypeChanged,
+    TResult Function(String data)? emitterDataChanged,
+    TResult Function(String name)? listenerNameChanged,
+    TResult Function(bool value, int listenerIndex)? listenerSwitchToggled,
+    TResult Function()? addQueryParameter,
+    TResult Function(int rowIndex, PlutoRow row)? queryRowChanged,
+    TResult Function(int rowIndex, PlutoRow row)? queryRowChecked,
+    TResult Function(bool isChecked)? queryAllRowsChecked,
+    TResult Function()? deleteSelectedQueryParameters,
+    TResult Function()? addHeader,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChanged,
+    TResult Function(int rowIndex, PlutoRow row)? headerRowChecked,
+    TResult Function(bool isChecked)? headerAllRowsChecked,
+    TResult Function()? deleteSelectedHeaders,
+    TResult Function()? addAuth,
+    TResult Function(int rowIndex, PlutoRow row)? authRowChanged,
+    TResult Function(int rowIndex, PlutoRow row)? authRowChecked,
+    TResult Function(bool isChecked)? authAllRowsChecked,
+    TResult Function()? deleteSelectedAuthRows,
+    TResult Function()? saveButtonPressed,
+    required TResult orElse(),
+  }) {
+    if (deleteEvent != null) {
+      return deleteEvent(type, eventIndex);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initialize value) initialize,
+    required TResult Function(_ConnectionNameChanged value)
+        connectionNameChanged,
+    required TResult Function(_ConnectionUrlChanged value) connectionUrlChanged,
+    required TResult Function(_ConnectionSelected value) connectionSelected,
+    required TResult Function(_NewConnectionButtonPressed value)
+        newConnectionButtonPressed,
+    required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_DeleteEvent value) deleteEvent,
+    required TResult Function(_EmitterSelected value) emitterSelected,
+    required TResult Function(_ListenerSelected value) listenerSelected,
+    required TResult Function(_UnSelectListener value) unSelectListener,
+    required TResult Function(_EmitterNameChanged value) emitterNameChanged,
+    required TResult Function(_EmitterDataTypeChanged value)
+        emitterDataTypeChanged,
+    required TResult Function(_EmitterDataChanged value) emitterDataChanged,
+    required TResult Function(_ListenerNameChanged value) listenerNameChanged,
+    required TResult Function(_ListenerSwitchToggled value)
+        listenerSwitchToggled,
+    required TResult Function(_AddQueryParameter value) addQueryParameter,
+    required TResult Function(_QueryRowChanged value) queryRowChanged,
+    required TResult Function(_QueryRowChecked value) queryRowChecked,
+    required TResult Function(_QueryAllRowsChecked value) queryAllRowsChecked,
+    required TResult Function(_DeleteSelectedQueryParameters value)
+        deleteSelectedQueryParameters,
+    required TResult Function(_AddHeader value) addHeader,
+    required TResult Function(_HeaderRowChanged value) headerRowChanged,
+    required TResult Function(_HeaderRowChecked value) headerRowChecked,
+    required TResult Function(_HeaderAllRowsChecked value) headerAllRowsChecked,
+    required TResult Function(_DeleteSelectedHeaders value)
+        deleteSelectedHeaders,
+    required TResult Function(_AddAuth value) addAuth,
+    required TResult Function(_AuthRowChanged value) authRowChanged,
+    required TResult Function(_AuthRowChecked value) authRowChecked,
+    required TResult Function(_AuthAllRowsChecked value) authAllRowsChecked,
+    required TResult Function(_DeleteSelectedAuthRows value)
+        deleteSelectedAuthRows,
+    required TResult Function(_SaveButtonPressed value) saveButtonPressed,
+  }) {
+    return deleteEvent(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialize value)? initialize,
+    TResult? Function(_ConnectionNameChanged value)? connectionNameChanged,
+    TResult? Function(_ConnectionUrlChanged value)? connectionUrlChanged,
+    TResult? Function(_ConnectionSelected value)? connectionSelected,
+    TResult? Function(_NewConnectionButtonPressed value)?
+        newConnectionButtonPressed,
+    TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_DeleteEvent value)? deleteEvent,
+    TResult? Function(_EmitterSelected value)? emitterSelected,
+    TResult? Function(_ListenerSelected value)? listenerSelected,
+    TResult? Function(_UnSelectListener value)? unSelectListener,
+    TResult? Function(_EmitterNameChanged value)? emitterNameChanged,
+    TResult? Function(_EmitterDataTypeChanged value)? emitterDataTypeChanged,
+    TResult? Function(_EmitterDataChanged value)? emitterDataChanged,
+    TResult? Function(_ListenerNameChanged value)? listenerNameChanged,
+    TResult? Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult? Function(_AddQueryParameter value)? addQueryParameter,
+    TResult? Function(_QueryRowChanged value)? queryRowChanged,
+    TResult? Function(_QueryRowChecked value)? queryRowChecked,
+    TResult? Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
+    TResult? Function(_DeleteSelectedQueryParameters value)?
+        deleteSelectedQueryParameters,
+    TResult? Function(_AddHeader value)? addHeader,
+    TResult? Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult? Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult? Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult? Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
+    TResult? Function(_AddAuth value)? addAuth,
+    TResult? Function(_AuthRowChanged value)? authRowChanged,
+    TResult? Function(_AuthRowChecked value)? authRowChecked,
+    TResult? Function(_AuthAllRowsChecked value)? authAllRowsChecked,
+    TResult? Function(_DeleteSelectedAuthRows value)? deleteSelectedAuthRows,
+    TResult? Function(_SaveButtonPressed value)? saveButtonPressed,
+  }) {
+    return deleteEvent?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialize value)? initialize,
+    TResult Function(_ConnectionNameChanged value)? connectionNameChanged,
+    TResult Function(_ConnectionUrlChanged value)? connectionUrlChanged,
+    TResult Function(_ConnectionSelected value)? connectionSelected,
+    TResult Function(_NewConnectionButtonPressed value)?
+        newConnectionButtonPressed,
+    TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_DeleteEvent value)? deleteEvent,
+    TResult Function(_EmitterSelected value)? emitterSelected,
+    TResult Function(_ListenerSelected value)? listenerSelected,
+    TResult Function(_UnSelectListener value)? unSelectListener,
+    TResult Function(_EmitterNameChanged value)? emitterNameChanged,
+    TResult Function(_EmitterDataTypeChanged value)? emitterDataTypeChanged,
+    TResult Function(_EmitterDataChanged value)? emitterDataChanged,
+    TResult Function(_ListenerNameChanged value)? listenerNameChanged,
+    TResult Function(_ListenerSwitchToggled value)? listenerSwitchToggled,
+    TResult Function(_AddQueryParameter value)? addQueryParameter,
+    TResult Function(_QueryRowChanged value)? queryRowChanged,
+    TResult Function(_QueryRowChecked value)? queryRowChecked,
+    TResult Function(_QueryAllRowsChecked value)? queryAllRowsChecked,
+    TResult Function(_DeleteSelectedQueryParameters value)?
+        deleteSelectedQueryParameters,
+    TResult Function(_AddHeader value)? addHeader,
+    TResult Function(_HeaderRowChanged value)? headerRowChanged,
+    TResult Function(_HeaderRowChecked value)? headerRowChecked,
+    TResult Function(_HeaderAllRowsChecked value)? headerAllRowsChecked,
+    TResult Function(_DeleteSelectedHeaders value)? deleteSelectedHeaders,
+    TResult Function(_AddAuth value)? addAuth,
+    TResult Function(_AuthRowChanged value)? authRowChanged,
+    TResult Function(_AuthRowChecked value)? authRowChecked,
+    TResult Function(_AuthAllRowsChecked value)? authAllRowsChecked,
+    TResult Function(_DeleteSelectedAuthRows value)? deleteSelectedAuthRows,
+    TResult Function(_SaveButtonPressed value)? saveButtonPressed,
+    required TResult orElse(),
+  }) {
+    if (deleteEvent != null) {
+      return deleteEvent(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _DeleteEvent implements ConnectionFormEvent {
+  const factory _DeleteEvent(
+      {required final EventType type,
+      required final int eventIndex}) = _$DeleteEventImpl;
+
+  EventType get type;
+  int get eventIndex;
+  @JsonKey(ignore: true)
+  _$$DeleteEventImplCopyWith<_$DeleteEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2158,6 +2531,7 @@ class _$EmitterSelectedImpl implements _EmitterSelected {
     required TResult Function(Connection connection) connectionSelected,
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
+    required TResult Function(EventType type, int eventIndex) deleteEvent,
     required TResult Function(int emitterIndex) emitterSelected,
     required TResult Function(int listenerIndex) listenerSelected,
     required TResult Function() unSelectListener,
@@ -2196,6 +2570,7 @@ class _$EmitterSelectedImpl implements _EmitterSelected {
     TResult? Function(Connection connection)? connectionSelected,
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
+    TResult? Function(EventType type, int eventIndex)? deleteEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
     TResult? Function(int listenerIndex)? listenerSelected,
     TResult? Function()? unSelectListener,
@@ -2233,6 +2608,7 @@ class _$EmitterSelectedImpl implements _EmitterSelected {
     TResult Function(Connection connection)? connectionSelected,
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
+    TResult Function(EventType type, int eventIndex)? deleteEvent,
     TResult Function(int emitterIndex)? emitterSelected,
     TResult Function(int listenerIndex)? listenerSelected,
     TResult Function()? unSelectListener,
@@ -2276,6 +2652,7 @@ class _$EmitterSelectedImpl implements _EmitterSelected {
     required TResult Function(_NewConnectionButtonPressed value)
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_DeleteEvent value) deleteEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
     required TResult Function(_ListenerSelected value) listenerSelected,
     required TResult Function(_UnSelectListener value) unSelectListener,
@@ -2319,6 +2696,7 @@ class _$EmitterSelectedImpl implements _EmitterSelected {
     TResult? Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_DeleteEvent value)? deleteEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
     TResult? Function(_ListenerSelected value)? listenerSelected,
     TResult? Function(_UnSelectListener value)? unSelectListener,
@@ -2358,6 +2736,7 @@ class _$EmitterSelectedImpl implements _EmitterSelected {
     TResult Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_DeleteEvent value)? deleteEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
     TResult Function(_ListenerSelected value)? listenerSelected,
     TResult Function(_UnSelectListener value)? unSelectListener,
@@ -2474,6 +2853,7 @@ class _$ListenerSelectedImpl implements _ListenerSelected {
     required TResult Function(Connection connection) connectionSelected,
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
+    required TResult Function(EventType type, int eventIndex) deleteEvent,
     required TResult Function(int emitterIndex) emitterSelected,
     required TResult Function(int listenerIndex) listenerSelected,
     required TResult Function() unSelectListener,
@@ -2512,6 +2892,7 @@ class _$ListenerSelectedImpl implements _ListenerSelected {
     TResult? Function(Connection connection)? connectionSelected,
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
+    TResult? Function(EventType type, int eventIndex)? deleteEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
     TResult? Function(int listenerIndex)? listenerSelected,
     TResult? Function()? unSelectListener,
@@ -2549,6 +2930,7 @@ class _$ListenerSelectedImpl implements _ListenerSelected {
     TResult Function(Connection connection)? connectionSelected,
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
+    TResult Function(EventType type, int eventIndex)? deleteEvent,
     TResult Function(int emitterIndex)? emitterSelected,
     TResult Function(int listenerIndex)? listenerSelected,
     TResult Function()? unSelectListener,
@@ -2592,6 +2974,7 @@ class _$ListenerSelectedImpl implements _ListenerSelected {
     required TResult Function(_NewConnectionButtonPressed value)
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_DeleteEvent value) deleteEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
     required TResult Function(_ListenerSelected value) listenerSelected,
     required TResult Function(_UnSelectListener value) unSelectListener,
@@ -2635,6 +3018,7 @@ class _$ListenerSelectedImpl implements _ListenerSelected {
     TResult? Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_DeleteEvent value)? deleteEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
     TResult? Function(_ListenerSelected value)? listenerSelected,
     TResult? Function(_UnSelectListener value)? unSelectListener,
@@ -2674,6 +3058,7 @@ class _$ListenerSelectedImpl implements _ListenerSelected {
     TResult Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_DeleteEvent value)? deleteEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
     TResult Function(_ListenerSelected value)? listenerSelected,
     TResult Function(_UnSelectListener value)? unSelectListener,
@@ -2762,6 +3147,7 @@ class _$UnSelectListenerImpl implements _UnSelectListener {
     required TResult Function(Connection connection) connectionSelected,
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
+    required TResult Function(EventType type, int eventIndex) deleteEvent,
     required TResult Function(int emitterIndex) emitterSelected,
     required TResult Function(int listenerIndex) listenerSelected,
     required TResult Function() unSelectListener,
@@ -2800,6 +3186,7 @@ class _$UnSelectListenerImpl implements _UnSelectListener {
     TResult? Function(Connection connection)? connectionSelected,
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
+    TResult? Function(EventType type, int eventIndex)? deleteEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
     TResult? Function(int listenerIndex)? listenerSelected,
     TResult? Function()? unSelectListener,
@@ -2837,6 +3224,7 @@ class _$UnSelectListenerImpl implements _UnSelectListener {
     TResult Function(Connection connection)? connectionSelected,
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
+    TResult Function(EventType type, int eventIndex)? deleteEvent,
     TResult Function(int emitterIndex)? emitterSelected,
     TResult Function(int listenerIndex)? listenerSelected,
     TResult Function()? unSelectListener,
@@ -2880,6 +3268,7 @@ class _$UnSelectListenerImpl implements _UnSelectListener {
     required TResult Function(_NewConnectionButtonPressed value)
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_DeleteEvent value) deleteEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
     required TResult Function(_ListenerSelected value) listenerSelected,
     required TResult Function(_UnSelectListener value) unSelectListener,
@@ -2923,6 +3312,7 @@ class _$UnSelectListenerImpl implements _UnSelectListener {
     TResult? Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_DeleteEvent value)? deleteEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
     TResult? Function(_ListenerSelected value)? listenerSelected,
     TResult? Function(_UnSelectListener value)? unSelectListener,
@@ -2962,6 +3352,7 @@ class _$UnSelectListenerImpl implements _UnSelectListener {
     TResult Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_DeleteEvent value)? deleteEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
     TResult Function(_ListenerSelected value)? listenerSelected,
     TResult Function(_UnSelectListener value)? unSelectListener,
@@ -3071,6 +3462,7 @@ class _$EmitterNameChangedImpl implements _EmitterNameChanged {
     required TResult Function(Connection connection) connectionSelected,
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
+    required TResult Function(EventType type, int eventIndex) deleteEvent,
     required TResult Function(int emitterIndex) emitterSelected,
     required TResult Function(int listenerIndex) listenerSelected,
     required TResult Function() unSelectListener,
@@ -3109,6 +3501,7 @@ class _$EmitterNameChangedImpl implements _EmitterNameChanged {
     TResult? Function(Connection connection)? connectionSelected,
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
+    TResult? Function(EventType type, int eventIndex)? deleteEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
     TResult? Function(int listenerIndex)? listenerSelected,
     TResult? Function()? unSelectListener,
@@ -3146,6 +3539,7 @@ class _$EmitterNameChangedImpl implements _EmitterNameChanged {
     TResult Function(Connection connection)? connectionSelected,
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
+    TResult Function(EventType type, int eventIndex)? deleteEvent,
     TResult Function(int emitterIndex)? emitterSelected,
     TResult Function(int listenerIndex)? listenerSelected,
     TResult Function()? unSelectListener,
@@ -3189,6 +3583,7 @@ class _$EmitterNameChangedImpl implements _EmitterNameChanged {
     required TResult Function(_NewConnectionButtonPressed value)
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_DeleteEvent value) deleteEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
     required TResult Function(_ListenerSelected value) listenerSelected,
     required TResult Function(_UnSelectListener value) unSelectListener,
@@ -3232,6 +3627,7 @@ class _$EmitterNameChangedImpl implements _EmitterNameChanged {
     TResult? Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_DeleteEvent value)? deleteEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
     TResult? Function(_ListenerSelected value)? listenerSelected,
     TResult? Function(_UnSelectListener value)? unSelectListener,
@@ -3271,6 +3667,7 @@ class _$EmitterNameChangedImpl implements _EmitterNameChanged {
     TResult Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_DeleteEvent value)? deleteEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
     TResult Function(_ListenerSelected value)? listenerSelected,
     TResult Function(_UnSelectListener value)? unSelectListener,
@@ -3390,6 +3787,7 @@ class _$EmitterDataTypeChangedImpl implements _EmitterDataTypeChanged {
     required TResult Function(Connection connection) connectionSelected,
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
+    required TResult Function(EventType type, int eventIndex) deleteEvent,
     required TResult Function(int emitterIndex) emitterSelected,
     required TResult Function(int listenerIndex) listenerSelected,
     required TResult Function() unSelectListener,
@@ -3428,6 +3826,7 @@ class _$EmitterDataTypeChangedImpl implements _EmitterDataTypeChanged {
     TResult? Function(Connection connection)? connectionSelected,
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
+    TResult? Function(EventType type, int eventIndex)? deleteEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
     TResult? Function(int listenerIndex)? listenerSelected,
     TResult? Function()? unSelectListener,
@@ -3465,6 +3864,7 @@ class _$EmitterDataTypeChangedImpl implements _EmitterDataTypeChanged {
     TResult Function(Connection connection)? connectionSelected,
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
+    TResult Function(EventType type, int eventIndex)? deleteEvent,
     TResult Function(int emitterIndex)? emitterSelected,
     TResult Function(int listenerIndex)? listenerSelected,
     TResult Function()? unSelectListener,
@@ -3508,6 +3908,7 @@ class _$EmitterDataTypeChangedImpl implements _EmitterDataTypeChanged {
     required TResult Function(_NewConnectionButtonPressed value)
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_DeleteEvent value) deleteEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
     required TResult Function(_ListenerSelected value) listenerSelected,
     required TResult Function(_UnSelectListener value) unSelectListener,
@@ -3551,6 +3952,7 @@ class _$EmitterDataTypeChangedImpl implements _EmitterDataTypeChanged {
     TResult? Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_DeleteEvent value)? deleteEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
     TResult? Function(_ListenerSelected value)? listenerSelected,
     TResult? Function(_UnSelectListener value)? unSelectListener,
@@ -3590,6 +3992,7 @@ class _$EmitterDataTypeChangedImpl implements _EmitterDataTypeChanged {
     TResult Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_DeleteEvent value)? deleteEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
     TResult Function(_ListenerSelected value)? listenerSelected,
     TResult Function(_UnSelectListener value)? unSelectListener,
@@ -3705,6 +4108,7 @@ class _$EmitterDataChangedImpl implements _EmitterDataChanged {
     required TResult Function(Connection connection) connectionSelected,
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
+    required TResult Function(EventType type, int eventIndex) deleteEvent,
     required TResult Function(int emitterIndex) emitterSelected,
     required TResult Function(int listenerIndex) listenerSelected,
     required TResult Function() unSelectListener,
@@ -3743,6 +4147,7 @@ class _$EmitterDataChangedImpl implements _EmitterDataChanged {
     TResult? Function(Connection connection)? connectionSelected,
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
+    TResult? Function(EventType type, int eventIndex)? deleteEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
     TResult? Function(int listenerIndex)? listenerSelected,
     TResult? Function()? unSelectListener,
@@ -3780,6 +4185,7 @@ class _$EmitterDataChangedImpl implements _EmitterDataChanged {
     TResult Function(Connection connection)? connectionSelected,
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
+    TResult Function(EventType type, int eventIndex)? deleteEvent,
     TResult Function(int emitterIndex)? emitterSelected,
     TResult Function(int listenerIndex)? listenerSelected,
     TResult Function()? unSelectListener,
@@ -3823,6 +4229,7 @@ class _$EmitterDataChangedImpl implements _EmitterDataChanged {
     required TResult Function(_NewConnectionButtonPressed value)
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_DeleteEvent value) deleteEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
     required TResult Function(_ListenerSelected value) listenerSelected,
     required TResult Function(_UnSelectListener value) unSelectListener,
@@ -3866,6 +4273,7 @@ class _$EmitterDataChangedImpl implements _EmitterDataChanged {
     TResult? Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_DeleteEvent value)? deleteEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
     TResult? Function(_ListenerSelected value)? listenerSelected,
     TResult? Function(_UnSelectListener value)? unSelectListener,
@@ -3905,6 +4313,7 @@ class _$EmitterDataChangedImpl implements _EmitterDataChanged {
     TResult Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_DeleteEvent value)? deleteEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
     TResult Function(_ListenerSelected value)? listenerSelected,
     TResult Function(_UnSelectListener value)? unSelectListener,
@@ -4020,6 +4429,7 @@ class _$ListenerNameChangedImpl implements _ListenerNameChanged {
     required TResult Function(Connection connection) connectionSelected,
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
+    required TResult Function(EventType type, int eventIndex) deleteEvent,
     required TResult Function(int emitterIndex) emitterSelected,
     required TResult Function(int listenerIndex) listenerSelected,
     required TResult Function() unSelectListener,
@@ -4058,6 +4468,7 @@ class _$ListenerNameChangedImpl implements _ListenerNameChanged {
     TResult? Function(Connection connection)? connectionSelected,
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
+    TResult? Function(EventType type, int eventIndex)? deleteEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
     TResult? Function(int listenerIndex)? listenerSelected,
     TResult? Function()? unSelectListener,
@@ -4095,6 +4506,7 @@ class _$ListenerNameChangedImpl implements _ListenerNameChanged {
     TResult Function(Connection connection)? connectionSelected,
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
+    TResult Function(EventType type, int eventIndex)? deleteEvent,
     TResult Function(int emitterIndex)? emitterSelected,
     TResult Function(int listenerIndex)? listenerSelected,
     TResult Function()? unSelectListener,
@@ -4138,6 +4550,7 @@ class _$ListenerNameChangedImpl implements _ListenerNameChanged {
     required TResult Function(_NewConnectionButtonPressed value)
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_DeleteEvent value) deleteEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
     required TResult Function(_ListenerSelected value) listenerSelected,
     required TResult Function(_UnSelectListener value) unSelectListener,
@@ -4181,6 +4594,7 @@ class _$ListenerNameChangedImpl implements _ListenerNameChanged {
     TResult? Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_DeleteEvent value)? deleteEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
     TResult? Function(_ListenerSelected value)? listenerSelected,
     TResult? Function(_UnSelectListener value)? unSelectListener,
@@ -4220,6 +4634,7 @@ class _$ListenerNameChangedImpl implements _ListenerNameChanged {
     TResult Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_DeleteEvent value)? deleteEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
     TResult Function(_ListenerSelected value)? listenerSelected,
     TResult Function(_UnSelectListener value)? unSelectListener,
@@ -4346,6 +4761,7 @@ class _$ListenerSwitchToggledImpl implements _ListenerSwitchToggled {
     required TResult Function(Connection connection) connectionSelected,
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
+    required TResult Function(EventType type, int eventIndex) deleteEvent,
     required TResult Function(int emitterIndex) emitterSelected,
     required TResult Function(int listenerIndex) listenerSelected,
     required TResult Function() unSelectListener,
@@ -4384,6 +4800,7 @@ class _$ListenerSwitchToggledImpl implements _ListenerSwitchToggled {
     TResult? Function(Connection connection)? connectionSelected,
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
+    TResult? Function(EventType type, int eventIndex)? deleteEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
     TResult? Function(int listenerIndex)? listenerSelected,
     TResult? Function()? unSelectListener,
@@ -4421,6 +4838,7 @@ class _$ListenerSwitchToggledImpl implements _ListenerSwitchToggled {
     TResult Function(Connection connection)? connectionSelected,
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
+    TResult Function(EventType type, int eventIndex)? deleteEvent,
     TResult Function(int emitterIndex)? emitterSelected,
     TResult Function(int listenerIndex)? listenerSelected,
     TResult Function()? unSelectListener,
@@ -4464,6 +4882,7 @@ class _$ListenerSwitchToggledImpl implements _ListenerSwitchToggled {
     required TResult Function(_NewConnectionButtonPressed value)
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_DeleteEvent value) deleteEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
     required TResult Function(_ListenerSelected value) listenerSelected,
     required TResult Function(_UnSelectListener value) unSelectListener,
@@ -4507,6 +4926,7 @@ class _$ListenerSwitchToggledImpl implements _ListenerSwitchToggled {
     TResult? Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_DeleteEvent value)? deleteEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
     TResult? Function(_ListenerSelected value)? listenerSelected,
     TResult? Function(_UnSelectListener value)? unSelectListener,
@@ -4546,6 +4966,7 @@ class _$ListenerSwitchToggledImpl implements _ListenerSwitchToggled {
     TResult Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_DeleteEvent value)? deleteEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
     TResult Function(_ListenerSelected value)? listenerSelected,
     TResult Function(_UnSelectListener value)? unSelectListener,
@@ -4636,6 +5057,7 @@ class _$AddQueryParameterImpl implements _AddQueryParameter {
     required TResult Function(Connection connection) connectionSelected,
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
+    required TResult Function(EventType type, int eventIndex) deleteEvent,
     required TResult Function(int emitterIndex) emitterSelected,
     required TResult Function(int listenerIndex) listenerSelected,
     required TResult Function() unSelectListener,
@@ -4674,6 +5096,7 @@ class _$AddQueryParameterImpl implements _AddQueryParameter {
     TResult? Function(Connection connection)? connectionSelected,
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
+    TResult? Function(EventType type, int eventIndex)? deleteEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
     TResult? Function(int listenerIndex)? listenerSelected,
     TResult? Function()? unSelectListener,
@@ -4711,6 +5134,7 @@ class _$AddQueryParameterImpl implements _AddQueryParameter {
     TResult Function(Connection connection)? connectionSelected,
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
+    TResult Function(EventType type, int eventIndex)? deleteEvent,
     TResult Function(int emitterIndex)? emitterSelected,
     TResult Function(int listenerIndex)? listenerSelected,
     TResult Function()? unSelectListener,
@@ -4754,6 +5178,7 @@ class _$AddQueryParameterImpl implements _AddQueryParameter {
     required TResult Function(_NewConnectionButtonPressed value)
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_DeleteEvent value) deleteEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
     required TResult Function(_ListenerSelected value) listenerSelected,
     required TResult Function(_UnSelectListener value) unSelectListener,
@@ -4797,6 +5222,7 @@ class _$AddQueryParameterImpl implements _AddQueryParameter {
     TResult? Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_DeleteEvent value)? deleteEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
     TResult? Function(_ListenerSelected value)? listenerSelected,
     TResult? Function(_UnSelectListener value)? unSelectListener,
@@ -4836,6 +5262,7 @@ class _$AddQueryParameterImpl implements _AddQueryParameter {
     TResult Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_DeleteEvent value)? deleteEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
     TResult Function(_ListenerSelected value)? listenerSelected,
     TResult Function(_UnSelectListener value)? unSelectListener,
@@ -4954,6 +5381,7 @@ class _$QueryRowChangedImpl implements _QueryRowChanged {
     required TResult Function(Connection connection) connectionSelected,
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
+    required TResult Function(EventType type, int eventIndex) deleteEvent,
     required TResult Function(int emitterIndex) emitterSelected,
     required TResult Function(int listenerIndex) listenerSelected,
     required TResult Function() unSelectListener,
@@ -4992,6 +5420,7 @@ class _$QueryRowChangedImpl implements _QueryRowChanged {
     TResult? Function(Connection connection)? connectionSelected,
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
+    TResult? Function(EventType type, int eventIndex)? deleteEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
     TResult? Function(int listenerIndex)? listenerSelected,
     TResult? Function()? unSelectListener,
@@ -5029,6 +5458,7 @@ class _$QueryRowChangedImpl implements _QueryRowChanged {
     TResult Function(Connection connection)? connectionSelected,
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
+    TResult Function(EventType type, int eventIndex)? deleteEvent,
     TResult Function(int emitterIndex)? emitterSelected,
     TResult Function(int listenerIndex)? listenerSelected,
     TResult Function()? unSelectListener,
@@ -5072,6 +5502,7 @@ class _$QueryRowChangedImpl implements _QueryRowChanged {
     required TResult Function(_NewConnectionButtonPressed value)
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_DeleteEvent value) deleteEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
     required TResult Function(_ListenerSelected value) listenerSelected,
     required TResult Function(_UnSelectListener value) unSelectListener,
@@ -5115,6 +5546,7 @@ class _$QueryRowChangedImpl implements _QueryRowChanged {
     TResult? Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_DeleteEvent value)? deleteEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
     TResult? Function(_ListenerSelected value)? listenerSelected,
     TResult? Function(_UnSelectListener value)? unSelectListener,
@@ -5154,6 +5586,7 @@ class _$QueryRowChangedImpl implements _QueryRowChanged {
     TResult Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_DeleteEvent value)? deleteEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
     TResult Function(_ListenerSelected value)? listenerSelected,
     TResult Function(_UnSelectListener value)? unSelectListener,
@@ -5280,6 +5713,7 @@ class _$QueryRowCheckedImpl implements _QueryRowChecked {
     required TResult Function(Connection connection) connectionSelected,
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
+    required TResult Function(EventType type, int eventIndex) deleteEvent,
     required TResult Function(int emitterIndex) emitterSelected,
     required TResult Function(int listenerIndex) listenerSelected,
     required TResult Function() unSelectListener,
@@ -5318,6 +5752,7 @@ class _$QueryRowCheckedImpl implements _QueryRowChecked {
     TResult? Function(Connection connection)? connectionSelected,
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
+    TResult? Function(EventType type, int eventIndex)? deleteEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
     TResult? Function(int listenerIndex)? listenerSelected,
     TResult? Function()? unSelectListener,
@@ -5355,6 +5790,7 @@ class _$QueryRowCheckedImpl implements _QueryRowChecked {
     TResult Function(Connection connection)? connectionSelected,
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
+    TResult Function(EventType type, int eventIndex)? deleteEvent,
     TResult Function(int emitterIndex)? emitterSelected,
     TResult Function(int listenerIndex)? listenerSelected,
     TResult Function()? unSelectListener,
@@ -5398,6 +5834,7 @@ class _$QueryRowCheckedImpl implements _QueryRowChecked {
     required TResult Function(_NewConnectionButtonPressed value)
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_DeleteEvent value) deleteEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
     required TResult Function(_ListenerSelected value) listenerSelected,
     required TResult Function(_UnSelectListener value) unSelectListener,
@@ -5441,6 +5878,7 @@ class _$QueryRowCheckedImpl implements _QueryRowChecked {
     TResult? Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_DeleteEvent value)? deleteEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
     TResult? Function(_ListenerSelected value)? listenerSelected,
     TResult? Function(_UnSelectListener value)? unSelectListener,
@@ -5480,6 +5918,7 @@ class _$QueryRowCheckedImpl implements _QueryRowChecked {
     TResult Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_DeleteEvent value)? deleteEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
     TResult Function(_ListenerSelected value)? listenerSelected,
     TResult Function(_UnSelectListener value)? unSelectListener,
@@ -5598,6 +6037,7 @@ class _$QueryAllRowsCheckedImpl implements _QueryAllRowsChecked {
     required TResult Function(Connection connection) connectionSelected,
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
+    required TResult Function(EventType type, int eventIndex) deleteEvent,
     required TResult Function(int emitterIndex) emitterSelected,
     required TResult Function(int listenerIndex) listenerSelected,
     required TResult Function() unSelectListener,
@@ -5636,6 +6076,7 @@ class _$QueryAllRowsCheckedImpl implements _QueryAllRowsChecked {
     TResult? Function(Connection connection)? connectionSelected,
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
+    TResult? Function(EventType type, int eventIndex)? deleteEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
     TResult? Function(int listenerIndex)? listenerSelected,
     TResult? Function()? unSelectListener,
@@ -5673,6 +6114,7 @@ class _$QueryAllRowsCheckedImpl implements _QueryAllRowsChecked {
     TResult Function(Connection connection)? connectionSelected,
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
+    TResult Function(EventType type, int eventIndex)? deleteEvent,
     TResult Function(int emitterIndex)? emitterSelected,
     TResult Function(int listenerIndex)? listenerSelected,
     TResult Function()? unSelectListener,
@@ -5716,6 +6158,7 @@ class _$QueryAllRowsCheckedImpl implements _QueryAllRowsChecked {
     required TResult Function(_NewConnectionButtonPressed value)
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_DeleteEvent value) deleteEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
     required TResult Function(_ListenerSelected value) listenerSelected,
     required TResult Function(_UnSelectListener value) unSelectListener,
@@ -5759,6 +6202,7 @@ class _$QueryAllRowsCheckedImpl implements _QueryAllRowsChecked {
     TResult? Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_DeleteEvent value)? deleteEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
     TResult? Function(_ListenerSelected value)? listenerSelected,
     TResult? Function(_UnSelectListener value)? unSelectListener,
@@ -5798,6 +6242,7 @@ class _$QueryAllRowsCheckedImpl implements _QueryAllRowsChecked {
     TResult Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_DeleteEvent value)? deleteEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
     TResult Function(_ListenerSelected value)? listenerSelected,
     TResult Function(_UnSelectListener value)? unSelectListener,
@@ -5891,6 +6336,7 @@ class _$DeleteSelectedQueryParametersImpl
     required TResult Function(Connection connection) connectionSelected,
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
+    required TResult Function(EventType type, int eventIndex) deleteEvent,
     required TResult Function(int emitterIndex) emitterSelected,
     required TResult Function(int listenerIndex) listenerSelected,
     required TResult Function() unSelectListener,
@@ -5929,6 +6375,7 @@ class _$DeleteSelectedQueryParametersImpl
     TResult? Function(Connection connection)? connectionSelected,
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
+    TResult? Function(EventType type, int eventIndex)? deleteEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
     TResult? Function(int listenerIndex)? listenerSelected,
     TResult? Function()? unSelectListener,
@@ -5966,6 +6413,7 @@ class _$DeleteSelectedQueryParametersImpl
     TResult Function(Connection connection)? connectionSelected,
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
+    TResult Function(EventType type, int eventIndex)? deleteEvent,
     TResult Function(int emitterIndex)? emitterSelected,
     TResult Function(int listenerIndex)? listenerSelected,
     TResult Function()? unSelectListener,
@@ -6009,6 +6457,7 @@ class _$DeleteSelectedQueryParametersImpl
     required TResult Function(_NewConnectionButtonPressed value)
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_DeleteEvent value) deleteEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
     required TResult Function(_ListenerSelected value) listenerSelected,
     required TResult Function(_UnSelectListener value) unSelectListener,
@@ -6052,6 +6501,7 @@ class _$DeleteSelectedQueryParametersImpl
     TResult? Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_DeleteEvent value)? deleteEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
     TResult? Function(_ListenerSelected value)? listenerSelected,
     TResult? Function(_UnSelectListener value)? unSelectListener,
@@ -6091,6 +6541,7 @@ class _$DeleteSelectedQueryParametersImpl
     TResult Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_DeleteEvent value)? deleteEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
     TResult Function(_ListenerSelected value)? listenerSelected,
     TResult Function(_UnSelectListener value)? unSelectListener,
@@ -6174,6 +6625,7 @@ class _$AddHeaderImpl implements _AddHeader {
     required TResult Function(Connection connection) connectionSelected,
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
+    required TResult Function(EventType type, int eventIndex) deleteEvent,
     required TResult Function(int emitterIndex) emitterSelected,
     required TResult Function(int listenerIndex) listenerSelected,
     required TResult Function() unSelectListener,
@@ -6212,6 +6664,7 @@ class _$AddHeaderImpl implements _AddHeader {
     TResult? Function(Connection connection)? connectionSelected,
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
+    TResult? Function(EventType type, int eventIndex)? deleteEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
     TResult? Function(int listenerIndex)? listenerSelected,
     TResult? Function()? unSelectListener,
@@ -6249,6 +6702,7 @@ class _$AddHeaderImpl implements _AddHeader {
     TResult Function(Connection connection)? connectionSelected,
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
+    TResult Function(EventType type, int eventIndex)? deleteEvent,
     TResult Function(int emitterIndex)? emitterSelected,
     TResult Function(int listenerIndex)? listenerSelected,
     TResult Function()? unSelectListener,
@@ -6292,6 +6746,7 @@ class _$AddHeaderImpl implements _AddHeader {
     required TResult Function(_NewConnectionButtonPressed value)
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_DeleteEvent value) deleteEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
     required TResult Function(_ListenerSelected value) listenerSelected,
     required TResult Function(_UnSelectListener value) unSelectListener,
@@ -6335,6 +6790,7 @@ class _$AddHeaderImpl implements _AddHeader {
     TResult? Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_DeleteEvent value)? deleteEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
     TResult? Function(_ListenerSelected value)? listenerSelected,
     TResult? Function(_UnSelectListener value)? unSelectListener,
@@ -6374,6 +6830,7 @@ class _$AddHeaderImpl implements _AddHeader {
     TResult Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_DeleteEvent value)? deleteEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
     TResult Function(_ListenerSelected value)? listenerSelected,
     TResult Function(_UnSelectListener value)? unSelectListener,
@@ -6492,6 +6949,7 @@ class _$HeaderRowChangedImpl implements _HeaderRowChanged {
     required TResult Function(Connection connection) connectionSelected,
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
+    required TResult Function(EventType type, int eventIndex) deleteEvent,
     required TResult Function(int emitterIndex) emitterSelected,
     required TResult Function(int listenerIndex) listenerSelected,
     required TResult Function() unSelectListener,
@@ -6530,6 +6988,7 @@ class _$HeaderRowChangedImpl implements _HeaderRowChanged {
     TResult? Function(Connection connection)? connectionSelected,
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
+    TResult? Function(EventType type, int eventIndex)? deleteEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
     TResult? Function(int listenerIndex)? listenerSelected,
     TResult? Function()? unSelectListener,
@@ -6567,6 +7026,7 @@ class _$HeaderRowChangedImpl implements _HeaderRowChanged {
     TResult Function(Connection connection)? connectionSelected,
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
+    TResult Function(EventType type, int eventIndex)? deleteEvent,
     TResult Function(int emitterIndex)? emitterSelected,
     TResult Function(int listenerIndex)? listenerSelected,
     TResult Function()? unSelectListener,
@@ -6610,6 +7070,7 @@ class _$HeaderRowChangedImpl implements _HeaderRowChanged {
     required TResult Function(_NewConnectionButtonPressed value)
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_DeleteEvent value) deleteEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
     required TResult Function(_ListenerSelected value) listenerSelected,
     required TResult Function(_UnSelectListener value) unSelectListener,
@@ -6653,6 +7114,7 @@ class _$HeaderRowChangedImpl implements _HeaderRowChanged {
     TResult? Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_DeleteEvent value)? deleteEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
     TResult? Function(_ListenerSelected value)? listenerSelected,
     TResult? Function(_UnSelectListener value)? unSelectListener,
@@ -6692,6 +7154,7 @@ class _$HeaderRowChangedImpl implements _HeaderRowChanged {
     TResult Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_DeleteEvent value)? deleteEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
     TResult Function(_ListenerSelected value)? listenerSelected,
     TResult Function(_UnSelectListener value)? unSelectListener,
@@ -6818,6 +7281,7 @@ class _$HeaderRowCheckedImpl implements _HeaderRowChecked {
     required TResult Function(Connection connection) connectionSelected,
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
+    required TResult Function(EventType type, int eventIndex) deleteEvent,
     required TResult Function(int emitterIndex) emitterSelected,
     required TResult Function(int listenerIndex) listenerSelected,
     required TResult Function() unSelectListener,
@@ -6856,6 +7320,7 @@ class _$HeaderRowCheckedImpl implements _HeaderRowChecked {
     TResult? Function(Connection connection)? connectionSelected,
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
+    TResult? Function(EventType type, int eventIndex)? deleteEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
     TResult? Function(int listenerIndex)? listenerSelected,
     TResult? Function()? unSelectListener,
@@ -6893,6 +7358,7 @@ class _$HeaderRowCheckedImpl implements _HeaderRowChecked {
     TResult Function(Connection connection)? connectionSelected,
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
+    TResult Function(EventType type, int eventIndex)? deleteEvent,
     TResult Function(int emitterIndex)? emitterSelected,
     TResult Function(int listenerIndex)? listenerSelected,
     TResult Function()? unSelectListener,
@@ -6936,6 +7402,7 @@ class _$HeaderRowCheckedImpl implements _HeaderRowChecked {
     required TResult Function(_NewConnectionButtonPressed value)
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_DeleteEvent value) deleteEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
     required TResult Function(_ListenerSelected value) listenerSelected,
     required TResult Function(_UnSelectListener value) unSelectListener,
@@ -6979,6 +7446,7 @@ class _$HeaderRowCheckedImpl implements _HeaderRowChecked {
     TResult? Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_DeleteEvent value)? deleteEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
     TResult? Function(_ListenerSelected value)? listenerSelected,
     TResult? Function(_UnSelectListener value)? unSelectListener,
@@ -7018,6 +7486,7 @@ class _$HeaderRowCheckedImpl implements _HeaderRowChecked {
     TResult Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_DeleteEvent value)? deleteEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
     TResult Function(_ListenerSelected value)? listenerSelected,
     TResult Function(_UnSelectListener value)? unSelectListener,
@@ -7137,6 +7606,7 @@ class _$HeaderAllRowsCheckedImpl implements _HeaderAllRowsChecked {
     required TResult Function(Connection connection) connectionSelected,
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
+    required TResult Function(EventType type, int eventIndex) deleteEvent,
     required TResult Function(int emitterIndex) emitterSelected,
     required TResult Function(int listenerIndex) listenerSelected,
     required TResult Function() unSelectListener,
@@ -7175,6 +7645,7 @@ class _$HeaderAllRowsCheckedImpl implements _HeaderAllRowsChecked {
     TResult? Function(Connection connection)? connectionSelected,
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
+    TResult? Function(EventType type, int eventIndex)? deleteEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
     TResult? Function(int listenerIndex)? listenerSelected,
     TResult? Function()? unSelectListener,
@@ -7212,6 +7683,7 @@ class _$HeaderAllRowsCheckedImpl implements _HeaderAllRowsChecked {
     TResult Function(Connection connection)? connectionSelected,
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
+    TResult Function(EventType type, int eventIndex)? deleteEvent,
     TResult Function(int emitterIndex)? emitterSelected,
     TResult Function(int listenerIndex)? listenerSelected,
     TResult Function()? unSelectListener,
@@ -7255,6 +7727,7 @@ class _$HeaderAllRowsCheckedImpl implements _HeaderAllRowsChecked {
     required TResult Function(_NewConnectionButtonPressed value)
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_DeleteEvent value) deleteEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
     required TResult Function(_ListenerSelected value) listenerSelected,
     required TResult Function(_UnSelectListener value) unSelectListener,
@@ -7298,6 +7771,7 @@ class _$HeaderAllRowsCheckedImpl implements _HeaderAllRowsChecked {
     TResult? Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_DeleteEvent value)? deleteEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
     TResult? Function(_ListenerSelected value)? listenerSelected,
     TResult? Function(_UnSelectListener value)? unSelectListener,
@@ -7337,6 +7811,7 @@ class _$HeaderAllRowsCheckedImpl implements _HeaderAllRowsChecked {
     TResult Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_DeleteEvent value)? deleteEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
     TResult Function(_ListenerSelected value)? listenerSelected,
     TResult Function(_UnSelectListener value)? unSelectListener,
@@ -7427,6 +7902,7 @@ class _$DeleteSelectedHeadersImpl implements _DeleteSelectedHeaders {
     required TResult Function(Connection connection) connectionSelected,
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
+    required TResult Function(EventType type, int eventIndex) deleteEvent,
     required TResult Function(int emitterIndex) emitterSelected,
     required TResult Function(int listenerIndex) listenerSelected,
     required TResult Function() unSelectListener,
@@ -7465,6 +7941,7 @@ class _$DeleteSelectedHeadersImpl implements _DeleteSelectedHeaders {
     TResult? Function(Connection connection)? connectionSelected,
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
+    TResult? Function(EventType type, int eventIndex)? deleteEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
     TResult? Function(int listenerIndex)? listenerSelected,
     TResult? Function()? unSelectListener,
@@ -7502,6 +7979,7 @@ class _$DeleteSelectedHeadersImpl implements _DeleteSelectedHeaders {
     TResult Function(Connection connection)? connectionSelected,
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
+    TResult Function(EventType type, int eventIndex)? deleteEvent,
     TResult Function(int emitterIndex)? emitterSelected,
     TResult Function(int listenerIndex)? listenerSelected,
     TResult Function()? unSelectListener,
@@ -7545,6 +8023,7 @@ class _$DeleteSelectedHeadersImpl implements _DeleteSelectedHeaders {
     required TResult Function(_NewConnectionButtonPressed value)
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_DeleteEvent value) deleteEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
     required TResult Function(_ListenerSelected value) listenerSelected,
     required TResult Function(_UnSelectListener value) unSelectListener,
@@ -7588,6 +8067,7 @@ class _$DeleteSelectedHeadersImpl implements _DeleteSelectedHeaders {
     TResult? Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_DeleteEvent value)? deleteEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
     TResult? Function(_ListenerSelected value)? listenerSelected,
     TResult? Function(_UnSelectListener value)? unSelectListener,
@@ -7627,6 +8107,7 @@ class _$DeleteSelectedHeadersImpl implements _DeleteSelectedHeaders {
     TResult Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_DeleteEvent value)? deleteEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
     TResult Function(_ListenerSelected value)? listenerSelected,
     TResult Function(_UnSelectListener value)? unSelectListener,
@@ -7709,6 +8190,7 @@ class _$AddAuthImpl implements _AddAuth {
     required TResult Function(Connection connection) connectionSelected,
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
+    required TResult Function(EventType type, int eventIndex) deleteEvent,
     required TResult Function(int emitterIndex) emitterSelected,
     required TResult Function(int listenerIndex) listenerSelected,
     required TResult Function() unSelectListener,
@@ -7747,6 +8229,7 @@ class _$AddAuthImpl implements _AddAuth {
     TResult? Function(Connection connection)? connectionSelected,
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
+    TResult? Function(EventType type, int eventIndex)? deleteEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
     TResult? Function(int listenerIndex)? listenerSelected,
     TResult? Function()? unSelectListener,
@@ -7784,6 +8267,7 @@ class _$AddAuthImpl implements _AddAuth {
     TResult Function(Connection connection)? connectionSelected,
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
+    TResult Function(EventType type, int eventIndex)? deleteEvent,
     TResult Function(int emitterIndex)? emitterSelected,
     TResult Function(int listenerIndex)? listenerSelected,
     TResult Function()? unSelectListener,
@@ -7827,6 +8311,7 @@ class _$AddAuthImpl implements _AddAuth {
     required TResult Function(_NewConnectionButtonPressed value)
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_DeleteEvent value) deleteEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
     required TResult Function(_ListenerSelected value) listenerSelected,
     required TResult Function(_UnSelectListener value) unSelectListener,
@@ -7870,6 +8355,7 @@ class _$AddAuthImpl implements _AddAuth {
     TResult? Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_DeleteEvent value)? deleteEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
     TResult? Function(_ListenerSelected value)? listenerSelected,
     TResult? Function(_UnSelectListener value)? unSelectListener,
@@ -7909,6 +8395,7 @@ class _$AddAuthImpl implements _AddAuth {
     TResult Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_DeleteEvent value)? deleteEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
     TResult Function(_ListenerSelected value)? listenerSelected,
     TResult Function(_UnSelectListener value)? unSelectListener,
@@ -8027,6 +8514,7 @@ class _$AuthRowChangedImpl implements _AuthRowChanged {
     required TResult Function(Connection connection) connectionSelected,
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
+    required TResult Function(EventType type, int eventIndex) deleteEvent,
     required TResult Function(int emitterIndex) emitterSelected,
     required TResult Function(int listenerIndex) listenerSelected,
     required TResult Function() unSelectListener,
@@ -8065,6 +8553,7 @@ class _$AuthRowChangedImpl implements _AuthRowChanged {
     TResult? Function(Connection connection)? connectionSelected,
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
+    TResult? Function(EventType type, int eventIndex)? deleteEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
     TResult? Function(int listenerIndex)? listenerSelected,
     TResult? Function()? unSelectListener,
@@ -8102,6 +8591,7 @@ class _$AuthRowChangedImpl implements _AuthRowChanged {
     TResult Function(Connection connection)? connectionSelected,
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
+    TResult Function(EventType type, int eventIndex)? deleteEvent,
     TResult Function(int emitterIndex)? emitterSelected,
     TResult Function(int listenerIndex)? listenerSelected,
     TResult Function()? unSelectListener,
@@ -8145,6 +8635,7 @@ class _$AuthRowChangedImpl implements _AuthRowChanged {
     required TResult Function(_NewConnectionButtonPressed value)
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_DeleteEvent value) deleteEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
     required TResult Function(_ListenerSelected value) listenerSelected,
     required TResult Function(_UnSelectListener value) unSelectListener,
@@ -8188,6 +8679,7 @@ class _$AuthRowChangedImpl implements _AuthRowChanged {
     TResult? Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_DeleteEvent value)? deleteEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
     TResult? Function(_ListenerSelected value)? listenerSelected,
     TResult? Function(_UnSelectListener value)? unSelectListener,
@@ -8227,6 +8719,7 @@ class _$AuthRowChangedImpl implements _AuthRowChanged {
     TResult Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_DeleteEvent value)? deleteEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
     TResult Function(_ListenerSelected value)? listenerSelected,
     TResult Function(_UnSelectListener value)? unSelectListener,
@@ -8353,6 +8846,7 @@ class _$AuthRowCheckedImpl implements _AuthRowChecked {
     required TResult Function(Connection connection) connectionSelected,
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
+    required TResult Function(EventType type, int eventIndex) deleteEvent,
     required TResult Function(int emitterIndex) emitterSelected,
     required TResult Function(int listenerIndex) listenerSelected,
     required TResult Function() unSelectListener,
@@ -8391,6 +8885,7 @@ class _$AuthRowCheckedImpl implements _AuthRowChecked {
     TResult? Function(Connection connection)? connectionSelected,
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
+    TResult? Function(EventType type, int eventIndex)? deleteEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
     TResult? Function(int listenerIndex)? listenerSelected,
     TResult? Function()? unSelectListener,
@@ -8428,6 +8923,7 @@ class _$AuthRowCheckedImpl implements _AuthRowChecked {
     TResult Function(Connection connection)? connectionSelected,
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
+    TResult Function(EventType type, int eventIndex)? deleteEvent,
     TResult Function(int emitterIndex)? emitterSelected,
     TResult Function(int listenerIndex)? listenerSelected,
     TResult Function()? unSelectListener,
@@ -8471,6 +8967,7 @@ class _$AuthRowCheckedImpl implements _AuthRowChecked {
     required TResult Function(_NewConnectionButtonPressed value)
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_DeleteEvent value) deleteEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
     required TResult Function(_ListenerSelected value) listenerSelected,
     required TResult Function(_UnSelectListener value) unSelectListener,
@@ -8514,6 +9011,7 @@ class _$AuthRowCheckedImpl implements _AuthRowChecked {
     TResult? Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_DeleteEvent value)? deleteEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
     TResult? Function(_ListenerSelected value)? listenerSelected,
     TResult? Function(_UnSelectListener value)? unSelectListener,
@@ -8553,6 +9051,7 @@ class _$AuthRowCheckedImpl implements _AuthRowChecked {
     TResult Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_DeleteEvent value)? deleteEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
     TResult Function(_ListenerSelected value)? listenerSelected,
     TResult Function(_UnSelectListener value)? unSelectListener,
@@ -8671,6 +9170,7 @@ class _$AuthAllRowsCheckedImpl implements _AuthAllRowsChecked {
     required TResult Function(Connection connection) connectionSelected,
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
+    required TResult Function(EventType type, int eventIndex) deleteEvent,
     required TResult Function(int emitterIndex) emitterSelected,
     required TResult Function(int listenerIndex) listenerSelected,
     required TResult Function() unSelectListener,
@@ -8709,6 +9209,7 @@ class _$AuthAllRowsCheckedImpl implements _AuthAllRowsChecked {
     TResult? Function(Connection connection)? connectionSelected,
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
+    TResult? Function(EventType type, int eventIndex)? deleteEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
     TResult? Function(int listenerIndex)? listenerSelected,
     TResult? Function()? unSelectListener,
@@ -8746,6 +9247,7 @@ class _$AuthAllRowsCheckedImpl implements _AuthAllRowsChecked {
     TResult Function(Connection connection)? connectionSelected,
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
+    TResult Function(EventType type, int eventIndex)? deleteEvent,
     TResult Function(int emitterIndex)? emitterSelected,
     TResult Function(int listenerIndex)? listenerSelected,
     TResult Function()? unSelectListener,
@@ -8789,6 +9291,7 @@ class _$AuthAllRowsCheckedImpl implements _AuthAllRowsChecked {
     required TResult Function(_NewConnectionButtonPressed value)
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_DeleteEvent value) deleteEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
     required TResult Function(_ListenerSelected value) listenerSelected,
     required TResult Function(_UnSelectListener value) unSelectListener,
@@ -8832,6 +9335,7 @@ class _$AuthAllRowsCheckedImpl implements _AuthAllRowsChecked {
     TResult? Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_DeleteEvent value)? deleteEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
     TResult? Function(_ListenerSelected value)? listenerSelected,
     TResult? Function(_UnSelectListener value)? unSelectListener,
@@ -8871,6 +9375,7 @@ class _$AuthAllRowsCheckedImpl implements _AuthAllRowsChecked {
     TResult Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_DeleteEvent value)? deleteEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
     TResult Function(_ListenerSelected value)? listenerSelected,
     TResult Function(_UnSelectListener value)? unSelectListener,
@@ -8963,6 +9468,7 @@ class _$DeleteSelectedAuthRowsImpl implements _DeleteSelectedAuthRows {
     required TResult Function(Connection connection) connectionSelected,
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
+    required TResult Function(EventType type, int eventIndex) deleteEvent,
     required TResult Function(int emitterIndex) emitterSelected,
     required TResult Function(int listenerIndex) listenerSelected,
     required TResult Function() unSelectListener,
@@ -9001,6 +9507,7 @@ class _$DeleteSelectedAuthRowsImpl implements _DeleteSelectedAuthRows {
     TResult? Function(Connection connection)? connectionSelected,
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
+    TResult? Function(EventType type, int eventIndex)? deleteEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
     TResult? Function(int listenerIndex)? listenerSelected,
     TResult? Function()? unSelectListener,
@@ -9038,6 +9545,7 @@ class _$DeleteSelectedAuthRowsImpl implements _DeleteSelectedAuthRows {
     TResult Function(Connection connection)? connectionSelected,
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
+    TResult Function(EventType type, int eventIndex)? deleteEvent,
     TResult Function(int emitterIndex)? emitterSelected,
     TResult Function(int listenerIndex)? listenerSelected,
     TResult Function()? unSelectListener,
@@ -9081,6 +9589,7 @@ class _$DeleteSelectedAuthRowsImpl implements _DeleteSelectedAuthRows {
     required TResult Function(_NewConnectionButtonPressed value)
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_DeleteEvent value) deleteEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
     required TResult Function(_ListenerSelected value) listenerSelected,
     required TResult Function(_UnSelectListener value) unSelectListener,
@@ -9124,6 +9633,7 @@ class _$DeleteSelectedAuthRowsImpl implements _DeleteSelectedAuthRows {
     TResult? Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_DeleteEvent value)? deleteEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
     TResult? Function(_ListenerSelected value)? listenerSelected,
     TResult? Function(_UnSelectListener value)? unSelectListener,
@@ -9163,6 +9673,7 @@ class _$DeleteSelectedAuthRowsImpl implements _DeleteSelectedAuthRows {
     TResult Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_DeleteEvent value)? deleteEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
     TResult Function(_ListenerSelected value)? listenerSelected,
     TResult Function(_UnSelectListener value)? unSelectListener,
@@ -9245,6 +9756,7 @@ class _$SaveButtonPressedImpl implements _SaveButtonPressed {
     required TResult Function(Connection connection) connectionSelected,
     required TResult Function() newConnectionButtonPressed,
     required TResult Function(EventType type) addEvent,
+    required TResult Function(EventType type, int eventIndex) deleteEvent,
     required TResult Function(int emitterIndex) emitterSelected,
     required TResult Function(int listenerIndex) listenerSelected,
     required TResult Function() unSelectListener,
@@ -9283,6 +9795,7 @@ class _$SaveButtonPressedImpl implements _SaveButtonPressed {
     TResult? Function(Connection connection)? connectionSelected,
     TResult? Function()? newConnectionButtonPressed,
     TResult? Function(EventType type)? addEvent,
+    TResult? Function(EventType type, int eventIndex)? deleteEvent,
     TResult? Function(int emitterIndex)? emitterSelected,
     TResult? Function(int listenerIndex)? listenerSelected,
     TResult? Function()? unSelectListener,
@@ -9320,6 +9833,7 @@ class _$SaveButtonPressedImpl implements _SaveButtonPressed {
     TResult Function(Connection connection)? connectionSelected,
     TResult Function()? newConnectionButtonPressed,
     TResult Function(EventType type)? addEvent,
+    TResult Function(EventType type, int eventIndex)? deleteEvent,
     TResult Function(int emitterIndex)? emitterSelected,
     TResult Function(int listenerIndex)? listenerSelected,
     TResult Function()? unSelectListener,
@@ -9363,6 +9877,7 @@ class _$SaveButtonPressedImpl implements _SaveButtonPressed {
     required TResult Function(_NewConnectionButtonPressed value)
         newConnectionButtonPressed,
     required TResult Function(_AddEvent value) addEvent,
+    required TResult Function(_DeleteEvent value) deleteEvent,
     required TResult Function(_EmitterSelected value) emitterSelected,
     required TResult Function(_ListenerSelected value) listenerSelected,
     required TResult Function(_UnSelectListener value) unSelectListener,
@@ -9406,6 +9921,7 @@ class _$SaveButtonPressedImpl implements _SaveButtonPressed {
     TResult? Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult? Function(_AddEvent value)? addEvent,
+    TResult? Function(_DeleteEvent value)? deleteEvent,
     TResult? Function(_EmitterSelected value)? emitterSelected,
     TResult? Function(_ListenerSelected value)? listenerSelected,
     TResult? Function(_UnSelectListener value)? unSelectListener,
@@ -9445,6 +9961,7 @@ class _$SaveButtonPressedImpl implements _SaveButtonPressed {
     TResult Function(_NewConnectionButtonPressed value)?
         newConnectionButtonPressed,
     TResult Function(_AddEvent value)? addEvent,
+    TResult Function(_DeleteEvent value)? deleteEvent,
     TResult Function(_EmitterSelected value)? emitterSelected,
     TResult Function(_ListenerSelected value)? listenerSelected,
     TResult Function(_UnSelectListener value)? unSelectListener,

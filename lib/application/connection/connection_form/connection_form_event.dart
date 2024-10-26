@@ -17,6 +17,10 @@ class ConnectionFormEvent with _$ConnectionFormEvent {
   const factory ConnectionFormEvent.addEvent({
     required EventType type,
   }) = _AddEvent;
+  const factory ConnectionFormEvent.deleteEvent({
+    required EventType type,
+    required int eventIndex,
+  }) = _DeleteEvent;
   const factory ConnectionFormEvent.emitterSelected({
     required int emitterIndex,
   }) = _EmitterSelected;

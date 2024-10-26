@@ -88,6 +88,34 @@ class ConnectionFormBloc
             ));
           }
         },
+        deleteEvent: (e) async {
+          if (e.type == EventType.emitter) {
+            emit(state.copyWith(
+              connectionFormData: state.connectionFormData?.copyWith(
+                eventEmitters: state.connectionFormData!.eventEmitters
+                    .asMap()
+                    .entries
+                    .where((entry) => entry.key != e.eventIndex)
+                    .map((entry) => entry.value)
+                    .toList(),
+              ),
+            ));
+          } else {
+            emit(state.copyWith(
+              connectionFormData: state.connectionFormData?.copyWith(
+                eventListeners: state.connectionFormData!.eventListeners
+                    .asMap()
+                    .entries
+                    .where((entry) => entry.key != e.eventIndex)
+                    .map((entry) => entry.value)
+                    .toList(),
+              ),
+            ));
+          }
+          if (state.isSaved) {
+            add(const ConnectionFormEvent.saveButtonPressed());
+          }
+        },
         emitterSelected: (e) async => emit(state.copyWith(
           showValidationError: false,
           emitterIndex: e.emitterIndex,

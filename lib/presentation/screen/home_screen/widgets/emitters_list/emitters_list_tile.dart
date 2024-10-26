@@ -1,7 +1,9 @@
+import 'package:another_flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart' hide ConnectionState;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:stream_lab/application/connection/connection_bloc.dart';
 import 'package:stream_lab/application/connection/connection_form/connection_form_bloc.dart';
+import 'package:stream_lab/core/constants.dart';
 import 'package:stream_lab/presentation/core/constants.dart';
 
 class EmittersListTile extends StatelessWidget {
@@ -65,7 +67,27 @@ class EmittersListTile extends StatelessWidget {
                       ),
                       const Spacer(),
                       IconButton(
-                        onPressed: () {},
+                        onPressed: () => FlushbarHelper.createAction(
+                          message:
+                              'Are you sure you want to delete the event ${emitter.name} ?',
+                          button: TextButton(
+                            style: const ButtonStyle(
+                              foregroundColor: WidgetStatePropertyAll<Color>(
+                                Colors.red,
+                              ),
+                            ),
+                            onPressed: () {
+                              context
+                                  .read<ConnectionFormBloc>()
+                                  .add(ConnectionFormEvent.deleteEvent(
+                                    type: EventType.emitter,
+                                    eventIndex: emitterIndex,
+                                  ));
+                              Navigator.pop(context);
+                            },
+                            child: const Text('DELETE'),
+                          ),
+                        ).show(context),
                         icon: const Icon(
                           Icons.delete,
                           color: Colors.red,
