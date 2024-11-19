@@ -21,6 +21,7 @@ mixin _$SocketEvent {
     required TResult Function(Connection connection) connectButtonPressed,
     required TResult Function() disconnectButtonPresssed,
     required TResult Function() onConnected,
+    required TResult Function(SocketFailure failure) onConnectError,
     required TResult Function() onDisConnected,
   }) =>
       throw _privateConstructorUsedError;
@@ -29,6 +30,7 @@ mixin _$SocketEvent {
     TResult? Function(Connection connection)? connectButtonPressed,
     TResult? Function()? disconnectButtonPresssed,
     TResult? Function()? onConnected,
+    TResult? Function(SocketFailure failure)? onConnectError,
     TResult? Function()? onDisConnected,
   }) =>
       throw _privateConstructorUsedError;
@@ -37,6 +39,7 @@ mixin _$SocketEvent {
     TResult Function(Connection connection)? connectButtonPressed,
     TResult Function()? disconnectButtonPresssed,
     TResult Function()? onConnected,
+    TResult Function(SocketFailure failure)? onConnectError,
     TResult Function()? onDisConnected,
     required TResult orElse(),
   }) =>
@@ -47,6 +50,7 @@ mixin _$SocketEvent {
     required TResult Function(_DisconnectButtonPresssed value)
         disconnectButtonPresssed,
     required TResult Function(_OnConnected value) onConnected,
+    required TResult Function(_OnConnectError value) onConnectError,
     required TResult Function(_OnDisConnected value) onDisConnected,
   }) =>
       throw _privateConstructorUsedError;
@@ -56,6 +60,7 @@ mixin _$SocketEvent {
     TResult? Function(_DisconnectButtonPresssed value)?
         disconnectButtonPresssed,
     TResult? Function(_OnConnected value)? onConnected,
+    TResult? Function(_OnConnectError value)? onConnectError,
     TResult? Function(_OnDisConnected value)? onDisConnected,
   }) =>
       throw _privateConstructorUsedError;
@@ -64,6 +69,7 @@ mixin _$SocketEvent {
     TResult Function(_ConnectButtonPressed value)? connectButtonPressed,
     TResult Function(_DisconnectButtonPresssed value)? disconnectButtonPresssed,
     TResult Function(_OnConnected value)? onConnected,
+    TResult Function(_OnConnectError value)? onConnectError,
     TResult Function(_OnDisConnected value)? onDisConnected,
     required TResult orElse(),
   }) =>
@@ -165,6 +171,7 @@ class _$ConnectButtonPressedImpl implements _ConnectButtonPressed {
     required TResult Function(Connection connection) connectButtonPressed,
     required TResult Function() disconnectButtonPresssed,
     required TResult Function() onConnected,
+    required TResult Function(SocketFailure failure) onConnectError,
     required TResult Function() onDisConnected,
   }) {
     return connectButtonPressed(connection);
@@ -176,6 +183,7 @@ class _$ConnectButtonPressedImpl implements _ConnectButtonPressed {
     TResult? Function(Connection connection)? connectButtonPressed,
     TResult? Function()? disconnectButtonPresssed,
     TResult? Function()? onConnected,
+    TResult? Function(SocketFailure failure)? onConnectError,
     TResult? Function()? onDisConnected,
   }) {
     return connectButtonPressed?.call(connection);
@@ -187,6 +195,7 @@ class _$ConnectButtonPressedImpl implements _ConnectButtonPressed {
     TResult Function(Connection connection)? connectButtonPressed,
     TResult Function()? disconnectButtonPresssed,
     TResult Function()? onConnected,
+    TResult Function(SocketFailure failure)? onConnectError,
     TResult Function()? onDisConnected,
     required TResult orElse(),
   }) {
@@ -203,6 +212,7 @@ class _$ConnectButtonPressedImpl implements _ConnectButtonPressed {
     required TResult Function(_DisconnectButtonPresssed value)
         disconnectButtonPresssed,
     required TResult Function(_OnConnected value) onConnected,
+    required TResult Function(_OnConnectError value) onConnectError,
     required TResult Function(_OnDisConnected value) onDisConnected,
   }) {
     return connectButtonPressed(this);
@@ -215,6 +225,7 @@ class _$ConnectButtonPressedImpl implements _ConnectButtonPressed {
     TResult? Function(_DisconnectButtonPresssed value)?
         disconnectButtonPresssed,
     TResult? Function(_OnConnected value)? onConnected,
+    TResult? Function(_OnConnectError value)? onConnectError,
     TResult? Function(_OnDisConnected value)? onDisConnected,
   }) {
     return connectButtonPressed?.call(this);
@@ -226,6 +237,7 @@ class _$ConnectButtonPressedImpl implements _ConnectButtonPressed {
     TResult Function(_ConnectButtonPressed value)? connectButtonPressed,
     TResult Function(_DisconnectButtonPresssed value)? disconnectButtonPresssed,
     TResult Function(_OnConnected value)? onConnected,
+    TResult Function(_OnConnectError value)? onConnectError,
     TResult Function(_OnDisConnected value)? onDisConnected,
     required TResult orElse(),
   }) {
@@ -296,6 +308,7 @@ class _$DisconnectButtonPresssedImpl implements _DisconnectButtonPresssed {
     required TResult Function(Connection connection) connectButtonPressed,
     required TResult Function() disconnectButtonPresssed,
     required TResult Function() onConnected,
+    required TResult Function(SocketFailure failure) onConnectError,
     required TResult Function() onDisConnected,
   }) {
     return disconnectButtonPresssed();
@@ -307,6 +320,7 @@ class _$DisconnectButtonPresssedImpl implements _DisconnectButtonPresssed {
     TResult? Function(Connection connection)? connectButtonPressed,
     TResult? Function()? disconnectButtonPresssed,
     TResult? Function()? onConnected,
+    TResult? Function(SocketFailure failure)? onConnectError,
     TResult? Function()? onDisConnected,
   }) {
     return disconnectButtonPresssed?.call();
@@ -318,6 +332,7 @@ class _$DisconnectButtonPresssedImpl implements _DisconnectButtonPresssed {
     TResult Function(Connection connection)? connectButtonPressed,
     TResult Function()? disconnectButtonPresssed,
     TResult Function()? onConnected,
+    TResult Function(SocketFailure failure)? onConnectError,
     TResult Function()? onDisConnected,
     required TResult orElse(),
   }) {
@@ -334,6 +349,7 @@ class _$DisconnectButtonPresssedImpl implements _DisconnectButtonPresssed {
     required TResult Function(_DisconnectButtonPresssed value)
         disconnectButtonPresssed,
     required TResult Function(_OnConnected value) onConnected,
+    required TResult Function(_OnConnectError value) onConnectError,
     required TResult Function(_OnDisConnected value) onDisConnected,
   }) {
     return disconnectButtonPresssed(this);
@@ -346,6 +362,7 @@ class _$DisconnectButtonPresssedImpl implements _DisconnectButtonPresssed {
     TResult? Function(_DisconnectButtonPresssed value)?
         disconnectButtonPresssed,
     TResult? Function(_OnConnected value)? onConnected,
+    TResult? Function(_OnConnectError value)? onConnectError,
     TResult? Function(_OnDisConnected value)? onDisConnected,
   }) {
     return disconnectButtonPresssed?.call(this);
@@ -357,6 +374,7 @@ class _$DisconnectButtonPresssedImpl implements _DisconnectButtonPresssed {
     TResult Function(_ConnectButtonPressed value)? connectButtonPressed,
     TResult Function(_DisconnectButtonPresssed value)? disconnectButtonPresssed,
     TResult Function(_OnConnected value)? onConnected,
+    TResult Function(_OnConnectError value)? onConnectError,
     TResult Function(_OnDisConnected value)? onDisConnected,
     required TResult orElse(),
   }) {
@@ -415,6 +433,7 @@ class _$OnConnectedImpl implements _OnConnected {
     required TResult Function(Connection connection) connectButtonPressed,
     required TResult Function() disconnectButtonPresssed,
     required TResult Function() onConnected,
+    required TResult Function(SocketFailure failure) onConnectError,
     required TResult Function() onDisConnected,
   }) {
     return onConnected();
@@ -426,6 +445,7 @@ class _$OnConnectedImpl implements _OnConnected {
     TResult? Function(Connection connection)? connectButtonPressed,
     TResult? Function()? disconnectButtonPresssed,
     TResult? Function()? onConnected,
+    TResult? Function(SocketFailure failure)? onConnectError,
     TResult? Function()? onDisConnected,
   }) {
     return onConnected?.call();
@@ -437,6 +457,7 @@ class _$OnConnectedImpl implements _OnConnected {
     TResult Function(Connection connection)? connectButtonPressed,
     TResult Function()? disconnectButtonPresssed,
     TResult Function()? onConnected,
+    TResult Function(SocketFailure failure)? onConnectError,
     TResult Function()? onDisConnected,
     required TResult orElse(),
   }) {
@@ -453,6 +474,7 @@ class _$OnConnectedImpl implements _OnConnected {
     required TResult Function(_DisconnectButtonPresssed value)
         disconnectButtonPresssed,
     required TResult Function(_OnConnected value) onConnected,
+    required TResult Function(_OnConnectError value) onConnectError,
     required TResult Function(_OnDisConnected value) onDisConnected,
   }) {
     return onConnected(this);
@@ -465,6 +487,7 @@ class _$OnConnectedImpl implements _OnConnected {
     TResult? Function(_DisconnectButtonPresssed value)?
         disconnectButtonPresssed,
     TResult? Function(_OnConnected value)? onConnected,
+    TResult? Function(_OnConnectError value)? onConnectError,
     TResult? Function(_OnDisConnected value)? onDisConnected,
   }) {
     return onConnected?.call(this);
@@ -476,6 +499,7 @@ class _$OnConnectedImpl implements _OnConnected {
     TResult Function(_ConnectButtonPressed value)? connectButtonPressed,
     TResult Function(_DisconnectButtonPresssed value)? disconnectButtonPresssed,
     TResult Function(_OnConnected value)? onConnected,
+    TResult Function(_OnConnectError value)? onConnectError,
     TResult Function(_OnDisConnected value)? onDisConnected,
     required TResult orElse(),
   }) {
@@ -488,6 +512,180 @@ class _$OnConnectedImpl implements _OnConnected {
 
 abstract class _OnConnected implements SocketEvent {
   const factory _OnConnected() = _$OnConnectedImpl;
+}
+
+/// @nodoc
+abstract class _$$OnConnectErrorImplCopyWith<$Res> {
+  factory _$$OnConnectErrorImplCopyWith(_$OnConnectErrorImpl value,
+          $Res Function(_$OnConnectErrorImpl) then) =
+      __$$OnConnectErrorImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({SocketFailure failure});
+
+  $SocketFailureCopyWith<$Res> get failure;
+}
+
+/// @nodoc
+class __$$OnConnectErrorImplCopyWithImpl<$Res>
+    extends _$SocketEventCopyWithImpl<$Res, _$OnConnectErrorImpl>
+    implements _$$OnConnectErrorImplCopyWith<$Res> {
+  __$$OnConnectErrorImplCopyWithImpl(
+      _$OnConnectErrorImpl _value, $Res Function(_$OnConnectErrorImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of SocketEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? failure = null,
+  }) {
+    return _then(_$OnConnectErrorImpl(
+      failure: null == failure
+          ? _value.failure
+          : failure // ignore: cast_nullable_to_non_nullable
+              as SocketFailure,
+    ));
+  }
+
+  /// Create a copy of SocketEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $SocketFailureCopyWith<$Res> get failure {
+    return $SocketFailureCopyWith<$Res>(_value.failure, (value) {
+      return _then(_value.copyWith(failure: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$OnConnectErrorImpl implements _OnConnectError {
+  const _$OnConnectErrorImpl({required this.failure});
+
+  @override
+  final SocketFailure failure;
+
+  @override
+  String toString() {
+    return 'SocketEvent.onConnectError(failure: $failure)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$OnConnectErrorImpl &&
+            (identical(other.failure, failure) || other.failure == failure));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, failure);
+
+  /// Create a copy of SocketEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$OnConnectErrorImplCopyWith<_$OnConnectErrorImpl> get copyWith =>
+      __$$OnConnectErrorImplCopyWithImpl<_$OnConnectErrorImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(Connection connection) connectButtonPressed,
+    required TResult Function() disconnectButtonPresssed,
+    required TResult Function() onConnected,
+    required TResult Function(SocketFailure failure) onConnectError,
+    required TResult Function() onDisConnected,
+  }) {
+    return onConnectError(failure);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Connection connection)? connectButtonPressed,
+    TResult? Function()? disconnectButtonPresssed,
+    TResult? Function()? onConnected,
+    TResult? Function(SocketFailure failure)? onConnectError,
+    TResult? Function()? onDisConnected,
+  }) {
+    return onConnectError?.call(failure);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Connection connection)? connectButtonPressed,
+    TResult Function()? disconnectButtonPresssed,
+    TResult Function()? onConnected,
+    TResult Function(SocketFailure failure)? onConnectError,
+    TResult Function()? onDisConnected,
+    required TResult orElse(),
+  }) {
+    if (onConnectError != null) {
+      return onConnectError(failure);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ConnectButtonPressed value) connectButtonPressed,
+    required TResult Function(_DisconnectButtonPresssed value)
+        disconnectButtonPresssed,
+    required TResult Function(_OnConnected value) onConnected,
+    required TResult Function(_OnConnectError value) onConnectError,
+    required TResult Function(_OnDisConnected value) onDisConnected,
+  }) {
+    return onConnectError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ConnectButtonPressed value)? connectButtonPressed,
+    TResult? Function(_DisconnectButtonPresssed value)?
+        disconnectButtonPresssed,
+    TResult? Function(_OnConnected value)? onConnected,
+    TResult? Function(_OnConnectError value)? onConnectError,
+    TResult? Function(_OnDisConnected value)? onDisConnected,
+  }) {
+    return onConnectError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ConnectButtonPressed value)? connectButtonPressed,
+    TResult Function(_DisconnectButtonPresssed value)? disconnectButtonPresssed,
+    TResult Function(_OnConnected value)? onConnected,
+    TResult Function(_OnConnectError value)? onConnectError,
+    TResult Function(_OnDisConnected value)? onDisConnected,
+    required TResult orElse(),
+  }) {
+    if (onConnectError != null) {
+      return onConnectError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnConnectError implements SocketEvent {
+  const factory _OnConnectError({required final SocketFailure failure}) =
+      _$OnConnectErrorImpl;
+
+  SocketFailure get failure;
+
+  /// Create a copy of SocketEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$OnConnectErrorImplCopyWith<_$OnConnectErrorImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -534,6 +732,7 @@ class _$OnDisConnectedImpl implements _OnDisConnected {
     required TResult Function(Connection connection) connectButtonPressed,
     required TResult Function() disconnectButtonPresssed,
     required TResult Function() onConnected,
+    required TResult Function(SocketFailure failure) onConnectError,
     required TResult Function() onDisConnected,
   }) {
     return onDisConnected();
@@ -545,6 +744,7 @@ class _$OnDisConnectedImpl implements _OnDisConnected {
     TResult? Function(Connection connection)? connectButtonPressed,
     TResult? Function()? disconnectButtonPresssed,
     TResult? Function()? onConnected,
+    TResult? Function(SocketFailure failure)? onConnectError,
     TResult? Function()? onDisConnected,
   }) {
     return onDisConnected?.call();
@@ -556,6 +756,7 @@ class _$OnDisConnectedImpl implements _OnDisConnected {
     TResult Function(Connection connection)? connectButtonPressed,
     TResult Function()? disconnectButtonPresssed,
     TResult Function()? onConnected,
+    TResult Function(SocketFailure failure)? onConnectError,
     TResult Function()? onDisConnected,
     required TResult orElse(),
   }) {
@@ -572,6 +773,7 @@ class _$OnDisConnectedImpl implements _OnDisConnected {
     required TResult Function(_DisconnectButtonPresssed value)
         disconnectButtonPresssed,
     required TResult Function(_OnConnected value) onConnected,
+    required TResult Function(_OnConnectError value) onConnectError,
     required TResult Function(_OnDisConnected value) onDisConnected,
   }) {
     return onDisConnected(this);
@@ -584,6 +786,7 @@ class _$OnDisConnectedImpl implements _OnDisConnected {
     TResult? Function(_DisconnectButtonPresssed value)?
         disconnectButtonPresssed,
     TResult? Function(_OnConnected value)? onConnected,
+    TResult? Function(_OnConnectError value)? onConnectError,
     TResult? Function(_OnDisConnected value)? onDisConnected,
   }) {
     return onDisConnected?.call(this);
@@ -595,6 +798,7 @@ class _$OnDisConnectedImpl implements _OnDisConnected {
     TResult Function(_ConnectButtonPressed value)? connectButtonPressed,
     TResult Function(_DisconnectButtonPresssed value)? disconnectButtonPresssed,
     TResult Function(_OnConnected value)? onConnected,
+    TResult Function(_OnConnectError value)? onConnectError,
     TResult Function(_OnDisConnected value)? onDisConnected,
     required TResult orElse(),
   }) {
@@ -613,6 +817,7 @@ abstract class _OnDisConnected implements SocketEvent {
 mixin _$SocketState {
   bool get isConnecting => throw _privateConstructorUsedError;
   bool get isConnected => throw _privateConstructorUsedError;
+  Option<SocketFailure> get failure => throw _privateConstructorUsedError;
 
   /// Create a copy of SocketState
   /// with the given fields replaced by the non-null parameter values.
@@ -627,7 +832,8 @@ abstract class $SocketStateCopyWith<$Res> {
           SocketState value, $Res Function(SocketState) then) =
       _$SocketStateCopyWithImpl<$Res, SocketState>;
   @useResult
-  $Res call({bool isConnecting, bool isConnected});
+  $Res call(
+      {bool isConnecting, bool isConnected, Option<SocketFailure> failure});
 }
 
 /// @nodoc
@@ -647,6 +853,7 @@ class _$SocketStateCopyWithImpl<$Res, $Val extends SocketState>
   $Res call({
     Object? isConnecting = null,
     Object? isConnected = null,
+    Object? failure = null,
   }) {
     return _then(_value.copyWith(
       isConnecting: null == isConnecting
@@ -657,6 +864,10 @@ class _$SocketStateCopyWithImpl<$Res, $Val extends SocketState>
           ? _value.isConnected
           : isConnected // ignore: cast_nullable_to_non_nullable
               as bool,
+      failure: null == failure
+          ? _value.failure
+          : failure // ignore: cast_nullable_to_non_nullable
+              as Option<SocketFailure>,
     ) as $Val);
   }
 }
@@ -669,7 +880,8 @@ abstract class _$$SocketStateImplCopyWith<$Res>
       __$$SocketStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({bool isConnecting, bool isConnected});
+  $Res call(
+      {bool isConnecting, bool isConnected, Option<SocketFailure> failure});
 }
 
 /// @nodoc
@@ -687,6 +899,7 @@ class __$$SocketStateImplCopyWithImpl<$Res>
   $Res call({
     Object? isConnecting = null,
     Object? isConnected = null,
+    Object? failure = null,
   }) {
     return _then(_$SocketStateImpl(
       isConnecting: null == isConnecting
@@ -697,6 +910,10 @@ class __$$SocketStateImplCopyWithImpl<$Res>
           ? _value.isConnected
           : isConnected // ignore: cast_nullable_to_non_nullable
               as bool,
+      failure: null == failure
+          ? _value.failure
+          : failure // ignore: cast_nullable_to_non_nullable
+              as Option<SocketFailure>,
     ));
   }
 }
@@ -705,16 +922,20 @@ class __$$SocketStateImplCopyWithImpl<$Res>
 
 class _$SocketStateImpl implements _SocketState {
   const _$SocketStateImpl(
-      {required this.isConnecting, required this.isConnected});
+      {required this.isConnecting,
+      required this.isConnected,
+      required this.failure});
 
   @override
   final bool isConnecting;
   @override
   final bool isConnected;
+  @override
+  final Option<SocketFailure> failure;
 
   @override
   String toString() {
-    return 'SocketState(isConnecting: $isConnecting, isConnected: $isConnected)';
+    return 'SocketState(isConnecting: $isConnecting, isConnected: $isConnected, failure: $failure)';
   }
 
   @override
@@ -725,11 +946,13 @@ class _$SocketStateImpl implements _SocketState {
             (identical(other.isConnecting, isConnecting) ||
                 other.isConnecting == isConnecting) &&
             (identical(other.isConnected, isConnected) ||
-                other.isConnected == isConnected));
+                other.isConnected == isConnected) &&
+            (identical(other.failure, failure) || other.failure == failure));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, isConnecting, isConnected);
+  int get hashCode =>
+      Object.hash(runtimeType, isConnecting, isConnected, failure);
 
   /// Create a copy of SocketState
   /// with the given fields replaced by the non-null parameter values.
@@ -743,12 +966,15 @@ class _$SocketStateImpl implements _SocketState {
 abstract class _SocketState implements SocketState {
   const factory _SocketState(
       {required final bool isConnecting,
-      required final bool isConnected}) = _$SocketStateImpl;
+      required final bool isConnected,
+      required final Option<SocketFailure> failure}) = _$SocketStateImpl;
 
   @override
   bool get isConnecting;
   @override
   bool get isConnected;
+  @override
+  Option<SocketFailure> get failure;
 
   /// Create a copy of SocketState
   /// with the given fields replaced by the non-null parameter values.

@@ -8,5 +8,8 @@ class SocketEvent with _$SocketEvent {
   const factory SocketEvent.disconnectButtonPresssed() =
       _DisconnectButtonPresssed;
   const factory SocketEvent.onConnected() = _OnConnected;
+  const factory SocketEvent.onConnectError({
+    required SocketFailure failure,
+  }) = _OnConnectError;
   const factory SocketEvent.onDisConnected() = _OnDisConnected;
 }

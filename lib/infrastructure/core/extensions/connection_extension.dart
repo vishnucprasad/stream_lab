@@ -8,8 +8,27 @@ extension ConnectionX on Connection {
         .setTimeout(3000)
         .setReconnectionDelay(5000)
         .disableAutoConnect()
-        .build();
+        .enableForceNew()
+        .disableReconnection();
 
-    return io(connectionUrl, options);
+    if (queryParameters.isNotEmpty) {
+      options.setQuery({
+        for (var item in queryParameters) item['key']: item['value'],
+      });
+    }
+
+    if (headers.isNotEmpty) {
+      options.setExtraHeaders({
+        for (var item in headers) item['key']: item['value'],
+      });
+    }
+
+    if (auth.isNotEmpty) {
+      options.setAuth({
+        for (var item in auth) item['key']: item['value'],
+      });
+    }
+
+    return io(connectionUrl, options.build());
   }
 }

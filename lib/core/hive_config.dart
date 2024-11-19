@@ -15,7 +15,7 @@ Future<void> configureHive() async {
     Hive.initFlutter('/assets/db');
   } else {
     final appDocumentDir = await getApplicationDocumentsDirectory();
-    Hive.initFlutter(appDocumentDir.path);
+    Hive.init(appDocumentDir.path);
   }
 
   Hive.registerAdapter<Connection>(ConnectionAdapter());
