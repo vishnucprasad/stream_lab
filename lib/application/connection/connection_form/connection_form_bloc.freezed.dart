@@ -258,6 +258,9 @@ class _$ConnectionFormEventCopyWithImpl<$Res, $Val extends ConnectionFormEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -274,6 +277,9 @@ class __$$InitializeImplCopyWithImpl<$Res>
   __$$InitializeImplCopyWithImpl(
       _$InitializeImpl _value, $Res Function(_$InitializeImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -566,6 +572,8 @@ class __$$ConnectionNameChangedImplCopyWithImpl<$Res>
       $Res Function(_$ConnectionNameChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -605,7 +613,9 @@ class _$ConnectionNameChangedImpl implements _ConnectionNameChanged {
   @override
   int get hashCode => Object.hash(runtimeType, connectionName);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ConnectionNameChangedImplCopyWith<_$ConnectionNameChangedImpl>
@@ -866,7 +876,10 @@ abstract class _ConnectionNameChanged implements ConnectionFormEvent {
       _$ConnectionNameChangedImpl;
 
   String get connectionName;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ConnectionNameChangedImplCopyWith<_$ConnectionNameChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -888,6 +901,8 @@ class __$$ConnectionUrlChangedImplCopyWithImpl<$Res>
       $Res Function(_$ConnectionUrlChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -927,7 +942,9 @@ class _$ConnectionUrlChangedImpl implements _ConnectionUrlChanged {
   @override
   int get hashCode => Object.hash(runtimeType, connectionUrl);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ConnectionUrlChangedImplCopyWith<_$ConnectionUrlChangedImpl>
@@ -1189,7 +1206,10 @@ abstract class _ConnectionUrlChanged implements ConnectionFormEvent {
       _$ConnectionUrlChangedImpl;
 
   String get connectionUrl;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ConnectionUrlChangedImplCopyWith<_$ConnectionUrlChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1211,6 +1231,8 @@ class __$$ConnectionSelectedImplCopyWithImpl<$Res>
       $Res Function(_$ConnectionSelectedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1250,7 +1272,9 @@ class _$ConnectionSelectedImpl implements _ConnectionSelected {
   @override
   int get hashCode => Object.hash(runtimeType, connection);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ConnectionSelectedImplCopyWith<_$ConnectionSelectedImpl> get copyWith =>
@@ -1511,7 +1535,10 @@ abstract class _ConnectionSelected implements ConnectionFormEvent {
       _$ConnectionSelectedImpl;
 
   Connection get connection;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ConnectionSelectedImplCopyWith<_$ConnectionSelectedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1533,6 +1560,9 @@ class __$$NewConnectionButtonPressedImplCopyWithImpl<$Res>
       _$NewConnectionButtonPressedImpl _value,
       $Res Function(_$NewConnectionButtonPressedImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1826,6 +1856,8 @@ class __$$AddEventImplCopyWithImpl<$Res>
       _$AddEventImpl _value, $Res Function(_$AddEventImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1864,7 +1896,9 @@ class _$AddEventImpl implements _AddEvent {
   @override
   int get hashCode => Object.hash(runtimeType, type);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AddEventImplCopyWith<_$AddEventImpl> get copyWith =>
@@ -2123,7 +2157,10 @@ abstract class _AddEvent implements ConnectionFormEvent {
   const factory _AddEvent({required final EventType type}) = _$AddEventImpl;
 
   EventType get type;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AddEventImplCopyWith<_$AddEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2145,6 +2182,8 @@ class __$$DeleteEventImplCopyWithImpl<$Res>
       _$DeleteEventImpl _value, $Res Function(_$DeleteEventImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2192,7 +2231,9 @@ class _$DeleteEventImpl implements _DeleteEvent {
   @override
   int get hashCode => Object.hash(runtimeType, type, eventIndex);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DeleteEventImplCopyWith<_$DeleteEventImpl> get copyWith =>
@@ -2454,7 +2495,10 @@ abstract class _DeleteEvent implements ConnectionFormEvent {
 
   EventType get type;
   int get eventIndex;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DeleteEventImplCopyWith<_$DeleteEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2476,6 +2520,8 @@ class __$$EmitterSelectedImplCopyWithImpl<$Res>
       _$EmitterSelectedImpl _value, $Res Function(_$EmitterSelectedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2515,7 +2561,9 @@ class _$EmitterSelectedImpl implements _EmitterSelected {
   @override
   int get hashCode => Object.hash(runtimeType, emitterIndex);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$EmitterSelectedImplCopyWith<_$EmitterSelectedImpl> get copyWith =>
@@ -2776,7 +2824,10 @@ abstract class _EmitterSelected implements ConnectionFormEvent {
       _$EmitterSelectedImpl;
 
   int get emitterIndex;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EmitterSelectedImplCopyWith<_$EmitterSelectedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2798,6 +2849,8 @@ class __$$ListenerSelectedImplCopyWithImpl<$Res>
       $Res Function(_$ListenerSelectedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2837,7 +2890,9 @@ class _$ListenerSelectedImpl implements _ListenerSelected {
   @override
   int get hashCode => Object.hash(runtimeType, listenerIndex);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ListenerSelectedImplCopyWith<_$ListenerSelectedImpl> get copyWith =>
@@ -3098,7 +3153,10 @@ abstract class _ListenerSelected implements ConnectionFormEvent {
       _$ListenerSelectedImpl;
 
   int get listenerIndex;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ListenerSelectedImplCopyWith<_$ListenerSelectedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3117,6 +3175,9 @@ class __$$UnSelectListenerImplCopyWithImpl<$Res>
   __$$UnSelectListenerImplCopyWithImpl(_$UnSelectListenerImpl _value,
       $Res Function(_$UnSelectListenerImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -3408,6 +3469,8 @@ class __$$EmitterNameChangedImplCopyWithImpl<$Res>
       $Res Function(_$EmitterNameChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3446,7 +3509,9 @@ class _$EmitterNameChangedImpl implements _EmitterNameChanged {
   @override
   int get hashCode => Object.hash(runtimeType, name);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$EmitterNameChangedImplCopyWith<_$EmitterNameChangedImpl> get copyWith =>
@@ -3707,7 +3772,10 @@ abstract class _EmitterNameChanged implements ConnectionFormEvent {
       _$EmitterNameChangedImpl;
 
   String get name;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EmitterNameChangedImplCopyWith<_$EmitterNameChangedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3732,6 +3800,8 @@ class __$$EmitterDataTypeChangedImplCopyWithImpl<$Res>
       $Res Function(_$EmitterDataTypeChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3771,7 +3841,9 @@ class _$EmitterDataTypeChangedImpl implements _EmitterDataTypeChanged {
   @override
   int get hashCode => Object.hash(runtimeType, dataType);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$EmitterDataTypeChangedImplCopyWith<_$EmitterDataTypeChangedImpl>
@@ -4032,7 +4104,10 @@ abstract class _EmitterDataTypeChanged implements ConnectionFormEvent {
       {required final EventDataType dataType}) = _$EmitterDataTypeChangedImpl;
 
   EventDataType get dataType;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EmitterDataTypeChangedImplCopyWith<_$EmitterDataTypeChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -4054,6 +4129,8 @@ class __$$EmitterDataChangedImplCopyWithImpl<$Res>
       $Res Function(_$EmitterDataChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4092,7 +4169,9 @@ class _$EmitterDataChangedImpl implements _EmitterDataChanged {
   @override
   int get hashCode => Object.hash(runtimeType, data);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$EmitterDataChangedImplCopyWith<_$EmitterDataChangedImpl> get copyWith =>
@@ -4353,7 +4432,10 @@ abstract class _EmitterDataChanged implements ConnectionFormEvent {
       _$EmitterDataChangedImpl;
 
   String get data;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EmitterDataChangedImplCopyWith<_$EmitterDataChangedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -4375,6 +4457,8 @@ class __$$ListenerNameChangedImplCopyWithImpl<$Res>
       $Res Function(_$ListenerNameChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4413,7 +4497,9 @@ class _$ListenerNameChangedImpl implements _ListenerNameChanged {
   @override
   int get hashCode => Object.hash(runtimeType, name);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ListenerNameChangedImplCopyWith<_$ListenerNameChangedImpl> get copyWith =>
@@ -4674,7 +4760,10 @@ abstract class _ListenerNameChanged implements ConnectionFormEvent {
       _$ListenerNameChangedImpl;
 
   String get name;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ListenerNameChangedImplCopyWith<_$ListenerNameChangedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -4697,6 +4786,8 @@ class __$$ListenerSwitchToggledImplCopyWithImpl<$Res>
       $Res Function(_$ListenerSwitchToggledImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4745,7 +4836,9 @@ class _$ListenerSwitchToggledImpl implements _ListenerSwitchToggled {
   @override
   int get hashCode => Object.hash(runtimeType, value, listenerIndex);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ListenerSwitchToggledImplCopyWith<_$ListenerSwitchToggledImpl>
@@ -5008,7 +5101,10 @@ abstract class _ListenerSwitchToggled implements ConnectionFormEvent {
 
   bool get value;
   int get listenerIndex;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ListenerSwitchToggledImplCopyWith<_$ListenerSwitchToggledImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -5027,6 +5123,9 @@ class __$$AddQueryParameterImplCopyWithImpl<$Res>
   __$$AddQueryParameterImplCopyWithImpl(_$AddQueryParameterImpl _value,
       $Res Function(_$AddQueryParameterImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -5318,6 +5417,8 @@ class __$$QueryRowChangedImplCopyWithImpl<$Res>
       _$QueryRowChangedImpl _value, $Res Function(_$QueryRowChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5365,7 +5466,9 @@ class _$QueryRowChangedImpl implements _QueryRowChanged {
   @override
   int get hashCode => Object.hash(runtimeType, rowIndex, row);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$QueryRowChangedImplCopyWith<_$QueryRowChangedImpl> get copyWith =>
@@ -5628,7 +5731,10 @@ abstract class _QueryRowChanged implements ConnectionFormEvent {
 
   int get rowIndex;
   PlutoRow get row;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$QueryRowChangedImplCopyWith<_$QueryRowChangedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -5650,6 +5756,8 @@ class __$$QueryRowCheckedImplCopyWithImpl<$Res>
       _$QueryRowCheckedImpl _value, $Res Function(_$QueryRowCheckedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5697,7 +5805,9 @@ class _$QueryRowCheckedImpl implements _QueryRowChecked {
   @override
   int get hashCode => Object.hash(runtimeType, rowIndex, row);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$QueryRowCheckedImplCopyWith<_$QueryRowCheckedImpl> get copyWith =>
@@ -5960,7 +6070,10 @@ abstract class _QueryRowChecked implements ConnectionFormEvent {
 
   int get rowIndex;
   PlutoRow get row;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$QueryRowCheckedImplCopyWith<_$QueryRowCheckedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -5982,6 +6095,8 @@ class __$$QueryAllRowsCheckedImplCopyWithImpl<$Res>
       $Res Function(_$QueryAllRowsCheckedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6021,7 +6136,9 @@ class _$QueryAllRowsCheckedImpl implements _QueryAllRowsChecked {
   @override
   int get hashCode => Object.hash(runtimeType, isChecked);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$QueryAllRowsCheckedImplCopyWith<_$QueryAllRowsCheckedImpl> get copyWith =>
@@ -6282,7 +6399,10 @@ abstract class _QueryAllRowsChecked implements ConnectionFormEvent {
       _$QueryAllRowsCheckedImpl;
 
   bool get isChecked;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$QueryAllRowsCheckedImplCopyWith<_$QueryAllRowsCheckedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -6304,6 +6424,9 @@ class __$$DeleteSelectedQueryParametersImplCopyWithImpl<$Res>
       _$DeleteSelectedQueryParametersImpl _value,
       $Res Function(_$DeleteSelectedQueryParametersImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -6595,6 +6718,9 @@ class __$$AddHeaderImplCopyWithImpl<$Res>
   __$$AddHeaderImplCopyWithImpl(
       _$AddHeaderImpl _value, $Res Function(_$AddHeaderImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -6886,6 +7012,8 @@ class __$$HeaderRowChangedImplCopyWithImpl<$Res>
       $Res Function(_$HeaderRowChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6933,7 +7061,9 @@ class _$HeaderRowChangedImpl implements _HeaderRowChanged {
   @override
   int get hashCode => Object.hash(runtimeType, rowIndex, row);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$HeaderRowChangedImplCopyWith<_$HeaderRowChangedImpl> get copyWith =>
@@ -7196,7 +7326,10 @@ abstract class _HeaderRowChanged implements ConnectionFormEvent {
 
   int get rowIndex;
   PlutoRow get row;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$HeaderRowChangedImplCopyWith<_$HeaderRowChangedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -7218,6 +7351,8 @@ class __$$HeaderRowCheckedImplCopyWithImpl<$Res>
       $Res Function(_$HeaderRowCheckedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -7265,7 +7400,9 @@ class _$HeaderRowCheckedImpl implements _HeaderRowChecked {
   @override
   int get hashCode => Object.hash(runtimeType, rowIndex, row);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$HeaderRowCheckedImplCopyWith<_$HeaderRowCheckedImpl> get copyWith =>
@@ -7528,7 +7665,10 @@ abstract class _HeaderRowChecked implements ConnectionFormEvent {
 
   int get rowIndex;
   PlutoRow get row;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$HeaderRowCheckedImplCopyWith<_$HeaderRowCheckedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -7550,6 +7690,8 @@ class __$$HeaderAllRowsCheckedImplCopyWithImpl<$Res>
       $Res Function(_$HeaderAllRowsCheckedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -7589,7 +7731,9 @@ class _$HeaderAllRowsCheckedImpl implements _HeaderAllRowsChecked {
   @override
   int get hashCode => Object.hash(runtimeType, isChecked);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$HeaderAllRowsCheckedImplCopyWith<_$HeaderAllRowsCheckedImpl>
@@ -7851,7 +7995,10 @@ abstract class _HeaderAllRowsChecked implements ConnectionFormEvent {
       _$HeaderAllRowsCheckedImpl;
 
   bool get isChecked;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$HeaderAllRowsCheckedImplCopyWith<_$HeaderAllRowsCheckedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -7871,6 +8018,9 @@ class __$$DeleteSelectedHeadersImplCopyWithImpl<$Res>
   __$$DeleteSelectedHeadersImplCopyWithImpl(_$DeleteSelectedHeadersImpl _value,
       $Res Function(_$DeleteSelectedHeadersImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -8160,6 +8310,9 @@ class __$$AddAuthImplCopyWithImpl<$Res>
   __$$AddAuthImplCopyWithImpl(
       _$AddAuthImpl _value, $Res Function(_$AddAuthImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -8451,6 +8604,8 @@ class __$$AuthRowChangedImplCopyWithImpl<$Res>
       _$AuthRowChangedImpl _value, $Res Function(_$AuthRowChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -8498,7 +8653,9 @@ class _$AuthRowChangedImpl implements _AuthRowChanged {
   @override
   int get hashCode => Object.hash(runtimeType, rowIndex, row);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AuthRowChangedImplCopyWith<_$AuthRowChangedImpl> get copyWith =>
@@ -8761,7 +8918,10 @@ abstract class _AuthRowChanged implements ConnectionFormEvent {
 
   int get rowIndex;
   PlutoRow get row;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AuthRowChangedImplCopyWith<_$AuthRowChangedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -8783,6 +8943,8 @@ class __$$AuthRowCheckedImplCopyWithImpl<$Res>
       _$AuthRowCheckedImpl _value, $Res Function(_$AuthRowCheckedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -8830,7 +8992,9 @@ class _$AuthRowCheckedImpl implements _AuthRowChecked {
   @override
   int get hashCode => Object.hash(runtimeType, rowIndex, row);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AuthRowCheckedImplCopyWith<_$AuthRowCheckedImpl> get copyWith =>
@@ -9093,7 +9257,10 @@ abstract class _AuthRowChecked implements ConnectionFormEvent {
 
   int get rowIndex;
   PlutoRow get row;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AuthRowCheckedImplCopyWith<_$AuthRowCheckedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -9115,6 +9282,8 @@ class __$$AuthAllRowsCheckedImplCopyWithImpl<$Res>
       $Res Function(_$AuthAllRowsCheckedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -9154,7 +9323,9 @@ class _$AuthAllRowsCheckedImpl implements _AuthAllRowsChecked {
   @override
   int get hashCode => Object.hash(runtimeType, isChecked);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AuthAllRowsCheckedImplCopyWith<_$AuthAllRowsCheckedImpl> get copyWith =>
@@ -9415,7 +9586,10 @@ abstract class _AuthAllRowsChecked implements ConnectionFormEvent {
       _$AuthAllRowsCheckedImpl;
 
   bool get isChecked;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AuthAllRowsCheckedImplCopyWith<_$AuthAllRowsCheckedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -9437,6 +9611,9 @@ class __$$DeleteSelectedAuthRowsImplCopyWithImpl<$Res>
       _$DeleteSelectedAuthRowsImpl _value,
       $Res Function(_$DeleteSelectedAuthRowsImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -9726,6 +9903,9 @@ class __$$SaveButtonPressedImplCopyWithImpl<$Res>
   __$$SaveButtonPressedImplCopyWithImpl(_$SaveButtonPressedImpl _value,
       $Res Function(_$SaveButtonPressedImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ConnectionFormEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -10014,7 +10194,9 @@ mixin _$ConnectionFormState {
   Option<Either<ConnectionFailure, Unit>> get failureOrSucessOption =>
       throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConnectionFormState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ConnectionFormStateCopyWith<ConnectionFormState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -10049,6 +10231,8 @@ class _$ConnectionFormStateCopyWithImpl<$Res, $Val extends ConnectionFormState>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ConnectionFormState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -10102,6 +10286,8 @@ class _$ConnectionFormStateCopyWithImpl<$Res, $Val extends ConnectionFormState>
     ) as $Val);
   }
 
+  /// Create a copy of ConnectionFormState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ConnectionFormDataCopyWith<$Res>? get connectionFormData {
@@ -10147,6 +10333,8 @@ class __$$ConnectionFormStateImplCopyWithImpl<$Res>
       $Res Function(_$ConnectionFormStateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConnectionFormState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -10276,7 +10464,9 @@ class _$ConnectionFormStateImpl implements _ConnectionFormState {
       connectionFormData,
       failureOrSucessOption);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConnectionFormState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ConnectionFormStateImplCopyWith<_$ConnectionFormStateImpl> get copyWith =>
@@ -10315,8 +10505,11 @@ abstract class _ConnectionFormState implements ConnectionFormState {
   ConnectionFormData? get connectionFormData;
   @override
   Option<Either<ConnectionFailure, Unit>> get failureOrSucessOption;
+
+  /// Create a copy of ConnectionFormState
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ConnectionFormStateImplCopyWith<_$ConnectionFormStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

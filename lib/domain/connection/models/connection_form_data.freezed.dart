@@ -25,7 +25,9 @@ mixin _$ConnectionFormData {
   List<PlutoRow> get headers => throw _privateConstructorUsedError;
   List<PlutoRow> get auth => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConnectionFormData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ConnectionFormDataCopyWith<ConnectionFormData> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -57,6 +59,8 @@ class _$ConnectionFormDataCopyWithImpl<$Res, $Val extends ConnectionFormData>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ConnectionFormData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -133,6 +137,8 @@ class __$$ConnectionFormDataImplCopyWithImpl<$Res>
       $Res Function(_$ConnectionFormDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConnectionFormData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -285,7 +291,9 @@ class _$ConnectionFormDataImpl extends _ConnectionFormData {
       const DeepCollectionEquality().hash(_headers),
       const DeepCollectionEquality().hash(_auth));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConnectionFormData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ConnectionFormDataImplCopyWith<_$ConnectionFormDataImpl> get copyWith =>
@@ -321,8 +329,11 @@ abstract class _ConnectionFormData extends ConnectionFormData {
   List<PlutoRow> get headers;
   @override
   List<PlutoRow> get auth;
+
+  /// Create a copy of ConnectionFormData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ConnectionFormDataImplCopyWith<_$ConnectionFormDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

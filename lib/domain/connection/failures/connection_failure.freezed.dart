@@ -79,6 +79,9 @@ class _$ConnectionFailureCopyWithImpl<$Res, $Val extends ConnectionFailure>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of ConnectionFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -98,6 +101,8 @@ class __$$ClientFailureImplCopyWithImpl<$Res>
       _$ClientFailureImpl _value, $Res Function(_$ClientFailureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConnectionFailure
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -137,7 +142,9 @@ class _$ClientFailureImpl implements _ClientFailure {
   @override
   int get hashCode => Object.hash(runtimeType, messsage);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConnectionFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ClientFailureImplCopyWith<_$ClientFailureImpl> get copyWith =>
@@ -218,7 +225,10 @@ abstract class _ClientFailure implements ConnectionFailure {
       _$ClientFailureImpl;
 
   String get messsage;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConnectionFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ClientFailureImplCopyWith<_$ClientFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -240,6 +250,8 @@ class __$$ServerFailureImplCopyWithImpl<$Res>
       _$ServerFailureImpl _value, $Res Function(_$ServerFailureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConnectionFailure
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -279,7 +291,9 @@ class _$ServerFailureImpl implements _ServerFailure {
   @override
   int get hashCode => Object.hash(runtimeType, messsage);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConnectionFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ServerFailureImplCopyWith<_$ServerFailureImpl> get copyWith =>
@@ -360,7 +374,10 @@ abstract class _ServerFailure implements ConnectionFailure {
       _$ServerFailureImpl;
 
   String get messsage;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConnectionFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ServerFailureImplCopyWith<_$ServerFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -381,6 +398,9 @@ class __$$DuplicateConnectionNameImplCopyWithImpl<$Res>
       _$DuplicateConnectionNameImpl _value,
       $Res Function(_$DuplicateConnectionNameImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ConnectionFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc

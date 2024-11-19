@@ -84,6 +84,9 @@ class _$ValueFailureCopyWithImpl<T, $Res, $Val extends ValueFailure<T>>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -100,6 +103,9 @@ class __$$EmptyImplCopyWithImpl<T, $Res>
   __$$EmptyImplCopyWithImpl(
       _$EmptyImpl<T> _value, $Res Function(_$EmptyImpl<T>) _then)
       : super(_value, _then);
+
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -217,6 +223,8 @@ class __$$InvalidImplCopyWithImpl<T, $Res>
       _$InvalidImpl<T> _value, $Res Function(_$InvalidImpl<T>) _then)
       : super(_value, _then);
 
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -257,7 +265,9 @@ class _$InvalidImpl<T> implements _Invalid<T> {
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(failedValue));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InvalidImplCopyWith<T, _$InvalidImpl<T>> get copyWith =>
@@ -342,7 +352,10 @@ abstract class _Invalid<T> implements ValueFailure<T> {
   const factory _Invalid({required final T failedValue}) = _$InvalidImpl<T>;
 
   T get failedValue;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InvalidImplCopyWith<T, _$InvalidImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -364,6 +377,8 @@ class __$$ExceedingLengthImplCopyWithImpl<T, $Res>
       $Res Function(_$ExceedingLengthImpl<T>) _then)
       : super(_value, _then);
 
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -414,7 +429,9 @@ class _$ExceedingLengthImpl<T> implements _ExceedingLength<T> {
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(failedValue), maxLength);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ExceedingLengthImplCopyWith<T, _$ExceedingLengthImpl<T>> get copyWith =>
@@ -503,7 +520,10 @@ abstract class _ExceedingLength<T> implements ValueFailure<T> {
 
   T get failedValue;
   int get maxLength;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ExceedingLengthImplCopyWith<T, _$ExceedingLengthImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -525,6 +545,8 @@ class __$$InvalidURLImplCopyWithImpl<T, $Res>
       _$InvalidURLImpl<T> _value, $Res Function(_$InvalidURLImpl<T>) _then)
       : super(_value, _then);
 
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -565,7 +587,9 @@ class _$InvalidURLImpl<T> implements _InvalidURL<T> {
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(failedValue));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InvalidURLImplCopyWith<T, _$InvalidURLImpl<T>> get copyWith =>
@@ -651,7 +675,10 @@ abstract class _InvalidURL<T> implements ValueFailure<T> {
       _$InvalidURLImpl<T>;
 
   T get failedValue;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InvalidURLImplCopyWith<T, _$InvalidURLImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -45,6 +45,7 @@ dependencies:
   json_text_field: ^1.2.0
   path_provider: ^2.1.4
   pluto_grid: ^8.0.0
+  socket_io_client: ^3.0.2
   toggle_list: ^0.3.1
 
 dev_dependencies:

@@ -22,7 +22,9 @@ mixin _$EventFormData {
   EventData? get data => throw _privateConstructorUsedError;
   bool get isEnabled => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of EventFormData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $EventFormDataCopyWith<EventFormData> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +53,8 @@ class _$EventFormDataCopyWithImpl<$Res, $Val extends EventFormData>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of EventFormData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -109,6 +113,8 @@ class __$$EventFormDataImplCopyWithImpl<$Res>
       _$EventFormDataImpl _value, $Res Function(_$EventFormDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of EventFormData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -188,7 +194,9 @@ class _$EventFormDataImpl extends _EventFormData {
   int get hashCode =>
       Object.hash(runtimeType, name, type, dataType, data, isEnabled);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of EventFormData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$EventFormDataImplCopyWith<_$EventFormDataImpl> get copyWith =>
@@ -214,8 +222,11 @@ abstract class _EventFormData extends EventFormData {
   EventData? get data;
   @override
   bool get isEnabled;
+
+  /// Create a copy of EventFormData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EventFormDataImplCopyWith<_$EventFormDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

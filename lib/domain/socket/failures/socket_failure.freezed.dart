@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'event_failure.dart';
+part of 'socket_failure.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$EventFailure {
+mixin _$SocketFailure {
   String get message => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -56,33 +56,33 @@ mixin _$EventFailure {
   }) =>
       throw _privateConstructorUsedError;
 
-  /// Create a copy of EventFailure
+  /// Create a copy of SocketFailure
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $EventFailureCopyWith<EventFailure> get copyWith =>
+  $SocketFailureCopyWith<SocketFailure> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $EventFailureCopyWith<$Res> {
-  factory $EventFailureCopyWith(
-          EventFailure value, $Res Function(EventFailure) then) =
-      _$EventFailureCopyWithImpl<$Res, EventFailure>;
+abstract class $SocketFailureCopyWith<$Res> {
+  factory $SocketFailureCopyWith(
+          SocketFailure value, $Res Function(SocketFailure) then) =
+      _$SocketFailureCopyWithImpl<$Res, SocketFailure>;
   @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class _$EventFailureCopyWithImpl<$Res, $Val extends EventFailure>
-    implements $EventFailureCopyWith<$Res> {
-  _$EventFailureCopyWithImpl(this._value, this._then);
+class _$SocketFailureCopyWithImpl<$Res, $Val extends SocketFailure>
+    implements $SocketFailureCopyWith<$Res> {
+  _$SocketFailureCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of EventFailure
+  /// Create a copy of SocketFailure
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -100,7 +100,7 @@ class _$EventFailureCopyWithImpl<$Res, $Val extends EventFailure>
 
 /// @nodoc
 abstract class _$$ClientFailureImplCopyWith<$Res>
-    implements $EventFailureCopyWith<$Res> {
+    implements $SocketFailureCopyWith<$Res> {
   factory _$$ClientFailureImplCopyWith(
           _$ClientFailureImpl value, $Res Function(_$ClientFailureImpl) then) =
       __$$ClientFailureImplCopyWithImpl<$Res>;
@@ -111,13 +111,13 @@ abstract class _$$ClientFailureImplCopyWith<$Res>
 
 /// @nodoc
 class __$$ClientFailureImplCopyWithImpl<$Res>
-    extends _$EventFailureCopyWithImpl<$Res, _$ClientFailureImpl>
+    extends _$SocketFailureCopyWithImpl<$Res, _$ClientFailureImpl>
     implements _$$ClientFailureImplCopyWith<$Res> {
   __$$ClientFailureImplCopyWithImpl(
       _$ClientFailureImpl _value, $Res Function(_$ClientFailureImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of EventFailure
+  /// Create a copy of SocketFailure
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -143,7 +143,7 @@ class _$ClientFailureImpl implements _ClientFailure {
 
   @override
   String toString() {
-    return 'EventFailure.clientFailure(message: $message)';
+    return 'SocketFailure.clientFailure(message: $message)';
   }
 
   @override
@@ -157,7 +157,7 @@ class _$ClientFailureImpl implements _ClientFailure {
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  /// Create a copy of EventFailure
+  /// Create a copy of SocketFailure
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
@@ -228,14 +228,14 @@ class _$ClientFailureImpl implements _ClientFailure {
   }
 }
 
-abstract class _ClientFailure implements EventFailure {
+abstract class _ClientFailure implements SocketFailure {
   const factory _ClientFailure({required final String message}) =
       _$ClientFailureImpl;
 
   @override
   String get message;
 
-  /// Create a copy of EventFailure
+  /// Create a copy of SocketFailure
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -245,7 +245,7 @@ abstract class _ClientFailure implements EventFailure {
 
 /// @nodoc
 abstract class _$$ServerFailureImplCopyWith<$Res>
-    implements $EventFailureCopyWith<$Res> {
+    implements $SocketFailureCopyWith<$Res> {
   factory _$$ServerFailureImplCopyWith(
           _$ServerFailureImpl value, $Res Function(_$ServerFailureImpl) then) =
       __$$ServerFailureImplCopyWithImpl<$Res>;
@@ -256,13 +256,13 @@ abstract class _$$ServerFailureImplCopyWith<$Res>
 
 /// @nodoc
 class __$$ServerFailureImplCopyWithImpl<$Res>
-    extends _$EventFailureCopyWithImpl<$Res, _$ServerFailureImpl>
+    extends _$SocketFailureCopyWithImpl<$Res, _$ServerFailureImpl>
     implements _$$ServerFailureImplCopyWith<$Res> {
   __$$ServerFailureImplCopyWithImpl(
       _$ServerFailureImpl _value, $Res Function(_$ServerFailureImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of EventFailure
+  /// Create a copy of SocketFailure
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -288,7 +288,7 @@ class _$ServerFailureImpl implements _ServerFailure {
 
   @override
   String toString() {
-    return 'EventFailure.serverFailure(message: $message)';
+    return 'SocketFailure.serverFailure(message: $message)';
   }
 
   @override
@@ -302,7 +302,7 @@ class _$ServerFailureImpl implements _ServerFailure {
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  /// Create a copy of EventFailure
+  /// Create a copy of SocketFailure
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
@@ -373,14 +373,14 @@ class _$ServerFailureImpl implements _ServerFailure {
   }
 }
 
-abstract class _ServerFailure implements EventFailure {
+abstract class _ServerFailure implements SocketFailure {
   const factory _ServerFailure({required final String message}) =
       _$ServerFailureImpl;
 
   @override
   String get message;
 
-  /// Create a copy of EventFailure
+  /// Create a copy of SocketFailure
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)

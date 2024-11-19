@@ -78,6 +78,9 @@ class _$ConnectionEventCopyWithImpl<$Res, $Val extends ConnectionEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of ConnectionEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -94,6 +97,9 @@ class __$$LoadConnectionsImplCopyWithImpl<$Res>
   __$$LoadConnectionsImplCopyWithImpl(
       _$LoadConnectionsImpl _value, $Res Function(_$LoadConnectionsImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ConnectionEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -205,6 +211,8 @@ class __$$DeleteConnectionImplCopyWithImpl<$Res>
       $Res Function(_$DeleteConnectionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConnectionEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -244,7 +252,9 @@ class _$DeleteConnectionImpl implements _DeleteConnection {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(key));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConnectionEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DeleteConnectionImplCopyWith<_$DeleteConnectionImpl> get copyWith =>
@@ -325,7 +335,10 @@ abstract class _DeleteConnection implements ConnectionEvent {
       _$DeleteConnectionImpl;
 
   dynamic get key;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConnectionEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DeleteConnectionImplCopyWith<_$DeleteConnectionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -347,6 +360,8 @@ class __$$DuplicateConnectionImplCopyWithImpl<$Res>
       $Res Function(_$DuplicateConnectionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConnectionEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -386,7 +401,9 @@ class _$DuplicateConnectionImpl implements _DuplicateConnection {
   @override
   int get hashCode => Object.hash(runtimeType, connection);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConnectionEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DuplicateConnectionImplCopyWith<_$DuplicateConnectionImpl> get copyWith =>
@@ -467,7 +484,10 @@ abstract class _DuplicateConnection implements ConnectionEvent {
       _$DuplicateConnectionImpl;
 
   Connection get connection;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConnectionEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DuplicateConnectionImplCopyWith<_$DuplicateConnectionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -479,7 +499,9 @@ mixin _$ConnectionState {
   Option<Either<ConnectionFailure, Unit>> get failureOrSuccessOption =>
       throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConnectionState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ConnectionStateCopyWith<ConnectionState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -506,6 +528,8 @@ class _$ConnectionStateCopyWithImpl<$Res, $Val extends ConnectionState>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ConnectionState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -552,6 +576,8 @@ class __$$ConnectionStateImplCopyWithImpl<$Res>
       _$ConnectionStateImpl _value, $Res Function(_$ConnectionStateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConnectionState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -623,7 +649,9 @@ class _$ConnectionStateImpl implements _ConnectionState {
       const DeepCollectionEquality().hash(_connections),
       failureOrSuccessOption);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConnectionState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ConnectionStateImplCopyWith<_$ConnectionStateImpl> get copyWith =>
@@ -644,8 +672,11 @@ abstract class _ConnectionState implements ConnectionState {
   List<Connection> get connections;
   @override
   Option<Either<ConnectionFailure, Unit>> get failureOrSuccessOption;
+
+  /// Create a copy of ConnectionState
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ConnectionStateImplCopyWith<_$ConnectionStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

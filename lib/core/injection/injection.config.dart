@@ -16,10 +16,14 @@ import 'package:stream_lab/application/connection/connection_bloc.dart'
     as _i776;
 import 'package:stream_lab/application/connection/connection_form/connection_form_bloc.dart'
     as _i341;
+import 'package:stream_lab/application/socket/socket_bloc.dart' as _i943;
 import 'package:stream_lab/domain/connection/i_connection_repository.dart'
     as _i955;
+import 'package:stream_lab/domain/socket/i_socket_repository.dart' as _i647;
 import 'package:stream_lab/infrastructure/connection/connection_respository.dart'
     as _i272;
+import 'package:stream_lab/infrastructure/socket/socket_repository.dart'
+    as _i562;
 
 extension GetItInjectableX on _i174.GetIt {
 // initializes the registration of main-scope dependencies inside of GetIt
@@ -39,6 +43,9 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i776.ConnectionBloc(gh<_i955.IConnectionRepository>()));
     gh.factory<_i341.ConnectionFormBloc>(
         () => _i341.ConnectionFormBloc(gh<_i955.IConnectionRepository>()));
+    gh.lazySingleton<_i647.ISocketRepository>(() => _i562.SocketRepository());
+    gh.factory<_i943.SocketBloc>(
+        () => _i943.SocketBloc(gh<_i647.ISocketRepository>()));
     return this;
   }
 }
