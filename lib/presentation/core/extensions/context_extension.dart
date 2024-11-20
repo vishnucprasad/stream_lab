@@ -9,7 +9,8 @@ extension ContextX on BuildContext {
     toastification.show(
       context: this,
       icon: const Icon(Icons.check_circle),
-      title: Text(message),
+      title: const Text('Success!'),
+      description: Text(message),
       style: ToastificationStyle.flatColored,
       primaryColor: Colors.green,
       backgroundColor: Colors.green.withOpacity(0.25),
@@ -24,10 +25,27 @@ extension ContextX on BuildContext {
     toastification.show(
       context: this,
       icon: const Icon(Icons.info),
-      title: Text(message),
+      title: const Text('Info'),
+      description: Text(message),
       style: ToastificationStyle.flatColored,
       primaryColor: Colors.lightBlue,
       backgroundColor: Colors.lightBlue.withOpacity(0.25),
+      autoCloseDuration: const Duration(seconds: 5),
+      alignment: Alignment.bottomRight,
+    );
+  }
+
+  void showWarningToast({
+    required String message,
+  }) {
+    toastification.show(
+      context: this,
+      icon: const Icon(Icons.warning),
+      title: const Text('Warning!'),
+      description: Text(message),
+      style: ToastificationStyle.flatColored,
+      primaryColor: Colors.yellow[700],
+      backgroundColor: Colors.yellow[700]?.withOpacity(0.25),
       autoCloseDuration: const Duration(seconds: 5),
       alignment: Alignment.bottomRight,
     );
@@ -39,7 +57,8 @@ extension ContextX on BuildContext {
     toastification.show(
       context: this,
       icon: const Icon(Icons.error),
-      title: Text(message),
+      title: const Text('Error!'),
+      description: Text(message),
       style: ToastificationStyle.flatColored,
       primaryColor: Theme.of(this).colorScheme.error,
       backgroundColor: Theme.of(this).colorScheme.error.withOpacity(0.25),

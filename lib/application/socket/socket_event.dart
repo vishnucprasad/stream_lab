@@ -3,6 +3,7 @@ part of 'socket_bloc.dart';
 @freezed
 class SocketEvent with _$SocketEvent {
   const factory SocketEvent.connectButtonPressed({
+    required dynamic connectionKey,
     required Connection connection,
   }) = _ConnectButtonPressed;
   const factory SocketEvent.disconnectButtonPresssed() =

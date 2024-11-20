@@ -18,7 +18,8 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$SocketEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Connection connection) connectButtonPressed,
+    required TResult Function(dynamic connectionKey, Connection connection)
+        connectButtonPressed,
     required TResult Function() disconnectButtonPresssed,
     required TResult Function(String connectionUrl) onConnected,
     required TResult Function(SocketFailure failure) onConnectError,
@@ -29,7 +30,8 @@ mixin _$SocketEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Connection connection)? connectButtonPressed,
+    TResult? Function(dynamic connectionKey, Connection connection)?
+        connectButtonPressed,
     TResult? Function()? disconnectButtonPresssed,
     TResult? Function(String connectionUrl)? onConnected,
     TResult? Function(SocketFailure failure)? onConnectError,
@@ -40,7 +42,8 @@ mixin _$SocketEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Connection connection)? connectButtonPressed,
+    TResult Function(dynamic connectionKey, Connection connection)?
+        connectButtonPressed,
     TResult Function()? disconnectButtonPresssed,
     TResult Function(String connectionUrl)? onConnected,
     TResult Function(SocketFailure failure)? onConnectError,
@@ -115,7 +118,7 @@ abstract class _$$ConnectButtonPressedImplCopyWith<$Res> {
           $Res Function(_$ConnectButtonPressedImpl) then) =
       __$$ConnectButtonPressedImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({Connection connection});
+  $Res call({dynamic connectionKey, Connection connection});
 }
 
 /// @nodoc
@@ -131,9 +134,14 @@ class __$$ConnectButtonPressedImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? connectionKey = freezed,
     Object? connection = null,
   }) {
     return _then(_$ConnectButtonPressedImpl(
+      connectionKey: freezed == connectionKey
+          ? _value.connectionKey
+          : connectionKey // ignore: cast_nullable_to_non_nullable
+              as dynamic,
       connection: null == connection
           ? _value.connection
           : connection // ignore: cast_nullable_to_non_nullable
@@ -145,14 +153,17 @@ class __$$ConnectButtonPressedImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$ConnectButtonPressedImpl implements _ConnectButtonPressed {
-  const _$ConnectButtonPressedImpl({required this.connection});
+  const _$ConnectButtonPressedImpl(
+      {required this.connectionKey, required this.connection});
 
+  @override
+  final dynamic connectionKey;
   @override
   final Connection connection;
 
   @override
   String toString() {
-    return 'SocketEvent.connectButtonPressed(connection: $connection)';
+    return 'SocketEvent.connectButtonPressed(connectionKey: $connectionKey, connection: $connection)';
   }
 
   @override
@@ -160,12 +171,15 @@ class _$ConnectButtonPressedImpl implements _ConnectButtonPressed {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ConnectButtonPressedImpl &&
+            const DeepCollectionEquality()
+                .equals(other.connectionKey, connectionKey) &&
             (identical(other.connection, connection) ||
                 other.connection == connection));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, connection);
+  int get hashCode => Object.hash(runtimeType,
+      const DeepCollectionEquality().hash(connectionKey), connection);
 
   /// Create a copy of SocketEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -180,7 +194,8 @@ class _$ConnectButtonPressedImpl implements _ConnectButtonPressed {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Connection connection) connectButtonPressed,
+    required TResult Function(dynamic connectionKey, Connection connection)
+        connectButtonPressed,
     required TResult Function() disconnectButtonPresssed,
     required TResult Function(String connectionUrl) onConnected,
     required TResult Function(SocketFailure failure) onConnectError,
@@ -188,13 +203,14 @@ class _$ConnectButtonPressedImpl implements _ConnectButtonPressed {
     required TResult Function(EventFormData event) onNewResponse,
     required TResult Function() clearAllResponses,
   }) {
-    return connectButtonPressed(connection);
+    return connectButtonPressed(connectionKey, connection);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Connection connection)? connectButtonPressed,
+    TResult? Function(dynamic connectionKey, Connection connection)?
+        connectButtonPressed,
     TResult? Function()? disconnectButtonPresssed,
     TResult? Function(String connectionUrl)? onConnected,
     TResult? Function(SocketFailure failure)? onConnectError,
@@ -202,13 +218,14 @@ class _$ConnectButtonPressedImpl implements _ConnectButtonPressed {
     TResult? Function(EventFormData event)? onNewResponse,
     TResult? Function()? clearAllResponses,
   }) {
-    return connectButtonPressed?.call(connection);
+    return connectButtonPressed?.call(connectionKey, connection);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Connection connection)? connectButtonPressed,
+    TResult Function(dynamic connectionKey, Connection connection)?
+        connectButtonPressed,
     TResult Function()? disconnectButtonPresssed,
     TResult Function(String connectionUrl)? onConnected,
     TResult Function(SocketFailure failure)? onConnectError,
@@ -218,7 +235,7 @@ class _$ConnectButtonPressedImpl implements _ConnectButtonPressed {
     required TResult orElse(),
   }) {
     if (connectButtonPressed != null) {
-      return connectButtonPressed(connection);
+      return connectButtonPressed(connectionKey, connection);
     }
     return orElse();
   }
@@ -273,9 +290,11 @@ class _$ConnectButtonPressedImpl implements _ConnectButtonPressed {
 }
 
 abstract class _ConnectButtonPressed implements SocketEvent {
-  const factory _ConnectButtonPressed({required final Connection connection}) =
-      _$ConnectButtonPressedImpl;
+  const factory _ConnectButtonPressed(
+      {required final dynamic connectionKey,
+      required final Connection connection}) = _$ConnectButtonPressedImpl;
 
+  dynamic get connectionKey;
   Connection get connection;
 
   /// Create a copy of SocketEvent
@@ -329,7 +348,8 @@ class _$DisconnectButtonPresssedImpl implements _DisconnectButtonPresssed {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Connection connection) connectButtonPressed,
+    required TResult Function(dynamic connectionKey, Connection connection)
+        connectButtonPressed,
     required TResult Function() disconnectButtonPresssed,
     required TResult Function(String connectionUrl) onConnected,
     required TResult Function(SocketFailure failure) onConnectError,
@@ -343,7 +363,8 @@ class _$DisconnectButtonPresssedImpl implements _DisconnectButtonPresssed {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Connection connection)? connectButtonPressed,
+    TResult? Function(dynamic connectionKey, Connection connection)?
+        connectButtonPressed,
     TResult? Function()? disconnectButtonPresssed,
     TResult? Function(String connectionUrl)? onConnected,
     TResult? Function(SocketFailure failure)? onConnectError,
@@ -357,7 +378,8 @@ class _$DisconnectButtonPresssedImpl implements _DisconnectButtonPresssed {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Connection connection)? connectButtonPressed,
+    TResult Function(dynamic connectionKey, Connection connection)?
+        connectButtonPressed,
     TResult Function()? disconnectButtonPresssed,
     TResult Function(String connectionUrl)? onConnected,
     TResult Function(SocketFailure failure)? onConnectError,
@@ -494,7 +516,8 @@ class _$OnConnectedImpl implements _OnConnected {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Connection connection) connectButtonPressed,
+    required TResult Function(dynamic connectionKey, Connection connection)
+        connectButtonPressed,
     required TResult Function() disconnectButtonPresssed,
     required TResult Function(String connectionUrl) onConnected,
     required TResult Function(SocketFailure failure) onConnectError,
@@ -508,7 +531,8 @@ class _$OnConnectedImpl implements _OnConnected {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Connection connection)? connectButtonPressed,
+    TResult? Function(dynamic connectionKey, Connection connection)?
+        connectButtonPressed,
     TResult? Function()? disconnectButtonPresssed,
     TResult? Function(String connectionUrl)? onConnected,
     TResult? Function(SocketFailure failure)? onConnectError,
@@ -522,7 +546,8 @@ class _$OnConnectedImpl implements _OnConnected {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Connection connection)? connectButtonPressed,
+    TResult Function(dynamic connectionKey, Connection connection)?
+        connectButtonPressed,
     TResult Function()? disconnectButtonPresssed,
     TResult Function(String connectionUrl)? onConnected,
     TResult Function(SocketFailure failure)? onConnectError,
@@ -680,7 +705,8 @@ class _$OnConnectErrorImpl implements _OnConnectError {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Connection connection) connectButtonPressed,
+    required TResult Function(dynamic connectionKey, Connection connection)
+        connectButtonPressed,
     required TResult Function() disconnectButtonPresssed,
     required TResult Function(String connectionUrl) onConnected,
     required TResult Function(SocketFailure failure) onConnectError,
@@ -694,7 +720,8 @@ class _$OnConnectErrorImpl implements _OnConnectError {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Connection connection)? connectButtonPressed,
+    TResult? Function(dynamic connectionKey, Connection connection)?
+        connectButtonPressed,
     TResult? Function()? disconnectButtonPresssed,
     TResult? Function(String connectionUrl)? onConnected,
     TResult? Function(SocketFailure failure)? onConnectError,
@@ -708,7 +735,8 @@ class _$OnConnectErrorImpl implements _OnConnectError {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Connection connection)? connectButtonPressed,
+    TResult Function(dynamic connectionKey, Connection connection)?
+        connectButtonPressed,
     TResult Function()? disconnectButtonPresssed,
     TResult Function(String connectionUrl)? onConnected,
     TResult Function(SocketFailure failure)? onConnectError,
@@ -855,7 +883,8 @@ class _$OnDisConnectedImpl implements _OnDisConnected {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Connection connection) connectButtonPressed,
+    required TResult Function(dynamic connectionKey, Connection connection)
+        connectButtonPressed,
     required TResult Function() disconnectButtonPresssed,
     required TResult Function(String connectionUrl) onConnected,
     required TResult Function(SocketFailure failure) onConnectError,
@@ -869,7 +898,8 @@ class _$OnDisConnectedImpl implements _OnDisConnected {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Connection connection)? connectButtonPressed,
+    TResult? Function(dynamic connectionKey, Connection connection)?
+        connectButtonPressed,
     TResult? Function()? disconnectButtonPresssed,
     TResult? Function(String connectionUrl)? onConnected,
     TResult? Function(SocketFailure failure)? onConnectError,
@@ -883,7 +913,8 @@ class _$OnDisConnectedImpl implements _OnDisConnected {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Connection connection)? connectButtonPressed,
+    TResult Function(dynamic connectionKey, Connection connection)?
+        connectButtonPressed,
     TResult Function()? disconnectButtonPresssed,
     TResult Function(String connectionUrl)? onConnected,
     TResult Function(SocketFailure failure)? onConnectError,
@@ -1040,7 +1071,8 @@ class _$OnNewResponseImpl implements _OnNewResponse {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Connection connection) connectButtonPressed,
+    required TResult Function(dynamic connectionKey, Connection connection)
+        connectButtonPressed,
     required TResult Function() disconnectButtonPresssed,
     required TResult Function(String connectionUrl) onConnected,
     required TResult Function(SocketFailure failure) onConnectError,
@@ -1054,7 +1086,8 @@ class _$OnNewResponseImpl implements _OnNewResponse {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Connection connection)? connectButtonPressed,
+    TResult? Function(dynamic connectionKey, Connection connection)?
+        connectButtonPressed,
     TResult? Function()? disconnectButtonPresssed,
     TResult? Function(String connectionUrl)? onConnected,
     TResult? Function(SocketFailure failure)? onConnectError,
@@ -1068,7 +1101,8 @@ class _$OnNewResponseImpl implements _OnNewResponse {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Connection connection)? connectButtonPressed,
+    TResult Function(dynamic connectionKey, Connection connection)?
+        connectButtonPressed,
     TResult Function()? disconnectButtonPresssed,
     TResult Function(String connectionUrl)? onConnected,
     TResult Function(SocketFailure failure)? onConnectError,
@@ -1186,7 +1220,8 @@ class _$ClearAllResponsesImpl implements _ClearAllResponses {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Connection connection) connectButtonPressed,
+    required TResult Function(dynamic connectionKey, Connection connection)
+        connectButtonPressed,
     required TResult Function() disconnectButtonPresssed,
     required TResult Function(String connectionUrl) onConnected,
     required TResult Function(SocketFailure failure) onConnectError,
@@ -1200,7 +1235,8 @@ class _$ClearAllResponsesImpl implements _ClearAllResponses {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Connection connection)? connectButtonPressed,
+    TResult? Function(dynamic connectionKey, Connection connection)?
+        connectButtonPressed,
     TResult? Function()? disconnectButtonPresssed,
     TResult? Function(String connectionUrl)? onConnected,
     TResult? Function(SocketFailure failure)? onConnectError,
@@ -1214,7 +1250,8 @@ class _$ClearAllResponsesImpl implements _ClearAllResponses {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Connection connection)? connectButtonPressed,
+    TResult Function(dynamic connectionKey, Connection connection)?
+        connectButtonPressed,
     TResult Function()? disconnectButtonPresssed,
     TResult Function(String connectionUrl)? onConnected,
     TResult Function(SocketFailure failure)? onConnectError,
@@ -1286,6 +1323,7 @@ abstract class _ClearAllResponses implements SocketEvent {
 mixin _$SocketState {
   bool get isConnecting => throw _privateConstructorUsedError;
   bool get isConnected => throw _privateConstructorUsedError;
+  dynamic get connectionKey => throw _privateConstructorUsedError;
   List<EventFormData> get responses => throw _privateConstructorUsedError;
   Option<SocketFailure> get failure => throw _privateConstructorUsedError;
 
@@ -1305,6 +1343,7 @@ abstract class $SocketStateCopyWith<$Res> {
   $Res call(
       {bool isConnecting,
       bool isConnected,
+      dynamic connectionKey,
       List<EventFormData> responses,
       Option<SocketFailure> failure});
 }
@@ -1326,6 +1365,7 @@ class _$SocketStateCopyWithImpl<$Res, $Val extends SocketState>
   $Res call({
     Object? isConnecting = null,
     Object? isConnected = null,
+    Object? connectionKey = freezed,
     Object? responses = null,
     Object? failure = null,
   }) {
@@ -1338,6 +1378,10 @@ class _$SocketStateCopyWithImpl<$Res, $Val extends SocketState>
           ? _value.isConnected
           : isConnected // ignore: cast_nullable_to_non_nullable
               as bool,
+      connectionKey: freezed == connectionKey
+          ? _value.connectionKey
+          : connectionKey // ignore: cast_nullable_to_non_nullable
+              as dynamic,
       responses: null == responses
           ? _value.responses
           : responses // ignore: cast_nullable_to_non_nullable
@@ -1361,6 +1405,7 @@ abstract class _$$SocketStateImplCopyWith<$Res>
   $Res call(
       {bool isConnecting,
       bool isConnected,
+      dynamic connectionKey,
       List<EventFormData> responses,
       Option<SocketFailure> failure});
 }
@@ -1380,6 +1425,7 @@ class __$$SocketStateImplCopyWithImpl<$Res>
   $Res call({
     Object? isConnecting = null,
     Object? isConnected = null,
+    Object? connectionKey = freezed,
     Object? responses = null,
     Object? failure = null,
   }) {
@@ -1392,6 +1438,10 @@ class __$$SocketStateImplCopyWithImpl<$Res>
           ? _value.isConnected
           : isConnected // ignore: cast_nullable_to_non_nullable
               as bool,
+      connectionKey: freezed == connectionKey
+          ? _value.connectionKey
+          : connectionKey // ignore: cast_nullable_to_non_nullable
+              as dynamic,
       responses: null == responses
           ? _value._responses
           : responses // ignore: cast_nullable_to_non_nullable
@@ -1410,6 +1460,7 @@ class _$SocketStateImpl implements _SocketState {
   const _$SocketStateImpl(
       {required this.isConnecting,
       required this.isConnected,
+      required this.connectionKey,
       required final List<EventFormData> responses,
       required this.failure})
       : _responses = responses;
@@ -1418,6 +1469,8 @@ class _$SocketStateImpl implements _SocketState {
   final bool isConnecting;
   @override
   final bool isConnected;
+  @override
+  final dynamic connectionKey;
   final List<EventFormData> _responses;
   @override
   List<EventFormData> get responses {
@@ -1431,7 +1484,7 @@ class _$SocketStateImpl implements _SocketState {
 
   @override
   String toString() {
-    return 'SocketState(isConnecting: $isConnecting, isConnected: $isConnected, responses: $responses, failure: $failure)';
+    return 'SocketState(isConnecting: $isConnecting, isConnected: $isConnected, connectionKey: $connectionKey, responses: $responses, failure: $failure)';
   }
 
   @override
@@ -1444,13 +1497,20 @@ class _$SocketStateImpl implements _SocketState {
             (identical(other.isConnected, isConnected) ||
                 other.isConnected == isConnected) &&
             const DeepCollectionEquality()
+                .equals(other.connectionKey, connectionKey) &&
+            const DeepCollectionEquality()
                 .equals(other._responses, _responses) &&
             (identical(other.failure, failure) || other.failure == failure));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, isConnecting, isConnected,
-      const DeepCollectionEquality().hash(_responses), failure);
+  int get hashCode => Object.hash(
+      runtimeType,
+      isConnecting,
+      isConnected,
+      const DeepCollectionEquality().hash(connectionKey),
+      const DeepCollectionEquality().hash(_responses),
+      failure);
 
   /// Create a copy of SocketState
   /// with the given fields replaced by the non-null parameter values.
@@ -1465,6 +1525,7 @@ abstract class _SocketState implements SocketState {
   const factory _SocketState(
       {required final bool isConnecting,
       required final bool isConnected,
+      required final dynamic connectionKey,
       required final List<EventFormData> responses,
       required final Option<SocketFailure> failure}) = _$SocketStateImpl;
 
@@ -1472,6 +1533,8 @@ abstract class _SocketState implements SocketState {
   bool get isConnecting;
   @override
   bool get isConnected;
+  @override
+  dynamic get connectionKey;
   @override
   List<EventFormData> get responses;
   @override

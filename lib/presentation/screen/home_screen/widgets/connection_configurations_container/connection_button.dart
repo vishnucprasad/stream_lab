@@ -32,6 +32,7 @@ class ConnectionButton extends StatelessWidget {
                     context
                         .read<SocketBloc>()
                         .add(SocketEvent.connectButtonPressed(
+                          connectionKey: formState.connectionKey,
                           connection: Connection.fromDomain(
                             formState.connectionFormData!,
                           ),

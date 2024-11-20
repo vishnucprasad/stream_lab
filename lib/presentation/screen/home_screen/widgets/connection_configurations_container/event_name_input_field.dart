@@ -13,7 +13,9 @@ class EventNameInputField extends HookWidget {
     final controller = useTextEditingController();
 
     return BlocConsumer<ConnectionFormBloc, ConnectionFormState>(
-      listenWhen: (p, c) => p.showValidationError != c.showValidationError,
+      listenWhen: (p, c) =>
+          (p.showValidationError != c.showValidationError) &&
+          c.emitterIndex != null,
       listener: (context, state) => controller.text = state
               .connectionFormData?.eventEmitters[state.emitterIndex!].name.value
               .getOrElse(() => "") ??
@@ -31,9 +33,12 @@ class EventNameInputField extends HookWidget {
 
         return BlocBuilder<ConnectionFormBloc, ConnectionFormState>(
           buildWhen: (p, c) =>
-              p.showValidationError != c.showValidationError ||
-              p.connectionFormData?.eventEmitters[state.emitterIndex!].name !=
-                  c.connectionFormData?.eventEmitters[state.emitterIndex!].name,
+              (c.emitterIndex != null) &&
+              (p.showValidationError != c.showValidationError ||
+                  p.connectionFormData?.eventEmitters[state.emitterIndex!]
+                          .name !=
+                      c.connectionFormData?.eventEmitters[state.emitterIndex!]
+                          .name),
           builder: (context, state) {
             return SizedBox(
               width: 200,

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:stream_lab/application/socket/socket_bloc.dart';
 import 'package:stream_lab/presentation/core/constants.dart';
 import 'package:stream_lab/presentation/screen/home_screen/widgets/connection_configurations_container/connection_name_input_field.dart';
 import 'package:stream_lab/presentation/screen/home_screen/widgets/connection_configurations_container/save_button.dart';
@@ -16,26 +18,30 @@ class ConfigurationHeader extends StatelessWidget {
         color: Colors.grey[200],
         borderRadius: BorderRadius.circular(8),
       ),
-      child: const Row(
+      child: Row(
         children: [
           Expanded(
             child: Padding(
-              padding: EdgeInsets.all(8),
+              padding: const EdgeInsets.all(8),
               child: Row(
                 children: [
-                  Icon(
-                    Icons.wifi,
-                    color: Colors.green,
+                  BlocBuilder<SocketBloc, SocketState>(
+                    builder: (context, state) {
+                      return Icon(
+                        state.isConnected ? Icons.wifi : Icons.wifi_off,
+                        color: state.isConnected ? Colors.green : Colors.red,
+                      );
+                    },
                   ),
                   kWidth,
-                  ConnectionNameInputField(),
+                  const ConnectionNameInputField(),
                 ],
               ),
             ),
           ),
-          SavedStatusBadge(),
+          const SavedStatusBadge(),
           kWidth,
-          SaveButton()
+          const SaveButton()
         ],
       ),
     );

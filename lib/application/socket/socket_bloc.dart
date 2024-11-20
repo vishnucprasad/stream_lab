@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:io';
 
 import 'package:dartz/dartz.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -7,7 +6,6 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:stream_lab/core/constants.dart';
 import 'package:stream_lab/domain/connection/models/connection.dart';
-import 'package:stream_lab/domain/event/models/event.dart';
 import 'package:stream_lab/domain/event/models/event_form_data.dart';
 import 'package:stream_lab/domain/event/models/event_value_objects.dart';
 import 'package:stream_lab/domain/socket/failures/socket_failure.dart';
@@ -30,6 +28,7 @@ class SocketBloc extends Bloc<SocketEvent, SocketState> {
         connectButtonPressed: (e) {
           emit(state.copyWith(
             isConnecting: true,
+            connectionKey: e.connectionKey,
             failure: none(),
           ));
 
@@ -73,12 +72,14 @@ class SocketBloc extends Bloc<SocketEvent, SocketState> {
         onConnectError: (e) => emit(state.copyWith(
           isConnecting: false,
           isConnected: false,
+          connectionKey: null,
           failure: some(e.failure),
         )),
         onDisConnected: (e) {
           emit(state.copyWith(
             isConnecting: false,
             isConnected: false,
+            connectionKey: null,
           ));
           add(SocketEvent.onNewResponse(
             event: EventFormData.empty().copyWith(

@@ -18,7 +18,7 @@ class ConnectionFormState with _$ConnectionFormState {
     return ConnectionFormState(
       isSubmitting: false,
       showValidationError: false,
-      isSaved: false,
+      isSaved: true,
       isRowChecked: false,
       connectionKey: null,
       emitterIndex: null,

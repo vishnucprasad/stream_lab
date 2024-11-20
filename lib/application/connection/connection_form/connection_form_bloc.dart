@@ -91,6 +91,9 @@ class ConnectionFormBloc
         deleteEvent: (e) async {
           if (e.type == EventType.emitter) {
             emit(state.copyWith(
+              emitterIndex: e.eventIndex == state.emitterIndex
+                  ? null
+                  : state.emitterIndex,
               connectionFormData: state.connectionFormData?.copyWith(
                 eventEmitters: state.connectionFormData!.eventEmitters
                     .asMap()

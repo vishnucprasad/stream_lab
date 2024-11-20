@@ -12,7 +12,9 @@ class TextDataInputField extends HookWidget {
     final controller = useTextEditingController();
 
     return BlocConsumer<ConnectionFormBloc, ConnectionFormState>(
-      listenWhen: (p, c) => p.showValidationError != c.showValidationError,
+      listenWhen: (p, c) =>
+          (p.showValidationError != c.showValidationError) &&
+          c.emitterIndex != null,
       listener: (context, state) {
         controller.text = state.connectionFormData
                 ?.eventEmitters[state.emitterIndex!].data?.value
