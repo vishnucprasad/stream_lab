@@ -1,10 +1,15 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'package:dartz/dartz.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
+import 'package:stream_lab/core/constants.dart';
 import 'package:stream_lab/domain/connection/models/connection.dart';
+import 'package:stream_lab/domain/event/models/event.dart';
+import 'package:stream_lab/domain/event/models/event_form_data.dart';
+import 'package:stream_lab/domain/event/models/event_value_objects.dart';
 import 'package:stream_lab/domain/socket/failures/socket_failure.dart';
 import 'package:stream_lab/domain/socket/i_socket_repository.dart';
 
@@ -31,7 +36,9 @@ class SocketBloc extends Bloc<SocketEvent, SocketState> {
           _socketRepository.connect(e.connection);
 
           _connectSubscription = _socketRepository.onConnectStream.listen(
-            (_) => add(const SocketEvent.onConnected()),
+            (_) => add(SocketEvent.onConnected(
+              connectionUrl: e.connection.connectionUrl,
+            )),
           );
 
           _connectErrorSubscription =
@@ -42,24 +49,50 @@ class SocketBloc extends Bloc<SocketEvent, SocketState> {
           );
 
           _disconnectSubscription = _socketRepository.onDisconnectStream.listen(
-            (_) => add(const SocketEvent.onDisConnected()),
+            (_) => add(SocketEvent.onDisConnected(
+              connectionUrl: e.connection.connectionUrl,
+            )),
           );
         },
         disconnectButtonPresssed: (_) {
           _socketRepository.disconnect();
         },
-        onConnected: (_) => emit(state.copyWith(
-          isConnecting: false,
-          isConnected: true,
-        )),
+        onConnected: (e) {
+          emit(state.copyWith(
+            isConnecting: false,
+            isConnected: true,
+          ));
+          add(SocketEvent.onNewResponse(
+            event: EventFormData.empty().copyWith(
+              name: EventName('Connected'),
+              type: EventType.connected,
+              data: EventData("Connected to ${e.connectionUrl}"),
+            ),
+          ));
+        },
         onConnectError: (e) => emit(state.copyWith(
           isConnecting: false,
           isConnected: false,
           failure: some(e.failure),
         )),
-        onDisConnected: (_) => emit(state.copyWith(
-          isConnecting: false,
-          isConnected: false,
+        onDisConnected: (e) {
+          emit(state.copyWith(
+            isConnecting: false,
+            isConnected: false,
+          ));
+          add(SocketEvent.onNewResponse(
+            event: EventFormData.empty().copyWith(
+              name: EventName('Disconnected'),
+              type: EventType.disconnected,
+              data: EventData("Disconnected from ${e.connectionUrl}"),
+            ),
+          ));
+        },
+        onNewResponse: (e) => emit(state.copyWith(
+          responses: [e.event, ...state.responses],
+        )),
+        clearAllResponses: (_) => emit(state.copyWith(
+          responses: [],
         )),
       );
     });

@@ -11,12 +11,16 @@ import 'package:stream_lab/infrastructure/core/extensions/connection_extension.d
 class SocketRepository implements ISocketRepository {
   late IO.Socket _socket;
 
-  final _onConnectController = StreamController<void>.broadcast();
-  final _onConnectErrorController = StreamController<SocketFailure>.broadcast();
-  final _onDisconnectController = StreamController<void>.broadcast();
+  late StreamController<void> _onConnectController;
+  late StreamController<SocketFailure> _onConnectErrorController;
+  late StreamController<void> _onDisconnectController;
 
   @override
   void connect(Connection connection) {
+    _onConnectController = StreamController<void>.broadcast();
+    _onConnectErrorController = StreamController<SocketFailure>.broadcast();
+    _onDisconnectController = StreamController<void>.broadcast();
+
     _socket = connection.createSocket();
     _socket.connect();
 
@@ -47,6 +51,13 @@ class SocketRepository implements ISocketRepository {
 
   @override
   void disconnect() {
-    _socket.disconnect();
+    _socket.dispose();
+    dispose();
+  }
+
+  void dispose() {
+    _onConnectController.close();
+    _onConnectErrorController.close();
+    _onDisconnectController.close();
   }
 }
