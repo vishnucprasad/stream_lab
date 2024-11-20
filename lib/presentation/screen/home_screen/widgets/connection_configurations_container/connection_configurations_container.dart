@@ -1,9 +1,9 @@
-import 'package:another_flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:stream_lab/application/connection/connection_bloc.dart';
 import 'package:stream_lab/application/connection/connection_form/connection_form_bloc.dart';
 import 'package:stream_lab/presentation/core/constants.dart';
+import 'package:stream_lab/presentation/core/extensions/context_extension.dart';
 import 'package:stream_lab/presentation/screen/home_screen/widgets/connection_configurations_container/configuration_connection_area.dart';
 import 'package:stream_lab/presentation/screen/home_screen/widgets/connection_configurations_container/configuration_header.dart';
 import 'package:stream_lab/presentation/screen/home_screen/widgets/connection_configurations_container/configuration_tab_bar.dart';
@@ -28,7 +28,7 @@ class ConnectionConfigurationsContainer extends StatelessWidget {
             state.failureOrSucessOption.fold(
               () => null,
               (either) => either.fold(
-                (f) => FlushbarHelper.createError(
+                (f) => context.showErrorToast(
                   message: f.map(
                     clientFailure: (_) => 'Something went wrong.',
                     duplicateConnectionName: (_) =>
@@ -36,7 +36,7 @@ class ConnectionConfigurationsContainer extends StatelessWidget {
                     serverFailure: (_) =>
                         'Something went wrong on the server side.',
                   ),
-                ).show(context),
+                ),
                 (_) => context
                     .read<ConnectionBloc>()
                     .add(const ConnectionEvent.loadConnections()),

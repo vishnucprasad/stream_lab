@@ -1,9 +1,10 @@
-import 'package:another_flushbar/flushbar_helper.dart';
+import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pluto_grid/pluto_grid.dart';
 import 'package:stream_lab/application/connection/connection_form/connection_form_bloc.dart';
 import 'package:stream_lab/presentation/core/constants.dart';
+import 'package:stream_lab/presentation/core/extensions/context_extension.dart';
 import 'package:stream_lab/presentation/screen/home_screen/widgets/connection_configurations_container/table_no_row_widget.dart';
 
 class QueryParamsTable extends StatelessWidget {
@@ -38,25 +39,20 @@ class QueryParamsTable extends StatelessWidget {
                     onPressed: () {
                       if (state.connectionFormData!.queryParameters
                           .any((element) => element.checked == true)) {
-                        FlushbarHelper.createAction(
+                        context.showDialog(
+                          dialogType: DialogType.question,
+                          title: 'Are you sure ?',
                           message:
                               'Are you sure you want to delete selected rows?',
-                          button: TextButton(
-                            style: const ButtonStyle(
-                              foregroundColor: WidgetStatePropertyAll<Color>(
-                                Colors.red,
-                              ),
-                            ),
-                            onPressed: () {
-                              context.read<ConnectionFormBloc>().add(
-                                  const ConnectionFormEvent
-                                      .deleteSelectedQueryParameters());
-                              Navigator.pop(context);
-                            },
-                            child: const Text('DELETE'),
-                          ),
-                          duration: const Duration(seconds: 5),
-                        ).show(context);
+                          confirmButtonText: 'Yes, Delete',
+                          dismissButtonText: 'No',
+                          onConfirm: () {
+                            context.read<ConnectionFormBloc>().add(
+                                const ConnectionFormEvent
+                                    .deleteSelectedQueryParameters());
+                          },
+                          onDismiss: () {},
+                        );
                       }
                     },
                     icon: Icon(

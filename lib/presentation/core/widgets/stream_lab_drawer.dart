@@ -1,9 +1,10 @@
-import 'package:another_flushbar/flushbar_helper.dart';
+import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart' hide ConnectionState;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:stream_lab/application/connection/connection_bloc.dart';
 import 'package:stream_lab/application/connection/connection_form/connection_form_bloc.dart';
 import 'package:stream_lab/presentation/core/constants.dart';
+import 'package:stream_lab/presentation/core/extensions/context_extension.dart';
 
 class StreamLabDrawer extends StatelessWidget {
   const StreamLabDrawer({super.key});
@@ -98,43 +99,35 @@ class StreamLabDrawer extends StatelessWidget {
                                         ),
                                         PopupMenuItem(
                                           onTap: () {
-                                            FlushbarHelper.createAction(
+                                            context.showDialog(
+                                              dialogType: DialogType.question,
+                                              title: 'Are you sure ?',
                                               message:
                                                   'Are you sure you want to delete ${connection.connectionName} ?',
-                                              button: TextButton(
-                                                style: const ButtonStyle(
-                                                  foregroundColor:
-                                                      WidgetStatePropertyAll<
-                                                          Color>(
-                                                    Colors.red,
-                                                  ),
-                                                ),
-                                                onPressed: () {
+                                              confirmButtonText: 'Yes, delete',
+                                              dismissButtonText: 'No',
+                                              onConfirm: () {
+                                                context
+                                                    .read<ConnectionBloc>()
+                                                    .add(
+                                                      ConnectionEvent
+                                                          .deleteConnection(
+                                                        key: connection.key,
+                                                      ),
+                                                    );
+                                                if (connection.key ==
+                                                    formState.connectionKey) {
                                                   context
-                                                      .read<ConnectionBloc>()
+                                                      .read<
+                                                          ConnectionFormBloc>()
                                                       .add(
-                                                        ConnectionEvent
-                                                            .deleteConnection(
-                                                          key: connection.key,
-                                                        ),
+                                                        const ConnectionFormEvent
+                                                            .initialize(),
                                                       );
-                                                  if (connection.key ==
-                                                      formState.connectionKey) {
-                                                    context
-                                                        .read<
-                                                            ConnectionFormBloc>()
-                                                        .add(
-                                                          const ConnectionFormEvent
-                                                              .initialize(),
-                                                        );
-                                                  }
-                                                  Navigator.pop(context);
-                                                },
-                                                child: const Text('DELETE'),
-                                              ),
-                                              duration:
-                                                  const Duration(seconds: 5),
-                                            ).show(context);
+                                                }
+                                              },
+                                              onDismiss: () {},
+                                            );
                                           },
                                           child: const ListTile(
                                             leading: Icon(

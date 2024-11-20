@@ -1,9 +1,10 @@
-import 'package:another_flushbar/flushbar_helper.dart';
+import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:stream_lab/application/connection/connection_form/connection_form_bloc.dart';
 import 'package:stream_lab/core/constants.dart';
 import 'package:stream_lab/presentation/core/constants.dart';
+import 'package:stream_lab/presentation/core/extensions/context_extension.dart';
 import 'package:stream_lab/presentation/screen/home_screen/widgets/listeners_list/listener_name_input_field.dart';
 
 class ListenersListTile extends StatelessWidget {
@@ -100,27 +101,21 @@ class ListenersListTile extends StatelessWidget {
                 ),
               ),
               IconButton(
-                onPressed: () => FlushbarHelper.createAction(
+                onPressed: () => context.showDialog(
+                  dialogType: DialogType.question,
+                  title: 'Are you sure ?',
                   message:
                       'Are you sure you want to delete the event ${listener?.name.getOrCrash()} ?',
-                  button: TextButton(
-                    style: const ButtonStyle(
-                      foregroundColor: WidgetStatePropertyAll<Color>(
-                        Colors.red,
-                      ),
-                    ),
-                    onPressed: () {
-                      context
-                          .read<ConnectionFormBloc>()
-                          .add(ConnectionFormEvent.deleteEvent(
-                            type: EventType.listener,
-                            eventIndex: listenerIndex,
-                          ));
-                      Navigator.pop(context);
-                    },
-                    child: const Text('DELETE'),
-                  ),
-                ).show(context),
+                  confirmButtonText: 'Yes. Delete',
+                  dismissButtonText: 'No',
+                  onConfirm: () => context
+                      .read<ConnectionFormBloc>()
+                      .add(ConnectionFormEvent.deleteEvent(
+                        type: EventType.listener,
+                        eventIndex: listenerIndex,
+                      )),
+                  onDismiss: () {},
+                ),
                 icon: const Icon(
                   Icons.delete,
                   color: Colors.red,

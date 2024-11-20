@@ -1,10 +1,10 @@
-import 'package:another_flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:stream_lab/application/connection/connection_form/connection_form_bloc.dart';
 import 'package:stream_lab/application/socket/socket_bloc.dart';
 import 'package:stream_lab/domain/connection/models/connection.dart';
 import 'package:stream_lab/presentation/core/constants.dart';
+import 'package:stream_lab/presentation/core/extensions/context_extension.dart';
 
 class ConnectionButton extends StatelessWidget {
   const ConnectionButton({
@@ -37,9 +37,7 @@ class ConnectionButton extends StatelessWidget {
                           ),
                         ));
                   } else {
-                    FlushbarHelper.createError(
-                      message: 'Invalid Connection URL!',
-                    ).show(context);
+                    context.showErrorToast(message: 'Invalid Connection URL!');
                   }
                 },
                 style: kDefaultButtonStyle.copyWith(

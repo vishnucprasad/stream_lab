@@ -1,12 +1,12 @@
 import 'dart:convert';
 
-import 'package:another_flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:json_text_field/json_text_field.dart';
 import 'package:stream_lab/application/connection/connection_form/connection_form_bloc.dart';
 import 'package:stream_lab/core/constants.dart';
 import 'package:stream_lab/presentation/core/constants.dart';
+import 'package:stream_lab/presentation/core/extensions/context_extension.dart';
 
 class JsonDataInputField extends StatelessWidget {
   const JsonDataInputField({
@@ -88,8 +88,7 @@ class JsonDataInputField extends StatelessWidget {
                             TextSelection.collapsed(offset: prettyJson.length),
                       );
                     } else {
-                      FlushbarHelper.createError(message: 'Invalid JSON')
-                          .show(context);
+                      context.showErrorToast(message: 'Invalid JSON');
                     }
                   },
                   style: kDefaultButtonStyle.copyWith(
