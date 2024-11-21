@@ -17,8 +17,14 @@ class SocketEvent with _$SocketEvent {
   const factory SocketEvent.onDisConnected({
     required String connectionUrl,
   }) = _OnDisConnected;
+  const factory SocketEvent.onError({
+    required SocketFailure failure,
+  }) = _OnError;
   const factory SocketEvent.onNewResponse({
     required EventFormData event,
   }) = _OnNewResponse;
   const factory SocketEvent.clearAllResponses() = _ClearAllResponses;
+  const factory SocketEvent.eventEmitted({
+    required Event event,
+  }) = _EventEmitted;
 }

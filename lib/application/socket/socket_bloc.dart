@@ -6,6 +6,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:stream_lab/core/constants.dart';
 import 'package:stream_lab/domain/connection/models/connection.dart';
+import 'package:stream_lab/domain/event/models/event.dart';
 import 'package:stream_lab/domain/event/models/event_form_data.dart';
 import 'package:stream_lab/domain/event/models/event_value_objects.dart';
 import 'package:stream_lab/domain/socket/failures/socket_failure.dart';
@@ -21,6 +22,7 @@ class SocketBloc extends Bloc<SocketEvent, SocketState> {
   late StreamSubscription _connectSubscription;
   late StreamSubscription _connectErrorSubscription;
   late StreamSubscription _disconnectSubscription;
+  late StreamSubscription _errorSubscription;
 
   SocketBloc(this._socketRepository) : super(SocketState.initial()) {
     on<SocketEvent>((event, emit) {
@@ -51,6 +53,12 @@ class SocketBloc extends Bloc<SocketEvent, SocketState> {
             (_) => add(SocketEvent.onDisConnected(
               connectionUrl: e.connection.connectionUrl,
             )),
+          );
+
+          _errorSubscription = _socketRepository.onErrorStream.listen(
+            (f) => add(
+              SocketEvent.onError(failure: f),
+            ),
           );
         },
         disconnectButtonPresssed: (_) {
@@ -89,12 +97,19 @@ class SocketBloc extends Bloc<SocketEvent, SocketState> {
             ),
           ));
         },
+        onError: (e) => emit(state.copyWith(
+          failure: some(e.failure),
+        )),
         onNewResponse: (e) => emit(state.copyWith(
           responses: [e.event, ...state.responses],
         )),
         clearAllResponses: (_) => emit(state.copyWith(
           responses: [],
         )),
+        eventEmitted: (e) {
+          _socketRepository.emitEvent(e.event);
+          add(SocketEvent.onNewResponse(event: e.event.toDomain()));
+        },
       );
     });
   }
@@ -104,6 +119,7 @@ class SocketBloc extends Bloc<SocketEvent, SocketState> {
     _connectSubscription.cancel();
     _connectErrorSubscription.cancel();
     _disconnectSubscription.cancel();
+    _errorSubscription.cancel();
     return super.close();
   }
 }
