@@ -59,22 +59,27 @@ class SocketRepository implements ISocketRepository {
 
   @override
   void listenAllActiveEvents(List<Event> eventListeners) {
-    _socket.clearListeners();
     for (var event in eventListeners) {
-      _socket.on(
-        event.name,
-        (data) {
-          _onEventController.add(
-            event.copyWith(
-              typeIndex: EventType.listener.index,
-              dataTypeIndex: isJson(data)
-                  ? EventDataType.json.index
-                  : EventDataType.text.index,
-              data: data is Map || data is List ? json.encode(data) : data,
-            ),
-          );
-        },
-      );
+      if (event.isEnabled && !_socket.hasListeners(event.name)) {
+        _socket.on(
+          event.name,
+          (data) {
+            _onEventController.add(
+              event.copyWith(
+                typeIndex: EventType.listener.index,
+                dataTypeIndex: isJson(data)
+                    ? EventDataType.json.index
+                    : EventDataType.text.index,
+                data: data is Map || data is List ? json.encode(data) : data,
+              ),
+            );
+          },
+        );
+      }
+
+      if (!event.isEnabled && _socket.hasListeners(event.name)) {
+        _socket.off(event.name);
+      }
     }
   }
 

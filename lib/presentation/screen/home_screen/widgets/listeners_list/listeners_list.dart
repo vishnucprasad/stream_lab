@@ -32,8 +32,7 @@ class ListenersList extends StatelessWidget {
               context
                   .read<SocketBloc>()
                   .add(SocketEvent.listeningStartedForAllActiveListeners(
-                    eventListeners:
-                        listeners.where((e) => e.isEnabled).toList(),
+                    eventListeners: listeners,
                   ));
             }
           },

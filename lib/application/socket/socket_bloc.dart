@@ -83,11 +83,7 @@ class SocketBloc extends Bloc<SocketEvent, SocketState> {
             ),
           ));
           add(SocketEvent.listeningStartedForAllActiveListeners(
-            eventListeners: e.eventListeners
-                .where(
-                  (event) => event.isEnabled,
-                )
-                .toList(),
+            eventListeners: e.eventListeners,
           ));
         },
         onConnectError: (e) => emit(state.copyWith(
