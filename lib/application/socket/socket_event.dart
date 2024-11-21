@@ -10,6 +10,7 @@ class SocketEvent with _$SocketEvent {
       _DisconnectButtonPresssed;
   const factory SocketEvent.onConnected({
     required String connectionUrl,
+    required List<Event> eventListeners,
   }) = _OnConnected;
   const factory SocketEvent.onConnectError({
     required SocketFailure failure,
@@ -27,4 +28,7 @@ class SocketEvent with _$SocketEvent {
   const factory SocketEvent.eventEmitted({
     required Event event,
   }) = _EventEmitted;
+  const factory SocketEvent.listeningStartedForAllActiveListeners({
+    required List<Event> eventListeners,
+  }) = _ListeningStartedForAllActiveListeners;
 }

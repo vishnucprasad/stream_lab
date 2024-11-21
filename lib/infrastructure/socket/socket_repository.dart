@@ -1,7 +1,9 @@
 import 'dart:async';
+import 'dart:convert';
 
 import 'package:injectable/injectable.dart';
 import 'package:socket_io_client/socket_io_client.dart' as IO;
+import 'package:stream_lab/core/constants.dart';
 import 'package:stream_lab/domain/connection/models/connection.dart';
 import 'package:stream_lab/domain/event/models/event.dart';
 import 'package:stream_lab/domain/socket/failures/socket_failure.dart';
@@ -16,6 +18,7 @@ class SocketRepository implements ISocketRepository {
   late StreamController<SocketFailure> _onConnectErrorController;
   late StreamController<void> _onDisconnectController;
   late StreamController<SocketFailure> _onErrorController;
+  late StreamController<Event> _onEventController;
 
   @override
   void connect(Connection connection) {
@@ -23,6 +26,7 @@ class SocketRepository implements ISocketRepository {
     _onConnectErrorController = StreamController<SocketFailure>.broadcast();
     _onDisconnectController = StreamController<void>.broadcast();
     _onErrorController = StreamController<SocketFailure>.broadcast();
+    _onEventController = StreamController<Event>.broadcast();
 
     _socket = connection.createSocket();
     _socket.connect();
@@ -54,6 +58,27 @@ class SocketRepository implements ISocketRepository {
   }
 
   @override
+  void listenAllActiveEvents(List<Event> eventListeners) {
+    _socket.clearListeners();
+    for (var event in eventListeners) {
+      _socket.on(
+        event.name,
+        (data) {
+          _onEventController.add(
+            event.copyWith(
+              typeIndex: EventType.listener.index,
+              dataTypeIndex: isJson(data)
+                  ? EventDataType.json.index
+                  : EventDataType.text.index,
+              data: data is Map || data is List ? json.encode(data) : data,
+            ),
+          );
+        },
+      );
+    }
+  }
+
+  @override
   Stream<void> get onConnectStream => _onConnectController.stream;
 
   @override
@@ -67,6 +92,9 @@ class SocketRepository implements ISocketRepository {
   Stream<SocketFailure> get onErrorStream => _onErrorController.stream;
 
   @override
+  Stream<Event> get onEventStream => _onEventController.stream;
+
+  @override
   void disconnect() {
     _socket.dispose();
     dispose();
@@ -76,5 +104,21 @@ class SocketRepository implements ISocketRepository {
     _onConnectController.close();
     _onConnectErrorController.close();
     _onDisconnectController.close();
+    _onErrorController.close();
+    _onEventController.close();
+  }
+
+  bool isJson(dynamic value) {
+    if (value is String) {
+      try {
+        final decoded = json.decode(value);
+        return decoded is Map || decoded is List;
+      } catch (e) {
+        return false;
+      }
+    } else if (value is Map || value is List) {
+      return true;
+    }
+    return false;
   }
 }

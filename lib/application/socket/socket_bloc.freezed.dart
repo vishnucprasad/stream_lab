@@ -21,13 +21,16 @@ mixin _$SocketEvent {
     required TResult Function(dynamic connectionKey, Connection connection)
         connectButtonPressed,
     required TResult Function() disconnectButtonPresssed,
-    required TResult Function(String connectionUrl) onConnected,
+    required TResult Function(String connectionUrl, List<Event> eventListeners)
+        onConnected,
     required TResult Function(SocketFailure failure) onConnectError,
     required TResult Function(String connectionUrl) onDisConnected,
     required TResult Function(SocketFailure failure) onError,
     required TResult Function(EventFormData event) onNewResponse,
     required TResult Function() clearAllResponses,
     required TResult Function(Event event) eventEmitted,
+    required TResult Function(List<Event> eventListeners)
+        listeningStartedForAllActiveListeners,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,13 +38,16 @@ mixin _$SocketEvent {
     TResult? Function(dynamic connectionKey, Connection connection)?
         connectButtonPressed,
     TResult? Function()? disconnectButtonPresssed,
-    TResult? Function(String connectionUrl)? onConnected,
+    TResult? Function(String connectionUrl, List<Event> eventListeners)?
+        onConnected,
     TResult? Function(SocketFailure failure)? onConnectError,
     TResult? Function(String connectionUrl)? onDisConnected,
     TResult? Function(SocketFailure failure)? onError,
     TResult? Function(EventFormData event)? onNewResponse,
     TResult? Function()? clearAllResponses,
     TResult? Function(Event event)? eventEmitted,
+    TResult? Function(List<Event> eventListeners)?
+        listeningStartedForAllActiveListeners,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -49,13 +55,16 @@ mixin _$SocketEvent {
     TResult Function(dynamic connectionKey, Connection connection)?
         connectButtonPressed,
     TResult Function()? disconnectButtonPresssed,
-    TResult Function(String connectionUrl)? onConnected,
+    TResult Function(String connectionUrl, List<Event> eventListeners)?
+        onConnected,
     TResult Function(SocketFailure failure)? onConnectError,
     TResult Function(String connectionUrl)? onDisConnected,
     TResult Function(SocketFailure failure)? onError,
     TResult Function(EventFormData event)? onNewResponse,
     TResult Function()? clearAllResponses,
     TResult Function(Event event)? eventEmitted,
+    TResult Function(List<Event> eventListeners)?
+        listeningStartedForAllActiveListeners,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -71,6 +80,8 @@ mixin _$SocketEvent {
     required TResult Function(_OnNewResponse value) onNewResponse,
     required TResult Function(_ClearAllResponses value) clearAllResponses,
     required TResult Function(_EventEmitted value) eventEmitted,
+    required TResult Function(_ListeningStartedForAllActiveListeners value)
+        listeningStartedForAllActiveListeners,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -85,6 +96,8 @@ mixin _$SocketEvent {
     TResult? Function(_OnNewResponse value)? onNewResponse,
     TResult? Function(_ClearAllResponses value)? clearAllResponses,
     TResult? Function(_EventEmitted value)? eventEmitted,
+    TResult? Function(_ListeningStartedForAllActiveListeners value)?
+        listeningStartedForAllActiveListeners,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -98,6 +111,8 @@ mixin _$SocketEvent {
     TResult Function(_OnNewResponse value)? onNewResponse,
     TResult Function(_ClearAllResponses value)? clearAllResponses,
     TResult Function(_EventEmitted value)? eventEmitted,
+    TResult Function(_ListeningStartedForAllActiveListeners value)?
+        listeningStartedForAllActiveListeners,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -209,13 +224,16 @@ class _$ConnectButtonPressedImpl implements _ConnectButtonPressed {
     required TResult Function(dynamic connectionKey, Connection connection)
         connectButtonPressed,
     required TResult Function() disconnectButtonPresssed,
-    required TResult Function(String connectionUrl) onConnected,
+    required TResult Function(String connectionUrl, List<Event> eventListeners)
+        onConnected,
     required TResult Function(SocketFailure failure) onConnectError,
     required TResult Function(String connectionUrl) onDisConnected,
     required TResult Function(SocketFailure failure) onError,
     required TResult Function(EventFormData event) onNewResponse,
     required TResult Function() clearAllResponses,
     required TResult Function(Event event) eventEmitted,
+    required TResult Function(List<Event> eventListeners)
+        listeningStartedForAllActiveListeners,
   }) {
     return connectButtonPressed(connectionKey, connection);
   }
@@ -226,13 +244,16 @@ class _$ConnectButtonPressedImpl implements _ConnectButtonPressed {
     TResult? Function(dynamic connectionKey, Connection connection)?
         connectButtonPressed,
     TResult? Function()? disconnectButtonPresssed,
-    TResult? Function(String connectionUrl)? onConnected,
+    TResult? Function(String connectionUrl, List<Event> eventListeners)?
+        onConnected,
     TResult? Function(SocketFailure failure)? onConnectError,
     TResult? Function(String connectionUrl)? onDisConnected,
     TResult? Function(SocketFailure failure)? onError,
     TResult? Function(EventFormData event)? onNewResponse,
     TResult? Function()? clearAllResponses,
     TResult? Function(Event event)? eventEmitted,
+    TResult? Function(List<Event> eventListeners)?
+        listeningStartedForAllActiveListeners,
   }) {
     return connectButtonPressed?.call(connectionKey, connection);
   }
@@ -243,13 +264,16 @@ class _$ConnectButtonPressedImpl implements _ConnectButtonPressed {
     TResult Function(dynamic connectionKey, Connection connection)?
         connectButtonPressed,
     TResult Function()? disconnectButtonPresssed,
-    TResult Function(String connectionUrl)? onConnected,
+    TResult Function(String connectionUrl, List<Event> eventListeners)?
+        onConnected,
     TResult Function(SocketFailure failure)? onConnectError,
     TResult Function(String connectionUrl)? onDisConnected,
     TResult Function(SocketFailure failure)? onError,
     TResult Function(EventFormData event)? onNewResponse,
     TResult Function()? clearAllResponses,
     TResult Function(Event event)? eventEmitted,
+    TResult Function(List<Event> eventListeners)?
+        listeningStartedForAllActiveListeners,
     required TResult orElse(),
   }) {
     if (connectButtonPressed != null) {
@@ -271,6 +295,8 @@ class _$ConnectButtonPressedImpl implements _ConnectButtonPressed {
     required TResult Function(_OnNewResponse value) onNewResponse,
     required TResult Function(_ClearAllResponses value) clearAllResponses,
     required TResult Function(_EventEmitted value) eventEmitted,
+    required TResult Function(_ListeningStartedForAllActiveListeners value)
+        listeningStartedForAllActiveListeners,
   }) {
     return connectButtonPressed(this);
   }
@@ -288,6 +314,8 @@ class _$ConnectButtonPressedImpl implements _ConnectButtonPressed {
     TResult? Function(_OnNewResponse value)? onNewResponse,
     TResult? Function(_ClearAllResponses value)? clearAllResponses,
     TResult? Function(_EventEmitted value)? eventEmitted,
+    TResult? Function(_ListeningStartedForAllActiveListeners value)?
+        listeningStartedForAllActiveListeners,
   }) {
     return connectButtonPressed?.call(this);
   }
@@ -304,6 +332,8 @@ class _$ConnectButtonPressedImpl implements _ConnectButtonPressed {
     TResult Function(_OnNewResponse value)? onNewResponse,
     TResult Function(_ClearAllResponses value)? clearAllResponses,
     TResult Function(_EventEmitted value)? eventEmitted,
+    TResult Function(_ListeningStartedForAllActiveListeners value)?
+        listeningStartedForAllActiveListeners,
     required TResult orElse(),
   }) {
     if (connectButtonPressed != null) {
@@ -375,13 +405,16 @@ class _$DisconnectButtonPresssedImpl implements _DisconnectButtonPresssed {
     required TResult Function(dynamic connectionKey, Connection connection)
         connectButtonPressed,
     required TResult Function() disconnectButtonPresssed,
-    required TResult Function(String connectionUrl) onConnected,
+    required TResult Function(String connectionUrl, List<Event> eventListeners)
+        onConnected,
     required TResult Function(SocketFailure failure) onConnectError,
     required TResult Function(String connectionUrl) onDisConnected,
     required TResult Function(SocketFailure failure) onError,
     required TResult Function(EventFormData event) onNewResponse,
     required TResult Function() clearAllResponses,
     required TResult Function(Event event) eventEmitted,
+    required TResult Function(List<Event> eventListeners)
+        listeningStartedForAllActiveListeners,
   }) {
     return disconnectButtonPresssed();
   }
@@ -392,13 +425,16 @@ class _$DisconnectButtonPresssedImpl implements _DisconnectButtonPresssed {
     TResult? Function(dynamic connectionKey, Connection connection)?
         connectButtonPressed,
     TResult? Function()? disconnectButtonPresssed,
-    TResult? Function(String connectionUrl)? onConnected,
+    TResult? Function(String connectionUrl, List<Event> eventListeners)?
+        onConnected,
     TResult? Function(SocketFailure failure)? onConnectError,
     TResult? Function(String connectionUrl)? onDisConnected,
     TResult? Function(SocketFailure failure)? onError,
     TResult? Function(EventFormData event)? onNewResponse,
     TResult? Function()? clearAllResponses,
     TResult? Function(Event event)? eventEmitted,
+    TResult? Function(List<Event> eventListeners)?
+        listeningStartedForAllActiveListeners,
   }) {
     return disconnectButtonPresssed?.call();
   }
@@ -409,13 +445,16 @@ class _$DisconnectButtonPresssedImpl implements _DisconnectButtonPresssed {
     TResult Function(dynamic connectionKey, Connection connection)?
         connectButtonPressed,
     TResult Function()? disconnectButtonPresssed,
-    TResult Function(String connectionUrl)? onConnected,
+    TResult Function(String connectionUrl, List<Event> eventListeners)?
+        onConnected,
     TResult Function(SocketFailure failure)? onConnectError,
     TResult Function(String connectionUrl)? onDisConnected,
     TResult Function(SocketFailure failure)? onError,
     TResult Function(EventFormData event)? onNewResponse,
     TResult Function()? clearAllResponses,
     TResult Function(Event event)? eventEmitted,
+    TResult Function(List<Event> eventListeners)?
+        listeningStartedForAllActiveListeners,
     required TResult orElse(),
   }) {
     if (disconnectButtonPresssed != null) {
@@ -437,6 +476,8 @@ class _$DisconnectButtonPresssedImpl implements _DisconnectButtonPresssed {
     required TResult Function(_OnNewResponse value) onNewResponse,
     required TResult Function(_ClearAllResponses value) clearAllResponses,
     required TResult Function(_EventEmitted value) eventEmitted,
+    required TResult Function(_ListeningStartedForAllActiveListeners value)
+        listeningStartedForAllActiveListeners,
   }) {
     return disconnectButtonPresssed(this);
   }
@@ -454,6 +495,8 @@ class _$DisconnectButtonPresssedImpl implements _DisconnectButtonPresssed {
     TResult? Function(_OnNewResponse value)? onNewResponse,
     TResult? Function(_ClearAllResponses value)? clearAllResponses,
     TResult? Function(_EventEmitted value)? eventEmitted,
+    TResult? Function(_ListeningStartedForAllActiveListeners value)?
+        listeningStartedForAllActiveListeners,
   }) {
     return disconnectButtonPresssed?.call(this);
   }
@@ -470,6 +513,8 @@ class _$DisconnectButtonPresssedImpl implements _DisconnectButtonPresssed {
     TResult Function(_OnNewResponse value)? onNewResponse,
     TResult Function(_ClearAllResponses value)? clearAllResponses,
     TResult Function(_EventEmitted value)? eventEmitted,
+    TResult Function(_ListeningStartedForAllActiveListeners value)?
+        listeningStartedForAllActiveListeners,
     required TResult orElse(),
   }) {
     if (disconnectButtonPresssed != null) {
@@ -489,7 +534,7 @@ abstract class _$$OnConnectedImplCopyWith<$Res> {
           _$OnConnectedImpl value, $Res Function(_$OnConnectedImpl) then) =
       __$$OnConnectedImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({String connectionUrl});
+  $Res call({String connectionUrl, List<Event> eventListeners});
 }
 
 /// @nodoc
@@ -506,12 +551,17 @@ class __$$OnConnectedImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? connectionUrl = null,
+    Object? eventListeners = null,
   }) {
     return _then(_$OnConnectedImpl(
       connectionUrl: null == connectionUrl
           ? _value.connectionUrl
           : connectionUrl // ignore: cast_nullable_to_non_nullable
               as String,
+      eventListeners: null == eventListeners
+          ? _value._eventListeners
+          : eventListeners // ignore: cast_nullable_to_non_nullable
+              as List<Event>,
     ));
   }
 }
@@ -519,14 +569,23 @@ class __$$OnConnectedImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$OnConnectedImpl implements _OnConnected {
-  const _$OnConnectedImpl({required this.connectionUrl});
+  const _$OnConnectedImpl(
+      {required this.connectionUrl, required final List<Event> eventListeners})
+      : _eventListeners = eventListeners;
 
   @override
   final String connectionUrl;
+  final List<Event> _eventListeners;
+  @override
+  List<Event> get eventListeners {
+    if (_eventListeners is EqualUnmodifiableListView) return _eventListeners;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_eventListeners);
+  }
 
   @override
   String toString() {
-    return 'SocketEvent.onConnected(connectionUrl: $connectionUrl)';
+    return 'SocketEvent.onConnected(connectionUrl: $connectionUrl, eventListeners: $eventListeners)';
   }
 
   @override
@@ -535,11 +594,14 @@ class _$OnConnectedImpl implements _OnConnected {
         (other.runtimeType == runtimeType &&
             other is _$OnConnectedImpl &&
             (identical(other.connectionUrl, connectionUrl) ||
-                other.connectionUrl == connectionUrl));
+                other.connectionUrl == connectionUrl) &&
+            const DeepCollectionEquality()
+                .equals(other._eventListeners, _eventListeners));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, connectionUrl);
+  int get hashCode => Object.hash(runtimeType, connectionUrl,
+      const DeepCollectionEquality().hash(_eventListeners));
 
   /// Create a copy of SocketEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -555,15 +617,18 @@ class _$OnConnectedImpl implements _OnConnected {
     required TResult Function(dynamic connectionKey, Connection connection)
         connectButtonPressed,
     required TResult Function() disconnectButtonPresssed,
-    required TResult Function(String connectionUrl) onConnected,
+    required TResult Function(String connectionUrl, List<Event> eventListeners)
+        onConnected,
     required TResult Function(SocketFailure failure) onConnectError,
     required TResult Function(String connectionUrl) onDisConnected,
     required TResult Function(SocketFailure failure) onError,
     required TResult Function(EventFormData event) onNewResponse,
     required TResult Function() clearAllResponses,
     required TResult Function(Event event) eventEmitted,
+    required TResult Function(List<Event> eventListeners)
+        listeningStartedForAllActiveListeners,
   }) {
-    return onConnected(connectionUrl);
+    return onConnected(connectionUrl, eventListeners);
   }
 
   @override
@@ -572,15 +637,18 @@ class _$OnConnectedImpl implements _OnConnected {
     TResult? Function(dynamic connectionKey, Connection connection)?
         connectButtonPressed,
     TResult? Function()? disconnectButtonPresssed,
-    TResult? Function(String connectionUrl)? onConnected,
+    TResult? Function(String connectionUrl, List<Event> eventListeners)?
+        onConnected,
     TResult? Function(SocketFailure failure)? onConnectError,
     TResult? Function(String connectionUrl)? onDisConnected,
     TResult? Function(SocketFailure failure)? onError,
     TResult? Function(EventFormData event)? onNewResponse,
     TResult? Function()? clearAllResponses,
     TResult? Function(Event event)? eventEmitted,
+    TResult? Function(List<Event> eventListeners)?
+        listeningStartedForAllActiveListeners,
   }) {
-    return onConnected?.call(connectionUrl);
+    return onConnected?.call(connectionUrl, eventListeners);
   }
 
   @override
@@ -589,17 +657,20 @@ class _$OnConnectedImpl implements _OnConnected {
     TResult Function(dynamic connectionKey, Connection connection)?
         connectButtonPressed,
     TResult Function()? disconnectButtonPresssed,
-    TResult Function(String connectionUrl)? onConnected,
+    TResult Function(String connectionUrl, List<Event> eventListeners)?
+        onConnected,
     TResult Function(SocketFailure failure)? onConnectError,
     TResult Function(String connectionUrl)? onDisConnected,
     TResult Function(SocketFailure failure)? onError,
     TResult Function(EventFormData event)? onNewResponse,
     TResult Function()? clearAllResponses,
     TResult Function(Event event)? eventEmitted,
+    TResult Function(List<Event> eventListeners)?
+        listeningStartedForAllActiveListeners,
     required TResult orElse(),
   }) {
     if (onConnected != null) {
-      return onConnected(connectionUrl);
+      return onConnected(connectionUrl, eventListeners);
     }
     return orElse();
   }
@@ -617,6 +688,8 @@ class _$OnConnectedImpl implements _OnConnected {
     required TResult Function(_OnNewResponse value) onNewResponse,
     required TResult Function(_ClearAllResponses value) clearAllResponses,
     required TResult Function(_EventEmitted value) eventEmitted,
+    required TResult Function(_ListeningStartedForAllActiveListeners value)
+        listeningStartedForAllActiveListeners,
   }) {
     return onConnected(this);
   }
@@ -634,6 +707,8 @@ class _$OnConnectedImpl implements _OnConnected {
     TResult? Function(_OnNewResponse value)? onNewResponse,
     TResult? Function(_ClearAllResponses value)? clearAllResponses,
     TResult? Function(_EventEmitted value)? eventEmitted,
+    TResult? Function(_ListeningStartedForAllActiveListeners value)?
+        listeningStartedForAllActiveListeners,
   }) {
     return onConnected?.call(this);
   }
@@ -650,6 +725,8 @@ class _$OnConnectedImpl implements _OnConnected {
     TResult Function(_OnNewResponse value)? onNewResponse,
     TResult Function(_ClearAllResponses value)? clearAllResponses,
     TResult Function(_EventEmitted value)? eventEmitted,
+    TResult Function(_ListeningStartedForAllActiveListeners value)?
+        listeningStartedForAllActiveListeners,
     required TResult orElse(),
   }) {
     if (onConnected != null) {
@@ -660,10 +737,12 @@ class _$OnConnectedImpl implements _OnConnected {
 }
 
 abstract class _OnConnected implements SocketEvent {
-  const factory _OnConnected({required final String connectionUrl}) =
-      _$OnConnectedImpl;
+  const factory _OnConnected(
+      {required final String connectionUrl,
+      required final List<Event> eventListeners}) = _$OnConnectedImpl;
 
   String get connectionUrl;
+  List<Event> get eventListeners;
 
   /// Create a copy of SocketEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -756,13 +835,16 @@ class _$OnConnectErrorImpl implements _OnConnectError {
     required TResult Function(dynamic connectionKey, Connection connection)
         connectButtonPressed,
     required TResult Function() disconnectButtonPresssed,
-    required TResult Function(String connectionUrl) onConnected,
+    required TResult Function(String connectionUrl, List<Event> eventListeners)
+        onConnected,
     required TResult Function(SocketFailure failure) onConnectError,
     required TResult Function(String connectionUrl) onDisConnected,
     required TResult Function(SocketFailure failure) onError,
     required TResult Function(EventFormData event) onNewResponse,
     required TResult Function() clearAllResponses,
     required TResult Function(Event event) eventEmitted,
+    required TResult Function(List<Event> eventListeners)
+        listeningStartedForAllActiveListeners,
   }) {
     return onConnectError(failure);
   }
@@ -773,13 +855,16 @@ class _$OnConnectErrorImpl implements _OnConnectError {
     TResult? Function(dynamic connectionKey, Connection connection)?
         connectButtonPressed,
     TResult? Function()? disconnectButtonPresssed,
-    TResult? Function(String connectionUrl)? onConnected,
+    TResult? Function(String connectionUrl, List<Event> eventListeners)?
+        onConnected,
     TResult? Function(SocketFailure failure)? onConnectError,
     TResult? Function(String connectionUrl)? onDisConnected,
     TResult? Function(SocketFailure failure)? onError,
     TResult? Function(EventFormData event)? onNewResponse,
     TResult? Function()? clearAllResponses,
     TResult? Function(Event event)? eventEmitted,
+    TResult? Function(List<Event> eventListeners)?
+        listeningStartedForAllActiveListeners,
   }) {
     return onConnectError?.call(failure);
   }
@@ -790,13 +875,16 @@ class _$OnConnectErrorImpl implements _OnConnectError {
     TResult Function(dynamic connectionKey, Connection connection)?
         connectButtonPressed,
     TResult Function()? disconnectButtonPresssed,
-    TResult Function(String connectionUrl)? onConnected,
+    TResult Function(String connectionUrl, List<Event> eventListeners)?
+        onConnected,
     TResult Function(SocketFailure failure)? onConnectError,
     TResult Function(String connectionUrl)? onDisConnected,
     TResult Function(SocketFailure failure)? onError,
     TResult Function(EventFormData event)? onNewResponse,
     TResult Function()? clearAllResponses,
     TResult Function(Event event)? eventEmitted,
+    TResult Function(List<Event> eventListeners)?
+        listeningStartedForAllActiveListeners,
     required TResult orElse(),
   }) {
     if (onConnectError != null) {
@@ -818,6 +906,8 @@ class _$OnConnectErrorImpl implements _OnConnectError {
     required TResult Function(_OnNewResponse value) onNewResponse,
     required TResult Function(_ClearAllResponses value) clearAllResponses,
     required TResult Function(_EventEmitted value) eventEmitted,
+    required TResult Function(_ListeningStartedForAllActiveListeners value)
+        listeningStartedForAllActiveListeners,
   }) {
     return onConnectError(this);
   }
@@ -835,6 +925,8 @@ class _$OnConnectErrorImpl implements _OnConnectError {
     TResult? Function(_OnNewResponse value)? onNewResponse,
     TResult? Function(_ClearAllResponses value)? clearAllResponses,
     TResult? Function(_EventEmitted value)? eventEmitted,
+    TResult? Function(_ListeningStartedForAllActiveListeners value)?
+        listeningStartedForAllActiveListeners,
   }) {
     return onConnectError?.call(this);
   }
@@ -851,6 +943,8 @@ class _$OnConnectErrorImpl implements _OnConnectError {
     TResult Function(_OnNewResponse value)? onNewResponse,
     TResult Function(_ClearAllResponses value)? clearAllResponses,
     TResult Function(_EventEmitted value)? eventEmitted,
+    TResult Function(_ListeningStartedForAllActiveListeners value)?
+        listeningStartedForAllActiveListeners,
     required TResult orElse(),
   }) {
     if (onConnectError != null) {
@@ -946,13 +1040,16 @@ class _$OnDisConnectedImpl implements _OnDisConnected {
     required TResult Function(dynamic connectionKey, Connection connection)
         connectButtonPressed,
     required TResult Function() disconnectButtonPresssed,
-    required TResult Function(String connectionUrl) onConnected,
+    required TResult Function(String connectionUrl, List<Event> eventListeners)
+        onConnected,
     required TResult Function(SocketFailure failure) onConnectError,
     required TResult Function(String connectionUrl) onDisConnected,
     required TResult Function(SocketFailure failure) onError,
     required TResult Function(EventFormData event) onNewResponse,
     required TResult Function() clearAllResponses,
     required TResult Function(Event event) eventEmitted,
+    required TResult Function(List<Event> eventListeners)
+        listeningStartedForAllActiveListeners,
   }) {
     return onDisConnected(connectionUrl);
   }
@@ -963,13 +1060,16 @@ class _$OnDisConnectedImpl implements _OnDisConnected {
     TResult? Function(dynamic connectionKey, Connection connection)?
         connectButtonPressed,
     TResult? Function()? disconnectButtonPresssed,
-    TResult? Function(String connectionUrl)? onConnected,
+    TResult? Function(String connectionUrl, List<Event> eventListeners)?
+        onConnected,
     TResult? Function(SocketFailure failure)? onConnectError,
     TResult? Function(String connectionUrl)? onDisConnected,
     TResult? Function(SocketFailure failure)? onError,
     TResult? Function(EventFormData event)? onNewResponse,
     TResult? Function()? clearAllResponses,
     TResult? Function(Event event)? eventEmitted,
+    TResult? Function(List<Event> eventListeners)?
+        listeningStartedForAllActiveListeners,
   }) {
     return onDisConnected?.call(connectionUrl);
   }
@@ -980,13 +1080,16 @@ class _$OnDisConnectedImpl implements _OnDisConnected {
     TResult Function(dynamic connectionKey, Connection connection)?
         connectButtonPressed,
     TResult Function()? disconnectButtonPresssed,
-    TResult Function(String connectionUrl)? onConnected,
+    TResult Function(String connectionUrl, List<Event> eventListeners)?
+        onConnected,
     TResult Function(SocketFailure failure)? onConnectError,
     TResult Function(String connectionUrl)? onDisConnected,
     TResult Function(SocketFailure failure)? onError,
     TResult Function(EventFormData event)? onNewResponse,
     TResult Function()? clearAllResponses,
     TResult Function(Event event)? eventEmitted,
+    TResult Function(List<Event> eventListeners)?
+        listeningStartedForAllActiveListeners,
     required TResult orElse(),
   }) {
     if (onDisConnected != null) {
@@ -1008,6 +1111,8 @@ class _$OnDisConnectedImpl implements _OnDisConnected {
     required TResult Function(_OnNewResponse value) onNewResponse,
     required TResult Function(_ClearAllResponses value) clearAllResponses,
     required TResult Function(_EventEmitted value) eventEmitted,
+    required TResult Function(_ListeningStartedForAllActiveListeners value)
+        listeningStartedForAllActiveListeners,
   }) {
     return onDisConnected(this);
   }
@@ -1025,6 +1130,8 @@ class _$OnDisConnectedImpl implements _OnDisConnected {
     TResult? Function(_OnNewResponse value)? onNewResponse,
     TResult? Function(_ClearAllResponses value)? clearAllResponses,
     TResult? Function(_EventEmitted value)? eventEmitted,
+    TResult? Function(_ListeningStartedForAllActiveListeners value)?
+        listeningStartedForAllActiveListeners,
   }) {
     return onDisConnected?.call(this);
   }
@@ -1041,6 +1148,8 @@ class _$OnDisConnectedImpl implements _OnDisConnected {
     TResult Function(_OnNewResponse value)? onNewResponse,
     TResult Function(_ClearAllResponses value)? clearAllResponses,
     TResult Function(_EventEmitted value)? eventEmitted,
+    TResult Function(_ListeningStartedForAllActiveListeners value)?
+        listeningStartedForAllActiveListeners,
     required TResult orElse(),
   }) {
     if (onDisConnected != null) {
@@ -1146,13 +1255,16 @@ class _$OnErrorImpl implements _OnError {
     required TResult Function(dynamic connectionKey, Connection connection)
         connectButtonPressed,
     required TResult Function() disconnectButtonPresssed,
-    required TResult Function(String connectionUrl) onConnected,
+    required TResult Function(String connectionUrl, List<Event> eventListeners)
+        onConnected,
     required TResult Function(SocketFailure failure) onConnectError,
     required TResult Function(String connectionUrl) onDisConnected,
     required TResult Function(SocketFailure failure) onError,
     required TResult Function(EventFormData event) onNewResponse,
     required TResult Function() clearAllResponses,
     required TResult Function(Event event) eventEmitted,
+    required TResult Function(List<Event> eventListeners)
+        listeningStartedForAllActiveListeners,
   }) {
     return onError(failure);
   }
@@ -1163,13 +1275,16 @@ class _$OnErrorImpl implements _OnError {
     TResult? Function(dynamic connectionKey, Connection connection)?
         connectButtonPressed,
     TResult? Function()? disconnectButtonPresssed,
-    TResult? Function(String connectionUrl)? onConnected,
+    TResult? Function(String connectionUrl, List<Event> eventListeners)?
+        onConnected,
     TResult? Function(SocketFailure failure)? onConnectError,
     TResult? Function(String connectionUrl)? onDisConnected,
     TResult? Function(SocketFailure failure)? onError,
     TResult? Function(EventFormData event)? onNewResponse,
     TResult? Function()? clearAllResponses,
     TResult? Function(Event event)? eventEmitted,
+    TResult? Function(List<Event> eventListeners)?
+        listeningStartedForAllActiveListeners,
   }) {
     return onError?.call(failure);
   }
@@ -1180,13 +1295,16 @@ class _$OnErrorImpl implements _OnError {
     TResult Function(dynamic connectionKey, Connection connection)?
         connectButtonPressed,
     TResult Function()? disconnectButtonPresssed,
-    TResult Function(String connectionUrl)? onConnected,
+    TResult Function(String connectionUrl, List<Event> eventListeners)?
+        onConnected,
     TResult Function(SocketFailure failure)? onConnectError,
     TResult Function(String connectionUrl)? onDisConnected,
     TResult Function(SocketFailure failure)? onError,
     TResult Function(EventFormData event)? onNewResponse,
     TResult Function()? clearAllResponses,
     TResult Function(Event event)? eventEmitted,
+    TResult Function(List<Event> eventListeners)?
+        listeningStartedForAllActiveListeners,
     required TResult orElse(),
   }) {
     if (onError != null) {
@@ -1208,6 +1326,8 @@ class _$OnErrorImpl implements _OnError {
     required TResult Function(_OnNewResponse value) onNewResponse,
     required TResult Function(_ClearAllResponses value) clearAllResponses,
     required TResult Function(_EventEmitted value) eventEmitted,
+    required TResult Function(_ListeningStartedForAllActiveListeners value)
+        listeningStartedForAllActiveListeners,
   }) {
     return onError(this);
   }
@@ -1225,6 +1345,8 @@ class _$OnErrorImpl implements _OnError {
     TResult? Function(_OnNewResponse value)? onNewResponse,
     TResult? Function(_ClearAllResponses value)? clearAllResponses,
     TResult? Function(_EventEmitted value)? eventEmitted,
+    TResult? Function(_ListeningStartedForAllActiveListeners value)?
+        listeningStartedForAllActiveListeners,
   }) {
     return onError?.call(this);
   }
@@ -1241,6 +1363,8 @@ class _$OnErrorImpl implements _OnError {
     TResult Function(_OnNewResponse value)? onNewResponse,
     TResult Function(_ClearAllResponses value)? clearAllResponses,
     TResult Function(_EventEmitted value)? eventEmitted,
+    TResult Function(_ListeningStartedForAllActiveListeners value)?
+        listeningStartedForAllActiveListeners,
     required TResult orElse(),
   }) {
     if (onError != null) {
@@ -1346,13 +1470,16 @@ class _$OnNewResponseImpl implements _OnNewResponse {
     required TResult Function(dynamic connectionKey, Connection connection)
         connectButtonPressed,
     required TResult Function() disconnectButtonPresssed,
-    required TResult Function(String connectionUrl) onConnected,
+    required TResult Function(String connectionUrl, List<Event> eventListeners)
+        onConnected,
     required TResult Function(SocketFailure failure) onConnectError,
     required TResult Function(String connectionUrl) onDisConnected,
     required TResult Function(SocketFailure failure) onError,
     required TResult Function(EventFormData event) onNewResponse,
     required TResult Function() clearAllResponses,
     required TResult Function(Event event) eventEmitted,
+    required TResult Function(List<Event> eventListeners)
+        listeningStartedForAllActiveListeners,
   }) {
     return onNewResponse(event);
   }
@@ -1363,13 +1490,16 @@ class _$OnNewResponseImpl implements _OnNewResponse {
     TResult? Function(dynamic connectionKey, Connection connection)?
         connectButtonPressed,
     TResult? Function()? disconnectButtonPresssed,
-    TResult? Function(String connectionUrl)? onConnected,
+    TResult? Function(String connectionUrl, List<Event> eventListeners)?
+        onConnected,
     TResult? Function(SocketFailure failure)? onConnectError,
     TResult? Function(String connectionUrl)? onDisConnected,
     TResult? Function(SocketFailure failure)? onError,
     TResult? Function(EventFormData event)? onNewResponse,
     TResult? Function()? clearAllResponses,
     TResult? Function(Event event)? eventEmitted,
+    TResult? Function(List<Event> eventListeners)?
+        listeningStartedForAllActiveListeners,
   }) {
     return onNewResponse?.call(event);
   }
@@ -1380,13 +1510,16 @@ class _$OnNewResponseImpl implements _OnNewResponse {
     TResult Function(dynamic connectionKey, Connection connection)?
         connectButtonPressed,
     TResult Function()? disconnectButtonPresssed,
-    TResult Function(String connectionUrl)? onConnected,
+    TResult Function(String connectionUrl, List<Event> eventListeners)?
+        onConnected,
     TResult Function(SocketFailure failure)? onConnectError,
     TResult Function(String connectionUrl)? onDisConnected,
     TResult Function(SocketFailure failure)? onError,
     TResult Function(EventFormData event)? onNewResponse,
     TResult Function()? clearAllResponses,
     TResult Function(Event event)? eventEmitted,
+    TResult Function(List<Event> eventListeners)?
+        listeningStartedForAllActiveListeners,
     required TResult orElse(),
   }) {
     if (onNewResponse != null) {
@@ -1408,6 +1541,8 @@ class _$OnNewResponseImpl implements _OnNewResponse {
     required TResult Function(_OnNewResponse value) onNewResponse,
     required TResult Function(_ClearAllResponses value) clearAllResponses,
     required TResult Function(_EventEmitted value) eventEmitted,
+    required TResult Function(_ListeningStartedForAllActiveListeners value)
+        listeningStartedForAllActiveListeners,
   }) {
     return onNewResponse(this);
   }
@@ -1425,6 +1560,8 @@ class _$OnNewResponseImpl implements _OnNewResponse {
     TResult? Function(_OnNewResponse value)? onNewResponse,
     TResult? Function(_ClearAllResponses value)? clearAllResponses,
     TResult? Function(_EventEmitted value)? eventEmitted,
+    TResult? Function(_ListeningStartedForAllActiveListeners value)?
+        listeningStartedForAllActiveListeners,
   }) {
     return onNewResponse?.call(this);
   }
@@ -1441,6 +1578,8 @@ class _$OnNewResponseImpl implements _OnNewResponse {
     TResult Function(_OnNewResponse value)? onNewResponse,
     TResult Function(_ClearAllResponses value)? clearAllResponses,
     TResult Function(_EventEmitted value)? eventEmitted,
+    TResult Function(_ListeningStartedForAllActiveListeners value)?
+        listeningStartedForAllActiveListeners,
     required TResult orElse(),
   }) {
     if (onNewResponse != null) {
@@ -1507,13 +1646,16 @@ class _$ClearAllResponsesImpl implements _ClearAllResponses {
     required TResult Function(dynamic connectionKey, Connection connection)
         connectButtonPressed,
     required TResult Function() disconnectButtonPresssed,
-    required TResult Function(String connectionUrl) onConnected,
+    required TResult Function(String connectionUrl, List<Event> eventListeners)
+        onConnected,
     required TResult Function(SocketFailure failure) onConnectError,
     required TResult Function(String connectionUrl) onDisConnected,
     required TResult Function(SocketFailure failure) onError,
     required TResult Function(EventFormData event) onNewResponse,
     required TResult Function() clearAllResponses,
     required TResult Function(Event event) eventEmitted,
+    required TResult Function(List<Event> eventListeners)
+        listeningStartedForAllActiveListeners,
   }) {
     return clearAllResponses();
   }
@@ -1524,13 +1666,16 @@ class _$ClearAllResponsesImpl implements _ClearAllResponses {
     TResult? Function(dynamic connectionKey, Connection connection)?
         connectButtonPressed,
     TResult? Function()? disconnectButtonPresssed,
-    TResult? Function(String connectionUrl)? onConnected,
+    TResult? Function(String connectionUrl, List<Event> eventListeners)?
+        onConnected,
     TResult? Function(SocketFailure failure)? onConnectError,
     TResult? Function(String connectionUrl)? onDisConnected,
     TResult? Function(SocketFailure failure)? onError,
     TResult? Function(EventFormData event)? onNewResponse,
     TResult? Function()? clearAllResponses,
     TResult? Function(Event event)? eventEmitted,
+    TResult? Function(List<Event> eventListeners)?
+        listeningStartedForAllActiveListeners,
   }) {
     return clearAllResponses?.call();
   }
@@ -1541,13 +1686,16 @@ class _$ClearAllResponsesImpl implements _ClearAllResponses {
     TResult Function(dynamic connectionKey, Connection connection)?
         connectButtonPressed,
     TResult Function()? disconnectButtonPresssed,
-    TResult Function(String connectionUrl)? onConnected,
+    TResult Function(String connectionUrl, List<Event> eventListeners)?
+        onConnected,
     TResult Function(SocketFailure failure)? onConnectError,
     TResult Function(String connectionUrl)? onDisConnected,
     TResult Function(SocketFailure failure)? onError,
     TResult Function(EventFormData event)? onNewResponse,
     TResult Function()? clearAllResponses,
     TResult Function(Event event)? eventEmitted,
+    TResult Function(List<Event> eventListeners)?
+        listeningStartedForAllActiveListeners,
     required TResult orElse(),
   }) {
     if (clearAllResponses != null) {
@@ -1569,6 +1717,8 @@ class _$ClearAllResponsesImpl implements _ClearAllResponses {
     required TResult Function(_OnNewResponse value) onNewResponse,
     required TResult Function(_ClearAllResponses value) clearAllResponses,
     required TResult Function(_EventEmitted value) eventEmitted,
+    required TResult Function(_ListeningStartedForAllActiveListeners value)
+        listeningStartedForAllActiveListeners,
   }) {
     return clearAllResponses(this);
   }
@@ -1586,6 +1736,8 @@ class _$ClearAllResponsesImpl implements _ClearAllResponses {
     TResult? Function(_OnNewResponse value)? onNewResponse,
     TResult? Function(_ClearAllResponses value)? clearAllResponses,
     TResult? Function(_EventEmitted value)? eventEmitted,
+    TResult? Function(_ListeningStartedForAllActiveListeners value)?
+        listeningStartedForAllActiveListeners,
   }) {
     return clearAllResponses?.call(this);
   }
@@ -1602,6 +1754,8 @@ class _$ClearAllResponsesImpl implements _ClearAllResponses {
     TResult Function(_OnNewResponse value)? onNewResponse,
     TResult Function(_ClearAllResponses value)? clearAllResponses,
     TResult Function(_EventEmitted value)? eventEmitted,
+    TResult Function(_ListeningStartedForAllActiveListeners value)?
+        listeningStartedForAllActiveListeners,
     required TResult orElse(),
   }) {
     if (clearAllResponses != null) {
@@ -1686,13 +1840,16 @@ class _$EventEmittedImpl implements _EventEmitted {
     required TResult Function(dynamic connectionKey, Connection connection)
         connectButtonPressed,
     required TResult Function() disconnectButtonPresssed,
-    required TResult Function(String connectionUrl) onConnected,
+    required TResult Function(String connectionUrl, List<Event> eventListeners)
+        onConnected,
     required TResult Function(SocketFailure failure) onConnectError,
     required TResult Function(String connectionUrl) onDisConnected,
     required TResult Function(SocketFailure failure) onError,
     required TResult Function(EventFormData event) onNewResponse,
     required TResult Function() clearAllResponses,
     required TResult Function(Event event) eventEmitted,
+    required TResult Function(List<Event> eventListeners)
+        listeningStartedForAllActiveListeners,
   }) {
     return eventEmitted(event);
   }
@@ -1703,13 +1860,16 @@ class _$EventEmittedImpl implements _EventEmitted {
     TResult? Function(dynamic connectionKey, Connection connection)?
         connectButtonPressed,
     TResult? Function()? disconnectButtonPresssed,
-    TResult? Function(String connectionUrl)? onConnected,
+    TResult? Function(String connectionUrl, List<Event> eventListeners)?
+        onConnected,
     TResult? Function(SocketFailure failure)? onConnectError,
     TResult? Function(String connectionUrl)? onDisConnected,
     TResult? Function(SocketFailure failure)? onError,
     TResult? Function(EventFormData event)? onNewResponse,
     TResult? Function()? clearAllResponses,
     TResult? Function(Event event)? eventEmitted,
+    TResult? Function(List<Event> eventListeners)?
+        listeningStartedForAllActiveListeners,
   }) {
     return eventEmitted?.call(event);
   }
@@ -1720,13 +1880,16 @@ class _$EventEmittedImpl implements _EventEmitted {
     TResult Function(dynamic connectionKey, Connection connection)?
         connectButtonPressed,
     TResult Function()? disconnectButtonPresssed,
-    TResult Function(String connectionUrl)? onConnected,
+    TResult Function(String connectionUrl, List<Event> eventListeners)?
+        onConnected,
     TResult Function(SocketFailure failure)? onConnectError,
     TResult Function(String connectionUrl)? onDisConnected,
     TResult Function(SocketFailure failure)? onError,
     TResult Function(EventFormData event)? onNewResponse,
     TResult Function()? clearAllResponses,
     TResult Function(Event event)? eventEmitted,
+    TResult Function(List<Event> eventListeners)?
+        listeningStartedForAllActiveListeners,
     required TResult orElse(),
   }) {
     if (eventEmitted != null) {
@@ -1748,6 +1911,8 @@ class _$EventEmittedImpl implements _EventEmitted {
     required TResult Function(_OnNewResponse value) onNewResponse,
     required TResult Function(_ClearAllResponses value) clearAllResponses,
     required TResult Function(_EventEmitted value) eventEmitted,
+    required TResult Function(_ListeningStartedForAllActiveListeners value)
+        listeningStartedForAllActiveListeners,
   }) {
     return eventEmitted(this);
   }
@@ -1765,6 +1930,8 @@ class _$EventEmittedImpl implements _EventEmitted {
     TResult? Function(_OnNewResponse value)? onNewResponse,
     TResult? Function(_ClearAllResponses value)? clearAllResponses,
     TResult? Function(_EventEmitted value)? eventEmitted,
+    TResult? Function(_ListeningStartedForAllActiveListeners value)?
+        listeningStartedForAllActiveListeners,
   }) {
     return eventEmitted?.call(this);
   }
@@ -1781,6 +1948,8 @@ class _$EventEmittedImpl implements _EventEmitted {
     TResult Function(_OnNewResponse value)? onNewResponse,
     TResult Function(_ClearAllResponses value)? clearAllResponses,
     TResult Function(_EventEmitted value)? eventEmitted,
+    TResult Function(_ListeningStartedForAllActiveListeners value)?
+        listeningStartedForAllActiveListeners,
     required TResult orElse(),
   }) {
     if (eventEmitted != null) {
@@ -1801,6 +1970,226 @@ abstract class _EventEmitted implements SocketEvent {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EventEmittedImplCopyWith<_$EventEmittedImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ListeningStartedForAllActiveListenersImplCopyWith<$Res> {
+  factory _$$ListeningStartedForAllActiveListenersImplCopyWith(
+          _$ListeningStartedForAllActiveListenersImpl value,
+          $Res Function(_$ListeningStartedForAllActiveListenersImpl) then) =
+      __$$ListeningStartedForAllActiveListenersImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<Event> eventListeners});
+}
+
+/// @nodoc
+class __$$ListeningStartedForAllActiveListenersImplCopyWithImpl<$Res>
+    extends _$SocketEventCopyWithImpl<$Res,
+        _$ListeningStartedForAllActiveListenersImpl>
+    implements _$$ListeningStartedForAllActiveListenersImplCopyWith<$Res> {
+  __$$ListeningStartedForAllActiveListenersImplCopyWithImpl(
+      _$ListeningStartedForAllActiveListenersImpl _value,
+      $Res Function(_$ListeningStartedForAllActiveListenersImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of SocketEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? eventListeners = null,
+  }) {
+    return _then(_$ListeningStartedForAllActiveListenersImpl(
+      eventListeners: null == eventListeners
+          ? _value._eventListeners
+          : eventListeners // ignore: cast_nullable_to_non_nullable
+              as List<Event>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ListeningStartedForAllActiveListenersImpl
+    implements _ListeningStartedForAllActiveListeners {
+  const _$ListeningStartedForAllActiveListenersImpl(
+      {required final List<Event> eventListeners})
+      : _eventListeners = eventListeners;
+
+  final List<Event> _eventListeners;
+  @override
+  List<Event> get eventListeners {
+    if (_eventListeners is EqualUnmodifiableListView) return _eventListeners;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_eventListeners);
+  }
+
+  @override
+  String toString() {
+    return 'SocketEvent.listeningStartedForAllActiveListeners(eventListeners: $eventListeners)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ListeningStartedForAllActiveListenersImpl &&
+            const DeepCollectionEquality()
+                .equals(other._eventListeners, _eventListeners));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_eventListeners));
+
+  /// Create a copy of SocketEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ListeningStartedForAllActiveListenersImplCopyWith<
+          _$ListeningStartedForAllActiveListenersImpl>
+      get copyWith => __$$ListeningStartedForAllActiveListenersImplCopyWithImpl<
+          _$ListeningStartedForAllActiveListenersImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(dynamic connectionKey, Connection connection)
+        connectButtonPressed,
+    required TResult Function() disconnectButtonPresssed,
+    required TResult Function(String connectionUrl, List<Event> eventListeners)
+        onConnected,
+    required TResult Function(SocketFailure failure) onConnectError,
+    required TResult Function(String connectionUrl) onDisConnected,
+    required TResult Function(SocketFailure failure) onError,
+    required TResult Function(EventFormData event) onNewResponse,
+    required TResult Function() clearAllResponses,
+    required TResult Function(Event event) eventEmitted,
+    required TResult Function(List<Event> eventListeners)
+        listeningStartedForAllActiveListeners,
+  }) {
+    return listeningStartedForAllActiveListeners(eventListeners);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(dynamic connectionKey, Connection connection)?
+        connectButtonPressed,
+    TResult? Function()? disconnectButtonPresssed,
+    TResult? Function(String connectionUrl, List<Event> eventListeners)?
+        onConnected,
+    TResult? Function(SocketFailure failure)? onConnectError,
+    TResult? Function(String connectionUrl)? onDisConnected,
+    TResult? Function(SocketFailure failure)? onError,
+    TResult? Function(EventFormData event)? onNewResponse,
+    TResult? Function()? clearAllResponses,
+    TResult? Function(Event event)? eventEmitted,
+    TResult? Function(List<Event> eventListeners)?
+        listeningStartedForAllActiveListeners,
+  }) {
+    return listeningStartedForAllActiveListeners?.call(eventListeners);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(dynamic connectionKey, Connection connection)?
+        connectButtonPressed,
+    TResult Function()? disconnectButtonPresssed,
+    TResult Function(String connectionUrl, List<Event> eventListeners)?
+        onConnected,
+    TResult Function(SocketFailure failure)? onConnectError,
+    TResult Function(String connectionUrl)? onDisConnected,
+    TResult Function(SocketFailure failure)? onError,
+    TResult Function(EventFormData event)? onNewResponse,
+    TResult Function()? clearAllResponses,
+    TResult Function(Event event)? eventEmitted,
+    TResult Function(List<Event> eventListeners)?
+        listeningStartedForAllActiveListeners,
+    required TResult orElse(),
+  }) {
+    if (listeningStartedForAllActiveListeners != null) {
+      return listeningStartedForAllActiveListeners(eventListeners);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ConnectButtonPressed value) connectButtonPressed,
+    required TResult Function(_DisconnectButtonPresssed value)
+        disconnectButtonPresssed,
+    required TResult Function(_OnConnected value) onConnected,
+    required TResult Function(_OnConnectError value) onConnectError,
+    required TResult Function(_OnDisConnected value) onDisConnected,
+    required TResult Function(_OnError value) onError,
+    required TResult Function(_OnNewResponse value) onNewResponse,
+    required TResult Function(_ClearAllResponses value) clearAllResponses,
+    required TResult Function(_EventEmitted value) eventEmitted,
+    required TResult Function(_ListeningStartedForAllActiveListeners value)
+        listeningStartedForAllActiveListeners,
+  }) {
+    return listeningStartedForAllActiveListeners(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ConnectButtonPressed value)? connectButtonPressed,
+    TResult? Function(_DisconnectButtonPresssed value)?
+        disconnectButtonPresssed,
+    TResult? Function(_OnConnected value)? onConnected,
+    TResult? Function(_OnConnectError value)? onConnectError,
+    TResult? Function(_OnDisConnected value)? onDisConnected,
+    TResult? Function(_OnError value)? onError,
+    TResult? Function(_OnNewResponse value)? onNewResponse,
+    TResult? Function(_ClearAllResponses value)? clearAllResponses,
+    TResult? Function(_EventEmitted value)? eventEmitted,
+    TResult? Function(_ListeningStartedForAllActiveListeners value)?
+        listeningStartedForAllActiveListeners,
+  }) {
+    return listeningStartedForAllActiveListeners?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ConnectButtonPressed value)? connectButtonPressed,
+    TResult Function(_DisconnectButtonPresssed value)? disconnectButtonPresssed,
+    TResult Function(_OnConnected value)? onConnected,
+    TResult Function(_OnConnectError value)? onConnectError,
+    TResult Function(_OnDisConnected value)? onDisConnected,
+    TResult Function(_OnError value)? onError,
+    TResult Function(_OnNewResponse value)? onNewResponse,
+    TResult Function(_ClearAllResponses value)? clearAllResponses,
+    TResult Function(_EventEmitted value)? eventEmitted,
+    TResult Function(_ListeningStartedForAllActiveListeners value)?
+        listeningStartedForAllActiveListeners,
+    required TResult orElse(),
+  }) {
+    if (listeningStartedForAllActiveListeners != null) {
+      return listeningStartedForAllActiveListeners(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ListeningStartedForAllActiveListeners implements SocketEvent {
+  const factory _ListeningStartedForAllActiveListeners(
+          {required final List<Event> eventListeners}) =
+      _$ListeningStartedForAllActiveListenersImpl;
+
+  List<Event> get eventListeners;
+
+  /// Create a copy of SocketEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ListeningStartedForAllActiveListenersImplCopyWith<
+          _$ListeningStartedForAllActiveListenersImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc

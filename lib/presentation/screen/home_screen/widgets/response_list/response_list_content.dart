@@ -10,12 +10,10 @@ class ResponseListContent extends StatelessWidget {
     super.key,
     required this.type,
     required this.data,
-    required this.responseIndex,
   });
 
   final EventDataType type;
   final String data;
-  final int responseIndex;
 
   @override
   Widget build(BuildContext context) {

@@ -23,6 +23,7 @@ class SocketBloc extends Bloc<SocketEvent, SocketState> {
   late StreamSubscription _connectErrorSubscription;
   late StreamSubscription _disconnectSubscription;
   late StreamSubscription _errorSubscription;
+  late StreamSubscription _eventSubscription;
 
   SocketBloc(this._socketRepository) : super(SocketState.initial()) {
     on<SocketEvent>((event, emit) {
@@ -39,6 +40,7 @@ class SocketBloc extends Bloc<SocketEvent, SocketState> {
           _connectSubscription = _socketRepository.onConnectStream.listen(
             (_) => add(SocketEvent.onConnected(
               connectionUrl: e.connection.connectionUrl,
+              eventListeners: e.connection.eventListeners,
             )),
           );
 
@@ -60,6 +62,10 @@ class SocketBloc extends Bloc<SocketEvent, SocketState> {
               SocketEvent.onError(failure: f),
             ),
           );
+
+          _eventSubscription = _socketRepository.onEventStream.listen(
+            (event) => add(SocketEvent.onNewResponse(event: event.toDomain())),
+          );
         },
         disconnectButtonPresssed: (_) {
           _socketRepository.disconnect();
@@ -75,6 +81,13 @@ class SocketBloc extends Bloc<SocketEvent, SocketState> {
               type: EventType.connected,
               data: EventData("Connected to ${e.connectionUrl}"),
             ),
+          ));
+          add(SocketEvent.listeningStartedForAllActiveListeners(
+            eventListeners: e.eventListeners
+                .where(
+                  (event) => event.isEnabled,
+                )
+                .toList(),
           ));
         },
         onConnectError: (e) => emit(state.copyWith(
@@ -110,6 +123,9 @@ class SocketBloc extends Bloc<SocketEvent, SocketState> {
           _socketRepository.emitEvent(e.event);
           add(SocketEvent.onNewResponse(event: e.event.toDomain()));
         },
+        listeningStartedForAllActiveListeners: (e) {
+          _socketRepository.listenAllActiveEvents(e.eventListeners);
+        },
       );
     });
   }
@@ -120,6 +136,7 @@ class SocketBloc extends Bloc<SocketEvent, SocketState> {
     _connectErrorSubscription.cancel();
     _disconnectSubscription.cancel();
     _errorSubscription.cancel();
+    _eventSubscription.cancel();
     return super.close();
   }
 }

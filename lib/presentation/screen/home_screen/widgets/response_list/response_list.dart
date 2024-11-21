@@ -64,7 +64,6 @@ class ResponseList extends StatelessWidget {
                                 data:
                                     response.data?.value.getOrElse(() => "") ??
                                         "",
-                                responseIndex: index,
                               ),
                             );
                           },

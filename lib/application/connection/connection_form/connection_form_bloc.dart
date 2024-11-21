@@ -183,23 +183,23 @@ class ConnectionFormBloc
           ),
           failureOrSucessOption: none(),
         )),
-        listenerNameChanged: (e) async => emit(state.copyWith(
-          isSaved: false,
-          connectionFormData: state.connectionFormData?.copyWith(
-            eventListeners: state.connectionFormData!.eventListeners
-                .asMap()
-                .entries
-                .map(
-                  (entry) => entry.key == state.listenerIndex
-                      ? state.connectionFormData!
-                          .eventEmitters[state.listenerIndex!]
-                          .copyWith(name: EventName(e.name))
-                      : entry.value,
-                )
-                .toList(),
-          ),
-          failureOrSucessOption: none(),
-        )),
+        listenerNameChanged: (e) async {
+          emit(state.copyWith(
+            isSaved: false,
+            connectionFormData: state.connectionFormData?.copyWith(
+              eventListeners: state.connectionFormData!.eventListeners
+                  .asMap()
+                  .entries
+                  .map(
+                    (entry) => entry.key == state.listenerIndex
+                        ? entry.value.copyWith(name: EventName(e.name))
+                        : entry.value,
+                  )
+                  .toList(),
+            ),
+            failureOrSucessOption: none(),
+          ));
+        },
         listenerSwitchToggled: (e) async => emit(state.copyWith(
           isSaved: false,
           connectionFormData: state.connectionFormData?.copyWith(
@@ -208,8 +208,7 @@ class ConnectionFormBloc
                 .entries
                 .map(
                   (entry) => entry.key == e.listenerIndex
-                      ? state.connectionFormData!.eventEmitters[e.listenerIndex]
-                          .copyWith(isEnabled: e.value)
+                      ? entry.value.copyWith(isEnabled: e.value)
                       : entry.value,
                 )
                 .toList(),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 
-class TextDataField extends HookWidget {
+class TextDataField extends StatelessWidget {
   const TextDataField({
     super.key,
     required this.text,
@@ -11,7 +10,7 @@ class TextDataField extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller = useTextEditingController(text: text);
+    final controller = TextEditingController(text: text);
 
     return TextFormField(
       controller: controller,

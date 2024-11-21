@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:stream_lab/application/connection/connection_form/connection_form_bloc.dart';
+import 'package:stream_lab/application/socket/socket_bloc.dart';
 import 'package:stream_lab/core/constants.dart';
+import 'package:stream_lab/domain/event/models/event.dart';
 import 'package:stream_lab/presentation/core/constants.dart';
 import 'package:stream_lab/presentation/screen/home_screen/widgets/listeners_list/listeners_list_tile.dart';
 
@@ -18,7 +20,23 @@ class ListenersList extends StatelessWidget {
           borderRadius: BorderRadius.circular(8),
           color: Colors.grey[200],
         ),
-        child: BlocBuilder<ConnectionFormBloc, ConnectionFormState>(
+        child: BlocConsumer<ConnectionFormBloc, ConnectionFormState>(
+          listenWhen: (p, c) =>
+              p.connectionFormData?.eventListeners !=
+              c.connectionFormData?.eventListeners,
+          listener: (context, state) {
+            if (state.connectionFormData != null) {
+              final listeners = state.connectionFormData!.eventListeners
+                  .map((e) => Event.fromDomain(e))
+                  .toList();
+              context
+                  .read<SocketBloc>()
+                  .add(SocketEvent.listeningStartedForAllActiveListeners(
+                    eventListeners:
+                        listeners.where((e) => e.isEnabled).toList(),
+                  ));
+            }
+          },
           builder: (context, state) {
             return Column(
               children: [
