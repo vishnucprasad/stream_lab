@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:pluto_grid/pluto_grid.dart';
 
 // Consraints
-const kMobileMaxWidth = 500;
-const kTabMaxWidth = 1100;
+const kMobileMaxWidth = 820;
+const kTabMaxWidth = 1200;
 
 // Colors
 final kDefaultBackgroundColor = Colors.grey[300];

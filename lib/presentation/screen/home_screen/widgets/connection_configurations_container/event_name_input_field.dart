@@ -41,7 +41,7 @@ class EventNameInputField extends HookWidget {
                           .name),
           builder: (context, state) {
             return SizedBox(
-              width: 200,
+              width: 180,
               height: state.showValidationError &&
                       context
                           .read<ConnectionFormBloc>()

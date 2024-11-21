@@ -36,7 +36,7 @@ class EmitButton extends StatelessWidget {
                   ),
                 ),
                 child: const Text(
-                  'Emit Event',
+                  'Emit',
                 ),
               ),
             );

@@ -13,7 +13,7 @@ class ClearAllResponsesButton extends StatelessWidget {
       onPressed: () =>
           context.read<SocketBloc>().add(const SocketEvent.clearAllResponses()),
       icon: const Icon(Icons.delete_sweep),
-      label: const Text('Clear all responses'),
+      label: const Text('Clear'),
     );
   }
 }

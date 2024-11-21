@@ -55,21 +55,16 @@ class DesktopLayout extends StatelessWidget {
                                           .read<AppActionCubit>()
                                           .mainDividerHoverChanged(false),
                                     ),
-                                    children: [
+                                    children: const [
                                       ResizableChild(
-                                        minSize:
-                                            MediaQuery.of(context).size.height /
-                                                4,
-                                        size:
-                                            const ResizableSize.ratio(2.5 / 4),
+                                        minSize: 275,
+                                        size: ResizableSize.ratio(2 / 3),
                                         child:
-                                            const ConnectionConfigurationsContainer(),
+                                            ConnectionConfigurationsContainer(),
                                       ),
                                       ResizableChild(
-                                        minSize:
-                                            MediaQuery.of(context).size.height /
-                                                4,
-                                        child: const ResponseList(),
+                                        minSize: 100,
+                                        child: ResponseList(),
                                       ),
                                     ],
                                   ),

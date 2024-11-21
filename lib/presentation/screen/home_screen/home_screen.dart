@@ -20,10 +20,10 @@ class HomeScreen extends StatelessWidget {
           (f) => context.showErrorToast(message: f.message),
         );
       },
-      child: const ResponsiveLayout(
+      child: ResponsiveLayout(
         mobileLayout: MobileLayout(),
-        tabLayout: TabLayout(),
-        desktopLayout: DesktopLayout(),
+        tabLayout: const TabLayout(),
+        desktopLayout: const DesktopLayout(),
       ),
     );
   }

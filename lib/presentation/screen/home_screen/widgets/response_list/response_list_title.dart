@@ -19,34 +19,37 @@ class ResponseListTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 48,
-      child: Row(
-        children: [
-          kWidth,
-          Icon(
-            type == EventType.connected
-                ? Icons.wifi
-                : type == EventType.disconnected
-                    ? Icons.wifi_off
-                    : type == EventType.emitter
-                        ? Icons.arrow_circle_up
-                        : Icons.arrow_circle_down,
-            color: type == EventType.connected
-                ? Colors.green
-                : type == EventType.disconnected
-                    ? Colors.red
-                    : type == EventType.emitter
-                        ? Colors.blue
-                        : Colors.orange,
-          ),
-          kWidth,
-          EventNameBadge(
-            type: type,
-            eventName: eventName,
-          ),
-          kWidth,
-          Text(data),
-          kWidth,
-        ],
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          children: [
+            kWidth,
+            Icon(
+              type == EventType.connected
+                  ? Icons.wifi
+                  : type == EventType.disconnected
+                      ? Icons.wifi_off
+                      : type == EventType.emitter
+                          ? Icons.arrow_circle_up
+                          : Icons.arrow_circle_down,
+              color: type == EventType.connected
+                  ? Colors.green
+                  : type == EventType.disconnected
+                      ? Colors.red
+                      : type == EventType.emitter
+                          ? Colors.blue
+                          : Colors.orange,
+            ),
+            kWidth,
+            EventNameBadge(
+              type: type,
+              eventName: eventName,
+            ),
+            kWidth,
+            Text(data),
+            kWidth,
+          ],
+        ),
       ),
     );
   }
