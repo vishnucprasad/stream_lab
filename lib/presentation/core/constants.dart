@@ -70,3 +70,8 @@ final kDefalutPlutoColumns = [
     enableSorting: false,
   ),
 ];
+
+// Intents
+class SaveIntent extends Intent {
+  const SaveIntent();
+}
