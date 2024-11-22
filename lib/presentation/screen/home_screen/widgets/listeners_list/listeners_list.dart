@@ -20,77 +20,83 @@ class ListenersList extends StatelessWidget {
           borderRadius: BorderRadius.circular(8),
           color: Colors.grey[200],
         ),
-        child: BlocConsumer<ConnectionFormBloc, ConnectionFormState>(
-          listenWhen: (p, c) =>
-              p.connectionFormData?.eventListeners !=
-              c.connectionFormData?.eventListeners,
-          listener: (context, state) {
-            if (state.connectionFormData != null) {
-              final listeners = state.connectionFormData!.eventListeners
-                  .map((e) => Event.fromDomain(e))
-                  .toList();
-              context
-                  .read<SocketBloc>()
-                  .add(SocketEvent.listeningStartedForAllActiveListeners(
-                    eventListeners: listeners,
-                  ));
-            }
-          },
-          builder: (context, state) {
-            return Column(
-              children: [
-                Row(
+        child: BlocBuilder<SocketBloc, SocketState>(
+          buildWhen: (p, c) => p.isConnected != c.isConnected,
+          builder: (context, socketState) {
+            return BlocConsumer<ConnectionFormBloc, ConnectionFormState>(
+              listenWhen: (p, c) =>
+                  (p.connectionFormData?.eventListeners !=
+                      c.connectionFormData?.eventListeners) &&
+                  socketState.isConnected,
+              listener: (context, state) {
+                if (state.connectionFormData != null) {
+                  final listeners = state.connectionFormData!.eventListeners
+                      .map((e) => Event.fromDomain(e))
+                      .toList();
+                  context
+                      .read<SocketBloc>()
+                      .add(SocketEvent.listeningStartedForAllActiveListeners(
+                        eventListeners: listeners,
+                      ));
+                }
+              },
+              builder: (context, state) {
+                return Column(
                   children: [
-                    kWidth,
-                    const Text(
-                      'Event Listeners',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                      ),
+                    Row(
+                      children: [
+                        kWidth,
+                        const Text(
+                          'Event Listeners',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const Spacer(),
+                        IconButton(
+                          onPressed: () => context
+                              .read<ConnectionFormBloc>()
+                              .add(const ConnectionFormEvent.addEvent(
+                                type: EventType.listener,
+                              )),
+                          icon: const Icon(Icons.add),
+                        ),
+                      ],
                     ),
-                    const Spacer(),
-                    IconButton(
-                      onPressed: () => context
-                          .read<ConnectionFormBloc>()
-                          .add(const ConnectionFormEvent.addEvent(
-                            type: EventType.listener,
-                          )),
-                      icon: const Icon(Icons.add),
-                    ),
-                  ],
-                ),
-                Expanded(
-                  child: state.connectionKey != null &&
-                          state.connectionFormData != null
-                      ? state.connectionFormData!.eventListeners.isNotEmpty
-                          ? ListView.separated(
-                              itemCount: state
-                                  .connectionFormData!.eventListeners.length,
-                              itemBuilder: (context, index) {
-                                return ListenersListTile(
-                                  listenerIndex: index,
-                                );
-                              },
-                              separatorBuilder: (_, __) => kHeight,
-                            )
+                    Expanded(
+                      child: state.connectionKey != null &&
+                              state.connectionFormData != null
+                          ? state.connectionFormData!.eventListeners.isNotEmpty
+                              ? ListView.separated(
+                                  itemCount: state.connectionFormData!
+                                      .eventListeners.length,
+                                  itemBuilder: (context, index) {
+                                    return ListenersListTile(
+                                      listenerIndex: index,
+                                    );
+                                  },
+                                  separatorBuilder: (_, __) => kHeight,
+                                )
+                              : const Center(
+                                  child: SizedBox(
+                                    width: 300,
+                                    child: Text(
+                                      'Oops! It seems like there are no event listeners available.',
+                                    ),
+                                  ),
+                                )
                           : const Center(
                               child: SizedBox(
                                 width: 300,
                                 child: Text(
-                                  'Oops! It seems like there are no event listeners available.',
+                                  'Select a connection or save this connection to work with events.',
                                 ),
                               ),
-                            )
-                      : const Center(
-                          child: SizedBox(
-                            width: 300,
-                            child: Text(
-                              'Select a connection or save this connection to work with events.',
                             ),
-                          ),
-                        ),
-                ),
-              ],
+                    ),
+                  ],
+                );
+              },
             );
           },
         ),
