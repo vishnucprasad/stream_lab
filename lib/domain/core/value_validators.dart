@@ -25,7 +25,7 @@ Either<ValueFailure<String>, String> validateURL(
   String input,
 ) {
   const urlRegex =
-      r'^(https?:\/\/)?((localhost:\d{2,5})|(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(:\d{2,5})?)|([\da-z\.-]+\.[a-z\.]{2,6}))([\/\w \.-]*)*\/?$';
+      r'^(https?:\/\/|wss?:\/\/)?((localhost:\d{2,5})|(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(:\d{2,5})?)|([\da-z\.-]+\.[a-z\.]{2,6}))([\/\w \.-]*)*\/?$';
   if (RegExp(urlRegex).hasMatch(input)) {
     return right(input);
   }
