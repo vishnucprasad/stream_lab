@@ -64,7 +64,7 @@ Follow these steps to set up Stream Lab on your local machine:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/stream-lab.git
+   git clone https://github.com/vishnucprasad/stream_lab
    cd stream-lab
    ```
 
