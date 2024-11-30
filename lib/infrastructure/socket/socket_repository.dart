@@ -54,7 +54,12 @@ class SocketRepository implements ISocketRepository {
 
   @override
   void emitEvent(Event event) {
-    _socket.emit(event.name, event.data);
+    _socket.emit(
+      event.name,
+      EventDataType.values[event.dataTypeIndex] == EventDataType.json
+          ? json.decode(event.data!) as Map<String, dynamic>
+          : event.data,
+    );
   }
 
   @override

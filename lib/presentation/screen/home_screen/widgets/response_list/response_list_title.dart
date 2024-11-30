@@ -46,7 +46,7 @@ class ResponseListTitle extends StatelessWidget {
               eventName: eventName,
             ),
             kWidth,
-            Text(data),
+            Text(data.replaceAll('\n', '').replaceAll(' ', '')),
             kWidth,
           ],
         ),

@@ -2,7 +2,6 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:stream_lab/core/constants.dart';
 import 'package:stream_lab/presentation/core/constants.dart';
-import 'package:stream_lab/presentation/screen/home_screen/widgets/response_list/json_data_field.dart';
 import 'package:stream_lab/presentation/screen/home_screen/widgets/response_list/text_data_field.dart';
 
 class ResponseListContent extends StatelessWidget {
@@ -44,8 +43,8 @@ class ResponseListContent extends StatelessWidget {
             Flexible(
               child: type == EventDataType.text
                   ? TextDataField(text: data)
-                  : JsonDataField(
-                      json: const JsonEncoder.withIndent('    ').convert(
+                  : TextDataField(
+                      text: const JsonEncoder.withIndent('    ').convert(
                         jsonDecode(data),
                       ),
                     ),
