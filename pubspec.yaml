@@ -16,7 +16,7 @@ publish_to: "none" # Remove this line if you wish to publish to pub.dev
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
-version: 1.0.0+1
+version: 1.0.0
 
 environment:
   sdk: ">=3.4.4 <4.0.0"
@@ -58,6 +58,7 @@ dev_dependencies:
   freezed: ^2.5.2
   hive_generator: ^2.0.1
   injectable_generator: ^2.6.2
+  msix: ^3.16.8
 
 dependency_overrides:
   extended_text_field: 16.0.0
@@ -97,3 +98,10 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+msix_config:
+  display_name: Stream Lab
+  publisher_display_name: Vishnu C Prasad
+  identity_name: streamlab.vishnucprasad.in
+  msix_version: 1.0.0.0
+  logo_path: windows\runner\resources\app_icon.ico
+  output_name: streamlab-v1.0.0
